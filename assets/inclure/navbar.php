@@ -25,7 +25,7 @@ template_header($title) {
         </div>
     </div>
     <div class="bleu row align-items-center">
-        <p> Identifiez-vous (ou inscrivez-vous gratuitement) afin de profiter pleinement des fonctionnalités.</p>
+        <p class="pnav"> Identifiez-vous (ou inscrivez-vous gratuitement) afin de profiter pleinement des fonctionnalités.</p>
     </div>
 
 EOT;
