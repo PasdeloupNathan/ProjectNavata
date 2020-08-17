@@ -3,12 +3,12 @@ include 'meta.php';
 ?>
 
 <?=template_meta('Acceuil')?>
-<body>
     
 <?=template_header()?>
+<div>
+    
+</div>
+<?=template_footer()?>
 
-</body>
-
-</html>
 
 

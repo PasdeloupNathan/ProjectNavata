@@ -2,7 +2,7 @@
 
 
 function template_meta($title) {
-    echo<<<EOT
+echo<<<EOT
 
 <!DOCTYPE html>
 <html>
@@ -21,7 +21,7 @@ EOT;
 
 function template_header() {
     echo<<<EOT
-    
+    <body>
     <div class="menu">
         <div class="row haut align-items-center">
             <div class="logo"><img src="../LOGO.png" alt="logo" class="logoimg"></div>
@@ -46,6 +46,21 @@ function template_header() {
         <p class="pnav"> Identifiez-vous (ou inscrivez-vous gratuitement) afin de profiter pleinement des fonctionnalités.</p>
     </div>
     
+    EOT;
+    }
+
+function template_footer(){
+    echo<<<EOT
+    
+    <div class="footer">
+    <h2 class="copy">Copyright</h2>
+    <h2 class="CGU">Mention legal et CGU</h2>
+    <h2 class="contact">Contact</h2>
+    </div>
+    
+    </body>
+    </html>
+
     EOT;
     }
 
