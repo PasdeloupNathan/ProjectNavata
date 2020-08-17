@@ -1,0 +1,55 @@
+.haut {
+    display: flex;
+    padding-left: 1%;
+}
+
+body {
+    margin-right: 5vw;
+    margin-left: 5vw;
+}
+
+h2 {
+    color: #707070;
+}
+
+.logo {
+    height: 80%;
+    .logoimg {
+        height: 100%;
+        width: 30%;
+    }
+}
+
+.bas {
+    display: flex;
+    height: 10vh;
+    align-items: center;
+    .nav {
+        height: 90%;
+        width: 100%;
+        padding-left: 1%;
+        .acceuil {
+            float: left;
+        }
+        .concours {
+            padding-left: 30%;
+            float: left;
+        }
+        .profil {
+            float: left;
+            padding-left: 30%;
+        }
+    }
+}
+
+.bleu {
+    height: 7.5vh;
+    width: 100vw;
+    margin-left: -5vw;
+    background-color: #7cbee8;
+    align-items: center;
+    display: flex;
+    p {
+        padding-left: 29%;
+    }
+}
