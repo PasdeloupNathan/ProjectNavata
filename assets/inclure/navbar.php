@@ -2,7 +2,7 @@
 <?php
 
 function template_header($title) {
-echo <<<EOT
+echo<<<EOT
 
 <div class="menu">
     <div class="row haut align-items-center">
