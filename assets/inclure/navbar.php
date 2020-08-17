@@ -1,13 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
-</head>
-<body>
-    
-</body>
-</html>
+<?php
+
+template_header($title) {
+    echo <<<EOT
+
+    <div class="menu">
+        <div class="row haut align-items-center">
+            <div class="logo"><img src="../LOGO.png" alt="logo" class="logoimg"></div>
+        </div>
+
+        <div class="row bas align-items-center">
+            <div class="col acceuil">
+                <h2 class="h2nav">Acceuil</h2>
+            </div>
+            <div class="col"></div>
+            <div class="col">
+                <h2 class="h2nav">Concours</h2>
+            </div>
+            <div class="col"></div>
+            <div class="col">
+                <h2 class="h2nav">Profil</h2>
+            </div>
+
+        </div>
+    </div>
+    <div class="bleu row align-items-center">
+        <p class="pnav"> Identifiez-vous (ou inscrivez-vous gratuitement) afin de profiter pleinement des fonctionnalités.</p>
+    </div>
+
+EOT;
+}
+
+?>
