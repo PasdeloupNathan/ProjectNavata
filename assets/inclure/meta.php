@@ -5,7 +5,7 @@ function template_meta($title) {
     echo<<<EOT
 
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     <meta charset="UTF-8">
