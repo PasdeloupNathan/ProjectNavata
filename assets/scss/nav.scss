@@ -4,7 +4,7 @@ body {
 }
 
 .logo {
-    width: 100%;
+    width: 100vw;
     height: 80%;
     text-align: center;
     .logoimg {
@@ -45,4 +45,8 @@ body {
         margin-bottom: 0;
         font-family: 'Times New Roman', Times, serif;
     }
+}
+
+.row {
+    margin: 0;
 }
