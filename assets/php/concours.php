@@ -6,13 +6,11 @@ include 'meta.php';
     
 <?=template_header()?>
 
-<div class="main">
-    
+<div col-row-md-12 class="main">
+    <div class="first">
 
+    </div>
 <div>
 
 </div>
 <?=template_footer()?>
-
-
-
