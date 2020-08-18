@@ -5,8 +5,8 @@ include 'meta.php';
 <?=template_meta('Acceuil')?>
     
 <?=template_header()?>
-<div>
-    <h2>test</h2>
+<div class="main">
+    
 </div>
 <?=template_footer()?>
 
