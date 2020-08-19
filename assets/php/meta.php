@@ -3,6 +3,7 @@
 
 function template_meta($title) {
 echo<<<EOT
+
     <!DOCTYPE html>
     <html>
     <head>  
@@ -16,18 +17,22 @@ echo<<<EOT
         <link rel="stylesheet" href="../css/nav.min.css">
         <link rel="stylesheet" href="../css/footerNoBootstrap.min.css">
         <link rel="stylesheet" href="../css/index.min.css">
+        <link rel="stylesheet" href="../css/connects.min.css">
 
     </head>
  
+
 EOT;
 }
 
 function template_header() {
+
 echo<<<EOT
     <body>
     <div class="menu">
         <div class="row haut align-items-center">
             <div class="logo animate__animated animate__bounceInUp"><img src="../img/LOGO.png" alt="logo" class="logoimg"></div>
+
         </div>
     
         <div class="row bas align-items-center">
@@ -45,6 +50,7 @@ echo<<<EOT
     
         </div>
     </div>
+
     <div class="bleu align-items-center">
         <p class="pnav"> Identifiez-vous (ou inscrivez-vous gratuitement) afin de profiter pleinement des fonctionnalités.</p>
     </div>
@@ -54,6 +60,7 @@ EOT;
 
 function template_footer(){
 echo<<<EOT
+
     
     <div class="footer">
     <h2 class="copy h2foot">Copyright</h2>
@@ -63,6 +70,10 @@ echo<<<EOT
     
     </body>
     </html>
+
+
+    EOT;
+    }
 
 EOT;
 }

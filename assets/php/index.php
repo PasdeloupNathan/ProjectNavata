@@ -2,6 +2,7 @@
 include 'meta.php';
 ?>
 
+
 <?=template_meta('Acceuil')?>
    
     
@@ -12,6 +13,7 @@ include 'meta.php';
 <div class="main2">
     
 </div>
+
 
 <?=template_footer()?>
 
