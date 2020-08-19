@@ -3,7 +3,6 @@
 
 function template_meta($title) {
 echo<<<EOT
-
     <!DOCTYPE html>
     <html>
     <head>  
@@ -17,22 +16,17 @@ echo<<<EOT
         <link rel="stylesheet" href="../css/nav.min.css">
         <link rel="stylesheet" href="../css/footerNoBootstrap.min.css">
         <link rel="stylesheet" href="../css/index.min.css">
-        <link rel="stylesheet" href="../css/connects.min.css">
-
+        <link rel="stylesheet" href="../css/connects.min.css">        
     </head>
  
-
 EOT;
 }
 
 function template_header() {
-
 echo<<<EOT
-    <body>
     <div class="menu">
         <div class="row haut align-items-center">
-            <div class="logo animate__animated animate__bounceInUp"><img src="../img/LOGO.png" alt="logo" class="logoimg"></div>
-
+            <div class="logo animate__animated animate__rubberBand"><img src="../img/LOGO.png" alt="logo" class="logoimg"></div>
         </div>
     
         <div class="row bas align-items-center">
@@ -50,9 +44,8 @@ echo<<<EOT
     
         </div>
     </div>
-
     <div class="bleu align-items-center">
-        <p class="pnav"> Identifiez-vous (ou inscrivez-vous gratuitement) afin de profiter pleinement des fonctionnalités.</p>
+        <p class="pnav animate__animated animate__backInLeft"> Identifiez-vous (ou inscrivez-vous gratuitement) afin de profiter pleinement des fonctionnalités.</p>
     </div>
     
 EOT;
@@ -66,7 +59,7 @@ echo<<<EOT
     <h2 class="contact h2foot">Contact</h2>
     </div>
     
-    </body>
+   
     </html>
 
 EOT;
