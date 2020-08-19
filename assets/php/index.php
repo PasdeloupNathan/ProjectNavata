@@ -2,7 +2,7 @@
 include 'meta.php';
 ?>
 
-<?=template_meta('Acceuil')?>
+<?=template_meta('connection')?>
     
 <?=template_header()?>
 
