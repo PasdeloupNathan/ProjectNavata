@@ -15,7 +15,7 @@ echo<<<EOT
         <link rel="stylesheet" href="../css/nav.min.css">
         <link rel="stylesheet" href="../css/footerNoBootstrap.min.css">
         <link rel="stylesheet" href="../css/index.min.css">
-
+        <link rel="stylesheet" href="../css/concours.min.css">
     </head>
  
 EOT;
