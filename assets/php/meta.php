@@ -17,6 +17,8 @@ echo<<<EOT
         <link rel="stylesheet" href="../css/footerNoBootstrap.min.css">
         <link rel="stylesheet" href="../css/index.min.css">
         <link rel="stylesheet" href="../css/connects.min.css">        
+        <link rel="stylesheet" href="../css/concours.min.css">
+
     </head>
  
 EOT;
@@ -58,8 +60,7 @@ echo<<<EOT
     <h2 class="CGU h2foot">Mention legal et CGU</h2>
     <h2 class="contact h2foot">Contact</h2>
     </div>
-    
-   
+
     </html>
 
 EOT;
