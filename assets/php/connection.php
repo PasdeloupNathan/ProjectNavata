@@ -6,8 +6,8 @@
 
 
 <div class="row conect" style="width: 100vw;">
-        <div class="col-md-4 row align-items-center" style="height: 20vh;">
-            <img src="../img/LOGO.png" alt="logo" style="height: 75%;padding-left: 35%;">
+        <div class="col-md-4 row align-items-center" style="height: 20vh;"> 
+            <img src="../img/LOGO.png" alt="logo" style="height: 75%;padding-left: 35%;"> 
         </div>
         <form class="form-horizontal col-md-4">
             <fieldset class="animate__animated animate__fadeInDown">
