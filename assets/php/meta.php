@@ -60,8 +60,6 @@ EOT;
 
 function template_footer(){
 echo<<<EOT
-
-    
     <div class="footer">
     <h2 class="copy h2foot">Copyright</h2>
     <h2 class="CGU h2foot">Mention legal et CGU</h2>
@@ -71,13 +69,6 @@ echo<<<EOT
     </body>
     </html>
 
-
-    EOT;
-    }
-
 EOT;
 }
-
-
-
 ?>
