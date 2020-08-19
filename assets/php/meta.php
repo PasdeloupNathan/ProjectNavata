@@ -33,7 +33,7 @@ echo<<<EOT
     
         <div class="row bas align-items-center">
             <div class="col acceuil">
-                <h2 class="h2nav">Acceuil</h2>
+                <h2 class="h2nav">Accueil</h2>
             </div>
             <div class="col"></div>
             <div class="col">
