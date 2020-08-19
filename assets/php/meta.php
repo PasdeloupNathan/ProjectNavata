@@ -24,7 +24,6 @@ EOT;
 
 function template_header() {
 echo<<<EOT
-    <body>
     <div class="menu">
         <div class="row haut align-items-center">
             <div class="logo animate__animated animate__rubberBand"><img src="../img/LOGO.png" alt="logo" class="logoimg"></div>
@@ -61,7 +60,7 @@ echo<<<EOT
     <h2 class="contact h2foot">Contact</h2>
     </div>
     
-    </body>
+   
     </html>
 
 EOT;
