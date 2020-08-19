@@ -27,7 +27,7 @@ echo<<<EOT
     <body>
     <div class="menu">
         <div class="row haut align-items-center">
-            <div class="logo animate__animated animate__bounceInUp"><img src="../img/LOGO.png" alt="logo" class="logoimg"></div>
+            <div class="logo animate__animated animate__rubberBand"><img src="../img/LOGO.png" alt="logo" class="logoimg"></div>
         </div>
     
         <div class="row bas align-items-center">
@@ -46,7 +46,7 @@ echo<<<EOT
         </div>
     </div>
     <div class="bleu align-items-center">
-        <p class="pnav"> Identifiez-vous (ou inscrivez-vous gratuitement) afin de profiter pleinement des fonctionnalités.</p>
+        <p class="pnav animate__animated animate__backInLeft"> Identifiez-vous (ou inscrivez-vous gratuitement) afin de profiter pleinement des fonctionnalités.</p>
     </div>
     
 EOT;
@@ -63,7 +63,7 @@ echo<<<EOT
     
     </body>
     </html>
-    
+
 EOT;
 }
 
