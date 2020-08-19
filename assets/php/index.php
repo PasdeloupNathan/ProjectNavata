@@ -2,16 +2,19 @@
 include 'meta.php';
 ?>
 
-<?=template_meta('connection')?>
+
+<?=template_meta('Acceuil')?>
+   
     
 <?=template_header()?>
-
-<div class="main">
+<div class="main1">
     
-=======
-<div>
-
 </div>
+<div class="main2">
+    
+</div>
+
+
 <?=template_footer()?>
 
 
