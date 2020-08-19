@@ -27,7 +27,7 @@ echo<<<EOT
     <body>
     <div class="menu">
         <div class="row haut align-items-center">
-            <div class="logo"><img src="../img/LOGO.png" alt="logo" class="logoimg"></div>
+            <div class="logo animate__animated animate__bounceInUp"><img src="../img/LOGO.png" alt="logo" class="logoimg"></div>
         </div>
     
         <div class="row bas align-items-center">
