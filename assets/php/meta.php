@@ -33,7 +33,7 @@ echo<<<EOT
     
         <div class="row bas align-items-center">
             <div class="col acceuil">
-                <h2 class="h2nav">Acceuil</h2>
+                <h2 class="h2nav">Accueil</h2>
             </div>
             <div class="col"></div>
             <div class="col">
@@ -55,18 +55,14 @@ EOT;
 
 function template_footer(){
 echo<<<EOT
-    
     <div class="footer">
     <h2 class="copy h2foot">Copyright</h2>
     <h2 class="CGU h2foot">Mention legal et CGU</h2>
     <h2 class="contact h2foot">Contact</h2>
     </div>
-    
+
     </html>
 
 EOT;
 }
-
-
-
 ?>
