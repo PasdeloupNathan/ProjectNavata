@@ -10,7 +10,7 @@
             <img src="../img/LOGO.png" alt="logo" style="height: 75%;padding-left: 35%;"> 
         </div>
         <form class="form-horizontal col-md-4">
-            <fieldset class="animate__animated animate__fadeInDown">
+            <fieldset class="animate__animated animate__fadeInUp">
                 <!-- Form Name -->
                 <legend style="padding-top: 15%;">Connectez-Vous</legend>
 
