@@ -2,14 +2,14 @@
 
 
 <?php include('meta.php')?>
-<?=template_meta('connection')?>
+<?=template_meta('Reinitialisation')?>
 
 
 <div class="row conect" style="width: 100vw;">
         <div class="col-md-4 row align-items-center" style="height: 20vh;">
-            <img src="../img/LOGO.png" alt="logo" style="height: 75%;padding-left: 35%;">
+            <img src="../img/LOGO.png" alt="logo" style="height: 75%;padding-left: 35%;" class="animate__animated animate__rotateIn">
         </div>
-        <form class="form-horizontal col-md-4">
+        <form class="form-horizontal col-md-4 animate__animated animate__backInUp">
             <fieldset>
 
                 <!-- Form Name -->
