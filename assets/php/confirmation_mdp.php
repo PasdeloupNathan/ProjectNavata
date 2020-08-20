@@ -1,7 +1,7 @@
   <!-- Meta-->
 
 <?php include('meta.php')?>
-<?=template_meta('connection')?>
+<?=template_meta('Confimation Mot de passe')?>
 
 
 
