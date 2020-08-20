@@ -4,6 +4,9 @@
 <?php include('meta.php')?>
 <?=template_meta('connection')?>
 
+<body>
+    
+
 
 <div class="row conect" style="width: 100vw;">
         <div class="col-md-4 row align-items-center" style="height: 20vh;">
