@@ -8,8 +8,11 @@ include 'meta.php';
 <body class="body">
 
 <?=template_header()?>
-<div class="main1">
+<div class="main1 row">
     
+
+
+
 </div>
 <div class="main2">
     

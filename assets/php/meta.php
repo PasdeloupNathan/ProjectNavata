@@ -55,16 +55,17 @@ EOT;
 
 function template_footer(){
 echo<<<EOT
-<div class="foot row align-items-center">
-<div class="col acceuil">
-    <h2 class="copy">Copyright</h2>
-</div>
-<div class="col">
-    <h2 class="CGU">Mention legal et CGU</h2>
-</div>
-<div class="col">
-    <h2 class="contact">Contact</h2>
-</div>
+    <div class="foot row align-items-center">
+        <div class="col acceuil">
+            <h2 class="copy">Copyright</h2>
+        </div>
+        <div class="col">
+            <h2 class="CGU">Mention legal et CGU</h2>
+        </div>
+        <div class="col">
+            <h2 class="contact">Contact</h2>
+        </div>
+    </div>
 
 
 
