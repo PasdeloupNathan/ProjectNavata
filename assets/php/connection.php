@@ -15,9 +15,6 @@
         <form class="form-horizontal col-md-4 animate__animated animate__backInUp">
             <fieldset>
 
-        <form class="form-horizontal col-md-4">
-            <fieldset>
-
                 <!-- Form Name -->
                 <legend style="padding-top: 15%;">Connectez-Vous</legend>
 
