@@ -1,9 +1,9 @@
-CREATE TABLE `roles` (
-	`id_roles` varchar(255) NOT NULL AUTO_INCREMENT,
-	`admin` varchar(255) NOT NULL,
-	`candidat` varchar(255) NOT NULL AUTO_INCREMENT,
-	`entreprise` varchar(255) NOT NULL AUTO_INCREMENT,
-	PRIMARY KEY (`id_roles`)
+CREATE TABLE roles(
+	id_roles varchar(255) PRIMARY KEY  NOT NULL AUTO_INCREMENT,
+	admin varchar(255) NOT NULL,
+	candidat varchar(255) NOT NULL AUTO_INCREMENT,
+	entreprise varchar(255) NOT NULL AUTO_INCREMENT
+	
 );
 
 CREATE TABLE `login` (

@@ -1,25 +1,20 @@
-
-
-
 <?php include('meta.php')?>
-<?=template_meta('Connection')?>
+<?=template_meta('connection')?>
 
 <body>
+
+
     
 
 
 <div class="row conect" style="width: 100vw;">
-
+            
         <div class="col-md-4 row align-items-center" style="height: 20vh;">
             <img src="../img/LOGO.png" alt="logo" style="height: 75%;padding-left: 35%;" class="animate__animated animate__rotateIn">
         </div>
         <form class="form-horizontal col-md-4 animate__animated animate__backInUp">
             <fieldset>
 
-
-        <div class="col-md-4 row align-items-center" style="height: 20vh;"> 
-            <img src="../img/LOGO.png" alt="logo" style="height: 75%;padding-left: 35%;"> 
-        </div>
         <form class="form-horizontal col-md-4">
             <fieldset>
 
@@ -27,13 +22,14 @@
                 <legend style="padding-top: 15%;">Connectez-Vous</legend>
 
                 <!-- Text input-->
-                <div class="form-group ">
-                    <div class="col" style="padding-top: 15%;">
-                        <input id="textinput" name="textinput" type="email" placeholder="Email" class="form-control input-md" required="" style="border:solid 1px #707070;">
 
+                <div class="form-group "> 
+                    <div class="col" style="padding-top: 15%;"> 
+                        <input uid="textinput"name="textinput" type="email" placeholder="Email" class="form-control input-md" required="" style="border:solid 1px #707070;">
+                        <i class="fas fa-caret-right"></i>
                     </div>
                 </div>
-
+           
                 <!-- Password input-->
                 <div class="form-group">
                     <div class="col" style="padding-top: 5%;">
@@ -64,6 +60,8 @@
             </fieldset>
         </form>
     </div>
+
+    <i class="fas fa-frog"></i>
 
 
 </body>

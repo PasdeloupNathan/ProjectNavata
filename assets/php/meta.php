@@ -18,6 +18,9 @@ echo<<<EOT
         <link rel="stylesheet" href="../css/index.min.css">
         <link rel="stylesheet" href="../css/connects.min.css">        
         <link rel="stylesheet" href="../css/concours.min.css">
+        <link href="/your-path-to-fontawesome/css/fontawesome.css" rel="stylesheet">
+        <link href="/your-path-to-fontawesome/css/brands.css" rel="stylesheet">
+        <link href="/your-path-to-fontawesome/css/solid.css" rel="stylesheet">
 
     </head>
  
