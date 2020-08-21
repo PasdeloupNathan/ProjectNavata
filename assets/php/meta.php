@@ -13,11 +13,12 @@ echo<<<EOT
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
         <link rel="stylesheet" href="../css/nav.min.css">
         <link rel="stylesheet" href="../css/footer.min.css">
-        <link rel="stylesheet" href="../css/index.min.css">
-        <link rel="stylesheet" href="../css/connects.min.css">        
+        <link rel="stylesheet" href="../css/index.min.css">      
         <link rel="stylesheet" href="../css/concours.min.css">
+        <link rel="stylesheet" href="../css/connects.min.css"> 
 
     </head>
  

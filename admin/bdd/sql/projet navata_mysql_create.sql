@@ -1,3 +1,4 @@
+
 DROP DATABASE IF EXISTS navata_db;
 CREATE DATABASE navata_db;
 USE navata_db;
@@ -7,6 +8,7 @@ CREATE TABLE Roles(
 	admin varchar(255) NOT NULL,              
 	candidat varchar(255) NOT NULL AUTO_INCREMENT,
 	entreprise varchar(255) NOT NULL AUTO_INCREMENT 
+
 );
 
 CREATE TABLE Avion(
