@@ -14,7 +14,7 @@ echo<<<EOT
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
         <link rel="stylesheet" href="../css/nav.min.css">
-        <link rel="stylesheet" href="../css/footerNoBootstrap.min.css">
+        <link rel="stylesheet" href="../css/footer.min.css">
         <link rel="stylesheet" href="../css/index.min.css">
         <link rel="stylesheet" href="../css/connects.min.css">        
         <link rel="stylesheet" href="../css/concours.min.css">
@@ -55,13 +55,19 @@ EOT;
 
 function template_footer(){
 echo<<<EOT
-    <div class="footer">
-    <h2 class="copy h2foot">Copyright</h2>
-    <h2 class="CGU h2foot">Mention legal et CGU</h2>
-    <h2 class="contact h2foot">Contact</h2>
+    <div class="foot row align-items-center">
+        <div class="col acceuil">
+            <h2 class="copy">Copyright</h2>
+        </div>
+        <div class="col">
+            <h2 class="CGU">Mention legal et CGU</h2>
+        </div>
+        <div class="col">
+            <h2 class="contact">Contact</h2>
+        </div>
     </div>
 
-    </html>
+
 
 EOT;
 }
