@@ -25,15 +25,17 @@
 
                 <div class="form-group "> 
                     <div class="col" style="padding-top: 15%;"> 
-                        <input uid="textinput"name="textinput" type="email" placeholder="Email" class="form-control input-md" required="" style="border:solid 1px #707070;">
-                        <i class="fas fa-caret-right"></i>
+                
+                        <input id="textinput"name="textinput" type="email" placeholder="Email" class="form-control input-md"  required="" style="border:solid 1px #707070;border-radius: 0;">
+                        <i class="fas fa-caret-right" style="position: absolute; transform: rotate(315deg);margin-left: 45%; margin-top: -10.23%; color: #de2b76 ;font-size: 1.5rem;"></i>
                     </div>
                 </div>
            
                 <!-- Password input-->
                 <div class="form-group">
                     <div class="col" style="padding-top: 5%;">
-                        <input id="" name="" type="password" placeholder="Mot de passe" class="form-control input-md" required="" style="border:solid 1px #707070;">
+                        <input id="" name="" type="password" placeholder="Mot de passe" class="form-control input-md" required="" style="border:solid 1px #707070;border-radius: 0;">
+                        <i class="fas fa-caret-right" style="position: absolute; transform: rotate(315deg);margin-left: 45%; margin-top: -10.23%; color: #de2b76 ;font-size: 1.5rem;"></i>
 
                     </div>
                 </div>
@@ -49,7 +51,8 @@
                 <!-- Button -->
                 <div class="form-group">
                     <div class="col" style="padding-top: 7.5%;">
-                        <button id="" name="" class="btn btn-primary" style="width: 100%;background-color: #ffffff;color: #707070;border:solid 1px #707070;">Connectez-Vous</button>
+                        <button id="" name="" class="btn btn-primary" style="width: 100%;background-color: #ffffff;color: #707070;border:solid 1px #707070;border-radius: 0;">Connectez-Vous</button>
+                        <i class="fas fa-caret-right" style="position: absolute; transform: rotate(315deg);margin-left: 45%; margin-top: -10.23%; color: #de2b76 ;font-size: 1.5rem;"></i>
                     </div>
                 </div>
 
@@ -61,7 +64,7 @@
         </form>
     </div>
 
-    <i class="fas fa-frog"></i>
+ 
 
 
 </body>
