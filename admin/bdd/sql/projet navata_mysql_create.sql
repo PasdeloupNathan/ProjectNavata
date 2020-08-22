@@ -1,10 +1,22 @@
-CREATE TABLE `roles` (
-	`id_roles` varchar(255) NOT NULL AUTO_INCREMENT,
-	`admin` varchar(255) NOT NULL,
-	`candidat` varchar(255) NOT NULL AUTO_INCREMENT,
-	`entreprise` varchar(255) NOT NULL AUTO_INCREMENT,
-	PRIMARY KEY (`id_roles`)
+
+DROP DATABASE IF EXISTS navata_db;
+CREATE DATABASE navata_db;
+USE navata_db;
+
+CREATE TABLE Roles(
+	IDroles INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+	admin varchar(255) NOT NULL,              
+	candidat varchar(255) NOT NULL AUTO_INCREMENT,
+	entreprise varchar(255) NOT NULL AUTO_INCREMENT 
+
 );
+
+CREATE TABLE Avion(
+    NumAvion INT(11) PRIMARY KEY,
+    TypeAvion VARCHAR(100),
+    BaseAeroport VARCHAR(3)
+);
+
 
 CREATE TABLE `login` (
 	`id_login` varchar(255) NOT NULL,

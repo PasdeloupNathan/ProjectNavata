@@ -26,7 +26,8 @@
                 <!-- Password input-->
                 <div class="form-group">
                     <div class="col" style="padding-top: 5%;">
-                        <input id="" name="" type="password" placeholder="Entrez votre nouveaux mot de passe" class="form-control input-md" required="" style="border:solid 1px #707070;">
+                        <input id="" name="" type="password" placeholder="Entrez votre nouveaux m
+                        ot de passe" class="form-control input-md" required="" style="border:solid 1px #707070;">
                     </div>
                 </div>
                     <!-- Password confirm-->
