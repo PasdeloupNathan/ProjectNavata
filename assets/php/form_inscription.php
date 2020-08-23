@@ -12,52 +12,52 @@
             <fieldset>
 
                     <!-- Form Name -->
-                    <legend >Formulaire de création d’un concours</legend>
+                    <legend > Formulaire d'inscription</legend>
         <div style="border-radius: 10px; padding-bottom:4%;">
 
                     <!-- Text input-->
                     <div class="form-group">
                         <div class="col" style="padding-top: 4%;">
-                            <input id="textinput" name="textinput" type="text" placeholder="Nom du concours" class="form-control input-md" required="" style="border:solid 1px #707070; margin-left: 5%; width:90%; border-radius: 0;">
+                            <input id="textinput" name="textinput" type="text" placeholder="Nom candidat" class="form-control input-md" required="" style="border:solid 1px #707070; margin-left: 5%; width:90%; border-radius: 0;">
                             <i class="fas fa-caret-right" style="position: absolute; transform: rotate(315deg);margin-left: 40%; margin-top: -11.7%; color: #de2b76 ;font-size: 1.5rem;"></i>
                         </div>
                     </div>
 
                     <div class="form-group">
                         <div class="col" style="padding-top: 1%;">
-                            <input id="" name="" type="name" placeholder="Nom de votre entreprises" class="form-control input-md" required="" style="border:solid 1px #707070; margin-left: 5%; width:90%;border-radius: 0;">
+                            <input id="" name="" type="date" placeholder="Date naissance" class="form-control input-md" required="" style="border:solid 1px #707070; margin-left: 5%; width:90%;border-radius: 0;">
+                            <i class="fas fa-caret-right" style="position: absolute; transform: rotate(315deg);margin-left: 40%; margin-top: -11.7%; color: #de2b76 ;font-size: 1.5rem;"></i>                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col" style="padding-top: 1%;">
+                            <input id="" name="" type="name" placeholder="Addresse" class="form-control input-md" required="" style="border:solid 1px #707070; margin-left: 5%; width:90%;border-radius: 0;">
                             <i class="fas fa-caret-right" style="position: absolute; transform: rotate(315deg);margin-left: 40%; margin-top: -11.7%; color: #de2b76 ;font-size: 1.5rem;"></i>
                         </div>
                     </div>
 
                     <div class="form-group">
                         <div class="col" style="padding-top: 1%;">
-                            <input id="" name="" type="name" placeholder="Déscription" class="form-control input-md" required="" style="border:solid 1px #707070; margin-left: 5%; width:90%;border-radius: 0;">
+                            <input id="" name="" type="number" placeholder="code postal" class="form-control input-md" required="" style="border:solid 1px #707070; margin-left: 5%; width:90%;border-radius: 0;">
                             <i class="fas fa-caret-right" style="position: absolute; transform: rotate(315deg);margin-left: 40%; margin-top: -11.7%; color: #de2b76 ;font-size: 1.5rem;"></i>                        </div>
                     </div>
 
 
                     <div class="form-group">
                         <div class="col" style="padding-top: 1%;">
-                            <input id="" name="" type="name" placeholder="Localisation" class="form-control input-md" required="" style="border:solid 1px #707070; margin-left: 5%; width:90%;border-radius: 0;">
+                            <input id="" name="" type="name" placeholder=" Nationalité" class="form-control input-md" required="" style="border:solid 1px #707070; margin-left: 5%; width:90%;border-radius: 0;">
                             <i class="fas fa-caret-right" style="position: absolute; transform: rotate(315deg);margin-left: 40%; margin-top: -11.7%; color: #de2b76 ;font-size: 1.5rem;"></i>                        </div>
                     </div>
 
                     <div class="form-group">
                         <div class="col" style="padding-top: 1%;">
-                            <input id="" name="" type="date" placeholder="Date" class="form-control input-md" required="" style="border:solid 1px #707070; margin-left: 5%; width:90%;border-radius: 0;">
+                            <input id="" name="" type="number" placeholder="Numero secu/numero id pays" class="form-control input-md" required="" style="border:solid 1px #707070; margin-left: 5%; width:90%;border-radius: 0;">
                             <i class="fas fa-caret-right" style="position: absolute; transform: rotate(315deg);margin-left: 40%; margin-top: -11.7%; color: #de2b76 ;font-size: 1.5rem;"></i>                        </div>
                     </div>
 
                     <div class="form-group">
                         <div class="col" style="padding-top: 1%;">
-                            <input id="" name="" type="number" placeholder="Max de participent" class="form-control input-md" required="" style="border:solid 1px #707070; margin-left: 5%; width:90%;border-radius: 0;">
-                            <i class="fas fa-caret-right" style="position: absolute; transform: rotate(315deg);margin-left: 40%; margin-top: -11.7%; color: #de2b76 ;font-size: 1.5rem;"></i>                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <div class="col" style="padding-top: 1%;">
-                            <input id="" name="" type="number" placeholder="Votre site" class="form-control input-md" required="" style="border:solid 1px #707070; margin-left: 5%; width:90%;border-radius: 0;">
+                            <input id="" name="" type="number" placeholder="Diplôme" class="form-control input-md" required="" style="border:solid 1px #707070; margin-left: 5%; width:90%;border-radius: 0;">
                             <i class="fas fa-caret-right" style="position: absolute; transform: rotate(315deg);margin-left: 40%; margin-top: -11.7%; color: #de2b76 ;font-size: 1.5rem;"></i>                        </div>
                     </div>
 
@@ -74,7 +74,7 @@
                     <!-- Button -->
                     <div class="form-group">
                         <div class="col" style="padding-top: 2.5%;">
-                            <button id="" name="" class="btn btn-primary" style="width: 100%;background-color: #ffffff;color: #707070;border:solid 1px #707070;border-radius: 0;">Validez votre concours</button>
+                            <button id="" name="" class="btn btn-primary" style="width: 100%;background-color: #ffffff;color: #707070;border:solid 1px #707070;border-radius: 0;">Validez votre inscription</button>
                             <i class="fas fa-caret-right" style="position: absolute; transform: rotate(315deg);margin-left: 44.4%; margin-top: -11.77%; color: #de2b76 ;font-size: 1.5rem;"></i>
                         </div>
                     </div>
