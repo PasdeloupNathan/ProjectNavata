@@ -54,7 +54,7 @@
                 </div>
 
                 <div style="padding-top: 5%;">
-                    <a href="insc.php">Pas encore inscrit ? Inscrivez-vous.</a>
+                    <a href="./inscription.php">Pas encore inscrit ? Inscrivez-vous.</a>
                 </div>
                 </div>
             </fieldset>

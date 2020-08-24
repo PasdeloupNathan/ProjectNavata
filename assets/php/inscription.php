@@ -85,7 +85,7 @@
                     </div>
 
                     <div style="padding-top: 1%;">
-                        <a href="insc.php">Vous avez déjà un compte? Connectez-vous</a>
+                        <a href="./connection.php">Vous avez déjà un compte? Connectez-vous</a>
                     </div>
                     </div>
             </fieldset>
