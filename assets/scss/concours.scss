@@ -29,16 +29,16 @@
 }
 
 .acceuil {
-    width: 1%;
+    #logoImg2 {
+        width: 65%;
+        padding-right: 2%;
+    }
 }
 
 .logo2 {
     width: 70vw;
     height: 80%;
     text-align: center;
-    .logoImg2 {
-        width: 5%;
-    }
 }
 
 .main3 {
@@ -49,4 +49,33 @@
 .main4 {
     height: 100vh;
     width: 100%;
+}
+
+.List {
+    padding-left: 10%;
+    .list1 {
+        margin-top: 5%;
+        padding-bottom: 10%;
+    }
+    .list2 {
+        padding-top: 10%;
+    }
+}
+
+.ListConcours {
+    padding-left: 5%;
+}
+
+.search {
+    padding-left: 15%;
+    left: 12Vw;
+    top: 1vh;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 0 10px 20px;
+    border-color: #7cbee8;
 }

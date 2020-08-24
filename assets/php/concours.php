@@ -17,7 +17,7 @@ include 'meta.php';
 
 
 <div class="main3">
-    <div class="mainconcour">
+    <div class="mainConcour">
         <div class="firstBox" class="container">
             <div  class=" subBox ">
                 <div class=" title">
@@ -25,13 +25,65 @@ include 'meta.php';
                 </div>
                 <div class="row bas align-items-center">
                     <div class="col-6 acceuil">
-                        <div class=" logo2">
-                            <img class="logoImg2" src="../img/LOGO.png" alt="logo">
-                        </div>
+                        <img id="logoImg2" src="../img/test1.jpg" alt="logo">
                     </div>
                     <div class="col-6">
-                        <h2 class="h2nav">Concours</h2>
+                        <div class="List">
+                        <h2 class=" col- h2nav">Concours</h2>
+                        <h2 class=" col- h2nav">Concours</h2>
+                        <h2 class=" col- h2nav">Concours</h2>
+                        </div>
                     </div>
+                </div>
+            </div>
+        </div>
+        <div class="firstBox" class="container">
+            <div  class=" subBox ">
+            <div class="row List">
+                <div class="col-6 title">
+                    <H2>Liste des concours disponible</H2>
+                </div>
+                <div class="col-4 search">
+                <select id="selectbasic" name="selectbasic" class="form-control">
+                    <option value="1">Option one</option>
+                    <option value="2">Option two</option>
+                </select>
+                </div>
+            </div>
+            <div class="row ListConcours">
+            <div class="col"><p>Sport</p></div>
+            <div class="col"><p>Education</p></div>
+            <div class="col"><p>Academique</p></div>
+            <div class="col"><p>Fonctionnaire</p></div>
+            <div class="col"><p>E-sport</p></div>
+            </div>
+                
+                <div class="row bas align-items-center">
+                <div class="col-6">
+                        <div class="List">
+                        <h2 class=" col- h2nav list1">Concours1</h2>
+                        <h2 class=" col- h2nav">Concours2</h2>
+                        <h2 class=" col- h2nav list2">Concour3</h2>
+                        <h2 class=" col- h2nav list2">Concours4</h2>
+                        </div>
+                    </div>
+                    
+                    <div class="col-6 acceuil">
+                        <div>
+                        <img id="logoImg2" src="../img/test1.jpg" alt="logo">
+                        </div>
+                        <div>
+                            <p class="h2nav">desc concours</p>
+                        </div>
+                        <div>
+                            <div class="triangle">
+
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    
                 </div>
             </div>
         </div>
