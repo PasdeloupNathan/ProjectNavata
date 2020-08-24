@@ -5,7 +5,12 @@ include 'meta.php';
 <?=template_meta('Concours')?>
     
 
+=======
+
 <body class="body">
+    
+
+
     
 
 <?=template_header()?>
@@ -36,6 +41,6 @@ include 'meta.php';
     
 </div>
 
+
 <?=template_footer()?>
 
-</body>

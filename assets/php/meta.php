@@ -48,11 +48,13 @@ echo<<<EOT
         </div>
     </div>
     <div class="bleu align-items-center">
-        <p class="pnav animate__animated animate__backInLeft"> Identifiez-vous (ou inscrivez-vous gratuitement) afin de profiter pleinement des fonctionnalités.</p>
+        <p class="pnav animate__animated animate__backInLeft"> Identifiez-vous ( <a href="./inscription.php" class="animate__animated animate__shakeX">ou inscrivez-vous</a> ) afin de profiter pleinement des fonctionnalités.</p>
     </div>
     
 EOT;
 }
+
+
 
 function template_footer(){
 echo<<<EOT
