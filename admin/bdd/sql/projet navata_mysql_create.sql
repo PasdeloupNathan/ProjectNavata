@@ -3,22 +3,21 @@ DROP DATABASE IF EXISTS navata_db;
 CREATE DATABASE navata_db;
 USE navata_db;
 
-CREATE TABLE Roles(
-	IDroles INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
-	admin varchar(255) NOT NULL,              
-	candidat varchar(255) NOT NULL AUTO_INCREMENT,
-	entreprise varchar(255) NOT NULL AUTO_INCREMENT 
-
+CREATE TABLE `Roles`(
+	`id_roles` INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+	`admin` varchar(255) NOT NULL,              
+	`candidat` INT(255) NOT NULL AUTO_INCREMENT,
+	`entreprise` INT(255) NOT NULL AUTO_INCREMENT 
 );
 
-CREATE TABLE Avion(
-    NumAvion INT(11) PRIMARY KEY,
-    TypeAvion VARCHAR(100),
-    BaseAeroport VARCHAR(3)
+CREATE TABLE `Avion`(
+    `NumAvion` INT(11) PRIMARY KEY,
+    `TypeAvion` VARCHAR(100),
+    `BaseAeroport` VARCHAR(3)
 );
 
 
-CREATE TABLE `login` (
+CREATE TABLE `clogin` (
 	`id_login` varchar(255) NOT NULL,
 	`mot de passe` varchar(255) NOT NULL,
 	`users` varchar(255) NOT NULL,
@@ -27,16 +26,16 @@ CREATE TABLE `login` (
 
 CREATE TABLE `users` (
 	`id_users` BINARY NOT NULL AUTO_INCREMENT,
-	`noms` varchar(255) NOT NULL AUTO_INCREMENT,
-	`prénoms` varchar(255) NOT NULL AUTO_INCREMENT,
-	`adresses` varchar(255) NOT NULL AUTO_INCREMENT,
-	`numtel` varchar(255) NOT NULL AUTO_INCREMENT,
+	`noms` INT(255) NOT NULL AUTO_INCREMENT,
+	`prénoms` INT(255) NOT NULL AUTO_INCREMENT,
+	`adresses` INT(255) NOT NULL AUTO_INCREMENT,
+	`numtel` INT(255) NOT NULL AUTO_INCREMENT,
 	PRIMARY KEY (`id_users`)
 );
 
 CREATE TABLE `Candidatures` (
 	`id_candidature` INT NOT NULL AUTO_INCREMENT,
-	`diplomes_candidatures` varchar(255) NOT NULL AUTO_INCREMENT,
+	`diplomes_candidatures` INT(255) NOT NULL AUTO_INCREMENT,
 	PRIMARY KEY (`id_candidature`)
 );
 
