@@ -37,20 +37,28 @@ include 'meta.php';
                 </div>
             </div>
         </div>
-        <div class="firstBox" class="container">
+        
+    </div>
+</div>
+<div class="main4">
+<div class="firstBox" class="container">
             <div  class=" subBox ">
             <div class="row List">
                 <div class="col-6 title">
                     <H2>Liste des concours disponible</H2>
                 </div>
                 <div class="col-4 search">
-                <select id="selectbasic" name="selectbasic" class="form-control">
-                    <option value="1">Option one</option>
-                    <option value="2">Option two</option>
+                <select id="selectbasic" value="recherché" name="selectbasic" class="form-control">
+                    <option value="1">Recherché</option>
+                    <option value="2">Sport</option>
+                    <option value="3">Education</option>
+                    <option value="4">Academique</option>
+                    <option value="4">Fonctionnaire</option>
+                    <option value="4">E-sport</option>
                 </select>
                 </div>
             </div>
-            <div class="row ListConcours">
+            <div class="row ListConcours align-items-center">
             <div class="col"><p>Sport</p></div>
             <div class="col"><p>Education</p></div>
             <div class="col"><p>Academique</p></div>
@@ -73,13 +81,13 @@ include 'meta.php';
                         <img id="logoImg2" src="../img/test1.jpg" alt="logo">
                         </div>
                         <div>
-                            <p class="h2nav">desc concours</p>
+                            <p class="col h2nav">Lorem ipsum dolor sit,</p>
                         </div>
-                        <div>
-                            <div class="triangle">
-
+                        
+                            <div class="col fleche">
+                            <p>Page suivante: <i class="arrow right"></i></p>
                             </div>
-                        </div>
+                        
                     </div>
                     
                     
@@ -87,10 +95,6 @@ include 'meta.php';
                 </div>
             </div>
         </div>
-    </div>
-</div>
-<div class="main4">
-    
 </div>
 
 
