@@ -5,8 +5,6 @@ include 'meta.php';
 <?=template_meta('Concours')?>
     
 
-=======
-
 <body class="body">
     
 
