@@ -10,20 +10,13 @@
             <fieldset>
 
                     <!-- Form Name -->
-                    <legend >Inscription Particulier</legend>
-        <div style="border:solid 1px black;border-radius: 10px; padding-bottom:4%;">
+                    <legend > Inscription entreprises</legend>
+        <div style="border:solid 1px black;border-radius: 10px; padding-bottom:4%;">  
 
                     <!-- Text input-->
                     <div class="form-group">
                         <div class="col" style="padding-top: 4%;">
-                            <input id="textinput" name="textinput" type="text" placeholder="Nom" class="form-control input-md" required="" style="border:solid 1px #707070; margin-left: 5%; width:90%; border-radius: 0;">
-                            <i class="fas fa-caret-right" style="position: absolute; transform: rotate(315deg);margin-left: 40.6%; margin-top: -10.23%; color: #de2b76 ;font-size: 1.5rem;"></i>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <div class="col" style="padding-top: 1%;">
-                            <input id="" name="" type="name" placeholder="Prénom" class="form-control input-md" required="" style="border:solid 1px #707070; margin-left: 5%; width:90%;border-radius: 0;">
+                            <input id="textinput" name="textinput" type="text" placeholder="Nom de la société" class="form-control input-md" required="" style="border:solid 1px #707070; margin-left: 5%; width:90%; border-radius: 0;">
                             <i class="fas fa-caret-right" style="position: absolute; transform: rotate(315deg);margin-left: 40.6%; margin-top: -10.23%; color: #de2b76 ;font-size: 1.5rem;"></i>
                         </div>
                     </div>
@@ -39,12 +32,12 @@
                         <div class="col" style="padding-top: 1%;">
                             <input id="" name="" type="name" placeholder="Ville" class="form-control input-md" required="" style="border:solid 1px #707070; margin-left: 5%; width:90%;border-radius: 0;">
                             <i class="fas fa-caret-right" style="position: absolute; transform: rotate(315deg);margin-left: 40.6%; margin-top: -10.23%; color: #de2b76 ;font-size: 1.5rem;"></i>
-                        </div>
+                        </div>   
                     </div>
 
                     <div class="form-group">
                         <div class="col" style="padding-top: 1%;">
-                            <input id="" name="" type="name" placeholder="Adresse" class="form-control input-md" required="" style="border:solid 1px #707070; margin-left: 5%; width:90%;border-radius: 0;">
+                            <input id="" name="" type="name" placeholder="Adresse de la société" class="form-control input-md" required="" style="border:solid 1px #707070; margin-left: 5%; width:90%;border-radius: 0;">
                             <i class="fas fa-caret-right" style="position: absolute; transform: rotate(315deg);margin-left: 40.6%; margin-top: -10.23%; color: #de2b76 ;font-size: 1.5rem;"></i>
                         </div>
                     </div>
@@ -56,6 +49,13 @@
                         </div>
                     </div>
 
+                    <div class="form-group">
+                        <div class="col" style="padding-top: 1%;">
+                            <input id="" name="" type="number" placeholder="Numéro de siret" class="form-control input-md" required="" style="border:solid 1px #707070; margin-left: 5%; width:90%;border-radius: 0;">
+                            <i class="fas fa-caret-right" style="position: absolute; transform: rotate(315deg);margin-left: 40.6%; margin-top: -10.23%; color: #de2b76 ;font-size: 1.5rem;"></i>
+                        </div>
+                    </div>
+
                     <!-- Password input-->
                     <div class="form-group">
                         <div class="col" style="padding-top: 1%;">
@@ -63,6 +63,7 @@
                             <i class="fas fa-caret-right" style="position: absolute; transform: rotate(315deg);margin-left: 40.6%; margin-top: -10.23%; color: #de2b76 ;font-size: 1.5rem;"></i>
                         </div>
                     </div>
+                
 
                     <div class="form-group">
                         <div class="col" style="padding-top: 1%;">
@@ -76,6 +77,8 @@
                         politique de confidentialité.</label>
                     </div>
 
+
+
                     <!-- Button -->
                     <div class="form-group">
                         <div class="col" style="padding-top: 2.5%;">
@@ -85,9 +88,13 @@
                     </div>
 
                     <div style="padding-top: 1%;">
-                        <a href="./connection.php">Vous avez déjà un compte? Connectez-vous</a>
+                        <a href="insc.php">Vous avez déjà un compte? Connectez-vous</a>
                     </div>
+
+                    <div style="padding-top: 1%;">
+                        <a href="insc.php">Vous avez déjà un compte Particulier ? ou Inscrivez-vous</a>
                     </div>
+
             </fieldset>
         </form>
     </div>
