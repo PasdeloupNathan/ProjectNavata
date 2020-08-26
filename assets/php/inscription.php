@@ -1,14 +1,17 @@
 <?php include('meta.php')?>
 <?=template_meta('Inscription')?>
 
+
+
+
 <body style="overflow-x: hidden;">
+       
     <div class="row conect">
         <div class="col-md-4 row align-items-center" style="height: 20vh;">
             <img src="../img/LOGO.png" alt="logo" style="height: 75%;padding-left: 35%;" class="animate__animated animate__rotateIn">
          </div>
         <form class="form-horizontal col-md-4 animate__animated animate__backInUp" >
             <fieldset>
-
                     <!-- Form Name -->
                     <legend >Inscription Particulier</legend>
         <div style="border:solid 1px black;border-radius: 10px; padding-bottom:4%;">
