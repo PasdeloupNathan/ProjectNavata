@@ -55,11 +55,11 @@ CREATE TABLE `Candidatures` (
 
 CREATE TABLE `Concours` (
 	`id_concours` INT NOT NULL AUTO_INCREMENT,
-	`nomsConcours` varchar(255) NOT NULL,
+	`noms_concours` varchar(255) NOT NULL,
 	`nom_entreprise` varchar(255) NOT NULL,
 	`locaConcours` varchar(255) NOT NULL,
 	`categorieConcours` varchar(255) NOT NULL,
-	`date_concours` date(255) NOT NULL,
+	`date_concours` date NOT NULL,
 	`placeConcoursPrise` INT NOT NULL,
 	`placeConcoursMax` INT NOT NULL,
 	`placeConcoursRestante` INT NOT NULL,
