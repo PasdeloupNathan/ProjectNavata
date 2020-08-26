@@ -5,13 +5,9 @@ include 'meta.php';
 <?=template_meta('Concours')?>
     
 
-
-
 <body class="body">
     
 
-
-    
 
 <?=template_header()?>
 
