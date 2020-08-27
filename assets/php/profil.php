@@ -48,7 +48,7 @@ include 'meta.php';
     </div>
 </div>
 
-<div class="main6">
+<div class="main6 row">
     <div class="col doubleCInsc row align-items-center">
         <div class="concourInsC">
             <h2 class="h2cins">Concours auquel vous etes inscrit</h2>
@@ -64,6 +64,28 @@ include 'meta.php';
             <div class="row infoInsc">
                 <div class="col-5 offset-md-1">
                     <img src="../img/exam.jpg" alt="concours" style="width: 100%;" class="imginsc">
+                </div>
+                <div class="col-5 offset-md-1">
+                    <p>Nom <br> Info <br> Desc</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col doubleCInsc row align-items-center">
+        <div class="concourInsC2">
+            <h2 class="h2cins">Concours auquel vous etes inscrit</h2>
+            <i class="fas fa-caret-right rose1"></i>
+            <div class="row infoInsc2">
+                <div class="col-5 offset-md-1">
+                    <img src="../img/exam.jpg" alt="concours" style="width: 100%;" class="imginsc2">
+                </div>
+                <div class="col-5 offset-md-1">
+                    <p>Nom <br> Info <br> Desc</p>
+                </div>
+            </div>
+            <div class="row infoInsc2">
+                <div class="col-5 offset-md-1">
+                    <img src="../img/exam.jpg" alt="concours" style="width: 100%;" class="imginsc2">
                 </div>
                 <div class="col-5 offset-md-1">
                     <p>Nom <br> Info <br> Desc</p>
