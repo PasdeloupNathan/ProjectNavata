@@ -2,7 +2,7 @@
 include 'meta.php';
 ?>
 <html>
-<?=template_meta('Concours')?>
+<?=template_meta('admin')?>
     
 
 
@@ -17,17 +17,16 @@ include 'meta.php';
 </head>
 <body>
 
-<section class="navGauche">
-<ul>
-<div class="vertical-menu">
-  </li><a  class="active">Home</a>
-  <li> <button >Acceuil </button>
-  <li> <button >Concours</button>
-  <li> <button >Utilisateurs</button>
-  <li> <button >LOGS</button>
+<section class="navGauche ">
+<div class=" vertical-menu">
+  <a  class=" col- active">Home</a>
+  <div class="menu1"><button class=" col-" >Acceuil </button></div>
+  <div class="menu1"><button class=" col-" >Concours</button></div>
+  <div class="menu1"><button class=" col-">Utilisateurs</button></div>
+  <div class="menu1"><button class=" col-">LOGS</button></div>
   
 </div>
-</ul>
+
 </section>
 </body>
 </html>

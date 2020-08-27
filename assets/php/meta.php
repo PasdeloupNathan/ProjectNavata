@@ -35,11 +35,11 @@ echo<<<EOT
     
         <div class="row bas align-items-center">
             <div class="col acceuil">
-                <h2 class="h2nav">Accueil</h2>
+                <h2 class="h2nav"><a href="./index.php">Acceuil</a></h2>
             </div>
             <div class="col"></div>
             <div class="col">
-                <h2 class="h2nav">Concours</h2>
+            <h2 class="h2nav"><a href="./concours.php">Concours</a></h2>
             </div>
             <div class="col"></div>
             <div class="col">
