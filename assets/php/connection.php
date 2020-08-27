@@ -62,7 +62,22 @@
     </div>
 
  
-
+    <?php
+        if(isset($_POST['inscrire'])){ 
+             $name=$_POST["name"];
+             $prénoms=$_POST["prénoms"];
+            $email=$_POST["email"];
+            $ville=$_POST["ville"];
+            $codepostal=$_POST["codepostal"];
+            $mdp=$_POST["mdp"];
+        $mdp=$_POST["mdp"];
+        $addresse=$_POST["address"];
+        $img =$_POST["img"]; 
+        echo '<script LANGUAGE="javascript">document.location.href="connection.php"</script>';         
+  createUser($name,$prénoms,$email,$ville,$addresse,$codepostal,$mdp);
+        }
+    ?>
+</body>
 
 </body>
 </html>
