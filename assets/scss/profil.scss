@@ -45,4 +45,62 @@
 .main6 {
     height: 100vh;
     width: 100%;
+    .doubleCInsc {
+        .concourInsC {
+            margin-left: 15%;
+            width: 70%;
+            height: 70%;
+            border: #707070 1.5px solid;
+            background-color: #fff;
+            .rose1 {
+                position: absolute;
+                transform: rotate(315deg);
+                margin-left: 56.7%;
+                margin-top: -26.6%;
+                color: #de2b76;
+                font-size: 15rem;
+            }
+            .h2cins {
+                text-align: center;
+                padding-top: 10%;
+                color: #707070;
+                font-family: 'Times New Roman', Times, serif;
+            }
+            .infoInsc {
+                margin-top: 20%;
+                .imginsc {
+                    border: transparent 1px;
+                    border-radius: 15%;
+                }
+            }
+        }
+        .concourInsC2 {
+            margin-left: 15%;
+            width: 70%;
+            height: 70%;
+            border: #707070 1.5px solid;
+            background-color: #fff;
+            .rose1 {
+                position: absolute;
+                transform: rotate(315deg);
+                margin-left: 56.7%;
+                margin-top: -26.6%;
+                color: #de2b76;
+                font-size: 15rem;
+            }
+            .h2cins2 {
+                text-align: center;
+                padding-top: 10%;
+                color: #707070;
+                font-family: 'Times New Roman', Times, serif;
+            }
+            .infoInsc2 {
+                margin-top: 20%;
+                .imginsc2 {
+                    border: transparent 1px;
+                    border-radius: 15%;
+                }
+            }
+        }
+    }
 }

@@ -2,7 +2,7 @@
 include 'meta.php';
 ?>
 
-<?=template_meta('Concours')?>
+<?=template_meta('Profil')?>
     
 
 <body class="body">
@@ -33,13 +33,13 @@ include 'meta.php';
                 <p>Date de naissance : $data_naissance <i class="fas fa-edit"></i></p>
             </div>
             <div class="col droite">
-                <p>Prenom : $prenom <i class="fas fa-edit"></i></p>
+                <p>Email : $mail <i class="fas fa-edit"></i></p>
                 <br>
-                <p>Adresse : $adresse <i class="fas fa-edit"></i></p>
+                <p>Code Postal : $CodePost <i class="fas fa-edit"></i></p>
                 <br>
-                <p>Nationalité : $nation <i class="fas fa-edit"></i></p>
+                <p>Telephone : $tel <i class="fas fa-edit"></i></p>
                 <br>
-                <p>Date de naissance : $data_naissance <i class="fas fa-edit"></i></p>
+                <p>Numéro d'identité : $numidentité <i class="fas fa-edit"></i></p>
             </div>
         </div>
         <div class="row infoprof2">
@@ -49,7 +49,28 @@ include 'meta.php';
 </div>
 
 <div class="main6">
-
+    <div class="col doubleCInsc row align-items-center">
+        <div class="concourInsC">
+            <h2 class="h2cins">Concours auquel vous etes inscrit</h2>
+            <i class="fas fa-caret-right rose1"></i>
+            <div class="row infoInsc">
+                <div class="col-5 offset-md-1">
+                    <img src="../img/exam.jpg" alt="concours" style="width: 100%;" class="imginsc">
+                </div>
+                <div class="col-5 offset-md-1">
+                    <p>Nom <br> Info <br> Desc</p>
+                </div>
+            </div>
+            <div class="row infoInsc">
+                <div class="col-5 offset-md-1">
+                    <img src="../img/exam.jpg" alt="concours" style="width: 100%;" class="imginsc">
+                </div>
+                <div class="col-5 offset-md-1">
+                    <p>Nom <br> Info <br> Desc</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <?=template_footer()?>
