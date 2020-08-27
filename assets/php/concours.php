@@ -6,12 +6,13 @@ include 'meta.php';
     
 
 
+<body class="body">
 
-<body class="body ">
+
+
+
     
 
-
-    
 
 <?=template_header()?>
 

@@ -18,8 +18,13 @@ echo<<<EOT
         <link rel="stylesheet" href="../css/footer.min.css">
         <link rel="stylesheet" href="../css/index.min.css">      
         <link rel="stylesheet" href="../css/concours.min.css">
-        <link rel="stylesheet" href="../css/connects.min.css">
+        <link rel="stylesheet" href="../css/connects.min.css"> 
+        <link rel="stylesheet" href="../css/profil.min.css">
         <link rel="stylesheet" href="../css/admin.min.css">
+
+       
+       
+
 
     </head>
  
