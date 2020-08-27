@@ -16,7 +16,7 @@ function pdo_connect_mysql() {
 function createUser($noms, $prénoms, $email, $ville, $adresse, $codepostal, $mdp) {
 	try {
 		$con = pdo_connect_mysql();
-		//echo $con;
+		
 		$sql = "INSERT INTO users (noms, prénoms, email, ville, adresse, codepostal, mdp) 
 				VALUES ('$noms', '$prénoms', '$email' ,'$ville', '$adresse', '$codepostal', '$mdp')";
 		$con->exec($sql);
