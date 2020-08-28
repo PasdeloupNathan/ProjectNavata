@@ -20,6 +20,10 @@ echo<<<EOT
         <link rel="stylesheet" href="../css/concours.min.css">
         <link rel="stylesheet" href="../css/connects.min.css"> 
         <link rel="stylesheet" href="../css/profil.min.css">
+        <link rel="stylesheet" href="../css/admin.min.css">
+
+       
+       
 
 
     </head>
@@ -36,11 +40,11 @@ echo<<<EOT
     
         <div class="row bas align-items-center">
             <div class="col acceuil">
-                <h2 class="h2nav">Accueil</h2>
+                <h2 class="h2nav"><a href="./index.php">Acceuil</a></h2>
             </div>
             <div class="col"></div>
             <div class="col">
-                <h2 class="h2nav">Concours</h2>
+            <h2 class="h2nav"><a href="./concours.php">Concours</a></h2>
             </div>
             <div class="col"></div>
             <div class="col">
