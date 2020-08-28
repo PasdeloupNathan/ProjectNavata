@@ -67,7 +67,7 @@ include 'meta.php';
             <div class="col-5 offset-md-1">
                 <img src="../img/exam.jpg" alt="concours" style="width: 100%;" class="imginf">
             </div>
-            <div class="col-5 offset-md-1">
+            <div class="col-5 offset-md-1" style="text-align: left;">
                 <p>Nom <br> Info <br> Desc</p>
             </div>
         </div>
