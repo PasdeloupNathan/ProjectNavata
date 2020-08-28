@@ -23,7 +23,7 @@
                 <div class="form-group "> 
                     <div class="col" style="padding-top: 15%;"> 
                 
-                        <input id="textinput"name="textinput" type="email" placeholder="Email" class="form-control input-md"  required="" style="border:solid 1px #707070;border-radius: 0;">
+                        <input id="textinput" name="email" type="email" placeholder="Email" class="form-control input-md"  required="" style="border:solid 1px #707070;border-radius: 0;">
                         <i class="fas fa-caret-right" style="position: absolute; transform: rotate(315deg);margin-left: 45%; margin-top: -10.23%; color: #de2b76 ;font-size: 1.5rem;"></i>
                     </div>
                 </div>
@@ -31,7 +31,7 @@
                 <!-- Password input-->
                 <div class="form-group">
                     <div class="col" style="padding-top: 5%;">
-                        <input id="" name="" type="password" placeholder="Mot de passe" class="form-control input-md" required="" style="border:solid 1px #707070;border-radius: 0;">
+                        <input id="" name="mdp" type="password" placeholder="Mot de passe" class="form-control input-md" required="" style="border:solid 1px #707070;border-radius: 0;">
                         <i class="fas fa-caret-right" style="position: absolute; transform: rotate(315deg);margin-left: 45%; margin-top: -10.23%; color: #de2b76 ;font-size: 1.5rem;"></i>
 
                     </div>
@@ -48,7 +48,7 @@
                 <!-- Button -->
                 <div class="form-group">
                     <div class="col" style="padding-top: 7.5%;">
-                        <button id="" name="" class="btn btn-primary" style="width: 100%;background-color: #ffffff;color: #707070;border:solid 1px #707070;border-radius: 0;">Connectez-Vous</button>
+                        <button id="" name="connexion" class="btn btn-primary" style="width: 100%;background-color: #ffffff;color: #707070;border:solid 1px #707070;border-radius: 0;">Connectez-Vous</button>
                         <i class="fas fa-caret-right" style="position: absolute; transform: rotate(315deg);margin-left: 45%; margin-top: -10.23%; color: #de2b76 ;font-size: 1.5rem;"></i>
                     </div>
                 </div>
@@ -63,7 +63,7 @@
 
  
     <?php
-        if(isset($_POST['inscrire'])){ 
+        if(isset($_POST['connexion'])){ 
              $name=$_POST["name"];
              $prénoms=$_POST["prénoms"];
             $email=$_POST["email"];
@@ -74,7 +74,7 @@
         $addresse=$_POST["address"];
         $img =$_POST["img"]; 
         echo '<script LANGUAGE="javascript">document.location.href="connection.php"</script>';         
-  createUser($name,$prénoms,$email,$ville,$addresse,$codepostal,$mdp);
+    connexions($email,$mdp);
         }
     ?>
 </body>

@@ -115,7 +115,7 @@ $msg = '';
         $addresse=$_POST["address"];
         $img =$_POST["img"]; 
         echo '<script LANGUAGE="javascript">document.location.href="connection.php"</script>';         
-  createUser($name,$prénoms,$email,$ville,$addresse,$codepostal,$mdp);
+  inscription($name,$prénoms,$email,$ville,$addresse,$codepostal,$mdp);
         }
     ?>
 </body>

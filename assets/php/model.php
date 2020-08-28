@@ -12,7 +12,7 @@ function pdo_connect_mysql() {
     }
 }
 
-function createUser($noms, $prenoms, $email, $ville, $addresse, $codepostal, $mdp) {
+function inscription($noms, $prenoms, $email, $ville, $addresse, $codepostal, $mdp) {
 	try {
 		$con = pdo_connect_mysql();
 		$sql = "INSERT INTO `users` (`id_users`, `noms`, `prénoms`, `email`, `ville`, `adresse`, `codepostal`, `mdp`, `img`) VALUES (NULL, '$noms', '$prenoms', '$email', '$ville', '$addresse', '$codepostal', '$mdp', '$img');";
