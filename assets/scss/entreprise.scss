@@ -1,0 +1,88 @@
+.main7 {
+    height: 100vh;
+    width: 100%;
+    .profilentreprise {
+        text-align: center;
+        margin-left: 6%;
+        width: 90%;
+        height: 85%;
+        border: transparent 1.5px solid;
+        background-color: #fff;
+        padding-top: 3%;
+        .imgprofentreprise {
+            height: 50%;
+        }
+        .h2profentreprise {
+            text-align: center;
+            color: #707070;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .linkprofentreprise {
+            text-align: center;
+            color: #707070;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .rose4 {
+            position: absolute;
+            transform: rotate(315deg);
+            margin-left: 76.3%;
+            margin-top: -8.9%;
+            color: #de2b76;
+            font-size: 15rem;
+        }
+        .infoprofentreprise {
+            padding-top: 2%;
+            .gaucheentreprise {
+                padding-top: 3%;
+                text-align: left;
+            }
+            .droiteentreprise {
+                padding-top: 8%;
+                text-align: left;
+            }
+        }
+        .infoprof2entreprise {
+            padding-top: 2%;
+            text-align: left;
+        }
+    }
+}
+
+.main8 {
+    height: 100vh;
+    width: 100%;
+    .entrepriseconcour {
+        text-align: center;
+        margin-left: 6%;
+        width: 90%;
+        height: 85%;
+        border: transparent 1.5px solid;
+        background-color: #fff;
+        padding-top: 3%;
+        .titreconcourentreprise {
+            text-align: center;
+            color: #707070;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .rose5 {
+            position: absolute;
+            transform: rotate(315deg);
+            margin-left: 35.5%;
+            margin-top: -11.9%;
+            color: #de2b76;
+            font-size: 15rem;
+        }
+        .concourinfoentreprise {
+            padding-top: 3%;
+            .imgconcourentreprise {
+                border: transparent 1px;
+                border-radius: 15%;
+            }
+        }
+    }
+}
+
+.main9 {
+    height: 100vh;
+    width: 100%;
+}

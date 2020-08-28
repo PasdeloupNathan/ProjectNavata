@@ -13,7 +13,7 @@
                 margin-left: 15%;
                 width: 70%;
                 height: 70%;
-                border: #707070 1.5px solid;
+                border: transparent 1.5px solid;
                 background-color: #fff;
                 .rose1 {
                     position: absolute;
@@ -41,7 +41,7 @@
                 margin-left: 15%;
                 width: 70%;
                 height: 70%;
-                border: #707070 1.5px solid;
+                border: transparent 1.5px solid;
                 background-color: #fff;
                 .rose1 {
                     position: absolute;
@@ -75,7 +75,7 @@
             margin-left: 6%;
             width: 90%;
             height: 85%;
-            border: #707070 1.5px solid;
+            border: transparent 1.5px solid;
             background-color: #fff;
             .rose2 {
                 position: absolute;
@@ -124,6 +124,15 @@
 .body2 {
     width: 88vw;
     height: 147.5vh;
+    margin-right: 6vw;
+    margin-left: 6vw;
+    overflow-x: hidden;
+    background-color: #f1f2f5;
+}
+
+.body3 {
+    width: 88vw;
+    height: 347.5vh;
     margin-right: 6vw;
     margin-left: 6vw;
     overflow-x: hidden;
