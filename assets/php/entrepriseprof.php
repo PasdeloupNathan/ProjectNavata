@@ -78,8 +78,92 @@ include 'meta.php';
     </div>
 </div>
 
-<div class="main9">
+<div class="main9 row align-items-center">
+    <div class="inscvalid">
+        <h2 class="titrevalid">Demande d'inscription</h2>
+        <i class="fas fa-caret-right rose6"></i>
 
+        <!-- Row 1  -->
+
+        <div class="row userinscrvalid">
+            <div class="col-4 row align-items-center col1">
+                <p class="col User1">$User <br> $desc</p>
+                <button class="col-1 valid1"></button>
+                <button class="col-1 delete1"></button>
+            </div>
+            <div class="col-4 row align-items-center col2">
+                <p class="col User2">$User <br> $desc</p>
+                <button class="col-1 valid2"></button>
+                <button class="col-1 delete2"></button>
+            </div>
+            <div class="col-4 row align-items-center col3">
+                <p class="col User3">$User <br> $desc</p>
+                <button class="col-1 valid3"></button>
+                <button class="col-1 delete3"></button>
+            </div>
+        </div>
+
+        <!-- Row 2  -->
+
+        <div class="row userinscrvalid">
+            <div class="col-4 row align-items-center col1">
+                <p class="col User1">$User <br> $desc</p>
+                <button class="col-1 valid1"></button>
+                <button class="col-1 delete1"></button>
+            </div>
+            <div class="col-4 row align-items-center col2">
+                <p class="col User2">$User <br> $desc</p>
+                <button class="col-1 valid2"></button>
+                <button class="col-1 delete2"></button>
+            </div>
+            <div class="col-4 row align-items-center col3">
+                <p class="col User3">$User <br> $desc</p>
+                <button class="col-1 valid3"></button>
+                <button class="col-1 delete3"></button>
+            </div>
+        </div>
+
+        <!-- Row 3  -->
+
+        <div class="row userinscrvalid">
+            <div class="col-4 row align-items-center col1">
+                <p class="col User1">$User <br> $desc</p>
+                <button class="col-1 valid1"></button>
+                <button class="col-1 delete1"></button>
+            </div>
+            <div class="col-4 row align-items-center col2">
+                <p class="col User2">$User <br> $desc</p>
+                <button class="col-1 valid2"></button>
+                <button class="col-1 delete2"></button>
+            </div>
+            <div class="col-4 row align-items-center col3">
+                <p class="col User3">$User <br> $desc</p>
+                <button class="col-1 valid3"></button>
+                <button class="col-1 delete3"></button>
+            </div>
+        </div>
+
+        <!-- Row 4  -->
+
+        <div class="row userinscrvalid">
+            <div class="col-4 row align-items-center col1">
+                <p class="col User1">$User <br> $desc</p>
+                <button class="col-1 valid1"></button>
+                <button class="col-1 delete1"></button>
+            </div>
+            <div class="col-4 row align-items-center col2">
+                <p class="col User2">$User <br> $desc</p>
+                <button class="col-1 valid2"></button>
+                <button class="col-1 delete2"></button>
+            </div>
+            <div class="col-4 row align-items-center col3">
+                <p class="col User3">$User <br> $desc</p>
+                <button class="col-1 valid3"></button>
+                <button class="col-1 delete3"></button>
+            </div>
+        </div>
+
+    </div>
 </div>
 
 <?=template_footer()?>
