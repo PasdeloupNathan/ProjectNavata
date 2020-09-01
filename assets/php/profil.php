@@ -1,4 +1,10 @@
 <?php
+require 'model.php';
+$pdo = pdo_connect_mysql();
+$msg = '';
+?>
+
+<?php
 include 'meta.php';
 ?>
 
@@ -10,6 +16,8 @@ include 'meta.php';
 
 <?=template_header()?>
 
+
+<!-- Section Profil  -->
 
 <div class="main5 row align-items-center">
     <div class="profilc">
@@ -47,6 +55,26 @@ include 'meta.php';
         </div>
     </div>
 </div>
+
+<?php
+    if(isset($_POST['inscrire'])){ 
+        $name=$_POST["name"];
+        $prénoms=$_POST["prénoms"];
+    $email=$_POST["email"];
+    $ville=$_POST["ville"];
+    $codepostal=$_POST["codepostal"];
+    $mdp=$_POST["mdp"];
+    $mdp=$_POST["mdp"];
+    $addresse=$_POST["address"];
+    $img =$_POST["img"]; 
+    echo '<script LANGUAGE="javascript">document.location.href="connection.php"</script>';         
+    ($name,$prénoms,$email,$ville,$addresse,$codepostal,$mdp,$img);
+    }
+
+
+?>
+
+<!-- Section Concour du Profil  -->
 
 <div class="main6 row">
     <div class="col doubleCInsc row align-items-center">
