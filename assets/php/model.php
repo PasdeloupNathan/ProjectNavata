@@ -12,6 +12,8 @@ function pdo_connect_mysql() {
     }
 }
 
+			// Inscription //
+
 function inscription($noms, $prenoms, $email, $ville, $addresse, $codepostal, $mdp) {
 	try {
 		$con = pdo_connect_mysql();
@@ -22,6 +24,16 @@ function inscription($noms, $prenoms, $email, $ville, $addresse, $codepostal, $m
 		echo $sql . "<br>" . $e->getMessage();
 	}
 }
+
+			// Connexion //
+
+function connexion($email, $mdp) {
+	$req = $bdd->prepare('SELECT * FROM users WHERE email = ?');
+	$req->execute([$email]);
+	$users = $req->fetch(PDO::FETCH_ALL);
+	var_dump($users);
+}
+
 
 
 ?>
