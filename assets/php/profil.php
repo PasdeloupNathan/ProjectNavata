@@ -14,7 +14,7 @@ include 'meta.php';
 <div class="main5 row align-items-center">
     <div class="profilc">
         <div class="row toprof">
-            <img class="imgprof col-2 offset-md-1" src="" alt="logo entreprise">
+            <img class="imgprof col-2 offset-md-1" src="https://journalmetro.com/wp-content/uploads/2017/04/default_profile_400x400.png?w=860" alt="Image Profil">
             <div class="titrep col-3 offset-md-1">
                 <h2 class="h2prof"> Votre Profil </h2>
             </div>
