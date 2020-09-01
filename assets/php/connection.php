@@ -48,7 +48,7 @@ $msg = '';
                 </div>
 
                 <div style="padding-top: 2.5%;">
-                    <a href="mdpo.php">Mot de passe oublié ?</a>
+                    <a href="reinitialisation.php">Mot de passe oublié ?</a>
                 </div>
 
                 <!-- Button -->
