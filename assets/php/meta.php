@@ -21,6 +21,7 @@ echo<<<EOT
         <link rel="stylesheet" href="../css/connects.min.css"> 
         <link rel="stylesheet" href="../css/profil.min.css">
         <link rel="stylesheet" href="../css/admin.min.css">
+        <link rel="stylesheet" href="../css/adminConcours.min.css">
         <link rel="stylesheet" href="../css/entreprise.min.css">
 
     </head>
