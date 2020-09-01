@@ -7,9 +7,13 @@ $msg = '';
 <?php include('meta.php')?>
 <?=template_meta('connexions')?>
 
-
+<style>
+.connexion{
+    text-align: center;
+    color: red;
+}
+</style>
 <body>
-
 <div class="row conect" style="width: 100vw;">
             
         <div class="col-md-4 row align-items-center" style="height: 20vh;">
@@ -50,7 +54,7 @@ $msg = '';
                 <!-- Button -->
                 <div class="form-group">
                     <div class="col" style="padding-top: 7.5%;">
-                        <button id="connexion" type="submit" name="connexion" class="btn btn-primary" style="width: 100%;background-color: #ffffff;color: #707070;border:solid 1px #707070;border-radius: 0;">Connectez-Vous</button>
+                    <button id="connexion" type="submit" name="connexion" class="btn btn-primary" style="width: 100%;background-color: #ffffff;color: #707070;border:solid 1px #707070;border-radius: 0;">Connectez-Vous</button>
                         <i class="fas fa-caret-right" style="position: absolute; transform: rotate(315deg);margin-left: 45%; margin-top: -10.23%; color: #de2b76 ;font-size: 1.5rem;"></i>
                     </div>
                 </div>
@@ -81,19 +85,16 @@ $msg = '';
             
             foreach($user as $users){
                 if($users['mdp']==$mdp){
-                    echo "similaire";
                     echo '<script LANGUAGE="javascript">document.location.href="index.php"</script>';
                 }else{
-                    echo 'pas parreil';
+                    echo '<p class="connexion animate__animated animate__backInUp">Votre information sont incorect<p>';
                 }
             }
-        
-        }else{
-                    echo "email ou mdp incorrect bouffon";
+
 
         }
     
-        }
+    }
     ?>
 
 </body>
