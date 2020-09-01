@@ -21,10 +21,7 @@ echo<<<EOT
         <link rel="stylesheet" href="../css/connects.min.css"> 
         <link rel="stylesheet" href="../css/profil.min.css">
         <link rel="stylesheet" href="../css/admin.min.css">
-
-       
-       
-
+        <link rel="stylesheet" href="../css/entreprise.min.css">
 
     </head>
  
@@ -39,7 +36,7 @@ echo<<<EOT
         </div>
     
         <div class="row bas align-items-center">
-            <div class="col acceuil">
+            <div class="col accueil">
                 <h2 class="h2nav"><a href="./index.php">Acceuil</a></h2>
             </div>
             <div class="col"></div>

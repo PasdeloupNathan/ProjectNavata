@@ -1,27 +1,61 @@
-.navGauche {
-    height: 100vh;
+.page {
     border: solid black;
-    border-width: 0 3 0 0;
-    display: inline-block;
-    padding: 3px;
-    .vertical-menu {
-        width: 200px;
-    }
-    .vertical-menu button {
-        background-color: #eee;
+    border-width: 3px 3px 3px 3px;
+    height: 100vh;
+    .navGauche {
         color: black;
-        display: block;
-        padding: 12px;
-        text-decoration: none;
-    }
-    .vertical-menu button:hover {
-        background-color: black;
-    }
-    .vertical-menu button.active {
-        background-color: white;
+        background-color: #7cbee8;
+        height: 100%;
+        border: solid black;
+        border-width: 0 3 0 0;
+        display: inline-block;
+        padding: 3vh;
+        .vertical-menu {
+            width: 10vw;
+            text-align: center;
+        }
+        .vertical-menu button {
+            background-color: #222222;
+            align-items: center;
+            color: white;
+            display: block;
+            padding: 12%;
+            text-decoration: none;
+        }
+        .vertical-menu button:hover {
+            background-color: grey;
+        }
+        .menu1 {
+            background-color: #7cbee8;
+            color: #fff;
+            font: 1em "Trebuchet MS", Arial, sans-serif;
+            line-height: 1em;
+            padding-top: 5%;
+            padding-left: 10%;
+        }
     }
 }
 
-.menu1 {
-    padding-top: 5%
+.ListStats {
+    width: 50%;
+    height: 50%;
+    .stats {
+        border: solid black;
+        border-width: 3 3 3 3;
+        margin-top: 5%;
+        margin-left: 6%;
+        height: 10%;
+    }
+    .graph {
+        margin: auto;
+        width: 70%!important;
+        height: 100%
+    }
+    #cercle {
+        border: solid black;
+        width: 40%;
+        height: 50%;
+        border-radius: 50%;
+        margin-top: 2%;
+    }
 }
