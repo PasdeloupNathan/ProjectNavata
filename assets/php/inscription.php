@@ -114,8 +114,12 @@ $msg = '';
         $mdp=$_POST["mdp"];
         $addresse=$_POST["address"];
         $img =$_POST["img"]; 
-        echo '<script LANGUAGE="javascript">document.location.href="connection.php"</script>';         
-  inscription($name,$prénoms,$email,$ville,$addresse,$codepostal,$mdp);
+        $tel =$_POST["tel"];
+        $nation=$_POST["nation"];
+        $naissance=$_POST["naissance"];
+        $idcard=$_POST["idcard"];
+        // echo '<script LANGUAGE="javascript">document.location.href="connection.php"</script>';         
+  die(inscription($name,$prénoms,$email,$ville,$addresse,$codepostal,$mdp));
         }
     ?>
 </body>
