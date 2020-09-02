@@ -18,7 +18,7 @@ include 'meta.php';
 
 <?=template_admin()?>
 
-<div class="col-">
+<div class="col">
   <div class="ListStats" style="width:50%">
     <div class="col-  stats ">
     nombre de visiteurs mensuelle :

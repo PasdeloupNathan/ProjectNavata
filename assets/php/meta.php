@@ -61,13 +61,13 @@ EOT;
 function template_admin(){
 echo<<<EOT
     
-        <div class="col- navGauche ">
+        <div class="col-2 navGauche ">
             <div class="  vertical-menu">
-                <a  class=" col- active">MENU</a>
-        <div class="menu1"><button class="but col-" >Acceuil </button></div>
-        <div class="menu1"><button class=" col-" >Concours</button></div>
-        <div class="menu1"><button class=" col-">Utilisateurs</button></div>
-        <div class="menu1"><button class=" col-">LOGS</button></div>
+                <a  class=" col active">MENU</a>
+        <div class="menu1"><button class="but col" >Acceuil </button></div>
+        <div class="menu1"><button class=" col" >Concours</button></div>
+        <div class="menu1"><button class=" col">Utilisateurs</button></div>
+        <div class="menu1"><button class=" col">LOGS</button></div>
         
         </div>
     </div>
