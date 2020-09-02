@@ -8,20 +8,24 @@
     .menu {
         border: solid black;
         border-width: 0px 1px 1px 1px;
-        background-color: grey;
+        background-color: #f1f2f5;
         height: 100%;
         width: 100%;
         padding-top: 6%;
     }
     .listeData {
-        border: solid #f1f2f5;
-        border-width: 0px 0px 0.5px 0px;
+        margin-top: 1%;
+        margin-right: 1%;
+        margin-left: 1%;
+        border: solid grey;
+        border-width: 1px 0px 0.5px 0px;
+        background-color: #ADA9A8;
         .update {
-            background-color: green;
+            background-color: #8aba13;
             color: white;
         }
         .delete {
-            background-color: red;
+            background-color: #DB431A;
             color: white;
         }
     }
