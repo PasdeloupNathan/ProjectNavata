@@ -118,9 +118,10 @@ $msg = '';
         $nation=$_POST["nation"];
         $naissance=$_POST["naissance"];
         $idcard=$_POST["idcard"];
-        // echo '<script LANGUAGE="javascript">document.location.href="connection.php"</script>';         
-  die(inscription($name,$prénoms,$email,$ville,$addresse,$codepostal,$mdp));
+        echo '<script LANGUAGE="javascript">document.location.href="connection.php"</script>';         
+  inscription($name,$prénoms,$email,$ville,$addresse,$codepostal,$mdp);
         }
     ?>
 </body>
 </html>
+
