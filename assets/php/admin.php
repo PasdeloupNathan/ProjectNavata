@@ -1,7 +1,7 @@
 <?php
 include 'meta.php';
 ?>
-<?=template_meta('admin')?>
+<?=template_meta('adminConcours')?>
     
 
 
