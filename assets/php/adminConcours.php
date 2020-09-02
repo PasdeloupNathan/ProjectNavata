@@ -22,7 +22,6 @@ include 'meta.php';
     <div style="width: 100%; " class=" menu">
         <div  class="listeData row align-items-center">
             <div class="offset-md-5 col-2" ><p >test</p></div>
-            
             <div  class="col-2"><button class="update" type="button" name="modifier">modifier</button> </div>
             <div class="col-2 "><button class="delete" type="button" name="delete"> delete</button></div>
         </div>
@@ -51,3 +50,6 @@ include 'meta.php';
 
 
 <?=template_footer()?>
+
+<body>
+    

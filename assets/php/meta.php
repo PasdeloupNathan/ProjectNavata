@@ -22,6 +22,8 @@ echo<<<EOT
         <link rel="stylesheet" href="../css/profil.min.css">
         <link rel="stylesheet" href="../css/admin.min.css">
         <link rel="stylesheet" href="../css/adminConcours.min.css">
+        <link rel="stylesheet" href="../css/adminTable.min.css">
+        <link rel="stylesheet" href="../css/adminLogs.min.css">
         <link rel="stylesheet" href="../css/entreprise.min.css">
 
     </head>
@@ -64,10 +66,10 @@ echo<<<EOT
         <div class="col-2 navGauche ">
             <div class="  vertical-menu">
                 <a  class=" col active">MENU</a>
-        <div class="menu1"><button class="but col" >Acceuil </button></div>
-        <div class="menu1"><button class=" col" >Concours</button></div>
-        <div class="menu1"><button class=" col">Utilisateurs</button></div>
-        <div class="menu1"><button class=" col">LOGS</button></div>
+        <div class="menu1"><button onclick="location.href='./admin.php'" type="button" class="but col" >Acceuil</button></div>
+        <div class="menu1"><button onclick="location.href='./adminConcours.php'" type="button" class="but col" >Concours</button></div>
+        <div class="menu1"><button onclick="location.href='./adminTable.php'" type="button" class="but col" >Utilisateurs</button></div>
+        <div class="menu1"><button onclick="location.href='./adminLogs.php'" type="button" class="but col" >Logs</button></div>
         
         </div>
     </div>
