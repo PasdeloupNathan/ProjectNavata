@@ -25,6 +25,10 @@ CREATE TABLE `users` (
 	`codepostal` INT NOT NULL ,
 	`mdp` varchar(255) NOT NULL,
 	`img` varchar(255) NOT NULL,
+	`tel` INT NOT NULL,
+	`nation` varchar(255) NOT NULL,
+	`naissance` DATE NOT NULL,
+	`idcard` INT NOT NULL,
 	PRIMARY KEY (`id_users`)
 );
 
