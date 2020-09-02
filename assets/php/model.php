@@ -18,7 +18,6 @@ function inscription($noms, $prenoms, $email, $ville, $addresse, $codepostal, $m
 	try {
 		$con = pdo_connect_mysql();
 		$sql = "INSERT INTO `users` (`id_users`, `noms`, `prénoms`, `email`, `ville`, `adresse`, `codepostal`, `mdp`, `img`, `tel`, `nation`, `naissance`, `idcard`) VALUES (NULL, '$noms', '$prenoms', '$email', '$ville', '$addresse', '$codepostal', '$mdp', '$img', Null,Null, Null, Null);";
-		return $sql;
 		$con->exec($sql);
 	}
 	catch(PDOException $e) {
