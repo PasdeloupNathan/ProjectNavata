@@ -30,6 +30,7 @@ function inscription($noms, $prenoms, $email, $ville, $addresse, $codepostal, $m
 			// Connexion //
 
 function connexion($email, $mdp) {
+	$passwd_hash = hash('sha256', $mdp);
 	$req = $bdd->prepare('SELECT * FROM users WHERE email = ?');
 	$req->execute([$email]);
 	$users = $req->fetch(PDO::FETCH_ALL);

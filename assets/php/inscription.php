@@ -57,7 +57,9 @@ $msg = '';
 
                     <div class="form-group">
                         <div class="col" style="padding-top: 1%;">  
+
                             <input id="codepostal" name="codepostal" minlength="5" type="number" placeholder="Code Postal"  class="form-control input-md" required="" style="border:solid 1px #707070; margin-left: 5%; width:90%;border-radius: 0;">
+
                             <i class="fas fa-caret-right" style="position: absolute; transform: rotate(315deg);margin-left: 40.6%; margin-top: -10.23%; color: #de2b76 ;font-size: 1.5rem;"></i> 
                         </div>
                     </div>
@@ -117,11 +119,11 @@ $msg = '';
         $nation=$_POST["nation"];
         $naissance=$_POST["naissance"];
         $idcard=$_POST["idcard"];
-        echo '<script LANGUAGE="javascript">document.location.href="connection.php"</script>';    
+        echo '<script LANGUAGE="javascript">document.location.href="connection.php"</script>';      
+
   die(inscription($name,$prénoms,$email,$ville,$adresse,$codepostal,$mdp));
         }
     ?>
-
 
 
 </body>
