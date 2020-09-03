@@ -90,7 +90,7 @@ $msg = '';
                 if($users['mdp']==$mdp){
                     echo '<script LANGUAGE="javascript">document.location.href="index.php"</script>';
                 }else{
-                    echo '<p class="connexion animate__animated animate__flash">Votre information sont incorect<p>';
+                    echo '<p class="connexion animate__animated animate__flash">Votre information sont incorrect<p>';
                 }
             }
 
