@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 02, 2020 at 03:52 PM
+-- Generation Time: Sep 02, 2020 at 03:43 PM
 -- Server version: 10.4.13-MariaDB
 -- PHP Version: 7.4.8
 
@@ -108,20 +108,19 @@ CREATE TABLE `roles` (
 --
 
 CREATE TABLE `users` (
-	`id_users` INT NOT NULL AUTO_INCREMENT,
-	`noms` varchar(255) NOT NULL ,
-	`prénoms` varchar(255) NOT NULL ,
-	`email` varchar(255) NOT NULL ,
-	`ville` varchar(255) NOT NULL ,
-	`adresse` varchar(255) NOT NULL ,
-	`codepostal` varchar(255) NOT NULL ,
-	`mdp` varchar(255) NOT NULL,
-	`img` varchar(255) NOT NULL,
-	`tel` varchar(255) NULL,
-	`nation` varchar(255) NULL,
-	`naissance` DATE NULL,
-	`idcard` varchar(255) NULL,
-	PRIMARY KEY (`id_users`)
+  `id_users` int(11) NOT NULL,
+  `noms` varchar(255) NOT NULL,
+  `prénoms` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `ville` varchar(255) NOT NULL,
+  `adresse` varchar(255) NOT NULL,
+  `codepostal` int(11) NOT NULL,
+  `mdp` varchar(255) NOT NULL,
+  `img` varchar(255) NOT NULL,
+  `tel` int(11) NOT NULL,
+  `nation` varchar(255) NOT NULL,
+  `naissance` date NOT NULL,
+  `idcard` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -129,7 +128,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id_users`, `noms`, `prénoms`, `email`, `ville`, `adresse`, `codepostal`, `mdp`, `img`, `tel`, `nation`, `naissance`, `idcard`) VALUES
-(1, 'Pasdeloup', 'Nathan', 'gamee8678@gmail.com', 'Marseille', 'Vélodrome', 5, '1234', '', 0, '', '0000-00-00', 0);
+(1, 'Pasdeloup', 'Nathan', 'gamee8678@gmail.com', 'Marseille', 'Vélodrome', 5, '1234', '', 0, '', '0000-00-00', 0),
+(2, 'zzz', 'aaa', 'gamee8678@gmail.com', 'vvv', 'ggg', 5, '1234', '', 0, '', '0000-00-00', 0);
 
 --
 -- Indexes for dumped tables
@@ -203,7 +203,7 @@ ALTER TABLE `entreprise`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id_users` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_users` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -13,10 +13,10 @@ $msg = '';
         <div class="col-md-4 row align-items-center" style="height: 20vh;">
             <img src="../img/LOGO.png" alt="logo" style="height: 75%;padding-left: 35%;" class="animate__animated animate__rotateIn">
          </div>
-        <form action="" method="POST" class="form-horizontal col-md-4 animate__animated animate__backInUp">
+        <form action="" method="POST" class="form-horizontal col-md-4 animate__animated animate__backInUp" >
             <fieldset>
                     <!-- Form Name -->
-                    <legend>Inscription Particulier</legend>
+                    <legend >Inscription Particulier</legend>
         <div style="border:solid 1px black;border-radius: 10px; padding-bottom:4%;">
 
                     <!-- Text input-->
@@ -57,7 +57,7 @@ $msg = '';
 
                     <div class="form-group">
                         <div class="col" style="padding-top: 1%;">  
-                            <input id="codepostal" name="codepostal" minlength="5" type="number" placeholder="Code Postal"  class="form-control input-md" required="" style="border:solid 1px #707070; margin-left: 5%; width:90%;border-radius: 0;">
+                            <input id="codepostal" name="codepostal" type="number" placeholder="Code Postal"  class="form-control input-md" required="" style="border:solid 1px #707070; margin-left: 5%; width:90%;border-radius: 0;">
                             <i class="fas fa-caret-right" style="position: absolute; transform: rotate(315deg);margin-left: 40.6%; margin-top: -10.23%; color: #de2b76 ;font-size: 1.5rem;"></i> 
                         </div>
                     </div>
@@ -65,14 +65,14 @@ $msg = '';
                     <!-- Password input-->
                     <div class="form-group">
                         <div class="col" style="padding-top: 1%;">
-                            <input id="mdp" name="mdp" type="password" minlength="5" placeholder="Mot de passe" class="form-control input-md" required="" style="border:solid 1px #707070; margin-left: 5%; width:90%; border-radius: 0;">
+                            <input id="mdp" name="mdp" type="password" placeholder="Mot de passe" class="form-control input-md" required="" style="border:solid 1px #707070; margin-left: 5%; width:90%; border-radius: 0;">
                             <i class="fas fa-caret-right" style="position: absolute; transform: rotate(315deg);margin-left: 40.6%; margin-top: -10.23%; color: #de2b76 ;font-size: 1.5rem;"></i>
                         </div>
                     </div>
 
                     <div class="form-group">
                         <div class="col" style="padding-top: 1%;">
-                            <input id="mdp" name="mdp" type="password" minlength="5" placeholder="Confirme Mot passe" class="form-control input-md" required="" style="border:solid 1px #707070; margin-left: 5%; width:90%; border-radius: 0;">
+                            <input id="mdp" name="mdp" type="password" placeholder="Confirme Mot passe" class="form-control input-md" required="" style="border:solid 1px #707070; margin-left: 5%; width:90%; border-radius: 0;">
                             <i class="fas fa-caret-right" style="position: absolute; transform: rotate(315deg);margin-left: 40.6%; margin-top: -10.23%; color: #de2b76 ;font-size: 1.5rem;"></i>
                         </div>
                     </div>
@@ -86,7 +86,7 @@ $msg = '';
                     <div class="form-group">
                         <div class="col" style="padding-top: 2.5%;">
                         <a href="adresseCible.html">
-                        <button id="test" name="inscrire" class="btn btn-primary" style="width: 100%;background-color: #ffffff;color: #707070;border:solid 1px #707070;border-radius: 0;">Inscrivez-vous</button>
+                        <button id="" name="inscrire" class="btn btn-primary" style="width: 100%;background-color: #ffffff;color: #707070;border:solid 1px #707070;border-radius: 0;">Inscrivez-vous</button>
                         </a>
                         <i class="fas fa-caret-right" style="position: absolute; transform: rotate(315deg);margin-left: 45%; margin-top: -10.26%; color: #de2b76 ;font-size: 1.5rem;"></i>
                         </div>
@@ -100,6 +100,7 @@ $msg = '';
             </fieldset>-                 
 
     </div>
+
 
 
     <?php
@@ -117,12 +118,9 @@ $msg = '';
         $nation=$_POST["nation"];
         $naissance=$_POST["naissance"];
         $idcard=$_POST["idcard"];
-        echo '<script LANGUAGE="javascript">document.location.href="connection.php"</script>';    
+        echo '<script LANGUAGE="javascript">document.location.href="connection.php"</script>';      
   die(inscription($name,$prénoms,$email,$ville,$adresse,$codepostal,$mdp));
         }
     ?>
-
-
-
 </body>
 </html>
