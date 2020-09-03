@@ -65,6 +65,7 @@ $msg = '';
                 </div>
             </fieldset>
         </form>
+        
     </div>
 
     <?php
