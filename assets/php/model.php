@@ -17,7 +17,9 @@ function pdo_connect_mysql() {
 function inscription($noms, $prenoms, $email, $ville, $addresse, $codepostal, $mdp) {
 	try {
 		$con = pdo_connect_mysql();
-		$sql = "INSERT INTO `users` (`id_users`, `noms`, `prénoms`, `email`, `ville`, `adresse`, `codepostal`, `mdp`, `img`, `tel`, `nation`, `naissance`, `idcard`) VALUES (NULL, '$noms', '$prenoms', '$email', '$ville', '$addresse', '$codepostal', '$mdp', '$img', Null,Null, Null, Null);";
+    
+		$sql = "INSERT INTO `users` (`id_users`, `noms`, `prénoms`, `email`, `ville`, `adresse`, `codepostal`, `mdp`, `img`, `tel`, `nation`, `naissance`, `idcard`) VALUES (NULL, '$noms', '$prenoms', '$email', '$ville', '$addresse', '$codepostal','$mdp','$img', Null,Null, Null, Null);";
+
 		$con->exec($sql);
 	}
 	catch(PDOException $e) {
