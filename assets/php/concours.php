@@ -25,10 +25,10 @@ include 'meta.php';
                     <H2>Concours avec le plus d'angouement</H2>
                 </div>
                 <div class="row bas align-items-center">
-                    <div class="col-6 acceuil">
+                    <div class="col-sm-6 acceuil">
                         <img id="logoImg2" src="../img/test1.jpg" alt="logo">
                     </div>
-                    <div class="col-6">
+                    <div class="col-sm-6">
                         <div class="List">
                         <h2 class=" col- subList">Concours</h2>
                         <h2 class=" col- subList">Concours2</h2>
@@ -47,7 +47,7 @@ include 'meta.php';
                 <div class="col-6 title">
                     <H2>Liste des concours disponible</H2>
                 </div>
-                <div class="col-4 search">
+                <div class="col-sm-4  search">
                  
                 <select class="fond" value="recherché" name="selectbasic" class="form-control">
                 <!-- <option value="">--Catégorie--</option> -->
