@@ -22,13 +22,13 @@ CREATE TABLE `users` (
 	`email` varchar(255) NOT NULL ,
 	`ville` varchar(255) NOT NULL ,
 	`adresse` varchar(255) NOT NULL ,
-	`codepostal` INT NOT NULL ,
+	`codepostal` varchar(255) NOT NULL ,
 	`mdp` varchar(255) NOT NULL,
 	`img` varchar(255) NOT NULL,
-	`tel` INT NOT NULL,
-	`nation` varchar(255) NOT NULL,
-	`naissance` DATE NOT NULL,
-	`idcard` INT NOT NULL,
+	`tel` varchar(255) NULL,
+	`nation` varchar(255) NULL,
+	`naissance` DATE NULL,
+	`idcard` varchar(255) NULL,
 	PRIMARY KEY (`id_users`)
 );
 
