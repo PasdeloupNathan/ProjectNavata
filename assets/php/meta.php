@@ -48,7 +48,7 @@ echo<<<EOT
             </div>
             <div class="col"></div>
             <div class="col">
-                <h2 class="h2nav">Profil</h2>
+                <h2 class="h2nav"><a href="./profil.php">Profil</a></h2>
             </div>
     
         </div>

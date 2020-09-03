@@ -19,6 +19,15 @@ include 'meta.php';
 
 <!-- Section Profil  -->
 
+<?php
+
+$req = $pdo->prepare('SELECT * FROM users');
+$req->execute();
+$contact=$req->fetchAll(PDO::FETCH_ASSOC);
+
+$user = $pdo->query('SELECT * FROM users');
+?>
+
 <div class="main5 row align-items-center">
     <div class="profilc">
         <div class="row toprof">
@@ -30,15 +39,20 @@ include 'meta.php';
         </div>
         <div class="row infoprof">
             <div class="col offset-md-1 gauche">
-                <p>Nom : $nom <i class="fas fa-edit"></i></p>
+
+
+            <?php foreach ($user as $users): ?>
+
+                <p>Nom : <?= $users["noms"] ?> <i class="fas fa-edit"></i></p>
+                <br> 
+                <p>Prenom : <?= $users["prénoms"] ?> <i class="fas fa-edit"></i></p>
                 <br>
-                <p>Prenom : $prenom <i class="fas fa-edit"></i></p>
-                <br>
-                <p>Adresse : $adresse <i class="fas fa-edit"></i></p>
+                <p>Adresse : <?= $users["adresse"] ?> <i class="fas fa-edit"></i></p>
                 <br>
                 <p>Nationalité : $nation <i class="fas fa-edit"></i></p>
                 <br>
                 <p>Date de naissance : $data_naissance <i class="fas fa-edit"></i></p>
+            <?php endforeach ?>
             </div>
             <div class="col droite">
                 <p>Email : $mail <i class="fas fa-edit"></i></p>
@@ -49,6 +63,7 @@ include 'meta.php';
                 <br>
                 <p>Numéro d'identité : $numidentité <i class="fas fa-edit"></i></p>
             </div>
+            
         </div>
         <div class="row infoprof2">
             <p class="col offset-md-1 ">Modifiez tout votre profil <i class="fas fa-edit"></i></p> <p class="col"> Modifiez votre mot de passe <i class="fas fa-edit"></i></p>
@@ -56,23 +71,7 @@ include 'meta.php';
     </div>
 </div>
 
-<?php
-    if(isset($_POST['inscrire'])){ 
-        $name=$_POST["name"];
-        $prénoms=$_POST["prénoms"];
-    $email=$_POST["email"];
-    $ville=$_POST["ville"];
-    $codepostal=$_POST["codepostal"];
-    $mdp=$_POST["mdp"];
-    $mdp=$_POST["mdp"];
-    $addresse=$_POST["address"];
-    $img =$_POST["img"]; 
-    echo '<script LANGUAGE="javascript">document.location.href="connection.php"</script>';         
-    ($name,$prénoms,$email,$ville,$addresse,$codepostal,$mdp,$img);
-    }
 
-
-?>
 
 <!-- Section Concour du Profil  -->
 
