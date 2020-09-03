@@ -14,67 +14,42 @@ include 'meta.php';
 
 <?=template_header()?>
 
-
-
 <section class="row page">
-  <div class="col- navGauche ">
-<div class="  vertical-menu">
-  <a  class=" col- active">MENU</a>
-  <div class="menu1"><button class="but col-" >Acceuil </button></div>
-  <div class="menu1"><button class=" col-" >Concours</button></div>
-  <div class="menu1"><button class=" col-">Utilisateurs</button></div>
-  <div class="menu1"><button class=" col-">LOGS</button></div>
-  
+
+<?=template_admin()?>
+
+<form class="col-10 formulaire" action="">
+    <div style="width: 100%; " class=" menu">
+        <div  class="listeData row align-items-center">
+            <div class="offset-md-5 col-2" ><p >test</p></div>
+            <div  class="col-2"><button class="update" type="button" name="modifier">modifier</button> </div>
+            <div class="col-2 "><button class="delete" type="button" name="delete"> delete</button></div>
+        </div>
+        <div  class="listeData row align-items-center">
+            <div class="offset-md-5 col-2" ><p > mus, ipsa id.</p></div>
+            
+            <div  class="col-2"><button class="update" type="button" name="modifier">modifier</button> </div>
+            <div class="col-2 "><button class="delete" type="button" name="delete"> delete</button></div>
+        </div>
+        <div  class="listeData row align-items-center">
+            <div class="offset-md-5 col-2" ><p >test</p></div>
+            
+            <div  class="col-2"><button class="update" type="button" name="modifier">modifier</button> </div>
+            <div class="col-2 "><button class="delete" type="button" name="delete"> delete</button></div>
+        </div>
+        <div  class="listeData row align-items-center">
+            <div class="offset-md-5 col-2" ><p >test</p></div>
+            
+            <div  class="col-2"><button class="update" type="button" name="modifier">modifier</button> </div>
+            <div class="col-2 "><button class="delete" type="button" name="delete"> delete</button></div>
+        </div>
+<div style="width: 100%; " ><button class="col-3 validate" type="button">validé</button></div>
+
 </div>
-</div>
-<div class="col">
-  <div class="ListStats" style="width:50%">
-    <div class="col stats ">
-    nombre de visiteurs mensuelle :
-    </div>
-    
-    <div class="col stats ">
-    nombre de personne inscrite :
-    </div>
-    <div class="graph row"style="width:50%">
-
-    
-    <div id="cercle" class="col graph">
-
-    </div>
-    <div id="cercle" class="col graph">
-
-    </div>
-    </div>
-  </div>
-  <div class="ListStats" style="width:50%">
-    <div class="col stats ">
-    nombre de concours :
-    </div>  
-    <div class="col stats ">
-    pourcentage homme/femme :
-    </div>
-    <div class="graph row"style="width:50%">
-
-    
-    <div id="cercle" class="col graph">
-
-    </div>
-    <div id="cercle" class="col graph">
-
-    </div>
-    </div>
-  </div>
-</div>
-</section>
-
-
-
-
+</form>
 
 
 <?=template_footer()?>
 
-</body>
-
-</html>
+<body>
+    
