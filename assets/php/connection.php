@@ -19,7 +19,7 @@ $msg = '';
         <div class="col-md-4 row align-items-center" style="height: 20vh;">
             <img src="../img/LOGO.png" alt="logo" style="height: 75%;padding-left: 35%;" class="animate__animated animate__rotateIn">
         </div>
-        <form action="" method="POST" class="form-horizontal col-md-4 animate__animated animate__backInUp">
+        <form action="" method="POST" class="form-horizontal col-md-4 ">
             <fieldset>
 
                 <!-- Form Name -->
@@ -69,25 +69,28 @@ $msg = '';
 
     <?php
         if(isset ($_POST['connexion'])){ 
-             $name=$_POST["name"];
-             $prénoms=$_POST["prénoms"];
-            $email=$_POST["email"];
-            $ville=$_POST["ville"];
-            $codepostal=$_POST["codepostal"];
-            $mdp=$_POST["mdp"];
-        $mdp=$_POST["mdp"];
-        $addresse=$_POST["address"];
-        $img =$_POST["img"]; 
+            $name=$_POST["name"];
+            $prénoms=$_POST["prénoms"];
+           $email=$_POST["email"];
+           $ville=$_POST["ville"];
+           $codepostal=$_POST["codepostal"];
+           $mdp=$_POST["mdp"];
+       $mdp=$_POST["mdp"];
+       $addresse=$_POST["address"];
+       $img =$_POST["img"]; 
+       $tel =$_POST["tel"];
+       $nation=$_POST["nation"];
+       $naissance=$_POST["naissance"];
+       $idcard=$_POST["idcard"];
         if($email!= '' AND $mdp != ''){
             $test = $pdo->prepare("select * from users where email = ?");
             $test->execute([$email]);
             $user= $test->fetchAll(\PDO::FETCH_ASSOC);
-            
             foreach($user as $users){
                 if($users['mdp']==$mdp){
                     echo '<script LANGUAGE="javascript">document.location.href="index.php"</script>';
                 }else{
-                    echo '<p class="connexion animate__animated animate__backInUp">Votre information sont incorect<p>';
+                    echo '<p class="connexion animate__animated animate__flash">Votre information sont incorrect<p>';
                 }
             }
 

@@ -50,14 +50,14 @@ $msg = '';
 
                     <div class="form-group">
                         <div class="col" style="padding-top: 1%;">
-                            <input id="adresse" name="address" type="name" placeholder="Adresse" class="form-control input-md" required="" style="border:solid 1px #707070; margin-left: 5%; width:90%;border-radius: 0;">
+                            <input id="adresse" name="adresse" type="name" placeholder="Adresse" class="form-control input-md" required="" style="border:solid 1px #707070; margin-left: 5%; width:90%;border-radius: 0;">
                             <i class="fas fa-caret-right" style="position: absolute; transform: rotate(315deg);margin-left: 40.6%; margin-top: -10.23%; color: #de2b76 ;font-size: 1.5rem;"></i>
                         </div>
                     </div> 
 
                     <div class="form-group">
                         <div class="col" style="padding-top: 1%;">  
-                            <input id="codepostal" name="codepostal" type="number" placeholder="Code Postal"  min="0" max="5" class="form-control input-md" required="" style="border:solid 1px #707070; margin-left: 5%; width:90%;border-radius: 0;">
+                            <input id="codepostal" name="codepostal" type="number" placeholder="Code Postal"  class="form-control input-md" required="" style="border:solid 1px #707070; margin-left: 5%; width:90%;border-radius: 0;">
                             <i class="fas fa-caret-right" style="position: absolute; transform: rotate(315deg);margin-left: 40.6%; margin-top: -10.23%; color: #de2b76 ;font-size: 1.5rem;"></i> 
                         </div>
                     </div>
@@ -78,7 +78,7 @@ $msg = '';
                     </div>
 
                     <div style="padding-top: 1%;">
-                        <input type="checkbox" name="memo" id="mdp"> <label for="memo"> J’ai lu et j’accepte les conditions générales d’utilisation et la 
+                        <input type="checkbox" required="" name="memo" id="mdp"> <label for="memo"> J’ai lu et j’accepte les conditions générales d’utilisation et la 
                         politique de confidentialité.</label>
                     </div>
 
@@ -102,7 +102,6 @@ $msg = '';
     </div>
 
 
-
     <?php
         if(isset($_POST['inscrire'])){ 
              $name=$_POST["name"];
@@ -112,16 +111,19 @@ $msg = '';
             $codepostal=$_POST["codepostal"];
             $mdp=$_POST["mdp"];
         $mdp=$_POST["mdp"];
-        $addresse=$_POST["address"];
+        $adresse=$_POST["adresse"];
         $img =$_POST["img"]; 
         $tel =$_POST["tel"];
         $nation=$_POST["nation"];
         $naissance=$_POST["naissance"];
         $idcard=$_POST["idcard"];
-        echo '<script LANGUAGE="javascript">document.location.href="connection.php"</script>';         
-  inscription($name,$prénoms,$email,$ville,$addresse,$codepostal,$mdp);
+        echo '<script LANGUAGE="javascript">document.location.href="connection.php"</script>';      
+  die(inscription($name,$prénoms,$email,$ville,$adresse,$codepostal,$mdp));
         }
+    ?>
+
+    <?php
+        echo password_hash(email, PASSWO)
     ?>
 </body>
 </html>
-
