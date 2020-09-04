@@ -81,7 +81,7 @@ $user = $pdo->query('SELECT * FROM users');
 </div>
 
 
-<a href="connection.php" class="btn">deconnection</a>
+<a href="deconnection.php" class="btn">deconnection</a>
 
 
 
