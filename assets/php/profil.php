@@ -1,16 +1,12 @@
 <?php
+session_start()
+?>
+
+<?php
 require 'model.php';
 $pdo = pdo_connect_mysql();
 $msg = '';
 ?>
-
-
-<?php 
-session_start();
-echo $_SESSION['id'];
-
-?>
-
 
 <?php
 include 'meta.php';
