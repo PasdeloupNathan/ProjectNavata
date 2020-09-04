@@ -89,14 +89,15 @@ $msg = '';
             $user= $test->fetchAll(\PDO::FETCH_ASSOC);
             foreach($user as $users){
                 if($users['mdp']==$mdp){
-                    $_SESSION['id']=$users['id'];
+                    session_start();
                     echo '<script LANGUAGE="javascript">document.location.href="index.php"</script>';
                 }else{
                     echo '<p class="connexion animate__animated animate__flash">Votre information sont incorrect<p>';
                 }
-            }
 
+        }
 
+        
         }
     
     }
