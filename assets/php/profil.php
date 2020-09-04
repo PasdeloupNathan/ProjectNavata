@@ -7,7 +7,6 @@ $msg = '';
 
 <?php 
 session_start();
-echo $_SESSION['id'];
 
 ?>
 
@@ -41,38 +40,38 @@ $user = $pdo->query('SELECT * FROM users');
         <div class="row toprof">
             <img class="imgprof col-2 offset-md-1" src="https://journalmetro.com/wp-content/uploads/2017/04/default_profile_400x400.png?w=860" alt="Image Profil">
             <div class="titrep col-3 offset-md-1">
-                <h2 class="h2prof"> Votre Profil  <?= $_SESSION['id']?></h2>
+                <h2 class="h2prof"> Votre Profil </h2>
             </div>
             <i class="fas fa-caret-right rose3"></i>
         </div>
+
+        <?php foreach ($user as $users): ?>
+
         <div class="row infoprof">
             <div class="col offset-md-1 gauche">
-
-
-            <?php foreach ($user as $users): ?>
-
                 <p>Nom : <?= $users["noms"] ?> <i class="fas fa-edit"></i></p>
                 <br> 
                 <p>Prenom : <?= $users["prénoms"] ?> <i class="fas fa-edit"></i></p>
                 <br>
                 <p>Adresse : <?= $users["adresse"] ?> <i class="fas fa-edit"></i></p>
                 <br>
-                <p>Nationalité : $nation <i class="fas fa-edit"></i></p>
+                <p>Nationalité : <?= $users["nation"] ?> <i class="fas fa-edit"></i></p>
                 <br>
-                <p>Date de naissance : $data_naissance <i class="fas fa-edit"></i></p>
-            <?php endforeach ?>
+                <p>Date de naissance : <?= $users["naissance"] ?> <i class="fas fa-edit"></i></p>
+           
             </div>
             <div class="col droite">
-                <p>Email : $mail <i class="fas fa-edit"></i></p>
+                <p>Email : <?= $users["email"] ?> <i class="fas fa-edit"></i></p>
                 <br>
-                <p>Code Postal : $CodePost <i class="fas fa-edit"></i></p>
+                <p>Code Postal : <?= $users["codepostal"] ?> <i class="fas fa-edit"></i></p>
                 <br>
-                <p>Telephone : $tel <i class="fas fa-edit"></i></p>
+                <p>Telephone : <?= $users["tel"] ?> <i class="fas fa-edit"></i></p>
                 <br>
-                <p>Numéro d'identité : $numidentité <i class="fas fa-edit"></i></p>
+                <p>Numéro d'identité : <?= $users["idcard"] ?> <i class="fas fa-edit"></i></p>
             </div>
-            
         </div>
+
+        <?php endforeach ?>
 
         <div class="row infoprof2">
             <p class="col offset-md-1 ">Modifiez tout votre profil <i class="fas fa-edit"></i></p> <p class="col"> Modifiez votre mot de passe <i class="fas fa-edit"></i></p>
@@ -81,7 +80,7 @@ $user = $pdo->query('SELECT * FROM users');
 </div>
 
 
-<a href="connection.php" class="btn">deconnection</a>
+<a href="deconnection.php" class="btn">deconnection</a>
 
 
 

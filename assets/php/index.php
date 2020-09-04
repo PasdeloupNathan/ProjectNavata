@@ -1,6 +1,10 @@
 <?php
 include 'meta.php';
 ?>
+<?php 
+session_start();
+
+?>
 
 
 <?=template_meta('Acceuil')?>
