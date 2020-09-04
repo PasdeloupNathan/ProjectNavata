@@ -1,7 +1,7 @@
 <?php
 include 'meta.php';
 ?>
-<?=template_meta('admin')?>
+<?=template_meta('adminConcours')?>
     
 
 
@@ -14,22 +14,13 @@ include 'meta.php';
 
 <?=template_header()?>
 
+<div class="row  page">
 
+<?=template_admin()?>
 
-<section class="row page">
-  <div class="col- navGauche ">
-<div class="  vertical-menu">
-  <a  class=" col- active">MENU</a>
-  <div class="menu1"><button class="but col-" >Acceuil </button></div>
-  <div class="menu1"><button class=" col-" >Concours</button></div>
-  <div class="menu1"><button class=" col-">Utilisateurs</button></div>
-  <div class="menu1"><button class=" col-">LOGS</button></div>
-  
-</div>
-</div>
 <div class="col">
   <div class="ListStats" style="width:50%">
-    <div class="col stats ">
+    <div class="col-  stats ">
     nombre de visiteurs mensuelle :
     </div>
     
@@ -66,7 +57,7 @@ include 'meta.php';
     </div>
   </div>
 </div>
-</section>
+</div>
 
 
 
