@@ -1,5 +1,7 @@
 <?php
 include 'meta.php';
+// $total= nombre_vues()
+
 ?>
 <?=template_meta('adminConcours')?>
     
@@ -17,11 +19,16 @@ include 'meta.php';
 <div class="row  page">
 
 <?=template_admin()?>
-
+<!-- //frontEnd -->
 <div class="col">
   <div class="ListStats" style="width:50%">
     <div class="col-  stats ">
-    nombre de visiteurs mensuelle :
+    <?php 
+    require_once dirname(__DIR__) . DIRECTORY_SEPARATOR . 'function' . DIRECTORY_SEPARATOR . 'compteur.php';
+    ajouter_vue();
+    $vues = nombre_vues()
+    ?>
+    nombre de visiteurs  : <?= $vues ?> visites
     </div>
     
     <div class="col stats ">
@@ -60,6 +67,7 @@ include 'meta.php';
 </div>
 
 
+<!-- //backEnd -->
 
 
 
