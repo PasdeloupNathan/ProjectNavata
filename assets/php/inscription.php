@@ -1,4 +1,7 @@
 <?php
+session_start()
+?>
+<?php
 require 'model.php';
 $pdo = pdo_connect_mysql();
 $msg = '';
@@ -6,6 +9,13 @@ $msg = '';
 
 <?php include('meta.php')?>
 <?=template_meta('Inscription')?>
+
+<style>
+.connexion{
+    text-align: center;
+    color: red;
+}
+</style>
 
 <body style="overflow-x: hidden;">
 
@@ -57,9 +67,7 @@ $msg = '';
 
                     <div class="form-group">
                         <div class="col" style="padding-top: 1%;">  
-
                             <input id="codepostal" name="codepostal" minlength="5" type="number" placeholder="Code Postal"  class="form-control input-md" required="" style="border:solid 1px #707070; margin-left: 5%; width:90%;border-radius: 0;">
-
                             <i class="fas fa-caret-right" style="position: absolute; transform: rotate(315deg);margin-left: 40.6%; margin-top: -10.23%; color: #de2b76 ;font-size: 1.5rem;"></i> 
                         </div>
                     </div>
@@ -74,7 +82,7 @@ $msg = '';
 
                     <div class="form-group">
                         <div class="col" style="padding-top: 1%;">
-                            <input id="mdp" name="mdp" type="password" minlength="5" placeholder="Confirme Mot passe" class="form-control input-md" required="" style="border:solid 1px #707070; margin-left: 5%; width:90%; border-radius: 0;">
+                            <input id="mdp" name="mdpconf" type="password" minlength="5" placeholder="Confirme Mot passe" class="form-control input-md" required="" style="border:solid 1px #707070; margin-left: 5%; width:90%; border-radius: 0;">
                             <i class="fas fa-caret-right" style="position: absolute; transform: rotate(315deg);margin-left: 40.6%; margin-top: -10.23%; color: #de2b76 ;font-size: 1.5rem;"></i>
                         </div>
                     </div>
@@ -87,8 +95,8 @@ $msg = '';
                     <!-- Button -->
                     <div class="form-group">
                         <div class="col" style="padding-top: 2.5%;">
-                        <a href="adresseCible.html">
-                        <button id="test" name="inscrire" class="btn btn-primary" style="width: 100%;background-color: #ffffff;color: #707070;border:solid 1px #707070;border-radius: 0;">Inscrivez-vous</button>
+                        <a >
+                        <button id="test" name="inscrire" type="submit"class="btn btn-primary" style="width: 100%;background-color: #ffffff;color: #707070;border:solid 1px #707070;border-radius: 0;">Inscrivez-vous</button>
                         </a>
                         <i class="fas fa-caret-right" style="position: absolute; transform: rotate(315deg);margin-left: 45%; margin-top: -10.26%; color: #de2b76 ;font-size: 1.5rem;"></i>
                         </div>
@@ -112,19 +120,35 @@ $msg = '';
             $ville=$_POST["ville"];
             $codepostal=$_POST["codepostal"];
             $mdp=$_POST["mdp"];
-        $mdp=$_POST["mdp"];
+        $mdpconf=$_POST["mdpconf"];
         $adresse=$_POST["adresse"];
         $img =$_POST["img"]; 
         $tel =$_POST["tel"];
         $nation=$_POST["nation"];
         $naissance=$_POST["naissance"];
-        $idcard=$_POST["idcard"];
-        echo '<script LANGUAGE="javascript">document.location.href="connection.php"</script>';      
+        $idcard=$_POST["idcard"]; $email = "$email";
+        if($mdp != $mdpconf){
+            echo '<p class="connexion animate__animated animate__flash"> les deux mots de passe doivent être identique<p>';
+        }else{
+             $stmt = $pdo->prepare("SELECT * FROM users WHERE email=?");
+    $stmt->execute([$email]); 
+    $users = $stmt->fetch();
+    if($users){
+        echo '<p class="connexion animate__animated animate__flash">cette addresse mail est deja utilisé<p>';
+    }else{
+        echo '<script LANGUAGE="javascript">document.location.href="connection.php"</script>';    
+ die(inscription($name,$prénoms,$email,$ville,$adresse,$codepostal,$mdp));
+    }
 
-  die(inscription($name,$prénoms,$email,$ville,$adresse,$codepostal,$mdp));
+        }
+   
+       
         }
     ?>
 
-
+    <?php
+  
+   
+    ?>
 </body>
 </html>

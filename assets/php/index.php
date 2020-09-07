@@ -1,10 +1,7 @@
-<?php
-include 'meta.php';
-?>
-<?php 
-session_start();
+<?php session_start(); ?>
+    
+<?php include 'meta.php';?>
 
-?>
 
 
 <?=template_meta('Acceuil')?>
@@ -13,9 +10,10 @@ session_start();
 
 <?=template_header()?>
 <div class="main1 row" style="margin-left:0;margin-right:0;">
-    
+  
 <div class="col doubleC row align-items-center">
     <div class="newC">
+    
         <h2 class="h2new">Nouveaux Concours</h2>
         <i class="fas fa-caret-right rose1"></i>
             <div class="row info">
@@ -29,9 +27,9 @@ session_start();
             <div class="row info">
                 <div class="col-5 offset-md-1">
                     <img src="../img/exam.jpg" alt="concours" style="width: 100%;" class="imginf">
+ 
                 </div>
                 <div class="col-5 offset-md-1">
-                    <p>Nom <br> Info <br> Desc</p>
                 </div>
             </div>
     </div>
@@ -46,6 +44,8 @@ session_start();
                 </div>
                 <div class="col-5 offset-md-1">
                     <p>Nom <br> Info <br> Desc</p>
+                    <?php
+    ?>
                 </div>
             </div>
             <div class="row info">
@@ -58,7 +58,6 @@ session_start();
             </div>
     </div>
 </div>
-
 
 </div>
 <div class="main2 row align-items-center">
