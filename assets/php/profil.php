@@ -40,7 +40,7 @@ include 'meta.php';
             <div class="col offset-md-1 gauche">
                 <p>Nom : <?= $_SESSION['noms'];?>  <i class="fas fa-edit"></i></p>
                 <br> 
-                <p>Prenom : <?= $_SESSION['prénoms'];?>> <i class="fas fa-edit"></i></p>
+                <p>Prenom : <?= $_SESSION['prénoms'];?> <i class="fas fa-edit"></i></p>
                 <br>
                 <p>Adresse : <?= $_SESSION['adresse'];?> <i class="fas fa-edit"></i></p>
                 <br>
