@@ -1,8 +1,13 @@
 <?php
+session_start()
+?>
+
+<?php
 require 'model.php';
 $pdo = pdo_connect_mysql();
 $msg = '';
 ?>
+
 
 <?php
 include 'meta.php';
@@ -19,60 +24,64 @@ include 'meta.php';
 
 <!-- Section Profil  -->
 
+<?php
+
+$req = $pdo->prepare('SELECT * FROM users');
+$req->execute();
+$contact=$req->fetchAll(PDO::FETCH_ASSOC);
+
+$user = $pdo->query('SELECT * FROM users');
+?>
+
 <div class="main5 row align-items-center">
     <div class="profilc">
         <div class="row toprof">
             <img class="imgprof col-2 offset-md-1" src="https://journalmetro.com/wp-content/uploads/2017/04/default_profile_400x400.png?w=860" alt="Image Profil">
             <div class="titrep col-3 offset-md-1">
-                <h2 class="h2prof"> Votre Profil </h2>
+                <h2 class="h2prof"> Votre Profil
+</h2>
             </div>
             <i class="fas fa-caret-right rose3"></i>
         </div>
+
+        
+
         <div class="row infoprof">
             <div class="col offset-md-1 gauche">
-                <p>Nom : $nom <i class="fas fa-edit"></i></p>
+                <p>Nom :<?= $_SESSION['noms'];?> <i class="fas fa-edit"></i></p>
+                <br> 
+                <p>Prenom : <?= $_SESSION['mdp'];?>  <i class="fas fa-edit"></i></p>
                 <br>
-                <p>Prenom : $prenom <i class="fas fa-edit"></i></p>
+                <p>Adresse : <i class="fas fa-edit"></i></p>
                 <br>
-                <p>Adresse : $adresse <i class="fas fa-edit"></i></p>
+                <p>Nationalité : <i class="fas fa-edit"></i></p>
                 <br>
-                <p>Nationalité : $nation <i class="fas fa-edit"></i></p>
-                <br>
-                <p>Date de naissance : $data_naissance <i class="fas fa-edit"></i></p>
+                <p>Date de naissance :  <i class="fas fa-edit"></i></p>
+           
             </div>
             <div class="col droite">
-                <p>Email : $mail <i class="fas fa-edit"></i></p>
+                <p>Email :  <i class="fas fa-edit"></i></p>
                 <br>
-                <p>Code Postal : $CodePost <i class="fas fa-edit"></i></p>
+                <p>Code Postal :  <i class="fas fa-edit"></i></p>
                 <br>
-                <p>Telephone : $tel <i class="fas fa-edit"></i></p>
+                <p>Telephone :  <i class="fas fa-edit"></i></p>
                 <br>
-                <p>Numéro d'identité : $numidentité <i class="fas fa-edit"></i></p>
+                <p>Numéro d'identité :  <i class="fas fa-edit"></i></p>
             </div>
         </div>
+
+  
+
         <div class="row infoprof2">
             <p class="col offset-md-1 ">Modifiez tout votre profil <i class="fas fa-edit"></i></p> <p class="col"> Modifiez votre mot de passe <i class="fas fa-edit"></i></p>
         </div>
     </div>
 </div>
 
-<?php
-    if(isset($_POST['inscrire'])){ 
-        $name=$_POST["name"];
-        $prénoms=$_POST["prénoms"];
-    $email=$_POST["email"];
-    $ville=$_POST["ville"];
-    $codepostal=$_POST["codepostal"];
-    $mdp=$_POST["mdp"];
-    $mdp=$_POST["mdp"];
-    $addresse=$_POST["address"];
-    $img =$_POST["img"]; 
-    echo '<script LANGUAGE="javascript">document.location.href="connection.php"</script>';         
-    ($name,$prénoms,$email,$ville,$addresse,$codepostal,$mdp,$img);
-    }
+
+<a href="deconnection.php" class="btn">deconnection</a>
 
 
-?>
 
 <!-- Section Concour du Profil  -->
 

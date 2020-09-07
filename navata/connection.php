@@ -1,6 +1,4 @@
 <?php
-session_start();
-
 require 'model.php';
 $pdo = pdo_connect_mysql();
 $msg = '';
@@ -67,7 +65,6 @@ $msg = '';
                 </div>
             </fieldset>
         </form>
-        
     </div>
 
     <?php
@@ -91,17 +88,13 @@ $msg = '';
             $user= $test->fetchAll(\PDO::FETCH_ASSOC);
             foreach($user as $users){
                 if($users['mdp']==$mdp){
-                    $_SESSION['noms']=$users['noms'];
-                   $_SESSION['email']=$users['email'];
-                    $_SESSION['mdp']=$users['mdp'];
                     echo '<script LANGUAGE="javascript">document.location.href="index.php"</script>';
                 }else{
                     echo '<p class="connexion animate__animated animate__flash">Votre information sont incorrect<p>';
                 }
+            }
 
-        }
 
-        
         }
     
     }

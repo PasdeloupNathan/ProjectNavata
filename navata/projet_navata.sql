@@ -30,37 +30,7 @@ CREATE TABLE `users` (
 	`naissance` DATE NULL,
 	`idcard` varchar(255) NULL,
 	PRIMARY KEY (`id_users`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `users`
---
-
-INSERT INTO `users` (`id_users`, `noms`, `prénoms`, `email`, `ville`, `adresse`, `codepostal`, `mdp`, `img`, `tel`, `nation`, `naissance`, `idcard`) VALUES
-(1, 'Pasdeloup', 'Nathan', 'gamee8678@gmail.com', 'Marseille', 'Vélodrome', 5, '1234', '', 0, '', '0000-00-00', 0);
-
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `admin`
---
-ALTER TABLE `admin`
-  ADD PRIMARY KEY (`id_admin`);
-
---
--- Indexes for table `candidatures`
---
-ALTER TABLE `candidatures`
-  ADD PRIMARY KEY (`id_candidature`);
-
---
--- Indexes for table `concours`
---
-ALTER TABLE `concours`
-  ADD PRIMARY KEY (`id_concours`);
-
+);
 
 CREATE TABLE `entreprise` (
 	`id_entreprise` INT NOT NULL AUTO_INCREMENT,
