@@ -1,4 +1,8 @@
 <?php
+session_start()
+?>
+
+<?php
 include 'meta.php';
 ?>
 
@@ -10,10 +14,6 @@ include 'meta.php';
 
 
 
-
-    
-
-
 <?=template_header()?>
 
 
@@ -22,6 +22,7 @@ include 'meta.php';
         <div class="firstBox" class="container">
            
                 <div class=" title">
+
                     <H2>Concours avec le plus d'angouement</H2>
                 </div>
                 <div class="row bas align-items-center">

@@ -8,9 +8,7 @@ include 'meta.php';
 
 <body class="body2">
     
-
-
-    
+   
 
 <?=template_header()?>
 

@@ -38,38 +38,39 @@ $user = $pdo->query('SELECT * FROM users');
         <div class="row toprof">
             <img class="imgprof col-2 offset-md-1" src="https://journalmetro.com/wp-content/uploads/2017/04/default_profile_400x400.png?w=860" alt="Image Profil">
             <div class="titrep col-3 offset-md-1">
-                <h2 class="h2prof"> Votre Profil </h2>
+                <h2 class="h2prof"> Votre Profil
+</h2>
             </div>
             <i class="fas fa-caret-right rose3"></i>
         </div>
 
-        <?php foreach ($user as $users): ?>
+        
 
         <div class="row infoprof">
             <div class="col offset-md-1 gauche">
-                <p>Nom : <?= $users["noms"] ?> <i class="fas fa-edit"></i></p>
+                <p>Nom :<?= $_SESSION['noms'];?> <i class="fas fa-edit"></i></p>
                 <br> 
-                <p>Prenom : <?= $users["prénoms"] ?> <i class="fas fa-edit"></i></p>
+                <p>Prenom : <?= $_SESSION['mdp'];?>  <i class="fas fa-edit"></i></p>
                 <br>
-                <p>Adresse : <?= $users["adresse"] ?> <i class="fas fa-edit"></i></p>
+                <p>Adresse : <i class="fas fa-edit"></i></p>
                 <br>
-                <p>Nationalité : <?= $users["nation"] ?> <i class="fas fa-edit"></i></p>
+                <p>Nationalité : <i class="fas fa-edit"></i></p>
                 <br>
-                <p>Date de naissance : <?= $users["naissance"] ?> <i class="fas fa-edit"></i></p>
+                <p>Date de naissance :  <i class="fas fa-edit"></i></p>
            
             </div>
             <div class="col droite">
-                <p>Email : <?= $users["email"] ?> <i class="fas fa-edit"></i></p>
+                <p>Email :  <i class="fas fa-edit"></i></p>
                 <br>
-                <p>Code Postal : <?= $users["codepostal"] ?> <i class="fas fa-edit"></i></p>
+                <p>Code Postal :  <i class="fas fa-edit"></i></p>
                 <br>
-                <p>Telephone : <?= $users["tel"] ?> <i class="fas fa-edit"></i></p>
+                <p>Telephone :  <i class="fas fa-edit"></i></p>
                 <br>
-                <p>Numéro d'identité : <?= $users["idcard"] ?> <i class="fas fa-edit"></i></p>
+                <p>Numéro d'identité :  <i class="fas fa-edit"></i></p>
             </div>
         </div>
 
-        <?php endforeach ?>
+  
 
         <div class="row infoprof2">
             <p class="col offset-md-1 ">Modifiez tout votre profil <i class="fas fa-edit"></i></p> <p class="col"> Modifiez votre mot de passe <i class="fas fa-edit"></i></p>
