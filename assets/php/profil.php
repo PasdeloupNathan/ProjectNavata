@@ -1,11 +1,13 @@
 <?php
-session_start()
-?>
-
-<?php
 require 'model.php';
 $pdo = pdo_connect_mysql();
 $msg = '';
+?>
+
+
+<?php 
+session_start();
+
 ?>
 
 
@@ -24,56 +26,40 @@ include 'meta.php';
 
 <!-- Section Profil  -->
 
-<?php
-
-$req = $pdo->prepare('SELECT * FROM users');
-$req->execute();
-$contact=$req->fetchAll(PDO::FETCH_ASSOC);
-
-$user = $pdo->query('SELECT * FROM users');
-?>
-
 <div class="main5 row align-items-center">
     <div class="profilc">
         <div class="row toprof">
             <img class="imgprof col-2 offset-md-1" src="https://journalmetro.com/wp-content/uploads/2017/04/default_profile_400x400.png?w=860" alt="Image Profil">
             <div class="titrep col-3 offset-md-1">
-                <h2 class="h2prof"> Votre Profil
-</h2>
+                <h2 class="h2prof"> Votre Profil </h2>
             </div>
             <i class="fas fa-caret-right rose3"></i>
         </div>
 
-        
-
         <div class="row infoprof">
             <div class="col offset-md-1 gauche">
-                <p>Nom :<?= $_SESSION['noms'];?> <i class="fas fa-edit"></i></p>
+                <p>Nom : <?= $_SESSION['noms'];?> </p>
                 <br> 
-                <p>Prenom : <?= $_SESSION['mdp'];?>  <i class="fas fa-edit"></i></p>
+                <p>Prenom : <?= $_SESSION['prénoms'];?> </p>
                 <br>
-                <p>Adresse : <i class="fas fa-edit"></i></p>
+                <p>Adresse : <?= $_SESSION['adresse'];?> </p>
                 <br>
-                <p>Nationalité : <i class="fas fa-edit"></i></p>
+                <p>Nationalité : <?= $_SESSION['nation'];?> </p>
                 <br>
-                <p>Date de naissance :  <i class="fas fa-edit"></i></p>
+                <p>Date de naissance : <?= $_SESSION['naissance'];?> </p>
            
             </div>
             <div class="col droite">
-                <p>Email :  <i class="fas fa-edit"></i></p>
+                <p>Email : <?= $_SESSION['email'];?> </p>
                 <br>
-                <p>Code Postal :  <i class="fas fa-edit"></i></p>
+                <p>Code Postal : <?= $_SESSION['codepostal'];?> </p>
                 <br>
-                <p>Telephone :  <i class="fas fa-edit"></i></p>
+                <p>Telephone : <?= $_SESSION['tel'];?> </p>
                 <br>
-                <p>Numéro d'identité :  <i class="fas fa-edit"></i></p>
+                <p>Numéro d'identité : <?= $_SESSION['idcard'];?> </p>
+                <br>
+                <p>Modifiez tout votre profil <i class="fas fa-edit" id="modif"></i></p> 
             </div>
-        </div>
-
-  
-
-        <div class="row infoprof2">
-            <p class="col offset-md-1 ">Modifiez tout votre profil <i class="fas fa-edit"></i></p> <p class="col"> Modifiez votre mot de passe <i class="fas fa-edit"></i></p>
         </div>
     </div>
 </div>
@@ -140,6 +126,9 @@ $user = $pdo->query('SELECT * FROM users');
 
 <?=template_footer()?>
 
+
+
+<script src="../js/profil.js"></script>
 </body>
 
 </html>

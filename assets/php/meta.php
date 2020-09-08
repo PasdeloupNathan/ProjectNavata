@@ -25,6 +25,7 @@ echo<<<EOT
         <link rel="stylesheet" href="../css/adminTable.min.css">
         <link rel="stylesheet" href="../css/adminLogs.min.css">
         <link rel="stylesheet" href="../css/entreprise.min.css">
+        <link rel="stylesheet" href="../css/input.min.css">
 
     </head>
  
@@ -97,4 +98,6 @@ echo<<<EOT
 
 EOT;
 }
-?>
+
+
+
