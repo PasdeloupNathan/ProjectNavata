@@ -38,30 +38,28 @@ include 'meta.php';
 
         <div class="row infoprof">
             <div class="col offset-md-1 gauche">
-                <p>Nom : <?= $_SESSION['noms'];?>  <i class="fas fa-edit"></i></p>
+                <p>Nom : <?= $_SESSION['noms'];?> </p>
                 <br> 
-                <p>Prenom : <?= $_SESSION['prénoms'];?> <i class="fas fa-edit"></i></p>
+                <p>Prenom : <?= $_SESSION['prénoms'];?> </p>
                 <br>
-                <p>Adresse : <?= $_SESSION['adresse'];?> <i class="fas fa-edit"></i></p>
+                <p>Adresse : <?= $_SESSION['adresse'];?> </p>
                 <br>
-                <p>Nationalité : <?= $_SESSION['nation'];?> <i class="fas fa-edit"></i></p>
+                <p>Nationalité : <?= $_SESSION['nation'];?> </p>
                 <br>
-                <p>Date de naissance : <?= $_SESSION['naissance'];?> <i class="fas fa-edit"></i></p>
+                <p>Date de naissance : <?= $_SESSION['naissance'];?> </p>
            
             </div>
             <div class="col droite">
-                <p>Email : <?= $_SESSION['email'];?> <i class="fas fa-edit"></i></p>
+                <p>Email : <?= $_SESSION['email'];?> </p>
                 <br>
-                <p>Code Postal : <?= $_SESSION['codepostal'];?> <i class="fas fa-edit"></i></p>
+                <p>Code Postal : <?= $_SESSION['codepostal'];?> </p>
                 <br>
-                <p>Telephone : <?= $_SESSION['tel'];?> <i class="fas fa-edit"></i></p>
+                <p>Telephone : <?= $_SESSION['tel'];?> </p>
                 <br>
-                <p>Numéro d'identité : <?= $_SESSION['idcard'];?> <i class="fas fa-edit"></i></p>
+                <p>Numéro d'identité : <?= $_SESSION['idcard'];?> </p>
+                <br>
+                <p>Modifiez tout votre profil <i class="fas fa-edit" id="modif"></i></p> 
             </div>
-        </div>
-
-        <div class="row infoprof2">
-            <p class="col offset-md-1 ">Modifiez tout votre profil <i class="fas fa-edit"></i></p> <p class="col"> Modifiez votre mot de passe <i class="fas fa-edit"></i></p>
         </div>
     </div>
 </div>
@@ -128,6 +126,9 @@ include 'meta.php';
 
 <?=template_footer()?>
 
+
+
+<script src="../js/profil.js"></script>
 </body>
 
 </html>
