@@ -1,6 +1,9 @@
 <?php
+
+
 include 'meta.php';
 // $total= nombre_vues()
+$annee = (int)date('Y');
 
 ?>
 <?=template_meta('adminConcours')?>
@@ -16,7 +19,7 @@ include 'meta.php';
 
 <?=template_header()?>
 
-<div class="row  page">
+<div class="row page">
 
 <?=template_admin()?>
 <!-- //frontEnd -->

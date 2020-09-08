@@ -115,7 +115,19 @@ $msg = '';
     
     }
     ?>
+<!-- <?php
+$Role  = query_database("SELECT * FROM users WHERE prénom='".$_POST["prénom"]."'");
 
+
+if ( $Role == "Admin")
+ {
+    header("location:admin.php");
+ }
+  else  if ( $Role == "candidat ")
+ {
+          header("location: www.example.com/index.php");
+ }
+?> -->
 </body>
 
 </body>

@@ -38,3 +38,11 @@ function connexion($email, $mdp) {
 
 
 ?>
+
+<?function getAllConcours() {
+	$con = pdo_connect_mysql();
+	$requete = 'SELECT * from concours';
+	$rows = $con->query($requete);
+	return $rows;
+}
+    ?>

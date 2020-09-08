@@ -1,4 +1,8 @@
 <?php
+session_start()
+?>
+
+<?php
 include 'meta.php';
 ?>
 <?=template_meta('admin')?>
@@ -46,8 +50,15 @@ include 'meta.php';
 </div>
 </form>
 
-
+<div>
+<?
+$concours = getAllConcours();
+?>
+</div class='listeData' >
 <?=template_footer()?>
+
+
+
 
 <body>
     
