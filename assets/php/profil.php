@@ -44,12 +44,14 @@ include 'meta.php';
                 <br>
                 <p>Adresse : <?= $_SESSION['adresse'];?> </p>
                 <br>
-                <p>Nationalité : <?= $_SESSION['nation'];?> </p>
+                <p>Ville : <?= $_SESSION['ville'];?> </p>
                 <br>
-                <p>Date de naissance : <?= $_SESSION['naissance'];?> </p>
+                <p>Nationalité : <?= $_SESSION['nation'];?> </p>
            
             </div>
             <div class="col droite">
+                <p>Date de naissance : <?= $_SESSION['naissance'];?> </p>
+                <br>
                 <p>Email : <?= $_SESSION['email'];?> </p>
                 <br>
                 <p>Code Postal : <?= $_SESSION['codepostal'];?> </p>
@@ -58,7 +60,7 @@ include 'meta.php';
                 <br>
                 <p>Numéro d'identité : <?= $_SESSION['idcard'];?> </p>
                 <br>
-                <p>Modifiez tout votre profil <i class="fas fa-edit" id="modif"></i></p> 
+                <p>Modifiez votre profil <i class="fas fa-edit" id="modif"></i></p> 
             </div>
         </div>
     </div>
