@@ -7,6 +7,31 @@ $msg = '';
 session_start();
 ?>
 
+<?php
+$DATABASE_HOST = 'localhost';
+$DATABASE_USER = 'root';
+$DATABASE_PASS = '';
+$DATABASE_NAME = 'projet_navata';
+try {
+  $conn = new PDO('mysql:host=' . $DATABASE_HOST . ';dbname=' . $DATABASE_NAME . ';charset=utf8', $DATABASE_USER, $DATABASE_PASS);
+
+  $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+$sql = "UPDATE users SET noms=$name WHERE id=$_SESSION[id_users]";
+
+  $stmt = $conn->prepare($sql);
+
+
+  $stmt->execute();
+
+  echo $stmt->rowCount() . " records UPDATED successfully";
+} catch(PDOException $e) {
+  echo $sql . "<br>" . $e->getMessage();
+}
+
+$conn = null;
+?>
+
 
 <?php include 'meta.php';?>
 
@@ -23,28 +48,28 @@ session_start();
     <div class="inputg row">
         <div class="input offset-md-1 col-4">
 
-            <label for="noms">Nom : <input type="text" name="noms" placeholder="Changez votre nom"></label>
+            <label for="noms">Nom : <input type="text" name="noms" value="<?= $_SESSION['noms'];?>"></label>
             <br>
-            <label for="adresse">Adresse : <input type="text" name="adresse" placeholder="Changez votre Adresse"></label>
+            <label for="adresse">Adresse : <input type="text" name="adresse" value="<?= $_SESSION['adresse'];?>"></label>
             <br>
-            <label for="codepostal">Code-postal : <input type="text" name="codepostal" placeholder="Changez votre Code-postal"></label>
+            <label for="codepostal">Code-postal : <input type="text" name="codepostal" value="<?= $_SESSION['codepostal'];?>"></label>
             <br>
-            <label for="email">Email : <input type="text" name="email" placeholder="Changez votre Email"></label>
+            <label for="email">Email : <input type="text" name="email" value="<?= $_SESSION['email'];?>"></label>
             <br>
-            <label for="naissance">Date de naissance : <input type="text" name="naissance" placeholder="Changez votre Date de naissance"></label>
+            <label for="naissance">Date de naissance : <input type="text" name="naissance" value="<?= $_SESSION['naissance'];?>"></label>
             
         </div>
         <div class="input col-4">
 
-            <label for="prénoms">Prénom : <input type="text" name="prénoms" placeholder="Changez votre prénoms"></label>
+            <label for="prénoms">Prénom : <input type="text" name="prénoms" value="<?= $_SESSION['prénoms'];?>"></label>
             <br>
-            <label for="ville">Ville : <input type="text" name="ville" placeholder="Changez votre Ville"></label>
+            <label for="ville">Ville : <input type="text" name="ville" value="<?= $_SESSION['ville'];?>"></label>
             <br>
-            <label for="nation">Nationalité : <input type="text" name="nation" placeholder="Changez votre Nationalié"></label>
+            <label for="nation">Nationalité : <input type="text" name="nation" value="<?= $_SESSION['nation'];?>"></label>
             <br>
-            <label for="tel">N°Telephone : <input type="text" name="tel" placeholder="Changez votre N°Telephone"></label>
+            <label for="tel">N°Telephone : <input type="text" name="tel" value="<?= $_SESSION['tel'];?>"></label>
             <br>
-            <label for="idcard">N°ID : <input type="text" name="idcard" placeholder="Changez votre N°ID"></label>
+            <label for="idcard">N°ID : <input type="text" name="idcard" value="<?= $_SESSION['idcard'];?>"></label>
 
         </div>
     </div>
