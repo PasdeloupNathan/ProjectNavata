@@ -59,3 +59,22 @@ session_start();
 </body>
 
 </html>
+
+<?php
+        if(isset($_POST['inscrire'])){ 
+             $name=$_POST["name"];
+             $prénoms=$_POST["prénoms"];
+            $email=$_POST["email"];
+            $ville=$_POST["ville"];
+            $codepostal=$_POST["codepostal"];
+            $mdp=$_POST["mdp"];
+        $mdpconf=$_POST["mdpconf"];
+        $adresse=$_POST["adresse"];
+        $img =$_POST["img"]; 
+        $tel =$_POST["tel"];
+        $nation=$_POST["nation"];
+        $naissance=$_POST["naissance"];
+        $idcard=$_POST["idcard"]; $email = "$email";
+    }
+
+?>
