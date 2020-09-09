@@ -7,31 +7,6 @@ $msg = '';
 session_start();
 ?>
 
-<?php
-$DATABASE_HOST = 'localhost';
-$DATABASE_USER = 'root';
-$DATABASE_PASS = '';
-$DATABASE_NAME = 'projet_navata';
-try {
-  $conn = new PDO('mysql:host=' . $DATABASE_HOST . ';dbname=' . $DATABASE_NAME . ';charset=utf8', $DATABASE_USER, $DATABASE_PASS);
-
-  $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-$sql = "UPDATE users SET noms=$name WHERE id=$_SESSION[id_users]";
-
-  $stmt = $conn->prepare($sql);
-
-
-  $stmt->execute();
-
-  echo $stmt->rowCount() . " records UPDATED successfully";
-} catch(PDOException $e) {
-  echo $sql . "<br>" . $e->getMessage();
-}
-
-$conn = null;
-?>
-
 
 <?php include 'meta.php';?>
 
@@ -101,5 +76,5 @@ $conn = null;
         $naissance=$_POST["naissance"];
         $idcard=$_POST["idcard"]; $email = "$email";
     }
-
+    
 ?>
