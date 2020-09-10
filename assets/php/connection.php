@@ -118,5 +118,4 @@ $msg = '';
 
 </body>
 
-</body>
 </html>
