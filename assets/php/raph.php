@@ -16,21 +16,22 @@ if (isset($_POST['email'])){
   $password = mysqli_real_escape_string($conn, $password);
     $query = "SELECT * FROM `user` WHERE email='$email' and password='".hash('sha256', $password)."'";
   $result=$conn->query($query);
-  var_dump($result);
+  // var_dump($result);
   if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
+      echo "id: " . $row["id"]. " - Name: " . $row["email"]. " <br>" . $row["siret"]. "<br>";
       $rows = mysqli_num_rows($result);
       if($rows==1){
-          $_SESSION['nom'] = $row['nom'];
-          $_SESSION['prénoms'] = $row['prénoms'];
+          $_SESSION['username'] = $row['username'];
           $_SESSION['email'] = $row['email'];
+          $_SESSION['siret'] = $row['siret'];
           $_SESSION['ville'] = $row['ville'];
-          $_SESSION['adresse'] = $row['adresse'];
-          $_SESSION['codepostal'] = $row['codepostal'];
-          $_SESSION['rôles'] = $row['rôles'];
+          $_SESSION['address'] = $row['address'];
+          $_SESSION['code_postal'] = $row['code_postal'];
+          $_SESSION['role'] = $row['role'];
           $_SESSION['id'] = $row['id'];
-          
+          $_SESSION['role'] = $row['role'];
           
         
           header("Location: page_de_garde/pageGarde.php");
@@ -44,7 +45,7 @@ if (isset($_POST['email'])){
  
 }
 ?>
-<?=template_header('loginpro')?>
+<?=template_header()?>
 
 <section style="height:50vh" class="showcase">
 <div style="width:60vw" class="container">

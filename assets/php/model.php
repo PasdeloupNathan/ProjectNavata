@@ -1,4 +1,4 @@
-<?php 
+<!-- <?php 
 
 function pdo_connect_mysql() {
     $DATABASE_HOST = 'localhost';
@@ -33,8 +33,9 @@ function connexion($email, $mdp) {
 	$req = $bdd->prepare('SELECT * FROM users WHERE email = ?');
 	$req->execute([$email]);
 	$users = $req->fetch(PDO::FETCH_ALL);
-	var_dump($users);
+	// var_dump($users);
 }
+
 
 
 ?>
@@ -46,4 +47,4 @@ function connexion($email, $mdp) {
 	return $rows;
 }
     ?>
-	
+	 -->

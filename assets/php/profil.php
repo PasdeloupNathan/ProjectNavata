@@ -4,16 +4,21 @@ $pdo = pdo_connect_mysql();
 $msg = '';
 ?>
 
-
-<?php 
-session_start();
-
-?>
-
-
 <?php
 include 'meta.php';
 ?>
+
+<?php 
+session_start();
+if(!isset($_SESSION["email"])){
+    header("Location: connection.php");
+    exit();
+}
+?>
+<? $role=$_SESSION["rôles"];?>
+<? $id=$_SESSION["id_users"];?>
+
+<? if ($role == 'candidat')?>
 
 <?=template_meta('Profil')?>
     
@@ -66,7 +71,9 @@ include 'meta.php';
     </div>
 </div>
 
+<? $_SESSION["email"] ?>
 
+<? $_SESSION["id"] ?>
 <a href="deconnection.php" class="btn">deconnection</a>
 
 
