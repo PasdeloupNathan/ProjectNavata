@@ -60,7 +60,7 @@ include 'meta.php';
                 <br>
                 <p>Numéro d'identité : <?= $_SESSION['idcard'];?> </p>
                 <br>
-                <p>Modifiez votre profil <i class="fas fa-edit" id="modif"></i></p> 
+                <p id="modif">Modifiez votre profil  <i class="fas fa-edit" id="modif"></i></p> 
             </div>
         </div>
     </div>
