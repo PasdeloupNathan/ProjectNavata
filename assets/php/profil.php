@@ -38,6 +38,7 @@ include 'meta.php';
 
         <div class="row infoprof">
             <div class="col offset-md-1 gauche">
+                        <!-- appelle des valeurs de la bdd -->
                 <p>Nom : <?= $_SESSION['noms'];?> </p>
                 <br> 
                 <p>Prenom : <?= $_SESSION['prénoms'];?> </p>
@@ -75,6 +76,9 @@ include 'meta.php';
 
 <div class="main6 row">
     <div class="col doubleCInsc row align-items-center">
+
+    <!-- Concours auquel vous vous etes inscrit et en attente de la reponse  -->
+
         <div class="concourInsC">
             <h2 class="h2cins">Concours auquel vous etes inscrit</h2>
             <i class="fas fa-caret-right rose1"></i>
@@ -103,6 +107,9 @@ include 'meta.php';
         </div>
     </div>
     <div class="col doubleCInsc row align-items-center">
+
+    <!-- Concours bientot lancé que vous attendez  -->
+
         <div class="concourInsC2">
             <h2 class="h2cins2">Concours en attente d'ouverture</h2>
             <i class="fas fa-caret-right rose1"></i>

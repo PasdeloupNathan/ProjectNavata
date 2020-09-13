@@ -1,14 +1,19 @@
 <?php session_start(); ?>
-    
+
+<!-- Appeller de la page meta.php ou se situe toute les fonction template  -->
+
 <?php include 'meta.php';?>
 
-
+<!-- Appelle d'une foncion template  -->
 
 <?=template_meta('Acceuil')?>
    
 <body class="body">
 
 <?=template_header()?>
+
+<!-- Section pour les nouveaux concours et les concours arrivant a leur terme  -->
+
 <div class="main1 row" style="margin-left:0;margin-right:0;">
   
 <div class="col doubleC row align-items-center">
@@ -60,6 +65,9 @@
 </div>
 
 </div>
+
+<!-- Section pour les concours les tendance du momment  -->
+
 <div class="main2 row align-items-center">
     <div class="bestc">
         <div class="titrec">
