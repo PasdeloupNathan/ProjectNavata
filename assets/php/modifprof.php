@@ -32,7 +32,9 @@ session_start();
             <label for="email">Email : <input type="text" name="email" value="<?= $_SESSION['email'];?>"></label>
             <br>
             <label for="naissance">Date de naissance : <input type="text" name="naissance" value="<?= $_SESSION['naissance'];?>"></label>
-            
+            <br>
+            <label for="img" style="padding-right: 44%;">Image de profile : </label>
+            <br><input type="file"> 
         </div>
         <div class="input col-4">
 
