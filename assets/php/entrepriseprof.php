@@ -10,6 +10,8 @@ include 'meta.php';
 
 <?=template_header()?>
 
+    <!-- Profil de l'entreprise  -->
+
 <div class="main7 row align-items-center">
     <div class="profilentreprise">
             <div class="row toprofentreprise">
@@ -45,6 +47,9 @@ include 'meta.php';
             </div>
         </div>
     </div>
+
+    <!-- Concours de l'entreprise -->
+
 <div class="main8 row align-items-center">
     <div class="entrepriseconcour">
         <h2 class="titreconcourentreprise">Concours de votre entreprise</h2>
@@ -77,6 +82,9 @@ include 'meta.php';
         </div>
     </div>
 </div>
+
+
+    <!-- Candidat inscrit a vos concours  -->
 
 <div class="main9 row align-items-center">
     <div class="inscvalid">

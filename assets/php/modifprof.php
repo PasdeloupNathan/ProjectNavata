@@ -18,6 +18,8 @@ session_start();
 
 <?=template_header()?>
 
+    <!-- Section pour modifiez les info de votre profile  -->
+
 <div class="maininput">
 <h2>Modifiez vos informations</h2>
     <div class="inputg row">
