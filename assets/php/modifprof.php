@@ -1,5 +1,5 @@
 <?php
-require 'model.php';
+$mysql = require 'model.php';
 $pdo = pdo_connect_mysql();
 $msg = '';
 ?>
@@ -22,7 +22,7 @@ session_start();
 
 <div class="maininput">
 <h2>Modifiez vos informations</h2>
-    <div class="inputg row">
+    <form method="post" action="" class="inputg row">
         <div class="input offset-md-1 col-4">
 
             <label for="noms">Nom : <input type="text" name="noms" value="<?= $_SESSION['noms'];?>"></label>
@@ -51,12 +51,26 @@ session_start();
             <label for="idcard">N°ID : <input type="text" name="idcard" value="<?= $_SESSION['idcard'];?>"></label>
 
         </div>
-    </div>
-    <div class="buttong">
-        <button>Enregistrer les modifications</button>
-        <button>Annulez les modifications</button>
-    </div>
+        <div class="buttong">
+            <button type="submit" name="submit">Enregistrer les modifications</button>
+            <button>Annulez les modifications</button>
+        </div>
+    </form>
+    
 </div>
+
+<?php 
+
+if(isset($_POST['submit'])){
+    $stmt = "UPDATE users SET noms = 'toto' WHERE id_users = 2";
+    $mysql->query($stmt);
+    close();
+    echo "<scritp>console.log('test');</scritp>";
+}
+
+
+
+?>
 
 <?=template_footer()?>
 
