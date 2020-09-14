@@ -126,7 +126,7 @@ $msg = '';
         $tel =$_POST["tel"];
         $nation=$_POST["nation"];
         $naissance=$_POST["naissance"];
-        $idcard=$_POST["idcard"]; $email = "$email";
+        $idcard=$_POST["idcard"]; 
         if($mdp != $mdpconf){
             echo '<p class="connexion animate__animated animate__flash"> les deux mots de passe doivent être identique<p>';
         }else{
