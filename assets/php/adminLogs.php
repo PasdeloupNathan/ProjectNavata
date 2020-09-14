@@ -11,7 +11,7 @@ include 'meta.php';
 <?=template_header()?>
 <section class="row page">
 <?=template_admin()?>
-
+<!-- tableau permettant de lister les users -->
 <div style="height: 100%;" class="col">
 <table id="customers">
   <tr>
