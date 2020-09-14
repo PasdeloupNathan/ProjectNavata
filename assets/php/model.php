@@ -12,13 +12,25 @@ function pdo_connect_mysql() {
     }
 }
 
-			// Inscription //
+			// Inscription User //
 
 function inscription($noms, $prenoms, $email, $ville, $addresse, $codepostal, $mdp) {
 	try {
 		$con = pdo_connect_mysql();
-    
 		$sql = "INSERT INTO `users` (`id_users`, `noms`, `prénoms`, `email`, `ville`, `adresse`, `codepostal`, `mdp`, `img`, `tel`, `nation`, `naissance`, `idcard`) VALUES (NULL, '$noms', '$prenoms', '$email', '$ville', '$addresse', '$codepostal','$mdp','$img', Null,Null, Null, Null);";
+		$con->exec($sql);
+	}
+	catch(PDOException $e) {
+		echo $sql . "<br>" . $e->getMessage();
+	}
+}
+
+			// Inscription entreprises //
+
+function entreprise($nom_societe, $email_societe, $ville_societe, $adresse_societe, $codepostal_societe, $siret_societe, $mdp_societe) {
+	try {
+		$con = pdo_connect_mysql();
+		$sql = "INSERT INTO `entreprise` (`id_entreprise`, `nom_societe`, `email_societe`, `ville_societe`, `adresse_societe`, `codepostal_societe`, `siret_societe`, `mdp_societe`, `img_societe`) VALUES ('$id_entreprise', '$nom_societe', '$email_societe', '$ville_societe', '$adresse_societe', '$codepostal_societe', '$siret_societe','$mdp_societe',Null);";
 		$con->exec($sql);
 	}
 	catch(PDOException $e) {
