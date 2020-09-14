@@ -45,6 +45,7 @@ if(!isset($_SESSION["email"])){
             <div class="col offset-md-1 gauche">
                 <p>Nom : <?= $_SESSION['noms'];?> </p>
                 <br> 
+                <p>id : <?= $_SESSION['id_users'];?> </p>
                 <p>Prenom : <?= $_SESSION['prénoms'];?> </p>
                 <br>
                 <p>Adresse : <?= $_SESSION['adresse'];?> </p>
@@ -73,7 +74,7 @@ if(!isset($_SESSION["email"])){
 
 <? $_SESSION["email"] ?>
 
-<? $_SESSION["id"] ?>
+<?$id ?>
 <a href="deconnection.php" class="btn">deconnection</a>
 
 

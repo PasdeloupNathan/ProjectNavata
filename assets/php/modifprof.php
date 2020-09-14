@@ -8,28 +8,22 @@ session_start();
 ?>
 
 <?php
-$DATABASE_HOST = 'localhost';
-$DATABASE_USER = 'root';
-$DATABASE_PASS = '';
-$DATABASE_NAME = 'projet_navata';
-try {
-  $conn = new PDO('mysql:host=' . $DATABASE_HOST . ';dbname=' . $DATABASE_NAME . ';charset=utf8', $DATABASE_USER, $DATABASE_PASS);
-
-  $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-$sql = "UPDATE users SET noms=$name WHERE id=$_SESSION[id_users]";
-
-  $stmt = $conn->prepare($sql);
-
-
-  $stmt->execute();
-
-  echo $stmt->rowCount() . " records UPDATED successfully";
-} catch(PDOException $e) {
-  echo $sql . "<br>" . $e->getMessage();
+if (isset($_GET['id_users'])) {
+    if (!empty($_POST)) {
+        // This part is similar to the create.php, but instead we update a record and not insert
+        $id_users = isset($_POST['id_users']) ? $_POST['id_users'] : NULL;
+        $name = isset($_POST['name']) ? $_POST['name'] : '';
+        $email = isset($_POST['email']) ? $_POST['email'] : '';
+        $phone = isset($_POST['phone']) ? $_POST['phone'] : '';
+        $title = isset($_POST['title']) ? $_POST['title'] : '';
+        $created = isset($_POST['created']) ? $_POST['created'] : date('Y-m-d H:i:s');
+        // Update the record
+        $stmt = $pdo->prepare('UPDATE users SET id_users = ?, name = ?, email = ?, phone = ?, title = ?, created = ? WHERE id_users = ?');
+        $stmt->execute([$id_users, $name, $email, $img, $tel, $nation, $idcard, $age, $adresse, $_GET['id_users']]);
+        $msg = 'Updated Successfully!';
+    }
 }
-
-$conn = null;
+   
 ?>
 
 
@@ -45,7 +39,7 @@ $conn = null;
 
 <div class="maininput">
 <h2>Modifiez vos informations</h2>
-    <div class="inputg row">
+    <form action='modifprof.php' <?=$_SESSION['id_users'];?> class="inputg row">
         <div class="input offset-md-1 col-4">
 
             <label for="noms">Nom : <input type="text" name="noms" value="<?= $_SESSION['noms'];?>"></label>
@@ -72,11 +66,12 @@ $conn = null;
             <label for="idcard">N°ID : <input type="text" name="idcard" value="<?= $_SESSION['idcard'];?>"></label>
 
         </div>
-    </div>
-    <div class="buttong">
-        <button>Enregistrer les modifications</button>
-        <button>Annulez les modifications</button>
-    </div>
+        <div class="buttong">
+            <button type='submit' value='update' >Enregistrer les modifications</button>
+            <button>Annulez les modifications</button>
+        </div>
+    </form>
+    
 </div>
 
 <?=template_footer()?>
@@ -84,22 +79,5 @@ $conn = null;
 </body>
 
 </html>
-
-<?php
-        if(isset($_POST['inscrire'])){ 
-             $name=$_POST["name"];
-             $prénoms=$_POST["prénoms"];
-            $email=$_POST["email"];
-            $ville=$_POST["ville"];
-            $codepostal=$_POST["codepostal"];
-            $mdp=$_POST["mdp"];
-        $mdpconf=$_POST["mdpconf"];
-        $adresse=$_POST["adresse"];
-        $img =$_POST["img"]; 
-        $tel =$_POST["tel"];
-        $nation=$_POST["nation"];
-        $naissance=$_POST["naissance"];
-        $idcard=$_POST["idcard"]; $email = "$email";
-    }
 
 ?>
