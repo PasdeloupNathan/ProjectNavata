@@ -3,7 +3,7 @@
 function pdo_connect_mysql() {
     $DATABASE_HOST = 'localhost';
     $DATABASE_USER = 'root';
-    $DATABASE_PASS = '';
+    $DATABASE_PASS = 'root';
     $DATABASE_NAME = 'projet_navata';
     try {
     	return new PDO('mysql:host=' . $DATABASE_HOST . ';dbname=' . $DATABASE_NAME . ';charset=utf8', $DATABASE_USER, $DATABASE_PASS);
@@ -82,14 +82,15 @@ function conentreprise($email_societe, $mdp_societe) {
 
 ?>
 // read //
-<?function getAllConcours() {
+<? function getAllConcours() {
 	$con = pdo_connect_mysql();
 	$requete = 'SELECT * from concours';
 	$rows = $con->query($requete);
 	return $rows;
 }
+?>
 
 // UPDATE
 
-    ?>
+
 	 -->
