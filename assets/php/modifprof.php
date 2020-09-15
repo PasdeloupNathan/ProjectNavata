@@ -22,7 +22,7 @@ session_start();
 
 <div class="maininput">
 <h2>Modifiez vos informations</h2>
-    <div class="inputg row">
+    <form method="post" action="" class="inputg row">
         <div class="input offset-md-1 col-4">
 
             <label for="noms">Nom : <input type="text" name="noms" value="<?= $_SESSION['noms'];?>"></label>
@@ -51,12 +51,39 @@ session_start();
             <label for="idcard">N°ID : <input type="text" name="idcard" value="<?= $_SESSION['idcard'];?>"></label>
 
         </div>
-    </div>
-    <div class="buttong">
-        <button>Enregistrer les modifications</button>
-        <button>Annulez les modifications</button>
-    </div>
+        <div class="buttong">
+            <button type="submit" name="modif">Enregistrer les modifications</button>
+            <button>Annulez les modifications</button>
+        </div>
+    </form>
+    
 </div>
+
+<?php 
+$DATABASE_HOST = 'localhost';
+$DATABASE_USER = 'root';
+$DATABASE_PASS = '';
+$DATABASE_NAME = 'projet_navata';
+
+// Create connection
+$conn = new mysqli($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
+
+$sql = "UPDATE Users SET noms='Doe' WHERE id_users=2";
+
+if ($conn->query($sql) === TRUE) {
+  echo "Record updated successfully";
+} else {
+  echo "Error updating record: " . $conn->error;
+}
+
+$conn->close();
+?>
+
+?>
 
 <?=template_footer()?>
 
