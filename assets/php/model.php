@@ -36,5 +36,6 @@ function connexion($email, $mdp) {
 	var_dump($users);
 }
 
+			// Update //
 
 ?>

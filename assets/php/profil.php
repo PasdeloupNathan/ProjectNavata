@@ -31,7 +31,7 @@ include 'meta.php';
         <div class="row toprof">
             <img class="imgprof col-2 offset-md-1" src="../img/default_profil.png" alt="Image Profil">
             <div class="titrep col-3 offset-md-1">
-                <h2 class="h2prof"> Votre Profil </h2>
+                <h2 class="h2prof"> Votre Profil</h2>
             </div>
             <i class="fas fa-caret-right rose3"></i>
         </div>
@@ -48,6 +48,8 @@ include 'meta.php';
                 <p>Ville : <?= $_SESSION['ville'];?> </p>
                 <br>
                 <p>Nationalité : <?= $_SESSION['nation'];?> </p>
+                <br>
+                <p>Id Users : <?= $_SESSION['id_users'];?></p>
            
             </div>
             <div class="col droite">
