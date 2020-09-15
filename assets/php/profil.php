@@ -29,6 +29,15 @@ if(!isset($_SESSION["email"])){
 <?=template_header()?>
 
 
+<?php
+
+$teste = $pdo->prepare("select * from users where id_users = ?");
+$teste->execute();
+$bro= $teste->fetchAll(\PDO::FETCH_ASSOC);
+foreach($bro as $bros)
+
+?>
+
 <!-- Section Profil  -->
 
 <div class="main5 row align-items-center">
@@ -36,7 +45,7 @@ if(!isset($_SESSION["email"])){
         <div class="row toprof">
             <img class="imgprof col-2 offset-md-1" src="../img/default_profil.png" alt="Image Profil">
             <div class="titrep col-3 offset-md-1">
-                <h2 class="h2prof"> Votre Profil </h2>
+                <h2 class="h2prof"> Votre Profil</h2>
             </div>
             <i class="fas fa-caret-right rose3"></i>
         </div>
@@ -46,7 +55,7 @@ if(!isset($_SESSION["email"])){
                         <!-- appelle des valeurs de la bdd -->
                 <p>Nom : <?= $_SESSION['noms'];?> </p>
                 <br> 
-                <p>Prenom : <?= $_SESSION['prénoms'];?> </p>
+                <p>Prenom : <?= $bros['prénoms'];?> </p>
                 <br>
                 <p>Adresse : <?= $_SESSION['adresse'];?> </p>
                 <br>

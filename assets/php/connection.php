@@ -101,8 +101,9 @@ $msg = '';
                     $_SESSION['nation']=$users['nation'];
                     $_SESSION['naissance']=$users['naissance'];
                     $_SESSION['idcard']=$users['idcard'];
-                   $_SESSION['email']=$users['email'];
+                    $_SESSION['email']=$users['email'];
                     $_SESSION['mdp']=$users['mdp'];
+                    $_SESSION['id_users']=$users['id_users'];
                     echo '<script LANGUAGE="javascript">document.location.href="index.php"</script>';
                 }else{
                     echo '<p class="connexion animate__animated animate__flash">Votre information sont incorrect<p>';
