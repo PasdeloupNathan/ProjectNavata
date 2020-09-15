@@ -90,7 +90,7 @@ $msg = '';
                     <div style="padding-top: 1%;">
                         <input type="checkbox" required="" name="memo" id="mdp"> <label for="memo"> J’ai lu et j’accepte les conditions générales d’utilisation et la 
                         politique de confidentialité.</label>
-                        <input type="hidden" name="rôles" value="candidat">
+                        <!-- <input type="hidden" name="rôles" value="candidat"> -->
                     </div>
 
                     <!-- Button -->
