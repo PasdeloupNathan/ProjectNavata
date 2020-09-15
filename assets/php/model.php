@@ -12,20 +12,30 @@ function pdo_connect_mysql() {
     }
 }
 
-			// Inscription //
+			// Inscription User //
 
 function inscription($noms, $prenoms, $email, $ville, $addresse, $codepostal, $mdp) {
 	try {
 		$con = pdo_connect_mysql();
-    
-		$sql = "INSERT INTO `users` (`id_users`, `noms`, `prénoms`, `email`, `ville`, `adresse`, `codepostal`, `mdp`, `img`,
-         `tel`, `nation`, `naissance`, `idcard`) VALUES (NULL, '$noms', '$prenoms', '$email', '$ville', '$addresse', '$codepostal','$mdp','$img', Null,Null, Null, Null);";
+
+		$sql = "INSERT INTO `users` (`id_users`, `noms`, `prénoms`, `email`, `ville`, `adresse`, `codepostal`, `mdp`, `img`, `tel`, `nation`, `naissance`, `idcard`) VALUES (NULL, '$noms', '$prenoms', '$email', '$ville', '$addresse', '$codepostal','$mdp','$img', Null,Null, Null, Null);";
+
 		$con->exec($sql);
 	}
 	catch(PDOException $e) {
 		echo $sql . "<br>" . $e->getMessage();
 	}
 }
+
+
+			// Inscription entreprises //
+
+function entreprise($nom_societe, $email_societe, $ville_societe, $adresse_societe, $codepostal_societe, $siret_societe, $mdp_societe) {
+	try {
+		$con = pdo_connect_mysql();
+		$sql = "INSERT INTO `entreprise` (`id_entreprise`, `nom_societe`, `email_societe`, `ville_societe`, `adresse_societe`, `codepostal_societe`, `siret_societe`, `mdp_societe`, `img_societe`) VALUES (Null, '$nom_societe', '$email_societe', '$ville_societe', '$adresse_societe', '$codepostal_societe', '$siret_societe','$mdp_societe','$img_societe');";
+		$con->exec($sql);
+
 function update($id, $name, $email, $phone, $adresse) {
 	try {
 		$con = pdo_connect_mysql();
@@ -42,11 +52,13 @@ function update($id, $name, $email, $phone, $adresse) {
 					adresse = '$adresse' 
 					where id = '$id' ";
 		$stmt = $con->query($requete);
+
 	}
 	catch(PDOException $e) {
 		echo $sql . "<br>" . $e->getMessage();
 	}
 }
+
 			// Connexion //
 
 function connexion($email, $mdp) {
@@ -56,6 +68,17 @@ function connexion($email, $mdp) {
 	$users = $req->fetch(PDO::FETCH_ALL);
 	// var_dump($users);
 }
+
+
+function conentreprise($email_societe, $mdp_societe) {
+	$passwd_hash = hash('sha256', $mdp_societe);
+	$req = $bdd->prepare('SELECT * FROM entreprise WHERE email_societe = ?');
+	$req->execute([$email_societe]);
+	$entreprise = $req->fetch(PDO::FETCH_ALL);
+	var_dump($entreprise);
+}
+
+
 
 ?>
 // read //
