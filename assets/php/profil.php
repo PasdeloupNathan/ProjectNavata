@@ -40,8 +40,10 @@ foreach($bro as $bros)
 
         <div class="row infoprof">
             <div class="col offset-md-1 gauche">
+
                         <!-- appelle des valeurs de la bdd -->
                 <p>Nom : <?= $_SESSION['noms'];?> </p>
+
                 <br> 
 
                 <p>Prenom : <?= $bros['prénoms'];?> </p>
