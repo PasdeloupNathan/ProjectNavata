@@ -48,5 +48,13 @@ function connexion($email, $mdp) {
 	var_dump($users);
 }
 
+function conentreprise($email_societe, $mdp_societe) {
+	$passwd_hash = hash('sha256', $mdp_societe);
+	$req = $bdd->prepare('SELECT * FROM entreprise WHERE email_societe = ?');
+	$req->execute([$email_societe]);
+	$entreprise = $req->fetch(PDO::FETCH_ALL);
+	var_dump($entreprise);
+}
+
 
 ?>
