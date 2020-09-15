@@ -104,11 +104,11 @@ $msg = '';
                     </div>
 
                     <div style="padding-top: 1%;">
-                        <a href="insc.php">Vous avez déjà un compte? Connectez-vous</a>
+                        <a href="connection.php">Vous avez déjà un compte? Connectez-vous</a>
                     </div>
 
                     <div style="padding-top: 1%;">
-                        <a href="insc.php">Vous avez déjà un compte Particulier ? ou Inscrivez-vous</a>
+                        <a href="inscription.php">Vous avez déjà un compte Particulier ? ou Inscrivez-vous</a>
                     </div>
 
             </fieldset>
