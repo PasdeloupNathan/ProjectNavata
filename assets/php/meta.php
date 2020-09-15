@@ -1,6 +1,8 @@
 <?php
 
 
+// Function pour appeler la meta dans le code
+
 function template_meta($title) {
 echo<<<EOT
     <!DOCTYPE html>
@@ -31,6 +33,8 @@ echo<<<EOT
  
 EOT;
 }
+
+// Function pour appeler le header dans le code
 
 function template_header() {
 echo<<<EOT
@@ -79,6 +83,8 @@ echo<<<EOT
 
 EOT;
 }
+
+// Function pour appeler le footer dans le code
 
 function template_footer(){
 echo<<<EOT

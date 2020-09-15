@@ -7,24 +7,7 @@ $msg = '';
 session_start();
 ?>
 
-<?php
-if (isset($_GET['id_users'])) {
-    if (!empty($_POST)) {
-        // This part is similar to the create.php, but instead we update a record and not insert
-        $id_users = isset($_POST['id_users']) ? $_POST['id_users'] : NULL;
-        $name = isset($_POST['name']) ? $_POST['name'] : '';
-        $email = isset($_POST['email']) ? $_POST['email'] : '';
-        $phone = isset($_POST['phone']) ? $_POST['phone'] : '';
-        $title = isset($_POST['title']) ? $_POST['title'] : '';
-        $created = isset($_POST['created']) ? $_POST['created'] : date('Y-m-d H:i:s');
-        // Update the record
-        $stmt = $pdo->prepare('UPDATE users SET id_users = ?, name = ?, email = ?, phone = ?, title = ?, created = ? WHERE id_users = ?');
-        $stmt->execute([$id_users, $name, $email, $img, $tel, $nation, $idcard, $age, $adresse, $_GET['id_users']]);
-        $msg = 'Updated Successfully!';
-    }
-}
-   
-?>
+
 
 
 <?php include 'meta.php';?>
@@ -37,9 +20,13 @@ if (isset($_GET['id_users'])) {
 
 <?=template_header()?>
 
+    <!-- Section pour modifiez les info de votre profile  -->
+
 <div class="maininput">
 <h2>Modifiez vos informations</h2>
-    <form action='modifprof.php' <?=$_SESSION['id_users'];?> class="inputg row">
+
+    <form method="post" action="" class="inputg row">
+
         <div class="input offset-md-1 col-4">
 
             <label for="noms">Nom : <input type="text" name="noms" value="<?= $_SESSION['noms'];?>"></label>
@@ -51,7 +38,9 @@ if (isset($_GET['id_users'])) {
             <label for="email">Email : <input type="text" name="email" value="<?= $_SESSION['email'];?>"></label>
             <br>
             <label for="naissance">Date de naissance : <input type="text" name="naissance" value="<?= $_SESSION['naissance'];?>"></label>
-            
+            <br>
+            <label for="img" style="padding-right: 44%;">Image de profile : </label>
+            <br><input type="file"> 
         </div>
         <div class="input col-4">
 
@@ -67,12 +56,61 @@ if (isset($_GET['id_users'])) {
 
         </div>
         <div class="buttong">
-            <button type='submit' value='update' >Enregistrer les modifications</button>
+
+            <button type="submit" name="modif" action="">Enregistrer les modifications</button>
+
             <button>Annulez les modifications</button>
         </div>
     </form>
     
 </div>
+
+<?php 
+$DATABASE_HOST = 'localhost';
+$DATABASE_USER = 'root';
+$DATABASE_PASS = '';
+$DATABASE_NAME = 'projet_navata';
+
+
+$conn = new PDO('mysql:host=' . $DATABASE_HOST . ';dbname=' . $DATABASE_NAME . ';charset=utf8', $DATABASE_USER, $DATABASE_PASS);
+
+
+if (isset($_POST['modif'])){
+    $sql = "UPDATE Users SET noms='2' WHERE id_users=9";
+    // Prepare statement
+    $stmt = $conn->prepare($sql);
+
+    // execute the query
+    $stmt->execute();
+
+
+    $conn = null;
+
+    $test = $pdo->prepare("select * from users where id_users = ?");
+    $test->execute();
+    $user= $test->fetchAll(\PDO::FETCH_ASSOC);
+    foreach($user as $users){
+    //     if(isset($_POST['modif'])){
+            $_SESSION['noms']=$users['noms'];
+            $_SESSION['prénoms']=$users['prénoms'];
+            $_SESSION['ville']=$users['ville'];
+            $_SESSION['adresse']=$users['adresse'];
+            $_SESSION['codepostal']=$users['codepostal'];
+            $_SESSION['img']=$users['img'];
+            $_SESSION['tel']=$users['tel'];
+            $_SESSION['nation']=$users['nation'];
+            $_SESSION['naissance']=$users['naissance'];
+            $_SESSION['idcard']=$users['idcard'];
+            $_SESSION['email']=$users['email'];
+            $_SESSION['mdp']=$users['mdp'];
+            $_SESSION['id_users']=$users['id_users'];
+            echo '<script LANGUAGE="javascript">document.location.href="./profil.php"</script>';
+        }
+//     }
+}
+?>
+
+
 
 <?=template_footer()?>
 
@@ -80,4 +118,4 @@ if (isset($_GET['id_users'])) {
 
 </html>
 
-?>
+
