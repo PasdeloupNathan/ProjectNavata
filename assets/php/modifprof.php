@@ -71,36 +71,16 @@ $conn = new PDO('mysql:host=' . $DATABASE_HOST . ';dbname=' . $DATABASE_NAME . '
 
 if (isset($_POST['modif'])){
     $sql = "UPDATE Users SET noms='2' WHERE id_users=9";
-    // Prepare statement
+
     $stmt = $conn->prepare($sql);
 
-    // execute the query
+  
     $stmt->execute();
 
 
     $conn = null;
 
-    $test = $pdo->prepare("select * from users where id_users = ?");
-    $test->execute();
-    $user= $test->fetchAll(\PDO::FETCH_ASSOC);
-    foreach($user as $users){
-    //     if(isset($_POST['modif'])){
-            $_SESSION['noms']=$users['noms'];
-            $_SESSION['prénoms']=$users['prénoms'];
-            $_SESSION['ville']=$users['ville'];
-            $_SESSION['adresse']=$users['adresse'];
-            $_SESSION['codepostal']=$users['codepostal'];
-            $_SESSION['img']=$users['img'];
-            $_SESSION['tel']=$users['tel'];
-            $_SESSION['nation']=$users['nation'];
-            $_SESSION['naissance']=$users['naissance'];
-            $_SESSION['idcard']=$users['idcard'];
-            $_SESSION['email']=$users['email'];
-            $_SESSION['mdp']=$users['mdp'];
-            $_SESSION['id_users']=$users['id_users'];
-            echo '<script LANGUAGE="javascript">document.location.href="./profil.php"</script>';
-        }
-//     }
+
 }
 ?>
 
