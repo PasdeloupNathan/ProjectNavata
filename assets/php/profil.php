@@ -1,17 +1,24 @@
 <?php
-session_start()
-?>
-
-<?php
 require 'model.php';
 $pdo = pdo_connect_mysql();
 $msg = '';
 ?>
 
-
 <?php
 include 'meta.php';
 ?>
+
+<?php 
+session_start();
+if(!isset($_SESSION["email"])){
+    header("Location: connection.php");
+    exit();
+}
+?>
+<? $role=$_SESSION["rôles"];?>
+<? $id=$_SESSION["id_users"];?>
+
+<? if ($role == 'candidat')?>
 
 <?=template_meta('Profil')?>
     
@@ -22,64 +29,65 @@ include 'meta.php';
 <?=template_header()?>
 
 
-<!-- Section Profil  -->
-
 <?php
 
-$req = $pdo->prepare('SELECT * FROM users');
-$req->execute();
-$contact=$req->fetchAll(PDO::FETCH_ASSOC);
+$teste = $pdo->prepare("select * from users where id_users = ?");
+$teste->execute();
+$bro= $teste->fetchAll(\PDO::FETCH_ASSOC);
+foreach($bro as $bros)
 
-$user = $pdo->query('SELECT * FROM users');
 ?>
+
+<!-- Section Profil  -->
 
 <div class="main5 row align-items-center">
     <div class="profilc">
         <div class="row toprof">
-            <img class="imgprof col-2 offset-md-1" src="https://journalmetro.com/wp-content/uploads/2017/04/default_profile_400x400.png?w=860" alt="Image Profil">
+            <img class="imgprof col-2 offset-md-1" src="../img/default_profil.png" alt="Image Profil">
             <div class="titrep col-3 offset-md-1">
-                <h2 class="h2prof"> Votre Profil
-</h2>
+                <h2 class="h2prof"> Votre Profil</h2>
             </div>
             <i class="fas fa-caret-right rose3"></i>
         </div>
 
-        
-
         <div class="row infoprof">
             <div class="col offset-md-1 gauche">
-                <p>Nom :<?= $_SESSION['noms'];?> <i class="fas fa-edit"></i></p>
-                <p>Nom :<?= $_SESSION['id_users'];?> <i class="fas fa-edit"></i></p>
+
+                        <!-- appelle des valeurs de la bdd -->
+                <p>Nom : <?= $_SESSION['noms'];?> </p>
+
                 <br> 
-                <p>Prenom : <?= $_SESSION['mdp'];?>  <i class="fas fa-edit"></i></p>
+
+                <p>Prenom : <?= $bros['prénoms'];?> </p>
+
                 <br>
-                <p>Adresse : <i class="fas fa-edit"></i></p>
+                <p>Adresse : <?= $_SESSION['adresse'];?> </p>
                 <br>
-                <p>Nationalité : <i class="fas fa-edit"></i></p>
+                <p>Ville : <?= $_SESSION['ville'];?> </p>
                 <br>
-                <p>Date de naissance :  <i class="fas fa-edit"></i></p>
+                <p>Nationalité : <?= $_SESSION['nation'];?> </p>
            
             </div>
             <div class="col droite">
-                <p>Email :  <i class="fas fa-edit"></i></p>
+                <p>Date de naissance : <?= $_SESSION['naissance'];?> </p>
                 <br>
-                <p>Code Postal :  <i class="fas fa-edit"></i></p>
+                <p>Email : <?= $_SESSION['email'];?> </p>
                 <br>
-                <p>Telephone :  <i class="fas fa-edit"></i></p>
+                <p>Code Postal : <?= $_SESSION['codepostal'];?> </p>
                 <br>
-                <p>Numéro d'identité :  <i class="fas fa-edit"></i></p>
+                <p>Telephone : <?= $_SESSION['tel'];?> </p>
+                <br>
+                <p>Numéro d'identité : <?= $_SESSION['idcard'];?> </p>
+                <br>
+                <p id="modif">Modifiez votre profil  <i class="fas fa-edit" id="modif"></i></p> 
             </div>
-        </div>
-
-  
-
-        <div class="row infoprof2">
-            <p class="col offset-md-1 ">Modifiez tout votre profil <i class="fas fa-edit"></i></p> <p class="col"> Modifiez votre mot de passe <i class="fas fa-edit"></i></p>
         </div>
     </div>
 </div>
 
+<? $_SESSION["email"] ?>
 
+<?$id ?>
 <a href="deconnection.php" class="btn">deconnection</a>
 
 
@@ -88,6 +96,9 @@ $user = $pdo->query('SELECT * FROM users');
 
 <div class="main6 row">
     <div class="col doubleCInsc row align-items-center">
+
+    <!-- Concours auquel vous vous etes inscrit et en attente de la reponse  -->
+
         <div class="concourInsC">
             <h2 class="h2cins">Concours auquel vous etes inscrit</h2>
             <i class="fas fa-caret-right rose1"></i>
@@ -116,6 +127,9 @@ $user = $pdo->query('SELECT * FROM users');
         </div>
     </div>
     <div class="col doubleCInsc row align-items-center">
+
+    <!-- Concours bientot lancé que vous attendez  -->
+
         <div class="concourInsC2">
             <h2 class="h2cins2">Concours en attente d'ouverture</h2>
             <i class="fas fa-caret-right rose1"></i>
@@ -141,6 +155,9 @@ $user = $pdo->query('SELECT * FROM users');
 
 <?=template_footer()?>
 
+
+
+<script src="../js/profil.js"></script>
 </body>
 
 </html>

@@ -90,6 +90,7 @@ $msg = '';
                     <div style="padding-top: 1%;">
                         <input type="checkbox" required="" name="memo" id="mdp"> <label for="memo"> J’ai lu et j’accepte les conditions générales d’utilisation et la 
                         politique de confidentialité.</label>
+                        <input type="hidden" name="rôles" value="candidat">
                     </div>
 
                     <!-- Button -->
@@ -104,11 +105,11 @@ $msg = '';
                     <div style="padding-top: 1%;">
                         <a href="./connection.php">Vous avez déjà un compte? Connectez-vous</a>
                     </div>
-                    </div>
+                </div>
 
 
             </fieldset>-                 
-
+            
     </div>
 
 
@@ -126,7 +127,7 @@ $msg = '';
         $tel =$_POST["tel"];
         $nation=$_POST["nation"];
         $naissance=$_POST["naissance"];
-        $idcard=$_POST["idcard"]; $email = "$email";
+        $idcard=$_POST["idcard"]; 
         if($mdp != $mdpconf){
             echo '<p class="connexion animate__animated animate__flash"> les deux mots de passe doivent être identique<p>';
         }else{

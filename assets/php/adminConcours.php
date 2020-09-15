@@ -1,4 +1,8 @@
 <?php
+session_start()
+?>
+
+<?php
 include 'meta.php';
 ?>
 <?=template_meta('admin')?>
@@ -15,7 +19,7 @@ include 'meta.php';
 <section class="row page">
 
 <?=template_admin()?>
-
+<!-- tableau listant les concours -->
 <form class="col-10 formulaire" action="">
     <div style="width: 100%; " class=" menu">
         <div  class="listeData row align-items-center">
@@ -46,8 +50,15 @@ include 'meta.php';
 </div>
 </form>
 
-
+<div>
+<?
+$concours = getAllConcours();
+?>
+</div class='listeData' >
 <?=template_footer()?>
+
+
+
 
 <body>
     

@@ -18,7 +18,7 @@ include 'meta.php';
 
 
 <div class="main3 h2nav">
-    
+    <!-- premiere partie du site contenent le concours avec les plus d'angouement  -->
         <div class="firstBox" class="container">
            
                 <div class=" title">
@@ -42,6 +42,7 @@ include 'meta.php';
         </div>
 
 <div class="main3 h2nav">
+<!-- 2e partie de la page avec un carroussel permettant de visualisé les différent type de concours pas catégorie -->
 <div class="firstBox" class="container">
            
             <div class="row List">
@@ -83,7 +84,7 @@ include 'meta.php';
                         </div>
                         </div>
                     </div>
-                    
+                    <!-- carroussel -->
                     <div class="col-6 acceuil">
                         <div>
                         <img id="logoImg2" src="../img/test1.jpg" alt="logo">

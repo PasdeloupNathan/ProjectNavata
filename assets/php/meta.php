@@ -1,6 +1,8 @@
 <?php
 
 
+// Function pour appeler la meta dans le code
+
 function template_meta($title) {
 echo<<<EOT
     <!DOCTYPE html>
@@ -25,11 +27,14 @@ echo<<<EOT
         <link rel="stylesheet" href="../css/adminTable.min.css">
         <link rel="stylesheet" href="../css/adminLogs.min.css">
         <link rel="stylesheet" href="../css/entreprise.min.css">
+        <link rel="stylesheet" href="../css/input.min.css">
 
     </head>
  
 EOT;
 }
+
+// Function pour appeler le header dans le code
 
 function template_header() {
 echo<<<EOT
@@ -79,6 +84,8 @@ echo<<<EOT
 EOT;
 }
 
+// Function pour appeler le footer dans le code
+
 function template_footer(){
 echo<<<EOT
     <div class="foot row align-items-center">
@@ -97,4 +104,6 @@ echo<<<EOT
 
 EOT;
 }
-?>
+
+
+
