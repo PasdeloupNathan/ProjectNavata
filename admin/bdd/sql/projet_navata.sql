@@ -17,6 +17,7 @@ CREATE TABLE `admin` (
 
 CREATE TABLE `users` (
 	`id_users` INT NOT NULL AUTO_INCREMENT,
+	`rôles` varchar(255) NOT NULL,
 	`noms` varchar(255) NOT NULL ,
 	`prénoms` varchar(255) NOT NULL ,
 	`email` varchar(255) NOT NULL ,
