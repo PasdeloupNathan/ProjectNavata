@@ -14,11 +14,11 @@ function pdo_connect_mysql() {
 
 			// Inscription User //
 
-function inscription($noms, $prenoms, $email, $ville, $addresse, $codepostal, $mdp) {
+function inscription($rôles, $noms, $prenoms, $email, $ville, $addresse, $codepostal, $mdp) {
 	try {
 		$con = pdo_connect_mysql();
 
-		$sql = "INSERT INTO `users` (`id_users`, `noms`, `prénoms`, `email`, `ville`, `adresse`, `codepostal`, `mdp`, `img`, `tel`, `nation`, `naissance`, `idcard`) VALUES (NULL, '$noms', '$prenoms', '$email', '$ville', '$addresse', '$codepostal','$mdp','$img', Null,Null, Null, Null);";
+		$sql = "INSERT INTO `users` (`id_users`,`rôles`, `noms`, `prénoms`, `email`, `ville`, `adresse`, `codepostal`, `mdp`, `img`, `tel`, `nation`, `naissance`, `idcard`) VALUES (NULL, '$rôles', '$noms', '$prenoms', '$email', '$ville', '$addresse', '$codepostal','$mdp','$img', Null,Null, Null, Null);";
 
 		$con->exec($sql);
 	}
@@ -31,12 +31,16 @@ function inscription($noms, $prenoms, $email, $ville, $addresse, $codepostal, $m
 			// Inscription entreprises //
 
 function entreprise($nom_societe, $email_societe, $ville_societe, $adresse_societe, $codepostal_societe, $siret_societe, $mdp_societe) {
-	try {
+	try  {
 		$con = pdo_connect_mysql();
 		$sql = "INSERT INTO `entreprise` (`id_entreprise`, `nom_societe`, `email_societe`, `ville_societe`, `adresse_societe`, `codepostal_societe`, `siret_societe`, `mdp_societe`, `img_societe`) VALUES (Null, '$nom_societe', '$email_societe', '$ville_societe', '$adresse_societe', '$codepostal_societe', '$siret_societe','$mdp_societe','$img_societe');";
 		$con->exec($sql);
 
-
+    }
+    catch(PDOException $e) {
+		echo $sql . "<br>" . $e->getMessage();
+	}
+}
 
 
 function connexion($email, $mdp) {
@@ -45,7 +49,7 @@ function connexion($email, $mdp) {
     $req->execute([$email]);
     $users = $req->fetch(PDO::FETCH_ALL);
     var_dump($users);
-
+}
 
             
 
