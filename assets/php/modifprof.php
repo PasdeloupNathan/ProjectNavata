@@ -52,7 +52,7 @@ session_start();
 
         </div>
         <div class="buttong">
-            <button type="submit" name="modif">Enregistrer les modifications</button>
+            <button type="submit" name="modif" action="">Enregistrer les modifications</button>
             <button>Annulez les modifications</button>
         </div>
     </form>
@@ -65,25 +65,46 @@ $DATABASE_USER = 'root';
 $DATABASE_PASS = '';
 $DATABASE_NAME = 'projet_navata';
 
-// Create connection
-$conn = new mysqli($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
-// Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
+
+$conn = new PDO('mysql:host=' . $DATABASE_HOST . ';dbname=' . $DATABASE_NAME . ';charset=utf8', $DATABASE_USER, $DATABASE_PASS);
+
+
+if (isset($_POST['modif'])){
+    $sql = "UPDATE Users SET noms='2' WHERE id_users=9";
+    // Prepare statement
+    $stmt = $conn->prepare($sql);
+
+    // execute the query
+    $stmt->execute();
+
+
+    $conn = null;
+
+    $test = $pdo->prepare("select * from users where id_users = ?");
+    $test->execute();
+    $user= $test->fetchAll(\PDO::FETCH_ASSOC);
+    foreach($user as $users){
+    //     if(isset($_POST['modif'])){
+            $_SESSION['noms']=$users['noms'];
+            $_SESSION['prénoms']=$users['prénoms'];
+            $_SESSION['ville']=$users['ville'];
+            $_SESSION['adresse']=$users['adresse'];
+            $_SESSION['codepostal']=$users['codepostal'];
+            $_SESSION['img']=$users['img'];
+            $_SESSION['tel']=$users['tel'];
+            $_SESSION['nation']=$users['nation'];
+            $_SESSION['naissance']=$users['naissance'];
+            $_SESSION['idcard']=$users['idcard'];
+            $_SESSION['email']=$users['email'];
+            $_SESSION['mdp']=$users['mdp'];
+            $_SESSION['id_users']=$users['id_users'];
+            echo '<script LANGUAGE="javascript">document.location.href="./profil.php"</script>';
+        }
+//     }
 }
-
-$sql = "UPDATE Users SET noms='Doe' WHERE id_users=2";
-
-if ($conn->query($sql) === TRUE) {
-  echo "Record updated successfully";
-} else {
-  echo "Error updating record: " . $conn->error;
-}
-
-$conn->close();
 ?>
 
-?>
+
 
 <?=template_footer()?>
 
@@ -91,21 +112,3 @@ $conn->close();
 
 </html>
 
-<?php
-        if(isset($_POST['inscrire'])){ 
-             $name=$_POST["name"];
-             $prénoms=$_POST["prénoms"];
-            $email=$_POST["email"];
-            $ville=$_POST["ville"];
-            $codepostal=$_POST["codepostal"];
-            $mdp=$_POST["mdp"];
-        $mdpconf=$_POST["mdpconf"];
-        $adresse=$_POST["adresse"];
-        $img =$_POST["img"]; 
-        $tel =$_POST["tel"];
-        $nation=$_POST["nation"];
-        $naissance=$_POST["naissance"];
-        $idcard=$_POST["idcard"]; $email = "$email";
-    }
-    
-?>

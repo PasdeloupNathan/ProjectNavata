@@ -24,6 +24,15 @@ include 'meta.php';
 <?=template_header()?>
 
 
+<?php
+
+$teste = $pdo->prepare("select * from users where id_users = ?");
+$teste->execute();
+$bro= $teste->fetchAll(\PDO::FETCH_ASSOC);
+foreach($bro as $bros)
+
+?>
+
 <!-- Section Profil  -->
 
 <div class="main5 row align-items-center">
@@ -41,15 +50,13 @@ include 'meta.php';
                         <!-- appelle des valeurs de la bdd -->
                 <p>Nom : <?= $_SESSION['noms'];?> </p>
                 <br> 
-                <p>Prenom : <?= $_SESSION['prénoms'];?> </p>
+                <p>Prenom : <?= $bros['prénoms'];?> </p>
                 <br>
                 <p>Adresse : <?= $_SESSION['adresse'];?> </p>
                 <br>
                 <p>Ville : <?= $_SESSION['ville'];?> </p>
                 <br>
                 <p>Nationalité : <?= $_SESSION['nation'];?> </p>
-                <br>
-                <p>Id Users : <?= $_SESSION['id_users'];?></p>
            
             </div>
             <div class="col droite">
