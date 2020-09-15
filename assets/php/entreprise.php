@@ -1,12 +1,20 @@
 <?php
 session_start()
 ?>
+
 <?php
 require 'model.php';
 $pdo = pdo_connect_mysql();
 $msg = '';
 ?>
 
+
+<style>
+.connexion{
+    text-align: center;
+    color: red;
+}
+</style>
 
 <?php include('meta.php')?>
 <?=template_meta('Inscription')?>
@@ -40,7 +48,7 @@ $msg = '';
 
                     <div class="form-group">
                         <div class="col" style="padding-top: 1%;">
-                            <input id="" name="ville_societe" type="name" placeholder="Ville" class="form-control input-md" required="" style="border:solid 1px #707070; margin-left: 5%; width:90%;border-radius: 0;">
+                            <input id="ville_societe" name="ville_societe" type="name" placeholder="Ville" class="form-control input-md" required="" style="border:solid 1px #707070; margin-left: 5%; width:90%;border-radius: 0;">
                             <i class="fas fa-caret-right" style="position: absolute; transform: rotate(315deg);margin-left: 40.6%; margin-top: -10.23%; color: #de2b76 ;font-size: 1.5rem;"></i>
                         </div>   
                     </div>
@@ -89,9 +97,8 @@ $msg = '';
 
                     <!-- Button -->
                     <div class="form-group">
-                        <div class="col" style="padding-top: 2.5%;">
-                            <button id="test" name="entreprises" type="submit" class="btn btn-primary" style="width: 100%;background-color: #ffffff;color: #707070;border:solid 1px #707070;border-radius: 0;">Inscrivez-vous</button>
-                            
+                        <div class="col" style="padding-top: 2.5%;">                        
+                        <button id="test" name="entreprises" type="submit" class="btn btn-primary" style="width: 100%;background-color: #ffffff;color: #707070;border:solid 1px #707070;border-radius: 0;">Inscrivez-vous</button>          
                             <i class="fas fa-caret-right" style="position: absolute; transform: rotate(315deg);margin-left: 45%; margin-top: -10.26%; color: #de2b76 ;font-size: 1.5rem;"></i>
                         </div>
                     </div>
@@ -112,8 +119,8 @@ $msg = '';
         if(isset($_POST['entreprises'])){ 
              $nom_societe=$_POST["nom_societe"];
              $email_societe=$_POST["email_societe"];
-            $ville_societe=$_POST["	ville_societe"];
-            $adresse_societe=$_POST["adresse_societe"];
+             $ville_societe=$_POST["ville_societe"];
+             $adresse_societe=$_POST["adresse_societe"];
             $codepostal_societe=$_POST["codepostal_societe"];
             $siret_societe=$_POST["siret_societe"];
             $mdp_societe=$_POST["mdp_societe"];
@@ -128,7 +135,7 @@ $msg = '';
     if($entreprise){
         echo '<p class="connexion animate__animated animate__flash">cette addresse mail est deja utilisé<p>';
     }else{
-        echo '<script LANGUAGE="javascript">document.location.href="connection.php"</script>';    
+       echo '<script LANGUAGE="javascript">document.location.href="connection.php"</script>';    
  die(entreprise($nom_societe,$email_societe,$ville_societe,$adresse_societe,$codepostal_societe,$siret_societe,$mdp_societe));
     }
 
