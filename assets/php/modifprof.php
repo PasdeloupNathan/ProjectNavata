@@ -1,5 +1,5 @@
 <?php
-$mysql = require 'model.php';
+require 'model.php';
 $pdo = pdo_connect_mysql();
 $msg = '';
 ?>
@@ -52,7 +52,7 @@ session_start();
 
         </div>
         <div class="buttong">
-            <button type="submit" name="submit">Enregistrer les modifications</button>
+            <button type="submit" name="modif">Enregistrer les modifications</button>
             <button>Annulez les modifications</button>
         </div>
     </form>
@@ -60,15 +60,28 @@ session_start();
 </div>
 
 <?php 
+$DATABASE_HOST = 'localhost';
+$DATABASE_USER = 'root';
+$DATABASE_PASS = '';
+$DATABASE_NAME = 'projet_navata';
 
-if(isset($_POST['submit'])){
-    $stmt = "UPDATE users SET noms = 'toto' WHERE id_users = 2";
-    $mysql->query($stmt);
-    close();
-    echo "<scritp>console.log('test');</scritp>";
+// Create connection
+$conn = new mysqli($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
 }
 
+$sql = "UPDATE Users SET noms='Doe' WHERE id_users=2";
 
+if ($conn->query($sql) === TRUE) {
+  echo "Record updated successfully";
+} else {
+  echo "Error updating record: " . $conn->error;
+}
+
+$conn->close();
+?>
 
 ?>
 
