@@ -1,3 +1,7 @@
+<?php 
+session_start();
+?>
+
 <?php
 require 'model.php';
 $pdo = pdo_connect_mysql();
@@ -6,10 +10,6 @@ $msg = '';
 
 <?php
 include 'meta.php';
-?>
-
-<?php 
-session_start();
 ?>
 
 

@@ -47,7 +47,12 @@ function connexion($email, $mdp) {
 	$passwd_hash = hash('sha256', $mdp);
 	$req = $bdd->prepare('SELECT * FROM users WHERE email = ?');
 	$req->execute([$email]);
-	$users = $req->fetch(PDO::FETCH_ALL);
+	$users = $req->fetch();
+	if($users){
+
+	}else{
+		$req = $bdd->prepare('SELECT * FROM users WHERE email = ?');
+	}
 	// var_dump($users);
 }
 
