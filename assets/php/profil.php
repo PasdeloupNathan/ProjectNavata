@@ -55,7 +55,9 @@ foreach($bro as $bros)
                         <!-- appelle des valeurs de la bdd -->
                 <p>Nom : <?= $_SESSION['noms'];?> </p>
                 <br> 
+
                 <p>Prenom : <?= $bros['prénoms'];?> </p>
+
                 <br>
                 <p>Adresse : <?= $_SESSION['adresse'];?> </p>
                 <br>
@@ -83,7 +85,7 @@ foreach($bro as $bros)
 
 <? $_SESSION["email"] ?>
 
-<? $_SESSION["id"] ?>
+<?$id ?>
 <a href="deconnection.php" class="btn">deconnection</a>
 
 

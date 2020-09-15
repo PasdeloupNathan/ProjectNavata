@@ -90,6 +90,7 @@ $msg = '';
             $test->execute([$email]);
             $user= $test->fetchAll(\PDO::FETCH_ASSOC);
             foreach($user as $users){
+                    //déclaration data
                 if($users['mdp']==$mdp){
                     $_SESSION['noms']=$users['noms'];
                     $_SESSION['prénoms']=$users['prénoms'];

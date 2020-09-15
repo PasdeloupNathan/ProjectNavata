@@ -8,6 +8,8 @@ session_start();
 ?>
 
 
+
+
 <?php include 'meta.php';?>
 
 
@@ -22,7 +24,9 @@ session_start();
 
 <div class="maininput">
 <h2>Modifiez vos informations</h2>
+
     <form method="post" action="" class="inputg row">
+
         <div class="input offset-md-1 col-4">
 
             <label for="noms">Nom : <input type="text" name="noms" value="<?= $_SESSION['noms'];?>"></label>
@@ -52,7 +56,9 @@ session_start();
 
         </div>
         <div class="buttong">
+
             <button type="submit" name="modif" action="">Enregistrer les modifications</button>
+
             <button>Annulez les modifications</button>
         </div>
     </form>
@@ -111,4 +117,5 @@ if (isset($_POST['modif'])){
 </body>
 
 </html>
+
 

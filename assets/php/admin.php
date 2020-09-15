@@ -22,8 +22,9 @@ $annee = (int)date('Y');
 <div class="row page">
 
 <?=template_admin()?>
-<!-- //frontEnd -->
+<!-- //frontEnd de l'acceuil admin  -->
 <div class="col">
+<!-- compteur de visite du site -->
   <div class="ListStats" style="width:50%">
     <div class="col-  stats ">
     <?php 
@@ -39,7 +40,7 @@ $annee = (int)date('Y');
     </div>
     <div class="graph row"style="width:50%">
 
-    
+    <!--  futur graphique camembert listant des stats -->
     <div id="cercle" class="col graph">
 
     </div>
@@ -48,6 +49,7 @@ $annee = (int)date('Y');
     </div>
     </div>
   </div>
+  <!-- div pour le nombre de concours et le pourcentage homme/femme -->
   <div class="ListStats" style="width:50%">
     <div class="col stats ">
     nombre de concours :
