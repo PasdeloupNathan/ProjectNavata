@@ -1,15 +1,12 @@
+<?php 
+session_start();
+?>
+
 <?php
 require 'model.php';
 $pdo = pdo_connect_mysql();
 $msg = '';
 ?>
-
-
-<?php 
-session_start();
-
-?>
-
 
 <?php
 include 'meta.php';
@@ -47,10 +44,14 @@ foreach($bro as $bros)
 
         <div class="row infoprof">
             <div class="col offset-md-1 gauche">
+
                         <!-- appelle des valeurs de la bdd -->
+
                 <p>Nom : <?= $bros['noms'];?> </p>
                 <br>
+
                 <p>Prenom : <?= $bros['prénoms'];?> </p>
+
                 <br>
                 <p>Adresse : <?= $bros['adresse'];?> </p>
                 <br>
@@ -76,7 +77,9 @@ foreach($bro as $bros)
     </div>
 </div>
 
+<? $_SESSION["email"] ?>
 
+<?$id ?>
 <a href="deconnection.php" class="btn">deconnection</a>
 
 

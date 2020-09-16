@@ -1,6 +1,9 @@
 <?php
+
+
 include 'meta.php';
 // $total= nombre_vues()
+$annee = (int)date('Y');
 
 ?>
 <?=template_meta('adminConcours')?>
@@ -16,11 +19,12 @@ include 'meta.php';
 
 <?=template_header()?>
 
-<div class="row  page">
+<div class="row page">
 
 <?=template_admin()?>
-<!-- //frontEnd -->
+<!-- //frontEnd de l'acceuil admin  -->
 <div class="col">
+<!-- compteur de visite du site -->
   <div class="ListStats" style="width:50%">
     <div class="col-  stats ">
     <?php 
@@ -36,7 +40,7 @@ include 'meta.php';
     </div>
     <div class="graph row"style="width:50%">
 
-    
+    <!--  futur graphique camembert listant des stats -->
     <div id="cercle" class="col graph">
 
     </div>
@@ -45,6 +49,7 @@ include 'meta.php';
     </div>
     </div>
   </div>
+  <!-- div pour le nombre de concours et le pourcentage homme/femme -->
   <div class="ListStats" style="width:50%">
     <div class="col stats ">
     nombre de concours :
