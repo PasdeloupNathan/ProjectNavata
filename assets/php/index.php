@@ -1,13 +1,21 @@
-<?php session_start(); ?>
-
+<?php session_start(); 
+if(!isset($_SESSION["email"])){
+    header("Location: connection.php");
+    exit(); 
+  }
+  ?>
+  
+<?php $rôles=$_SESSION["rôles"];?>
+<?php $id=$_SESSION["id"];?>
 <!-- Appeller de la page meta.php ou se situe toute les fonction template  -->
-
 <?php include 'meta.php';?>
 
 <!-- Appelle d'une foncion template  -->
 
 <?=template_meta('Acceuil')?>
-   
+
+<?php if($rôles == 'candidat') {
+    ?>
 <body class="body">
 
 <?=template_header()?>
@@ -63,7 +71,9 @@
             </div>
     </div>
 </div>
-
+<?php
+}
+?>
 </div>
 
 <!-- Section pour les concours les tendance du momment  -->
