@@ -12,7 +12,6 @@ $msg = '';
 include 'meta.php';
 ?>
 
-
 <?=template_meta('Profil')?>
     
 
