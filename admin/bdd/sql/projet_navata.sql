@@ -44,15 +44,16 @@ CREATE TABLE `Candidatures` (
 
 CREATE TABLE `Concours` (
 	`id_concours` INT NOT NULL AUTO_INCREMENT,
-	`noms_concours` varchar(255) NOT NULL,
+	`noms_concours` varchar(255) NOT NULL, 
 	`nom_entreprise` varchar(255) NOT NULL,
+	`descriptionConcours` varchar(255) NOT NULL,
 	`locaConcours` varchar(255) NOT NULL,
-	`categorieConcours` varchar(255) NOT NULL,
-	`date_concours` date NOT NULL,
-	`placeConcoursPrise` INT NOT NULL,
+	`date_concours` DATE NOT NULL,
 	`placeConcoursMax` INT NOT NULL,
-	`placeConcoursRestante` INT NOT NULL,
 	`link_entreprise` varchar(255) NOT NULL,
+	`categorieConcours` varchar(255) NULL,
+	`placeConcoursPrise` INT NULL,
+	`placeConcoursRestante` INT NULL,
 	PRIMARY KEY (`id_concours`)
 );
 
