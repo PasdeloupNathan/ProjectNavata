@@ -62,22 +62,9 @@ function conentreprise($email_societe, $mdp_societe) {
 	$req->execute([$email_societe]);
 	$entreprise = $req->fetch(PDO::FETCH_ALL);
 	var_dump($entreprise);
+		
 }
 
-    }
-    catch(PDOException $e) {
-		echo $sql . "<br>" . $e->getMessage();
-	}
-}
-
-
-function connexion($email, $mdp) {
-    $passwd_hash = hash('sha256', $mdp);
-    $req = $bdd->prepare('SELECT * FROM users WHERE email = ?');
-    $req->execute([$email]);
-    $users = $req->fetch(PDO::FETCH_ALL);
-    var_dump($users);
-}
 
 
 ?>
