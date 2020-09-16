@@ -1,22 +1,6 @@
-CREATE TABLE `roles` (
-	`id_roles` INT NOT NULL,
-	`admin` varchar(255) NOT NULL,
-	`candidat` varchar(255) NOT NULL,
-	`entreprise` varchar(255) NOT NULL,
-	PRIMARY KEY (`id_roles`)
-);
-
-CREATE TABLE `admin` (
-	`id_admin` INT NOT NULL AUTO_INCREMENT,
-	`noms_admin` varchar(255) NOT NULL ,
-	`prénoms_admin` varchar(255) NOT NULL ,
-	`email_admin` varchar(255) NOT NULL ,
-	`mdp_admin` varchar(255) NOT NULL,
-	PRIMARY KEY (`id_admin`)
-);
-
 CREATE TABLE `users` (
 	`id_users` INT NOT NULL AUTO_INCREMENT,
+	`rôles` varchar(255) NOT NULL,
 	`noms` varchar(255) NOT NULL ,
 	`prénoms` varchar(255) NOT NULL ,
 	`email` varchar(255) NOT NULL ,

@@ -1,3 +1,7 @@
+<?php 
+session_start();
+?>
+
 <?php
 require 'model.php';
 $pdo = pdo_connect_mysql();
