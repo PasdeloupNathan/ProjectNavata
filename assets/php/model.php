@@ -2,7 +2,7 @@
 function pdo_connect_mysql() {
     $DATABASE_HOST = 'localhost';
     $DATABASE_USER = 'root';
-    $DATABASE_PASS = '';
+    $DATABASE_PASS = 'root';
     $DATABASE_NAME = 'projet_navata';
     try {
         return new PDO('mysql:host=' . $DATABASE_HOST . ';dbname=' . $DATABASE_NAME . ';charset=utf8', $DATABASE_USER, $DATABASE_PASS);
@@ -27,6 +27,7 @@ function inscription($rôles, $noms, $prenoms, $email, $ville, $addresse, $codep
 }
 
 
+
 			// Inscription entreprises //
 
 function entreprise($nom_societe, $email_societe, $ville_societe, $adresse_societe, $codepostal_societe, $siret_societe, $mdp_societe) {
@@ -39,7 +40,20 @@ function entreprise($nom_societe, $email_societe, $ville_societe, $adresse_socie
 		echo $sql . "<br>" . $e->getMessage();
 	}
 		
-   }
+}
+
+			// Inscription : création d’un concours //
+
+function create_form_concours($noms_concours, $nom_entreprise, $locaConcours, $descriptionConcours, $categorieConcours, $date_concours, $placeConcoursMax) {
+	try {
+		$con = pdo_connect_mysql();
+		$sql = "INSERT INTO `Concours` (`id_concours`, `noms_concours`, `nom_entreprise`, `locaConcours`, `descriptionConcours`, `categorieConcours`, `date_concours`, `placeConcoursPrise`, `placeConcoursMax`, `placeConcoursRestante`, `link_entreprise`) VALUES (NULL, '$noms_concours', '$nom_entreprise', '$locaConcours', '$descriptionConcours', NULL , '$date_concours', NULL,'$placeConcoursMax',NULL, '$link_entreprise');";
+		$con->exec($sql);
+	}
+	catch(PDOException $e) {
+		echo $sql . "<br>" . $e->getMessage();
+	}
+}
 			// Connexion //
 
 function connexion($email, $mdp) {
@@ -64,7 +78,6 @@ function conentreprise($email_societe, $mdp_societe) {
 	var_dump($entreprise);
 		
 }
-
 
 
 ?>
