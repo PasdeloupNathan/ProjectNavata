@@ -1,9 +1,23 @@
-<?php
-session_start()
-?>
+<? include 'model.php'; ?>
+<?php session_start(); 
+
+  ?>
+<!-- // Vérifiez si l'utilisateur est connecté, sinon redirigez-le vers la page de connexion// -->
+
+<!-- Appeller de la page meta.php ou se situe toute les fonction template  -->
+<?php include 'meta.php';?>
 
 <?php
-include 'meta.php';
+if($_SESSION == FALSE){
+    template_header();
+}elseif($_SESSION["rôles"] == 'candidat'){
+    template_headerUsers();
+}elseif($_SESSION["rôles"] == 'entreprise'){
+    template_headerEntreprise();
+}elseif($_SESSION["rôles"] == 'admin'){
+    template_headerAdmin();
+}
+
 ?>
 
 <?=template_meta('Concours')?>
@@ -14,7 +28,7 @@ include 'meta.php';
 
 
 
-<?=template_header()?>
+
 
 
 <div class="main3 h2nav">

@@ -66,7 +66,7 @@ EOT;
 }
 // Function pour appeler le header des candidats dans le code
 function template_headerUsers() {
-    echo<<<EOT
+echo<<<EOT
         <div class="menu">
             <div class="row haut align-items-center">
                 <div class="logo animate__animated animate__rubberBand"><img src="../img/LOGO.png" alt="logo" class="logoimg"></div>
@@ -88,14 +88,15 @@ function template_headerUsers() {
             </div>
         </div>
         <div class="bleu align-items-center">
-            <p class="pnav animate__animated animate__backInLeft"> Identifiez-vous ( <a href="./inscription.php" class="animate__animated animate__shakeX">ou inscrivez-vous</a> ) afin de profiter pleinement des fonctionnalités.</p>
+            
         </div>
         
     EOT;
-    }
+}
+
 // Function pour appeler le header des entreprises dans le code
 function template_headerEntreprise() {
-        echo<<<EOT
+echo<<<EOT
             <div class="menu">
                 <div class="row haut align-items-center">
                     <div class="logo animate__animated animate__rubberBand"><img src="../img/LOGO.png" alt="logo" class="logoimg"></div>
@@ -111,20 +112,23 @@ function template_headerEntreprise() {
                     </div>
                     <div class="col"></div>
                     <div class="col">
-                        <h2 class="h2nav"><a href="./entrepriseprof.php">Votre entreprise</a></h2>
+                        <h2 class="h2nav"><a href="./entrepriseprofil.php">Votre Entreprise</a></h2>
                     </div>
             
                 </div>
             </div>
             <div class="bleu align-items-center">
-                <p class="pnav animate__animated animate__backInLeft"> Identifiez-vous ( <a href="./inscription.php" class="animate__animated animate__shakeX">ou inscrivez-vous</a> ) afin de profiter pleinement des fonctionnalités.</p>
+               
             </div>
             
         EOT;
-        }
+    }
+
+
         // Function pour appeler le header des entreprises dans le code
+
 function template_headerAdmin() {
-        echo<<<EOT
+echo<<<EOT
             <div class="menu">
                 <div class="row haut align-items-center">
                     <div class="logo animate__animated animate__rubberBand"><img src="../img/LOGO.png" alt="logo" class="logoimg"></div>
@@ -146,11 +150,12 @@ function template_headerAdmin() {
                 </div>
             </div>
             <div class="bleu align-items-center">
-                <p class="pnav animate__animated animate__backInLeft"> Identifiez-vous ( <a href="./inscription.php" class="animate__animated animate__shakeX">ou inscrivez-vous</a> ) afin de profiter pleinement des fonctionnalités.</p>
+                
             </div>
             
         EOT;
-        }
+}
+// Function pour appeler le header des admins dans le code
 function template_admin(){
 echo<<<EOT
     

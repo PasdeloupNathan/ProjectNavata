@@ -1,6 +1,16 @@
-<?php
-session_start()
+<?php 
+session_start();
 ?>
+
+<?php
+require 'model.php';
+$pdo = pdo_connect_mysql();
+$msg = '';
+?>
+
+<?php if($_SESSION["rôles"] == 'admin'){
+  ?>
+
 
 <?php
 include 'meta.php';
@@ -62,3 +72,8 @@ $concours = getAllConcours();
 
 <body>
     
+<?php
+} else{
+    header("Location: redirection.php");
+}
+?>
