@@ -1,3 +1,17 @@
+<?php 
+session_start();
+?>
+
+<?php
+require 'model.php';
+$pdo = pdo_connect_mysql();
+$msg = '';
+?>
+
+<?php if($_SESSION["rôles"] == 'admin'){
+  ?>
+
+
 <?php
 include 'meta.php';
 ?>
@@ -179,3 +193,8 @@ include 'meta.php';
 </body>
 
 </html>
+<?php
+} else{
+    header("Location: redirection.php");
+}
+?>

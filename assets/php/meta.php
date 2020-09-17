@@ -88,7 +88,7 @@ echo<<<EOT
             </div>
         </div>
         <div class="bleu align-items-center">
-            <p class="pnav animate__animated animate__backInLeft"> Identifiez-vous ( <a href="./inscription.php" class="animate__animated animate__shakeX">ou inscrivez-vous</a> ) afin de profiter pleinement des fonctionnalités.</p>
+            
         </div>
         
     EOT;
@@ -112,13 +112,13 @@ echo<<<EOT
                     </div>
                     <div class="col"></div>
                     <div class="col">
-                        <h2 class="h2nav"><a href="./entrepriseprof.php">Votre Entreprise</a></h2>
+                        <h2 class="h2nav"><a href="./entrepriseprofil.php">Votre Entreprise</a></h2>
                     </div>
             
                 </div>
             </div>
             <div class="bleu align-items-center">
-                <p class="pnav animate__animated animate__backInLeft"> Identifiez-vous ( <a href="./inscription.php" class="animate__animated animate__shakeX">ou inscrivez-vous</a> ) afin de profiter pleinement des fonctionnalités.</p>
+               
             </div>
             
         EOT;
@@ -150,7 +150,7 @@ echo<<<EOT
                 </div>
             </div>
             <div class="bleu align-items-center">
-                <p class="pnav animate__animated animate__backInLeft"> Identifiez-vous ( <a href="./inscription.php" class="animate__animated animate__shakeX">ou inscrivez-vous</a> ) afin de profiter pleinement des fonctionnalités.</p>
+                
             </div>
             
         EOT;

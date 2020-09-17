@@ -1,3 +1,18 @@
+<?php 
+session_start();
+?>
+
+<?php
+require 'model.php';
+$pdo = pdo_connect_mysql();
+$msg = '';
+?>
+
+<?php if($_SESSION["rôles"] == 'admin'){
+  ?>
+
+
+
 <?php
 include 'meta.php';
 ?>
@@ -48,3 +63,8 @@ include 'meta.php';
 </div>
 
 <?=template_footer()?>
+<?php
+} else{
+    header("Location: redirection.php");
+}
+?>

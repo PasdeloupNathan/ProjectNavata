@@ -1,6 +1,16 @@
+<?php 
+session_start();
+?>
+
 <?php
+require 'model.php';
+$pdo = pdo_connect_mysql();
+$msg = '';
+?>
 
-
+<?php if($_SESSION["rôles"] == 'admin'){
+  ?>
+<?php
 include 'meta.php';
 // $total= nombre_vues()
 $annee = (int)date('Y');
@@ -17,7 +27,7 @@ $annee = (int)date('Y');
 
     
 
-<?=template_header()?>
+<?=template_headerAdmin()?>
 
 <div class="row page">
 
@@ -82,3 +92,8 @@ $annee = (int)date('Y');
 </body>
 
 </html>
+<?php
+} else{
+    header("Location: redirection.php");
+}
+?>
