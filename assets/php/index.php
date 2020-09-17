@@ -1,13 +1,16 @@
-<?php session_start(); ?>
+<?php session_start(); 
+
+  ?>
+  
 
 <!-- Appeller de la page meta.php ou se situe toute les fonction template  -->
-
 <?php include 'meta.php';?>
 
 <!-- Appelle d'une foncion template  -->
 
 <?=template_meta('Acceuil')?>
-   
+
+
 <body class="body">
 
 <?=template_header()?>
@@ -62,7 +65,6 @@
     </div>
 </div>
 
-</div>
 
 <!-- Section pour les concours les tendance du momment  -->
 
