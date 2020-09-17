@@ -81,6 +81,7 @@ $msg = '';
             foreach($user as $users){
                     //déclaration data
                 if($users['mdp']==$mdp){
+                    $_SESSION['rôles']=$users['rôles'];
                     $_SESSION['noms']=$users['noms'];
                     $_SESSION['prénoms']=$users['prénoms'];
                     $_SESSION['ville']=$users['ville'];
@@ -105,7 +106,11 @@ $msg = '';
         
         }
     
-    }
+    } 
+    
+
+
+
     ?>
 </body>
 
