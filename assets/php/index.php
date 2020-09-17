@@ -1,19 +1,36 @@
+<? include 'model.php'; ?>
 <?php session_start(); 
 
   ?>
-  
+<!-- // Vérifiez si l'utilisateur est connecté, sinon redirigez-le vers la page de connexion// -->
 
 <!-- Appeller de la page meta.php ou se situe toute les fonction template  -->
 <?php include 'meta.php';?>
 
-<!-- Appelle d'une foncion template  -->
+<?php
+if($_SESSION == FALSE){
+    template_header();
+}elseif($_SESSION["rôles"] == 'candidat'){
+    template_headerUsers();
+}elseif($_SESSION["rôles"] == 'entreprise'){
+    template_headerEntreprise();
+}elseif($_SESSION["rôles"] == 'admin'){
+    template_headerAdmin();
+}
+
+?>
+
+
+
+
+
+
+<!-- sans avoir de compte utilisateur -->
 
 <?=template_meta('Acceuil')?>
-
-
+   
 <body class="body">
 
-<?=template_header()?>
 
 <!-- Section pour les nouveaux concours et les concours arrivant a leur terme  -->
 
@@ -52,6 +69,8 @@
                 </div>
                 <div class="col-5 offset-md-1">
                     <p>Nom <br> Info <br> Desc</p>
+                    <?php
+    ?>
                 </div>
             </div>
             <div class="row info">
@@ -65,6 +84,7 @@
     </div>
 </div>
 
+</div>
 
 <!-- Section pour les concours les tendance du momment  -->
 
@@ -91,3 +111,10 @@
 </body>
 
 </html>
+
+
+
+
+
+
+
