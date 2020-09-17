@@ -27,6 +27,7 @@ function inscription($rôles, $noms, $prenoms, $email, $ville, $addresse, $codep
 }
 
 
+
 			// Inscription entreprises //
 
 function entreprise($nom_societe, $email_societe, $ville_societe, $adresse_societe, $codepostal_societe, $siret_societe, $mdp_societe) {
@@ -39,12 +40,25 @@ function entreprise($nom_societe, $email_societe, $ville_societe, $adresse_socie
 		echo $sql . "<br>" . $e->getMessage();
 	}
 		
-   }
+}
+
+			// Inscription : création d’un concours //
+
+function create_form_concours($noms_concours, $nom_entreprise, $locaConcours, $descriptionConcours, $categorieConcours, $date_concours, $placeConcoursMax) {
+	try {
+		$con = pdo_connect_mysql();
+		$sql = "INSERT INTO `Concours` (`id_concours`, `noms_concours`, `nom_entreprise`, `locaConcours`, `descriptionConcours`, `categorieConcours`, `date_concours`, `placeConcoursPrise`, `placeConcoursMax`, `placeConcoursRestante`, `link_entreprise`) VALUES (Null, '$noms_concours', '$nom_entreprise', '$locaConcours', '$descriptionConcours', Null , '$date_concours', Null,'$placeConcoursMax',Null, '$link_entreprise');";
+		$con->exec($sql);
+	}
+	catch(PDOException $e) {
+		echo $sql . "<br>" . $e->getMessage();
+	}
+}
 			// Connexion //
 
 function connexion($email, $mdp) {
 	$passwd_hash = hash('sha256', $mdp);
-	$req = $bdd->prepare('SELECT * FROM users WHERE email = ?');
+	$req = $bdd->prepare('SELECT * FROM users,entreprise WHERE email = ?,email_societe = ?');
 	$req->execute([$email]);
 	$users = $req->fetch();
 	if($users){
@@ -56,15 +70,6 @@ function connexion($email, $mdp) {
 }
 
 
-function conentreprise($email_societe, $mdp_societe) {
-	$passwd_hash = hash('sha256', $mdp_societe);
-	$req = $bdd->prepare('SELECT * FROM entreprise WHERE email_societe = ?');
-	$req->execute([$email_societe]);
-	$entreprise = $req->fetch(PDO::FETCH_ALL);
-	var_dump($entreprise);
-		
-}
-
-
-
 ?>
+
+
