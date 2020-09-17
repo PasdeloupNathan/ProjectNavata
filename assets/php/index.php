@@ -52,8 +52,6 @@
                 </div>
                 <div class="col-5 offset-md-1">
                     <p>Nom <br> Info <br> Desc</p>
-                    <?php
-    ?>
                 </div>
             </div>
             <div class="row info">
