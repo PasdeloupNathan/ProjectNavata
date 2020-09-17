@@ -7,6 +7,8 @@ require 'model.php';
 $pdo = pdo_connect_mysql();
 $msg = '';
 ?>
+<?php if($_SESSION["rôles"] == 'candidat'){
+?>
 
 <?php
 include 'meta.php';
@@ -18,7 +20,7 @@ include 'meta.php';
 <body class="body">
      
 
-<?=template_header()?>
+<?=template_headerUsers()?>
 
 
 <?php
@@ -153,3 +155,8 @@ foreach($bro as $bros)
 </body>
 
 </html>
+<?php
+} else{
+    header("Location: redirection.php");
+}
+?>

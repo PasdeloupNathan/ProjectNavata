@@ -24,7 +24,6 @@ if($_SESSION == FALSE){
 
 
 
-
 <!-- sans avoir de compte utilisateur -->
 
 <?=template_meta('Acceuil')?>
