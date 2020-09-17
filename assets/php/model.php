@@ -47,7 +47,7 @@ function entreprise($nom_societe, $email_societe, $ville_societe, $adresse_socie
 function create_form_concours($noms_concours, $nom_entreprise, $locaConcours, $descriptionConcours, $categorieConcours, $date_concours, $placeConcoursMax) {
 	try {
 		$con = pdo_connect_mysql();
-		$sql = "INSERT INTO `Concours` (`id_concours`, `noms_concours`, `nom_entreprise`, `locaConcours`, `descriptionConcours`, `categorieConcours`, `date_concours`, `placeConcoursPrise`, `placeConcoursMax`, `placeConcoursRestante`, `link_entreprise`) VALUES (NULL, '$noms_concours', '$nom_entreprise', '$locaConcours', '$descriptionConcours', NULL , '$date_concours', NULL,'$placeConcoursMax',NULL, '$link_entreprise');";
+		$sql = "INSERT INTO `Concours` (`id_concours`, `noms_concours`, `nom_entreprise`, `locaConcours`, `descriptionConcours`, `categorieConcours`, `date_concours`, `placeConcoursPrise`, `placeConcoursMax`, `placeConcoursRestante`, `link_entreprise`) VALUES (Null, '$noms_concours', '$nom_entreprise', '$locaConcours', '$descriptionConcours', Null , '$date_concours', Null,'$placeConcoursMax',Null, '$link_entreprise');";
 		$con->exec($sql);
 	}
 	catch(PDOException $e) {
@@ -70,6 +70,7 @@ function connexion($email, $mdp) {
 }
 
 
+
 function conentreprise($email_societe, $mdp_societe) {
 	$passwd_hash = hash('sha256', $mdp_societe);
 	$req = $bdd->prepare('SELECT * FROM entreprise WHERE email_societe = ?');
@@ -81,3 +82,5 @@ function conentreprise($email_societe, $mdp_societe) {
 
 
 ?>
+
+
