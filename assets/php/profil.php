@@ -18,7 +18,7 @@ include 'meta.php';
 <body class="body">
      
 
-<?=template_header()?>
+<?=template_headerUsers()?>
 
 
 <?php
