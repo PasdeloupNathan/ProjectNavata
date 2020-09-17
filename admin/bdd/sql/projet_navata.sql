@@ -28,7 +28,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `users` (
-  `id_users` int(11) NOT NULL,
+  `id_users` INT NOT NULL,
   `rôles` varchar(250) NOT NULL,
   `noms` varchar(255) NOT NULL,
   `prénoms` varchar(255) NOT NULL,
