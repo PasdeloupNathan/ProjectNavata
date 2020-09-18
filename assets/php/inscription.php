@@ -106,6 +106,9 @@ $msg = '';
                     <div style="padding-top: 1%;">
                         <a href="./connection.php">Vous avez déjà un compte? Connectez-vous</a>
                     </div>
+                    <div style="padding-top: 1%;">
+                        <a href="entreprise.php">Vous Souhaitez vous inscrire en tant qu'Entreprise ?</a>
+                    </div>
                 </div>
 
 

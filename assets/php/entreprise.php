@@ -34,6 +34,7 @@ $msg = '';
                     <!-- Text input-->
                     <div class="form-group">
                         <div class="col" style="padding-top: 4%;">
+                        <input type="hidden" name="rôles" value="entreprise" class="form-control input-md" required  style="border:solid 1px #707070; margin-left: 5%; width:90%; border-radius: 0;">
                             <input id="textinput" name="nom_societe" type="text" placeholder="Nom de la société" class="form-control input-md" required="" style="border:solid 1px #707070; margin-left: 5%; width:90%; border-radius: 0;">
                             <i class="fas fa-caret-right" style="position: absolute; transform: rotate(315deg);margin-left: 40.6%; margin-top: -10.23%; color: #de2b76 ;font-size: 1.5rem;"></i>
                         </div>
@@ -108,7 +109,7 @@ $msg = '';
                     </div>
 
                     <div style="padding-top: 1%;">
-                        <a href="inscription.php">Vous avez déjà un compte Particulier ? ou Inscrivez-vous</a>
+                        <a href="inscription.php">Vous Souhaitez vous inscrire en tant que candidat ?</a>
                     </div>
 
             </fieldset>
@@ -117,10 +118,11 @@ $msg = '';
 
     <?php
         if(isset($_POST['entreprises'])){ 
-             $nom_societe=$_POST["nom_societe"];
-             $email_societe=$_POST["email_societe"];
-             $ville_societe=$_POST["ville_societe"];
-             $adresse_societe=$_POST["adresse_societe"];
+            $rôles=$_POST["rôles"];
+            $nom_societe=$_POST["nom_societe"];
+            $email_societe=$_POST["email_societe"];
+            $ville_societe=$_POST["ville_societe"];
+            $adresse_societe=$_POST["adresse_societe"];
             $codepostal_societe=$_POST["codepostal_societe"];
             $siret_societe=$_POST["siret_societe"];
             $mdp_societe=$_POST["mdp_societe"];
@@ -136,7 +138,7 @@ $msg = '';
         echo '<p class="connexion animate__animated animate__flash">cette addresse mail est deja utilisé<p>';
     }else{
        echo '<script LANGUAGE="javascript">document.location.href="connection.php"</script>';    
- die(entreprise($nom_societe,$email_societe,$ville_societe,$adresse_societe,$codepostal_societe,$siret_societe,$mdp_societe));
+ die(entreprise($rôles,$nom_societe,$email_societe,$ville_societe,$adresse_societe,$codepostal_societe,$siret_societe,$mdp_societe));
     }
 
         }
