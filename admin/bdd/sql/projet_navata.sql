@@ -19,6 +19,7 @@ CREATE TABLE `users` (
 
 CREATE TABLE `entreprise` (
 	`id_entreprise` INT NOT NULL AUTO_INCREMENT,
+	`rôles` varchar(255) NOT NULL,
 	`nom_societe` varchar(255) NOT NULL ,
 	`email_societe` varchar(255) NOT NULL ,
 	`ville_societe` varchar(255) NOT NULL ,
