@@ -69,19 +69,8 @@ $msg = '';
 
     <?php
         if(isset ($_POST['connexion'])){ 
-            $name=$_POST["name"];
-            $prénoms=$_POST["prénoms"];
            $email=$_POST["email"];
-           $ville=$_POST["ville"];
-           $codepostal=$_POST["codepostal"];
            $mdp=$_POST["mdp"];
-       $mdp=$_POST["mdp"];
-       $addresse=$_POST["address"];
-       $img =$_POST["img"]; 
-       $tel =$_POST["tel"];
-       $nation=$_POST["nation"];
-       $naissance=$_POST["naissance"];
-       $idcard=$_POST["idcard"];
         if($email!= '' AND $mdp != ''){
             $test = $pdo->prepare("select * from users where email = ?");
             $test->execute([$email]);
