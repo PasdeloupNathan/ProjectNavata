@@ -32,7 +32,7 @@ CREATE TABLE `entreprise` (
 	PRIMARY KEY (`id_entreprise`)
 );
 
-CREATE TABLE `entreprise` (
+CREATE TABLE `admin` (
 	`id_admin` INT NOT NULL AUTO_INCREMENT,
 	`rôles` varchar(255) NOT NULL,
 	`nom` varchar(255) NOT NULL ,
