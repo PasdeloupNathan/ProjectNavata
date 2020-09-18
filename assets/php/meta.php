@@ -166,7 +166,7 @@ echo<<<EOT
         <div class="menu1"><button onclick="location.href='./adminConcours.php'" type="button" class="but col" >Concours</button></div>
         <div class="menu1"><button onclick="location.href='./adminTable.php'" type="button" class="but col" >Utilisateurs</button></div>
         <div class="menu1"><button onclick="location.href='./adminLogs.php'" type="button" class="but col" >Logs</button></div>
-        
+        <div class="menu1"><a href="deconnection.php" class="btn">deconnection</a></div>
         </div>
     </div>
     
