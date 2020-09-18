@@ -25,7 +25,7 @@ include 'meta.php';
 
 <?php
 
-$teste = $pdo->prepare("select * from users where id_users = ?");
+$teste = $pdo->prepare("SELECT * from users WHERE id_users=".$_SESSION['id_users']);
 $teste->execute();
 $bro= $teste->fetchAll(\PDO::FETCH_ASSOC);
 foreach($bro as $bros)
@@ -48,30 +48,30 @@ foreach($bro as $bros)
             <div class="col offset-md-1 gauche">
 
                         <!-- appelle des valeurs de la bdd -->
-                <p>Nom : <?= $_SESSION['noms'];?> </p>
 
-                <br> 
+                <p>Nom : <?= $bros['noms'];?> </p>
+                <br>
 
                 <p>Prenom : <?= $bros['prénoms'];?> </p>
 
                 <br>
-                <p>Adresse : <?= $_SESSION['adresse'];?> </p>
+                <p>Adresse : <?= $bros['adresse'];?> </p>
                 <br>
-                <p>Ville : <?= $_SESSION['ville'];?> </p>
+                <p>Ville : <?= $bros['ville'];?> </p>
                 <br>
-                <p>Nationalité : <?= $_SESSION['nation'];?> </p>
+                <p>Nationalité : <?= $bros['nation'];?> </p>
            
             </div>
             <div class="col droite">
-                <p>Date de naissance : <?= $_SESSION['naissance'];?> </p>
+                <p>Date de naissance : <?= $bros['naissance'];?> </p>
                 <br>
-                <p>Email : <?= $_SESSION['email'];?> </p>
+                <p>Email : <?= $bros['email'];?> </p>
                 <br>
-                <p>Code Postal : <?= $_SESSION['codepostal'];?> </p>
+                <p>Code Postal : <?= $bros['codepostal'];?> </p>
                 <br>
-                <p>Telephone : <?= $_SESSION['tel'];?> </p>
+                <p>Telephone : <?= $bros['tel'];?> </p>
                 <br>
-                <p>Numéro d'identité : <?= $_SESSION['idcard'];?> </p>
+                <p>Numéro d'identité : <?= $bros['idcard'];?> </p>
                 <br>
                 <p id="modif">Modifiez votre profil  <i class="fas fa-edit" id="modif"></i></p> 
             </div>
