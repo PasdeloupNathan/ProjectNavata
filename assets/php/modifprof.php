@@ -14,11 +14,11 @@ session_start();
 
 
 
-<?=template_meta('Changez votre nom')?>
+<?=template_meta('Modification de profil')?>
 
 <body class="body2">
 
-<?=template_header()?>
+<?=template_headerUsers()?>
 
 <?php
 

@@ -22,6 +22,7 @@ CREATE TABLE `entreprise` (
 	`rôles` varchar(255) NOT NULL,
 	`nom_societe` varchar(255) NOT NULL ,
 	`email_societe` varchar(255) NOT NULL ,
+	`tel_societe` varchar(255) NULL,
 	`ville_societe` varchar(255) NOT NULL ,
 	`adresse_societe` varchar(255) NOT NULL ,
 	`codepostal_societe` varchar(255) NOT NULL ,
@@ -29,6 +30,15 @@ CREATE TABLE `entreprise` (
 	`mdp_societe` varchar(255) NOT NULL,
 	`img_societe` varchar(255) NOT NULL,
 	PRIMARY KEY (`id_entreprise`)
+);
+
+CREATE TABLE `entreprise` (
+	`id_admin` INT NOT NULL AUTO_INCREMENT,
+	`rôles` varchar(255) NOT NULL,
+	`nom` varchar(255) NOT NULL ,
+	`email` varchar(255) NOT NULL ,
+	`mdp` varchar(255) NOT NULL,
+	PRIMARY KEY (`id_admin`)
 );
 
 

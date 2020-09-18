@@ -109,7 +109,7 @@ $msg = '';
                     </div>
 
                     <div style="padding-top: 1%;">
-                        <a href="inscription.php">Vous avez déjà un compte Particulier ? ou Inscrivez-vous</a>
+                        <a href="inscription.php">Vous Souhaitez vous inscrire en tant que candidat ?</a>
                     </div>
 
             </fieldset>
