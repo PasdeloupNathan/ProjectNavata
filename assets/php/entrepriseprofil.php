@@ -8,7 +8,7 @@ $pdo = pdo_connect_mysql();
 $msg = '';
 ?>
 
-<?php if($_SESSION["rôles"] == 'admin'){
+<?php if($_SESSION["rôles"] == 'entreprise'){
   ?>
 
 
@@ -22,7 +22,7 @@ include 'meta.php';
 <body class="body">
      
 
-<?=template_header()?>
+<?=template_headerEntreprise()?>
 
     <!-- Profil de l'entreprise  -->
 

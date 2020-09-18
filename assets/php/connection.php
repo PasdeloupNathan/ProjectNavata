@@ -108,6 +108,38 @@ $msg = '';
     
     } 
     
+    if(isset ($_POST['connexion'])){ 
+        $email=$_POST["email"];
+        $mdp=$_POST["mdp"];
+     if($email!= '' AND $mdp != ''){
+         $test = $pdo->prepare("select * from entreprise where email_societe = ?");
+         $test->execute([$email]);
+         $entreprise= $test->fetchAll(\PDO::FETCH_ASSOC);      
+         foreach($entreprise as $entreprises){
+                 //déclaration data
+             if($entreprises['mdp_societe']==$mdp){
+                 $_SESSION['rôles']=$entreprises['rôles'];
+                 $_SESSION['nom_societe']=$entreprises['noms'];
+                 $_SESSION['email_societe']=$entreprises['prénoms'];
+                 $_SESSION['ville_societe']=$entreprises['ville'];
+                 $_SESSION['adresse_societe']=$entreprises['adresse'];
+                 $_SESSION['codepostal_societe']=$entreprises['codepostal'];
+                 $_SESSION['siret_societe']=$entreprises['img'];
+                 $_SESSION['mdp_societe']=$entreprises['tel'];
+                 $_SESSION['img_societe']=$entreprises['nation'];
+                 $_SESSION['id_entreprise']=$entreprises['id_users'];
+
+                 echo '<script LANGUAGE="javascript">document.location.href="index.php"</script>';
+             }else{
+                 echo '<p class="connexion animate__animated animate__flash">Votre information sont incorrect<p>';
+             }
+
+     }
+
+     
+     }
+ 
+ } 
 
 
 
