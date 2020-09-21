@@ -26,6 +26,19 @@ function inscription($rôles, $noms, $prenoms, $email, $ville, $addresse, $codep
 	}
 }
 
+function adminCreate($rôles, $nom, $email, $mdp) {
+	try {
+		$con = pdo_connect_mysql();
+
+		$sql = "INSERT INTO `admin` (`id_admin`,`rôles`, `nom`, `email`, `mdp`) VALUES (NULL, '$rôles', '$nom', '$email', '$mdp');";
+
+		$con->exec($sql);
+	}
+	catch(PDOException $e) {
+		echo $sql . "<br>" . $e->getMessage();
+	}
+}
+
 
 
 			// Inscription entreprises //
