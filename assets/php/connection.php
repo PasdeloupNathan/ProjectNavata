@@ -138,6 +138,33 @@ $msg = '';
  
  } 
 
+ if(isset ($_POST['connexion'])){ 
+    $email=$_POST["email"];
+    $mdp=$_POST["mdp"];
+ if($email!= '' AND $mdp != ''){
+     $test = $pdo->prepare("select * from admin where email = ?");
+     $test->execute([$email]);
+     $admin= $test->fetchAll(\PDO::FETCH_ASSOC);      
+     foreach($admin as $admins){
+             //déclaration data
+         if($admins['mdp']==$mdp){
+             $_SESSION['rôles']=$admins['rôles'];
+             $_SESSION['nom']=$admins['nom'];
+             $_SESSION['email']=$admins['email'];
+             $_SESSION['mdp']=$admins['mdp'];
+
+             echo '<script LANGUAGE="javascript">document.location.href="index.php"</script>';
+         }else{
+             echo '<p class="connexion animate__animated animate__flash">Votre information sont incorrect<p>';
+         }
+
+ }
+
+ 
+ }
+
+} 
+
 
 
     ?>
