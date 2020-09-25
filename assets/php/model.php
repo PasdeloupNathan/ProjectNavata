@@ -17,7 +17,8 @@ function inscription($rôles, $noms, $prenoms, $email, $ville, $addresse, $codep
 	try {
 		$con = pdo_connect_mysql();
 
-		$sql = "INSERT INTO `users` (`id_users`,`rôles`, `noms`, `prénoms`, `email`, `ville`, `adresse`, `codepostal`, `mdp`, `img`, `tel`, `nation`, `naissance`, `idcard`) VALUES (NULL, '$rôles', '$noms', '$prenoms', '$email', '$ville', '$addresse', '$codepostal','$mdp','$img', Null,Null, Null, Null);";
+		$sql = "INSERT INTO `users` (`id_users`,`rôles`, `noms`, `prénoms`, `email`, `ville`, `adresse`, `codepostal`, `mdp`, `img`, `tel`, `nation`, `naissance`, `idcard`) 
+		VALUES (NULL, '$rôles', '$noms', '$prenoms', '$email', '$ville', '$addresse', '$codepostal','$mdp','$img', Null,Null, Null, Null);";
 
 		$con->exec($sql);
 	}
@@ -25,7 +26,7 @@ function inscription($rôles, $noms, $prenoms, $email, $ville, $addresse, $codep
 		echo $sql . "<br>" . $e->getMessage();
 	}
 }
-
+// incsription
 function adminCreate($rôles, $nom, $email, $mdp) {
 	try {
 		$con = pdo_connect_mysql();

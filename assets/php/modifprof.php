@@ -87,7 +87,10 @@ $conn = new PDO('mysql:host=' . $DATABASE_HOST . ';dbname=' . $DATABASE_NAME . '
 
 if (isset($_POST['modif'])){
 
-    $sql = "UPDATE Users SET noms='".$_POST['noms']. "',prénoms='".$_POST['prénoms']."',adresse='".$_POST['adresse']."',ville='".$_POST['ville']."',codepostal='".$_POST['codepostal']."',nation='".$_POST['nation']."',email='".$_POST['email']."',tel='".$_POST['tel']."',naissance='".$_POST['naissance']."',idcard='".$_POST['idcard']."'WHERE id_users=".$_SESSION['id_users'];
+    $sql = "UPDATE Users SET noms='".$_POST['noms']. "',prénoms='".$_POST['prénoms']."',adresse='".$_POST['adresse']."',ville='".$_POST['ville']."'
+    ,codepostal='".$_POST['codepostal']."',nation='".$_POST['nation']."',email='".$_POST['email']."',tel='".$_POST['tel']."',naissance='".$_POST['naissance']."'
+    ,
+idcard='".$_POST['idcard']."'WHERE id_users=".$_SESSION['id_users'];
 
     $stmt = $conn->prepare($sql);
 

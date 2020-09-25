@@ -8,6 +8,7 @@ $pdo = pdo_connect_mysql();
 $msg = '';
 ?>
 
+<?php if($_SESSION["rôles"] == 'entreprise'){?>
 
 <style>
 .connexion{
@@ -149,3 +150,8 @@ $msg = '';
 
 </body>
 </html>
+<?php
+} else{
+    header("Location: redirection.php");
+}
+?>
