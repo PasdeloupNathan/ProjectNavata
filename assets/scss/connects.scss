@@ -23,6 +23,33 @@
         color: #de2b76;
         font-size: 1.5rem;
     }
+    .please {
+        height: 75%;
+        padding-left: 35%;
+    }
+}
+
+// Inscription logo
+@media screen and (min-width: 412px) and (max-width: 767px) {
+    .please {
+        height: 75%;
+        padding-left: 35%;
+    }
+}
+
+@media screen and (min-width: 375px) and (max-width: 411px) {
+    .tests {
+        position: absolute;
+        transform: rotate(315deg);
+        margin-left: 149.3px;
+        margin-top: -46.7px;
+        color: #de2b76;
+        font-size: 1.5rem;
+    }
+    .fa-caret-right {
+        height: 75%;
+        padding-left: 35%;
+    }
 }
 
 @media screen and (min-width:575px) and (max-width:767px) {
@@ -47,12 +74,23 @@
     }
 }
 
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 992px) and (max-width: 1280px) {
     .tests {
         position: absolute;
         transform: rotate(315deg);
         margin-left: 42.3px;
         margin-top: -15.7px;
+        color: #de2b76;
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 1280px) and (max-width: 2560px) {
+    .tests {
+        position: absolute;
+        transform: rotate(315deg);
+        margin-left: 176.3px;
+        margin-top: -46.7px;
         color: #de2b76;
         font-size: 1.5rem;
     }

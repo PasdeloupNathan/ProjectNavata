@@ -16,9 +16,11 @@ $msg = '';
 <div class="row conect" style="width: 100vw;">
             
         <div class="col-md-4 row align-items-center" style="height: 20vh;">
-            <img src="../img/LOGO.png"alt="logo" style="height: 75%;padding-left: 35%;" class="animate__animated animate__rotateIn">
+            <img src="../img/LOGO.png" alt="logo" class="animate__animated animate__rotateIn please">
+            
+    
         </div>
-        <form action="" method="POST" class="form-horizontal col-md-4 ">
+        <form action="" method="POST" class="form-horizontal col-md-4 logo ">
             <fieldset>
 
                 <!-- Form Name -->
