@@ -8,14 +8,14 @@
 <?php include 'meta.php';?>
 
 <?php
-if($_SESSION == FALSE){
-    template_header();
-}elseif($_SESSION["rôles"] == 'candidat'){
-    template_headerUsers();
-}elseif($_SESSION["rôles"] == 'entreprise'){
-    template_headerEntreprise();
-}elseif($_SESSION["rôles"] == 'admin'){
-    template_headerAdmin();
+if($_SESSION == FALSE){ // si l'utilisateur n'a pas de compte 
+    template_header();//alors affiche l'header de base
+}elseif($_SESSION["rôles"] == 'candidat'){// si l'utilisateur est un candidat
+    template_headerUsers();//alors affiche l'header du candidat
+}elseif($_SESSION["rôles"] == 'entreprise'){//si l'utilisateur est un entreprise 
+    template_headerEntreprise();//alors affiche l'header du entreprise
+}elseif($_SESSION["rôles"] == 'admin'){//si l'utilisateur est un admin 
+    template_headerAdmin();//alors affiche l'header du admin
 }
 
 ?>
