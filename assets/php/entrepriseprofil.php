@@ -26,6 +26,7 @@ foreach($societe as $societes)
 
 ?>
 
+
 <?=template_meta('Entreprise_Profil')?>
     
 
@@ -78,6 +79,9 @@ foreach($societe as $societes)
 
 
 
+
+
+
     <!-- Concours de l'entreprise -->
 
 <div class="main8 row align-items-center">
@@ -90,7 +94,11 @@ foreach($societe as $societes)
                     <img src="../img/exam.jpg" alt="concours" style="width: 50%;" class="imgconcourentreprise">
                 </div>
                 <div class="col-5 offset-md-1" style="text-align: left;">
-                    <p>Nom <br> Info <br> Desc</p>
+                <p>test : <?= $pls['nom_entreprise'];
+                var_dump ($pls)
+                ?></p>
+                    <p>  <br> Info <br> Desc</p>
+
                 </div>
             </div>
             <div class="row concourinfoentreprise">

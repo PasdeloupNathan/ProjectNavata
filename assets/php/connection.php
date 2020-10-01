@@ -128,6 +128,9 @@ $msg = '';
                  $_SESSION['img_societe']=$entreprises['img_societe'];
                  $_SESSION['id_entreprise']=$entreprises['id_entreprise'];
 
+                 $_SESSION['id_concours']=$entreprises['id_concours'];  
+                 $_SESSION['noms_concours']=$concours['noms_concours'];
+
                  echo '<script LANGUAGE="javascript">document.location.href="index.php"</script>';
              }else{
                  echo '<p class="connexion animate__animated animate__flash">Votre information sont incorrect<p>';
