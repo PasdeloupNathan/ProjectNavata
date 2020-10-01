@@ -22,9 +22,9 @@ include 'meta.php';
 $tests = $pdo->prepare("SELECT * from entreprise WHERE id_entreprise=".$_SESSION['id_entreprise']);
 $tests->execute();
 $societe= $tests->fetchAll(\PDO::FETCH_ASSOC);
-foreach($societe as $societes)
-
+foreach($societe as $societes);
 ?>
+
 
 <?=template_meta('Entreprise_Profil')?>
     
@@ -76,6 +76,24 @@ foreach($societe as $societes)
 
     <a href="deconnection.php" class="btn">deconnection</a>
 
+<?php 
+
+echo "haha";
+echo "<br>";
+echo   $_SESSION['id_concours'];
+echo "<br>";
+echo $_SESSION['id_entreprise']
+
+?>
+<?php
+
+$plo = $pdo-> prepare("SELECT * From Concours WHERE id_concours=".$_SESSION['id_concours']);
+$plo-> execute();
+$pls= $plo->fetchAll(\PDO::FETCH_ASSOC);
+foreach($pls as $plss);
+
+?>
+
 
 
     <!-- Concours de l'entreprise -->
@@ -90,7 +108,11 @@ foreach($societe as $societes)
                     <img src="../img/exam.jpg" alt="concours" style="width: 50%;" class="imgconcourentreprise">
                 </div>
                 <div class="col-5 offset-md-1" style="text-align: left;">
-                    <p>Nom <br> Info <br> Desc</p>
+                <p>test : <?= $plss['nom_entreprise'];
+                var_dump($plss)
+                ?></p>
+                    <p>  <br> Info <br> Desc</p>
+
                 </div>
             </div>
             <div class="row concourinfoentreprise">

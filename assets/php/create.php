@@ -76,7 +76,7 @@ $msg = '';
 
                     <div class="form-group">
                         <div class="col" style="padding-top: 1%;">
-                            <input id="" name="link_entreprise" type="number" placeholder="Votre site" class="form-control input-md" required="" style="border:solid 1px #707070; margin-left: 5%; width:90%;border-radius: 0;">
+                            <input id="" name="link_entreprise" type="name" placeholder="Votre site" class="form-control input-md" required="" style="border:solid 1px #707070; margin-left: 5%; width:90%;border-radius: 0;">
                             <i class="fas fa-caret-right" style="position: absolute; transform: rotate(315deg);margin-left: 40%; margin-top: -11.7%; color: #de2b76 ;font-size: 1.5rem;"></i>                        </div>
                     </div>
 
@@ -128,8 +128,8 @@ $msg = '';
     if($Concours){
         echo '<p class="connexion animate__animated animate__flash">cette addresse mail est deja utilisé<p>';
     }else{
-        echo '<script LANGUAGE="javascript">document.location.href="connection.php"</script>';    
- die(create_form_concours($rôles,$name,$prénoms,$email,$ville,$adresse,$codepostal,$mdp));
+        echo '<script LANGUAGE="javascript">document.location.href="index.php"</script>';    
+ die(create_form_concours($noms_concours,$nom_entreprise,$descriptionConcours,$locaConcours,$date_concours,$placeConcoursMax,$link_entreprise));
     }
 
         }

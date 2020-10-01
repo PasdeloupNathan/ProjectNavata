@@ -16,18 +16,7 @@ echo<<<EOT
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-        <link rel="stylesheet" href="../css/nav.min.css">
-        <link rel="stylesheet" href="../css/footer.min.css">
-        <link rel="stylesheet" href="../css/index.min.css">      
-        <link rel="stylesheet" href="../css/concours.min.css">
-        <link rel="stylesheet" href="../css/connects.min.css"> 
-        <link rel="stylesheet" href="../css/profil.min.css">
-        <link rel="stylesheet" href="../css/admin.min.css">
-        <link rel="stylesheet" href="../css/adminConcours.min.css">
-        <link rel="stylesheet" href="../css/adminTable.min.css">
-        <link rel="stylesheet" href="../css/adminLogs.min.css">
-        <link rel="stylesheet" href="../css/entreprise.min.css">
-        <link rel="stylesheet" href="../css/input.min.css">
+        <link rel="stylesheet" href="../css/basic.min.css">
 
     </head>
  
@@ -166,9 +155,11 @@ echo<<<EOT
         <div class="menu1"><button onclick="location.href='./adminConcours.php'" type="button" class="but col" >Concours</button></div>
         <div class="menu1"><button onclick="location.href='./adminTable.php'" type="button" class="but col" >Utilisateurs</button></div>
         <div class="menu1"><button onclick="location.href='./adminLogs.php'" type="button" class="but col" >Logs</button></div>
+
         <div class="menu1"><button onclick="location.href='./adminCreation.php'" type="button" class="but col" >Creation admin</button></div>
         <a href="deconnection.php" class="btn">deconnection</a>
         
+
         </div>
     </div>
     
