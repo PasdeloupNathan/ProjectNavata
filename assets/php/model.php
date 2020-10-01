@@ -24,6 +24,8 @@ function inscription($rôles, $noms, $prenoms, $email, $ville, $addresse, $codep
 	}
 }
 
+			// Creation admin //
+
 function adminCreate($rôles, $nom, $email, $mdp) {
 	try {
 		$con = pdo_connect_mysql();
