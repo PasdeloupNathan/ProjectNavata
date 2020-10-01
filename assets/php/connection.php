@@ -113,8 +113,6 @@ $msg = '';
      if($email!= '' AND $mdp != ''){
          $test = $pdo->prepare("select * from entreprise where email_societe = ?");
          $test->execute([$email]);
-         $testbis->execute([$id]);
-
          $entreprise= $test->fetchAll(\PDO::FETCH_ASSOC);      
          foreach($entreprise as $entreprises){
                  //déclaration data
