@@ -113,6 +113,8 @@ $msg = '';
      if($email!= '' AND $mdp != ''){
          $test = $pdo->prepare("select * from entreprise where email_societe = ?");
          $test->execute([$email]);
+         $testbis->execute([$id]);
+
          $entreprise= $test->fetchAll(\PDO::FETCH_ASSOC);      
          foreach($entreprise as $entreprises){
                  //déclaration data
@@ -127,9 +129,8 @@ $msg = '';
                  $_SESSION['mdp_societe']=$entreprises['mdp_societe'];
                  $_SESSION['img_societe']=$entreprises['img_societe'];
                  $_SESSION['id_entreprise']=$entreprises['id_entreprise'];
-
                  $_SESSION['id_concours']=$entreprises['id_concours'];  
-                 $_SESSION['noms_concours']=$concours['noms_concours'];
+                 $_SESSION['noms_concours']=$entreprises['noms_concours'];
 
                  echo '<script LANGUAGE="javascript">document.location.href="index.php"</script>';
              }else{
