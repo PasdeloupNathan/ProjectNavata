@@ -2,7 +2,7 @@
 function pdo_connect_mysql() {
     $DATABASE_HOST = 'localhost';
     $DATABASE_USER = 'root';
-    $DATABASE_PASS = 'root';
+    $DATABASE_PASS = '';
     $DATABASE_NAME = 'projet_navata';
     try {
         return new PDO('mysql:host=' . $DATABASE_HOST . ';dbname=' . $DATABASE_NAME . ';charset=utf8', $DATABASE_USER, $DATABASE_PASS);
@@ -23,6 +23,8 @@ function inscription($rôles, $noms, $prenoms, $email, $ville, $addresse, $codep
 		echo $sql . "<br>" . $e->getMessage();
 	}
 }
+
+			// Creation admin //
 
 function adminCreate($rôles, $nom, $email, $mdp) {
 	try {
