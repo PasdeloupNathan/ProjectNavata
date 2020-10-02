@@ -33,7 +33,7 @@ if($_SESSION == FALSE){
 
 <div class="main3 h2nav">
     <!-- premiere partie du site contenent le concours avec les plus d'angouement  -->
-        <div class="firstBox" class="container">
+        <div class="col firstBox" class="container">
            
                 <div class=" title">
 
@@ -57,13 +57,13 @@ if($_SESSION == FALSE){
 
 <div class="main3 h2nav">
 <!-- 2e partie de la page avec un carroussel permettant de visualisé les différent type de concours pas catégorie -->
-<div class="firstBox" class="container">
+<div class="col firstBox" class="container">
            
-            <div class="row List">
-                <div class="col-6 title">
+            <div class="col row List">
+                <div class="col title">
                     <H2>Liste des concours disponible</H2>
                 </div>
-                <div class="col-sm-4  search">
+                <div class="col search">
                  
                 <select class="fond" value="recherché" name="selectbasic" class="form-control">
                 <!-- <option value="">--Catégorie--</option> -->
