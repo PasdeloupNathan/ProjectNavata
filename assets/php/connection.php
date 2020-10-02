@@ -10,18 +10,17 @@ $msg = '';
 <?=template_meta('connexions')?>
 
 <style>
-.connexion{
-    text-align: center;
-    color: red;
-}
+
 </style>
 <body>
 <div class="row conect" style="width: 100vw;">
             
         <div class="col-md-4 row align-items-center" style="height: 20vh;">
-            <img src="../img/LOGO.png" alt="logo" style="height: 75%;padding-left: 35%;" class="animate__animated animate__rotateIn">
+            <img src="../img/LOGO.png" alt="logo" class="animate__animated animate__rotateIn please">
+            
+    
         </div>
-        <form action="" method="POST" class="form-horizontal col-md-4 ">
+        <form action="" method="POST" class="form-horizontal col-md-4 logo ">
             <fieldset>
 
                 <!-- Form Name -->
@@ -32,7 +31,7 @@ $msg = '';
                 <div class="form-group "> 
                     <div class="col" style="padding-top: 15%;"> 
                         <input id="name" name="email" type="email" placeholder="Email" class="form-control input-md"  required="" style="border:solid 1px #707070;border-radius: 0;">
-                        <i class="fas fa-caret-right" style="position: absolute; transform: rotate(315deg);margin-left: 45%; margin-top: -10.23%; color: #de2b76 ;font-size: 1.5rem;"></i>
+                        <i class="fas fa-caret-right tests"></i>
                     </div>
                 </div>
            
@@ -40,7 +39,7 @@ $msg = '';
                 <div class="form-group">
                     <div class="col" style="padding-top: 5%;">
                         <input id="mdp" name="mdp" type="password" placeholder="Mot de passe" class="form-control input-md" required="" style="border:solid 1px #707070;border-radius: 0;">
-                        <i class="fas fa-caret-right" style="position: absolute; transform: rotate(315deg);margin-left: 45%; margin-top: -10.23%; color: #de2b76 ;font-size: 1.5rem;"></i>
+                        <i class="fas fa-caret-right tests" ></i>
 
                     </div>
                 </div>
@@ -57,7 +56,7 @@ $msg = '';
                 <div class="form-group">
                     <div class="col" style="padding-top: 7.5%;">
                     <button id="connexion" type="submit" name="connexion" class="btn btn-primary" style="width: 100%;background-color: #ffffff;color: #707070;border:solid 1px #707070;border-radius: 0;">Connectez-Vous</button>
-                        <i class="fas fa-caret-right" style="position: absolute; transform: rotate(315deg);margin-left: 45%; margin-top: -10.23%; color: #de2b76 ;font-size: 1.5rem;"></i>
+                        <i class="fas fa-caret-right tests"></i>
                     </div>
                 </div>
 
@@ -108,10 +107,46 @@ $msg = '';
     
     } 
     
+    if(isset ($_POST['connexion'])){ 
+        $email=$_POST["email"];
+        $mdp=$_POST["mdp"];
+     if($email!= '' AND $mdp != ''){
+         $test = $pdo->prepare("select * from entreprise where email_societe = ?");
+         $test->execute([$email]);
+         $entreprise= $test->fetchAll(\PDO::FETCH_ASSOC);      
+         foreach($entreprise as $entreprises){
+                 //déclaration data
+             if($entreprises['mdp_societe']==$mdp){
+                 $_SESSION['rôles']=$entreprises['rôles'];
+                 $_SESSION['nom_societe']=$entreprises['nom_societe'];
+                 $_SESSION['email_societe']=$entreprises['email_societe'];
+                 $_SESSION['ville_societe']=$entreprises['ville_societe'];
+                 $_SESSION['adresse_societe']=$entreprises['adresse_societe'];
+                 $_SESSION['codepostal_societe']=$entreprises['codepostal_societe'];
+                 $_SESSION['siret_societe']=$entreprises['siret_societe'];
+                 $_SESSION['mdp_societe']=$entreprises['mdp_societe'];
+                 $_SESSION['img_societe']=$entreprises['img_societe'];
+                 $_SESSION['id_entreprise']=$entreprises['id_entreprise'];
+                 $_SESSION['id_concours']=$entreprises['id_concours'];  
+                 $_SESSION['noms_concours']=$entreprises['noms_concours'];
+
+                 echo '<script LANGUAGE="javascript">document.location.href="index.php"</script>';
+             }else{
+                 echo '<p class="connexion animate__animated animate__flash">Votre information sont incorrect<p>';
+             }
+
+     }
+
+     
+     }
+ 
+ } 
 
 
 
     ?>
+
+
 </body>
 
 </html>

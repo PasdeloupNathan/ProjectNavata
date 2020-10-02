@@ -8,7 +8,7 @@ $pdo = pdo_connect_mysql();
 $msg = '';
 ?>
 
-<?php if($_SESSION["rôles"] == 'admin'){
+<?php if($_SESSION["rôles"] == 'entreprise'){
   ?>
 
 
@@ -16,13 +16,23 @@ $msg = '';
 include 'meta.php';
 ?>
 
+
+<?php
+
+$tests = $pdo->prepare("SELECT * from entreprise WHERE id_entreprise=".$_SESSION['id_entreprise']);
+$tests->execute();
+$societe= $tests->fetchAll(\PDO::FETCH_ASSOC);
+foreach($societe as $societes);
+?>
+
+
 <?=template_meta('Entreprise_Profil')?>
     
 
 <body class="body">
      
 
-<?=template_header()?>
+<?=template_headerEntreprise()?>
 
     <!-- Profil de l'entreprise  -->
 
@@ -40,27 +50,51 @@ include 'meta.php';
             </div>
             <div class="row infoprofentreprise">
                 <div class="col offset-md-1 gaucheentreprise">
-                    <p>Nom de l'entreprise : $nomEntrepsise <i class="fas fa-edit"></i></p>
+                    <p>Nom de l'entreprise : <?= $societes['nom_societe'];?></p>
+                    <br>                        
+                    <p>Adresse : <?= $societes['adresse_societe'];?> </p>
                     <br>
-                    <p>Adresse : $adresseEntrepsise  <i class="fas fa-edit"></i></p>
+                    <p>Code Postal : <?= $societes['codepostal_societe'];?> </p>
                     <br>
-                    <p>Nationalité : $nationEntrepsise <i class="fas fa-edit"></i></p>
-                    <br>
-                    <p>Code Postal : $CodePostEntrepsise <i class="fas fa-edit"></i></p>
+                    <p>Ville : <?= $societes['ville_societe'];?> </p>
                 </div>
                 <div class="col droiteentreprise">
-                    <p>Email : $mail <i class="fas fa-edit"></i></p>
+                    <p>Email :<?= $societes['email_societe'];?> </p>
                     <br>
-                    <p>Telephone : $tel <i class="fas fa-edit"></i></p>
+                    <p>Telephone : <?= $societes['tel_societe'];?> </p>
                     <br>
-                    <p>Numéro de siret : $numsiret <i class="fas fa-edit"></i></p>
+                    <p>Numéro de siret : <?= $societes['siret_societe'];?> </p>
+                    <br>
+                    <p id="modifprofil">Modifiez votre information d'entreprise.  <i class="fas fa-edit" id="modifprofil"></i></p> 
+
                 </div>
             </div>
-            <div class="row infoprof2entreprise">
-                <p class="col offset-md-1 ">Modifiez tout votre profil <i class="fas fa-edit"></i></p> <p class="col"> Modifiez votre mot de passe <i class="fas fa-edit"></i></p>
-            </div>
+            
         </div>
     </div>
+
+
+    <a href="deconnection.php" class="btn">deconnection</a>
+
+<?php 
+
+echo "haha";
+echo "<br>";
+echo   $_SESSION['id_concours'];
+echo "<br>";
+echo $_SESSION['id_entreprise']
+
+?>
+<?php
+
+$plo = $pdo-> prepare("SELECT * From Concours WHERE id_concours=".$_SESSION['id_concours']);
+$plo-> execute();
+$pls= $plo->fetchAll(\PDO::FETCH_ASSOC);
+foreach($pls as $plss);
+
+?>
+
+
 
     <!-- Concours de l'entreprise -->
 
@@ -74,7 +108,11 @@ include 'meta.php';
                     <img src="../img/exam.jpg" alt="concours" style="width: 50%;" class="imgconcourentreprise">
                 </div>
                 <div class="col-5 offset-md-1" style="text-align: left;">
-                    <p>Nom <br> Info <br> Desc</p>
+                <p>test : <?= $plss['nom_entreprise'];
+                var_dump($plss)
+                ?></p>
+                    <p>  <br> Info <br> Desc</p>
+
                 </div>
             </div>
             <div class="row concourinfoentreprise">
@@ -189,6 +227,9 @@ include 'meta.php';
 </div>
 
 <?=template_footer()?>
+
+
+<script src="../js/profil.js"></script>
 
 </body>
 

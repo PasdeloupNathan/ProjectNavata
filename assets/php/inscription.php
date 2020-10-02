@@ -21,7 +21,7 @@ $msg = '';
 
     <div class="row conect">
         <div class="col-md-4 row align-items-center" style="height: 20vh;">
-            <img src="../img/LOGO.png" alt="logo" style="height: 75%;padding-left: 35%;" class="animate__animated animate__rotateIn">
+            <img src="../img/LOGO.png" alt="logo" style="height: 75%;padding-left: 35%;" class="animate__animated animate__rotateI">
          </div>
         <form action  method="POST" class="form-horizontal col-md-4 animate__animated animate__backInUp">
             <fieldset>
@@ -106,11 +106,11 @@ $msg = '';
                     <div style="padding-top: 1%;">
                         <a href="./connection.php">Vous avez déjà un compte? Connectez-vous</a>
                     </div>
+                    <div style="padding-top: 1%;">
+                        <a href="entreprise.php">Vous Souhaitez vous inscrire en tant qu'Entreprise ?</a>
+                    </div>
                 </div>
-
-
-            </fieldset>-                 
-            
+            </fieldset>-                  
     </div>
 
 

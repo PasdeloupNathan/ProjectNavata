@@ -79,9 +79,9 @@ foreach($bro as $bros)
     </div>
 </div>
 
-<? $_SESSION["email"] ?>
 
-<?$id ?>
+
+
 <a href="deconnection.php" class="btn">deconnection</a>
 
 

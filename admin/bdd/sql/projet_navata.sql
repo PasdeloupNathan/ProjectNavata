@@ -22,6 +22,7 @@ CREATE TABLE `entreprise` (
 	`rôles` varchar(255) NOT NULL,
 	`nom_societe` varchar(255) NOT NULL ,
 	`email_societe` varchar(255) NOT NULL ,
+	`tel_societe` varchar(255) NULL,
 	`ville_societe` varchar(255) NOT NULL ,
 	`adresse_societe` varchar(255) NOT NULL ,
 	`codepostal_societe` varchar(255) NOT NULL ,
@@ -29,6 +30,15 @@ CREATE TABLE `entreprise` (
 	`mdp_societe` varchar(255) NOT NULL,
 	`img_societe` varchar(255) NOT NULL,
 	PRIMARY KEY (`id_entreprise`)
+);
+
+CREATE TABLE `admin` (
+	`id_admin` INT NOT NULL AUTO_INCREMENT,
+	`rôles` varchar(255) NOT NULL,
+	`nom` varchar(255) NOT NULL ,
+	`email` varchar(255) NOT NULL ,
+	`mdp` varchar(255) NOT NULL,
+	PRIMARY KEY (`id_admin`)
 );
 
 
@@ -49,8 +59,8 @@ CREATE TABLE `Concours` (
 	`nom_entreprise` varchar(255) NOT NULL,
 	`descriptionConcours` varchar(255) NOT NULL,
 	`locaConcours` varchar(255) NOT NULL,
-	`date_concours` DATE NOT NULL,
-	`placeConcoursMax` INT NOT NULL,
+	`date_concours` varchar(255) NOT NULL,
+	`placeConcoursMax` varchar(255) NOT NULL,
 	`link_entreprise` varchar(255) NOT NULL,
 	`categorieConcours` varchar(255) NULL,
 	`placeConcoursPrise` INT NULL,
