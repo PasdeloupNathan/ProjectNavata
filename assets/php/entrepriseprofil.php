@@ -85,12 +85,19 @@ echo "<br>";
 echo $_SESSION['id_entreprise']
 
 ?>
+
+<?php 
+
+
+?>
+
 <?php
 
 $plo = $pdo-> prepare("SELECT * From Concours WHERE id_concours=".$_SESSION['id_concours']);
 $plo-> execute();
 $pls= $plo->fetchAll(\PDO::FETCH_ASSOC);
 foreach($pls as $plss);
+
 
 ?>
 
