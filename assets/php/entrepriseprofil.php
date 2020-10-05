@@ -84,15 +84,10 @@ foreach($societe as $societes){
 
 <?php
 
-
-
-
-
 $test1 = $pdo->prepare("SELECT * from Concours WHERE nom_entreprise='broCorp'");
 $test1->execute();
 $concour= $test1->fetchAll(\PDO::FETCH_ASSOC);
 foreach($concour as $concours);
-
 
 ?>
 
