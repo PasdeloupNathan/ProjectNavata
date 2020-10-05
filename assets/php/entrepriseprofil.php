@@ -89,14 +89,14 @@ echo $_SESSION['nom_societe'];
 
 <?php
 
-<?php
+
 
 
 $test1 = $pdo->prepare("SELECT * from Concours WHERE nom_entreprise='broCorp'");
 $test1->execute();
 $concour= $test1->fetchAll(\PDO::FETCH_ASSOC);
 foreach($concour as $concours);
-=======
+
 
 ?>
 
@@ -241,7 +241,7 @@ foreach($concour as $concours);
 </body>
 
 </html>
-<?php
+<?
 } else{
     header("Location: redirection.php");
 }
