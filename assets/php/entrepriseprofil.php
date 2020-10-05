@@ -23,6 +23,7 @@ $tests = $pdo->prepare("SELECT * from entreprise WHERE id_entreprise=".$_SESSION
 $tests->execute();
 $societe= $tests->fetchAll(\PDO::FETCH_ASSOC);
 foreach($societe as $societes);
+{
 ?>
 
 
@@ -77,22 +78,30 @@ foreach($societe as $societes);
     <a href="deconnection.php" class="btn">deconnection</a>
 
 <?php 
+}
 
-echo "haha";
-echo "<br>";
-echo   $_SESSION['id_concours'];
-echo "<br>";
-echo $_SESSION['id_entreprise']
+echo $_SESSION['nom_societe'];
+
 
 ?>
+
+
+
 <?php
 
-$plo = $pdo-> prepare("SELECT * From Concours WHERE id_concours=".$_SESSION['id_concours']);
-$plo-> execute();
-$pls= $plo->fetchAll(\PDO::FETCH_ASSOC);
-foreach($pls as $plss);
+<?php
+
+
+$test1 = $pdo->prepare("SELECT * from Concours WHERE nom_entreprise='broCorp'");
+$test1->execute();
+$concour= $test1->fetchAll(\PDO::FETCH_ASSOC);
+foreach($concour as $concours);
+=======
 
 ?>
+
+
+
 
 
 
@@ -108,9 +117,7 @@ foreach($pls as $plss);
                     <img src="../img/exam.jpg" alt="concours" style="width: 50%;" class="imgconcourentreprise">
                 </div>
                 <div class="col-5 offset-md-1" style="text-align: left;">
-                <p>test : <?= $plss['nom_entreprise'];
-                var_dump($plss)
-                ?></p>
+                <p>test : <?= $concours['nom_entreprise'];?></p>
                     <p>  <br> Info <br> Desc</p>
 
                 </div>
