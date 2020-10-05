@@ -233,7 +233,7 @@ foreach($concour as $concours);
 </body>
 
 </html>
-<?php
+<?
 } else{
     header("Location: redirection.php");
 }
