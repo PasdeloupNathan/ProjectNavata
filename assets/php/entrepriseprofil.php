@@ -80,10 +80,14 @@ foreach($societe as $societes){
 
     <?php
 
-$test1 = $pdo->prepare("SELECT * from Concours WHERE nom_entreprise='broCorp'");
-$test1->execute();
-$concour= $test1->fetchAll(\PDO::FETCH_ASSOC);
-foreach($concour as $concours){
+
+
+$testsp = $pdo->prepare("SELECT * from concours WHERE ref=".$_SESSION['id_entreprise']);
+$testsp->execute();
+$societed= $testsp->fetchAll(\PDO::FETCH_ASSOC);
+foreach($societed as $societess){
+    
+    
 
 ?>
 
@@ -98,8 +102,11 @@ foreach($concour as $concours){
                 <div class="col-5 offset-md-1">
                     <img src="../img/exam.jpg" alt="concours" style="width: 50%;" class="imgconcourentreprise">
                 </div>
-                <div class="col-5 offset-md-1" style="text-align: left;">
-                    <p>Nom : <?= $concours['noms_concours'];?> <br> Info <br> Desc</p>
+                <div class="col-5 offset-md-1" style="text-align: left;">  
+                    <p> Nom de votre Concours : <?= $societess['noms_concours'];?>  <br>Nom de votre l'entreprise : <?= $societess['nom_entreprise'];?> <br> Description: <?= $societess['descriptionConcours'];?> <br> 
+                    Localisation: <?= $societess['locaConcours'];?> <br> Date du concour : <?= $societess['date_concours'];?> <br> Place du concours: <?= $societess['placeConcoursMax'];?> <br>  
+                    Link : <?= $societess['link_entreprise'];?>
+                    </p>
                 </div>
             </div>
             <div class="row concourinfoentreprise">
