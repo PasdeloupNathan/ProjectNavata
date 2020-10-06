@@ -1,7 +1,8 @@
 <? include 'model.php'; ?>
-<?php session_start(); 
+<?php 
+session_start(); 
+?>
 
-  ?>
 <!-- // Vérifiez si l'utilisateur est connecté, sinon redirigez-le vers la page de connexion// -->
 
 <!-- Appeller de la page meta.php ou se situe toute les fonction template  -->
