@@ -22,8 +22,7 @@ include 'meta.php';
 $tests = $pdo->prepare("SELECT * from entreprise WHERE id_entreprise=".$_SESSION['id_entreprise']);
 $tests->execute();
 $societe= $tests->fetchAll(\PDO::FETCH_ASSOC);
-foreach($societe as $societes);
-{
+foreach($societe as $societes){
 ?>
 
 
@@ -79,24 +78,16 @@ foreach($societe as $societes);
 
 <?php 
 }
-
-echo $_SESSION['nom_societe'];
-
-
 ?>
 
 
 
 <?php
 
-<?php
-
-
 $test1 = $pdo->prepare("SELECT * from Concours WHERE nom_entreprise='broCorp'");
 $test1->execute();
 $concour= $test1->fetchAll(\PDO::FETCH_ASSOC);
 foreach($concour as $concours);
-=======
 
 ?>
 
@@ -117,8 +108,7 @@ foreach($concour as $concours);
                     <img src="../img/exam.jpg" alt="concours" style="width: 50%;" class="imgconcourentreprise">
                 </div>
                 <div class="col-5 offset-md-1" style="text-align: left;">
-                <p>test : <?= $concours['nom_entreprise'];?></p>
-                    <p>  <br> Info <br> Desc</p>
+                    <p> Nom : <?= $concours['noms_concours'];?>  <br> Info : <?= $concours['descriptionConcours'];?> <br> Desc</p>
 
                 </div>
             </div>
@@ -141,6 +131,8 @@ foreach($concour as $concours);
         </div>
     </div>
 </div>
+
+
 
 
     <!-- Candidat inscrit a vos concours  -->
@@ -241,7 +233,7 @@ foreach($concour as $concours);
 </body>
 
 </html>
-<?php
+<?
 } else{
     header("Location: redirection.php");
 }

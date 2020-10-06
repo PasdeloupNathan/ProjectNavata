@@ -6,7 +6,7 @@
 
 <!-- Appeller de la page meta.php ou se situe toute les fonction template  -->
 <?php include 'meta.php';?>
-
+<!-- fonction permettant d'accédé a la page correspondant aux rôles -->
 <?php
 if($_SESSION == FALSE){
     template_header();
