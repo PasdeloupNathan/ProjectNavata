@@ -70,7 +70,7 @@ $msg = '';
 
                     <div class="form-group">
                         <div class="col" style="padding-top: 1%;">
-                            <input id="" name="placeConcoursMax" type="number" placeholder="Max de participent" class="form-control input-md" required="" style="border:solid 1px #707070; margin-left: 5%; width:90%;border-radius: 0;">
+                            <input id="" name="placeConcoursMax" type="number" placeholder="Participant Max" class="form-control input-md" required="" style="border:solid 1px #707070; margin-left: 5%; width:90%;border-radius: 0;">
                             <i class="fas fa-caret-right" style="position: absolute; transform: rotate(315deg);margin-left: 40%; margin-top: -11.7%; color: #de2b76 ;font-size: 1.5rem;"></i>                        </div>
                     </div>
 

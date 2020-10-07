@@ -44,7 +44,7 @@ foreach($societe as $societes){
                     <h2 class="h2profentreprise"> Profil de votre <br> Entreprise </h2>
                 </div>
                 <div class="titrepentreprise col-3 offset-md-1">
-                    <h2 class="linkprofentreprise">Crée un concours</h2>
+                    <a href="create.php"><h2 class="linkprofentreprise">Crée un concours</h2></a> 
                 </div>
                 <i class="fas fa-caret-right rose4"></i>
             </div>
