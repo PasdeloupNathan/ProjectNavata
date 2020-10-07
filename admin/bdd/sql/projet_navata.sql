@@ -54,17 +54,18 @@ CREATE TABLE `Candidatures` (
 );
 
 CREATE TABLE `Concours` (
-	`id_concours` INT NOT NULL AUTO_INCREMENT,
-	`noms_concours` varchar(255) NOT NULL, 
-	`nom_entreprise` varchar(255) NOT NULL,
-	`descriptionConcours` varchar(255) NOT NULL,
-	`locaConcours` varchar(255) NOT NULL,
-	`date_concours` varchar(255) NOT NULL,
-	`placeConcoursMax` varchar(255) NOT NULL,
-	`link_entreprise` varchar(255) NOT NULL,
-	`categorieConcours` varchar(255) NULL,
-	`placeConcoursPrise` INT NULL,
-	`placeConcoursRestante` INT NULL,
+  `id_concours` int(11) NOT NULL AUTO_INCREMENT,
+  `noms_concours` varchar(255) NOT NULL,
+  `nom_entreprise` varchar(255) NOT NULL,
+  `descriptionConcours` varchar(255) NOT NULL,
+  `locaConcours` varchar(255) NOT NULL,
+  `date_concours` varchar(255) NOT NULL,
+  `placeConcoursMax` varchar(255) NOT NULL,
+  `link_entreprise` varchar(255) NOT NULL,
+  `categorieConcours` varchar(255) DEFAULT NULL,
+  `placeConcoursPrise` int(11) DEFAULT NULL,
+  `placeConcoursRestante` int(11) DEFAULT NULL,
+  `ref` int(11) NOT NULL,
 	PRIMARY KEY (`id_concours`)
 );
 
