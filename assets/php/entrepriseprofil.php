@@ -34,7 +34,6 @@ foreach($societe as $societes){
 
 <?=template_headerEntreprise()?>
 
-
     <!-- Profil de l'entreprise  -->
 
 <div class="main7 row align-items-center">
