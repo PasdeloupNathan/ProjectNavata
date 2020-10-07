@@ -32,18 +32,39 @@ salut je suis le trait_exists
 
 </section> -->
 
-<div class="container">
-    <div class="row">
-        <div class="xs-12 md-6 mx-auto">
-            <div id="countUp">
-                <div class="numberRedirect" data-count="404">0</div>
-                <div class="textRedirect">Page not found</div>
-                <div class="textRedirect">This may not mean anything.</div>
-                <div class="textRedirect">I'm probably working on something that has blown up.</div>
+<div class="col">
+    <!-- premiere partie du site contenent le concours avec les plus d'angouement  -->
+        <div class="redirect1 " class="container">
+           
+                <div  class="col ">
+                <img  class="logoimg3" src="https://freefrontend.com/assets/img/html-funny-404-pages/SVG-Animation-404-Page.gif" alt="logo">
+                <div class="col">
+                        
+                        <h2 class=" col- textredirect">Vous essayez d'accéder a une page non autorisé</h2> <br>
+                        <h3 class=" col- textredirect"> veuillez retournez vers le droit chemin en cliquant <a href="index.php"> ici</a></h3>
+                        <p>Sinon vous serez redirigé automatiquement vers la page d'acceuil dans  <span id="counter">10</span> seconde(s).</p>
+                        
+                    
+                    </div>
+                </div>
+                
             </div>
         </div>
-    </div>
-</div>    
+        </div>
 
+<div class="main3 h2nav"> 
+
+<script type="text/javascript">
+function countdown() {
+    var temp = document.getElementById('counter');
+    if (parseInt(temp.innerHTML)<=0) {
+        location.href = 'index.php';
+    }
+    temp.innerHTML = parseInt(temp.innerHTML)-1;
+}
+setInterval(function(){ countdown(); },1000);
+</script>
 <?=template_footer()?>
 </body>
+
+

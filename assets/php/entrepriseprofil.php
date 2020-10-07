@@ -238,3 +238,4 @@ foreach($concour as $concours);
     header("Location: redirection.php");
 }
 ?>
+?>

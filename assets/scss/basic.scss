@@ -186,7 +186,7 @@
  }
  
  .firstBox {
-     background-color: white;
+     background-color: #ececec;
      border: solid 20px #de2b76;
      height: 85%;
      height: 85%;
@@ -738,14 +738,17 @@
  
  // PAGE REDIRECTION
  .redirect1 {
-     height: 100vh;
-     width: 100%;
-     margin-left: 15%;
-     width: 70%;
-     height: 30%;
-     border: black 1.5px solid;
-     background-color: #fff;
-     .Sousredirect {}
+     background-color: #ececec;
+     border: solid 20px #de2b76;
+     height: 35%;
+     margin: 1%;
+     text-align: center;
+     .logoimg3 {
+         width: 60%;
+     }
+     .textredirect {
+         padding-bottom: 1%;
+     }
  }
  
  .main6 {
