@@ -23,8 +23,8 @@ $tests = $pdo->prepare("SELECT * from entreprise WHERE id_entreprise=".$_SESSION
 $tests->execute();
 $societe= $tests->fetchAll(\PDO::FETCH_ASSOC);
 foreach($societe as $societes){
-?>
 
+?>
 
 <?=template_meta('Entreprise_Profil')?>
     
@@ -72,29 +72,24 @@ foreach($societe as $societes){
             
         </div>
     </div>
-
+    <?php
+}
+    ?>
 
     <a href="deconnection.php" class="btn">deconnection</a>
 
-<?php 
-}
-?>
+    <?php
 
 
 
-<?php
-
-$test1 = $pdo->prepare("SELECT * from Concours WHERE nom_entreprise='broCorp'");
-$test1->execute();
-$concour= $test1->fetchAll(\PDO::FETCH_ASSOC);
-foreach($concour as $concours);
+$testsp = $pdo->prepare("SELECT * from concours WHERE ref=".$_SESSION['id_entreprise']);
+$testsp->execute();
+$societed= $testsp->fetchAll(\PDO::FETCH_ASSOC);
+foreach($societed as $societess){
+    
+    
 
 ?>
-
-
-
-
-
 
     <!-- Concours de l'entreprise -->
 
@@ -107,9 +102,11 @@ foreach($concour as $concours);
                 <div class="col-5 offset-md-1">
                     <img src="../img/exam.jpg" alt="concours" style="width: 50%;" class="imgconcourentreprise">
                 </div>
-                <div class="col-5 offset-md-1" style="text-align: left;">
-                    <p> Nom : <?= $concours['noms_concours'];?>  <br> Info : <?= $concours['descriptionConcours'];?> <br> Desc</p>
-
+                <div class="col-5 offset-md-1" style="text-align: left;">  
+                    <p> Nom de votre Concours : <?= $societess['noms_concours'];?>  <br>Nom de votre l'entreprise : <?= $societess['nom_entreprise'];?> <br> Description: <?= $societess['descriptionConcours'];?> <br> 
+                    Localisation: <?= $societess['locaConcours'];?> <br> Date du concour : <?= $societess['date_concours'];?> <br> Place du concours: <?= $societess['placeConcoursMax'];?> <br>  
+                    Link : <?= $societess['link_entreprise'];?>
+                    </p>
                 </div>
             </div>
             <div class="row concourinfoentreprise">
@@ -132,8 +129,9 @@ foreach($concour as $concours);
     </div>
 </div>
 
-
-
+<?php
+}
+    ?>
 
     <!-- Candidat inscrit a vos concours  -->
 
@@ -233,7 +231,7 @@ foreach($concour as $concours);
 </body>
 
 </html>
-<?
+<?php
 } else{
     header("Location: redirection.php");
 }
