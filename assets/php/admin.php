@@ -7,7 +7,15 @@ require 'model.php';
 $pdo = pdo_connect_mysql();
 $msg = '';
 ?>
+<?php
 
+$tests = $pdo->prepare("SELECT COUNT(*) from users WHERE id_users=".$_SESSION['id_users']);
+$tests->execute();
+$societe= $tests->fetchAll(\PDO::FETCH_ASSOC);
+foreach($societe as $societes){
+
+?>
+<!--  Permission pour le rôles admin -->
 <?php if($_SESSION["rôles"] == 'admin'){
   ?>
 <?php
@@ -16,6 +24,7 @@ include 'meta.php';
 $annee = (int)date('Y');
 
 ?>
+
 <?=template_meta('adminConcours')?>
     
 
@@ -46,7 +55,7 @@ $annee = (int)date('Y');
     </div>
     
     <div class="col stats ">
-    nombre de personne inscrite :
+    nombre de personne inscrite :<?= $societes['noms'];?>
     </div>
     <div class="graph row"style="width:50%">
 
@@ -95,5 +104,6 @@ $annee = (int)date('Y');
 <?php
 } else{
     header("Location: redirection.php");
+}
 }
 ?>

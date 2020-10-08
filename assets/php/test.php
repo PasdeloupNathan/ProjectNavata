@@ -1,20 +1,20 @@
-<link rel="stylesheet" href="../css/test.min.css">
+<?php 
+session_start();
+?>
 
+<?php
+require 'model.php';
+$pdo = pdo_connect_mysql();
+$msg = '';
+?>
+<?php
+$result = PDO::query("SHOW COLUMNS FROM users");
+echo rowCount();($result);
+?>
 
-<div class="container">
-    <div class="row">
-        <div class="xs-12 md-6 mx-auto">
-            <div id="countUp">
-                <div class="number" data-count="404">0</div>
-                <div class="text">Page not found</div>
-                <div class="text">This may not mean anything.</div>
-                <div class="text">I'm probably working on something that has blown up.</div>
-                
-            </div>
-        </div>
+                        
+    nombre de personne inscrite :
     </div>
-    
-</div>      
 
 
 
