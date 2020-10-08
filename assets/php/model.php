@@ -52,7 +52,7 @@ function entreprise($rôles, $nom_societe, $email_societe, $ville_societe, $adre
 	catch(PDOException $e) {
 		echo $sql . "<br>" . $e->getMessage();
 	}
-		
+
 }
 
 			// Inscription : création d’un concours //
@@ -78,7 +78,8 @@ function connexion($email, $mdp) {
 	// var_dump($users);
 }
 
+?>  
 
-?>
+
 
 
