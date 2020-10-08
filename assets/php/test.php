@@ -1,20 +1,74 @@
-<link rel="stylesheet" href="../css/test.min.css">
+<?php include('../function.php')  ?>
 
 
-<div class="container">
-    <div class="row">
-        <div class="xs-12 md-6 mx-auto">
-            <div id="countUp">
-                <div class="number" data-count="404">0</div>
-                <div class="text">Page not found</div>
-                <div class="text">This may not mean anything.</div>
-                <div class="text">I'm probably working on something that has blown up.</div>
-                
-            </div>
+  
+  <?=template_header2('loginpro')?>
+<br>
+<body style="background-color: #f8f9fa;">
+<section style="margin-left: 60px; margin-right: 60px;">
+        <div class="row nomarge">
         </div>
-    </div>
+        <style>
+.zoom {
+  
+
+  transition: transform .2s;
+  
+  margin: 0 auto;
+}
+
+.zoom:hover {
+  -ms-transform: scale(1.18); /* IE 9 */
+  -webkit-transform: scale(1.18); /* Safari 3-8 */
+  transform: scale(1.18); 
+}
+
+</style>
     
-</div>      
+<?php 
+$pdo->prepare("select * from users where rôles = ?");
+            $test = $result->execute([$pdo]);
+
+
+// Associative array
+$row = $result -> fetch_assoc();
+?>
+ <div class="row nomarge">
+<?php
+ while($row=mysqli_fetch_array($result)){
+  
+
+    ?>
+            <div  style="text-align:center;" class="col-md-3 col-sm-6">
+                
+            
+               <br>
+               <br>
+               <p>     <?php echo $row['nom'] ?></p>
+                <p>     <?php echo $row['prénoms'] ?></p>
+                <p>     <?php echo $row['id_users'] ?>€</p>
+                <br>
+            </div>        
+           
+      
+    <?php
+  }  
+?></div>
+       
+
+       
+        
+
+    </section>
+</body>
+
+<br>
+<?=template_footer()?>
+
+
+
+
+
 
 
 
