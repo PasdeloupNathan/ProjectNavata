@@ -136,28 +136,6 @@
     color: white;
 }
 
-.top {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    .pagination {
-        display: flex;
-        justify-content: flex-end;
-        .aread {
-            display: inline-block;
-            text-decoration: none;
-            background-color: mix(#000, $read-table-color-scheme, 30);
-            font-weight: bold;
-            color: #ffffff;
-            padding: 5px 10px;
-            margin: 15px 0 15px 5px;
-            &:hover {
-                background-color: mix(#000, $read-table-color-scheme, 35);
-            }
-        }
-    }
-}
-
 // Concours.scss //
 .title {
     text-align: center;
