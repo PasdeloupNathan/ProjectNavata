@@ -178,7 +178,7 @@ echo<<<EOT
             <h2 class="copy">Copyright</h2>
         </div>
         <div class="col">
-            <h2 class="CGU">Mention legal et CGU</h2>
+            <h2 class="CGU"><a href="./cgu.php">Mention legal et CGU</a></h2>
         </div>
         <div class="col">
             <h2 class="contact">Contact</h2>

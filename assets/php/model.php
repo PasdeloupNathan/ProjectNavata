@@ -57,10 +57,10 @@ function entreprise($rôles, $nom_societe, $email_societe, $ville_societe, $adre
 
 			// Inscription : création d’un concours //
 
-function create_form_concours($noms_concours, $nom_entreprise, $descriptionConcours, $locaConcours, $date_concours, $placeConcoursMax, $link_entreprise, $ref) {
+function create_form_concours($noms_concours, $nom_entreprise, $descriptionConcours, $locaConcours, $date_concours, $placeConcoursMax, $link_entreprise, $ref, $menu_deroulant) {
 	try {
 		$con = pdo_connect_mysql();
-		$sql = "INSERT INTO `Concours` (`id_concours`, `noms_concours`, `nom_entreprise`, `descriptionConcours`, `locaConcours`, `date_concours`, `placeConcoursMax`, `link_entreprise`, `categorieConcours`, `placeConcoursPrise`, `placeConcoursRestante`, `ref`) VALUES (NULL, '$noms_concours', '$nom_entreprise', '$descriptionConcours', '$locaConcours', '$date_concours', '$placeConcoursMax', '$link_entreprise', NULL, NULL, NULL, '$ref' );";
+		$sql = "INSERT INTO `Concours` (`id_concours`, `noms_concours`, `nom_entreprise`, `descriptionConcours`, `locaConcours`, `date_concours`, `placeConcoursMax`, `link_entreprise`, `categorieConcours`, `placeConcoursPrise`, `placeConcoursRestante`, `ref`, `menu_deroulant`) VALUES (NULL, '$noms_concours', '$nom_entreprise', '$descriptionConcours', '$locaConcours', '$date_concours', '$placeConcoursMax', '$link_entreprise', NULL, NULL, NULL, '$ref', '$menu_deroulant');";
 		$con->exec($sql);
 	}
 	catch(PDOException $e) {
