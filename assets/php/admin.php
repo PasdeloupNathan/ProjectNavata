@@ -49,6 +49,9 @@ $countConcours = $sth->rowCount();
 // ===============================================
 // code permettant de compté le nombre total d'utilisateurs sur le site (admin exclu)
 $countTotal = $countCandidat + $countEntreprise;
+
+
+//  permet d'affiché le nombre de visite du site
 require_once dirname(__DIR__) . DIRECTORY_SEPARATOR . 'function' . DIRECTORY_SEPARATOR . 'compteur.php';
     ajouter_vue();
     $vues = nombre_vues()

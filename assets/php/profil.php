@@ -60,7 +60,6 @@ foreach($bro as $bros)
                 <p>Ville : <?= $bros['ville'];?> </p>
                 <br>
                 <p>Nationalité : <?= $bros['nation'];?> </p>
-           
             </div>
             <div class="col droite">
                 <p>Date de naissance : <?= $bros['naissance'];?> </p>
