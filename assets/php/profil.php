@@ -15,10 +15,9 @@ include 'meta.php';
 ?>
 
 <?=template_meta('Profil')?>
-    
 
 <body class="body">
-     
+
 
 <?=template_headerUsers()?>
 
