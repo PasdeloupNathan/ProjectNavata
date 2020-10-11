@@ -16,6 +16,10 @@ include 'meta.php';
 $annee = (int)date('Y');
 
 ?>
+<?php if($_SESSION["rôles"] == 'admin'){
+  ?>
+<?=template_meta('ListeCandidat')?>
+
 <?php
 
 // Connect to MySQL database
@@ -62,28 +66,37 @@ if (isset($_GET['search'])) {
 	$num_users = $pdo->query('SELECT COUNT(*) FROM users')->fetchColumn();
 }
 ?>
-<?=template_meta('adminConcours')?>
+
+
 
 <body class="body2">
 
-
-<?=template_header()?>
-<section class="row page">
+<?=template_headerAdmin()?>
+<div class="  row page ">
 <?=template_admin()?>
+
 <div class="col">
 <table id="customers">
-  <div>
-	<h2>Liste des candidats</h2>
-	<div class="top">
 
+	<div class="col row top">
+		<div class="col-6">
+<h2 class="candid1">Liste des candidats</h2>
+		</div>
+		
+		<div class=" col-4">
+<h2 class="col candid" type="button" onclick="location.href='./listeEntreprise.php'" >Liste des entreprise</h2>
+		</div>
+		
 	</div>
+	
+
 	<table id="customers">
-    	<form action="test.php" method="get">
+    	<form action="listeCandidat.php" method="get">
 			<input type="text" name="search" placeholder="Search..." value="<?=isset($_GET['search']) ? htmlentities($_GET['search'], ENT_QUOTES) : ''?>">
 		</form>
         <thead>
             <tr>
-                <th>#</th>
+                <th>ID</th>
                 <th>noms</th>
                 <th>prénoms</th>
                 <th>email</th>
@@ -92,8 +105,7 @@ if (isset($_GET['search'])) {
             </tr>
         </thead>
         <tbody>
-
-		<!-- boucle for each permettant d'affiché les donnés de la table USERS -->
+			<!-- boucle for each permettant d'affiché les donnés de la table USERS -->
             <?php foreach ($users as $contact): ?>
             <tr>
                 <td><?=$contact['id_users']?></td>
@@ -104,27 +116,32 @@ if (isset($_GET['search'])) {
                 <td><?=$contact['rôles']?></td>
             </tr>
             <?php endforeach; ?>
-        </tbody>
-    </table>
-</div>
-<!-- fléche pour permettre de naviqué dans le tableau -->
-    <div class="pagination">
+		</tbody>
+</table>
+	<div class="pagination">
 		<?php if ($page > 1): ?>
-		<a href="test.php?page=<?=$page-1?><?=isset($_GET['search']) ? '&search=' . htmlentities($_GET['search'], ENT_QUOTES) : ''?>">
+		<a class="aRead" href="listeCandidat.php?page=<?=$page-1?><?=isset($_GET['search']) ? '&search=' . htmlentities($_GET['search'], ENT_QUOTES) : ''?>">
 			<i class="fas fa-angle-double-left fa-sm"></i>
 		</a>
 		<?php endif; ?>
 		<?php if ($page*$records_per_page < $num_users): ?>
-		<a href="test.php?page=<?=$page+1?><?=isset($_GET['search']) ? '&search=' . htmlentities($_GET['search'], ENT_QUOTES) : ''?>">
+		<a class="aRead" href="listeCandidat.php?page=<?=$page+1?><?=isset($_GET['search']) ? '&search=' . htmlentities($_GET['search'], ENT_QUOTES) : ''?>">
 			<i class="fas fa-angle-double-right fa-sm"></i>
 		</a>
 		<?php endif; ?>
 	</div>
 </div>
+<!-- fléche pour permettre de naviqué dans le tableau -->
+    
+</div>
 
-
+</body>
 
 
 
 <?=template_footer()?>
-
+<?php
+} else{
+    header("Location: redirection.php");
+}
+?>

@@ -1,71 +1,4 @@
-// admin.scss //
-.page {
-    border: solid #f1f2f5;
-    border-width: 3px 3px 3px 3px;
-    height: 100vh;
-    .navGauche {
-        color: black;
-        background-color: #7cbee8;
-        height: 100%;
-        display: inline-block;
-        padding: 3vh;
-        .vertical-menu {
-            width: 10vw;
-            text-align: center;
-        }
-        .vertical-menu button {
-            background-color: #222222;
-            align-items: center;
-            color: white;
-            display: block;
-            padding: 12%;
-            text-decoration: none;
-        }
-        .vertical-menu button:hover {
-            background-color: grey;
-        }
-        .menu1 {
-            background-color: #7cbee8;
-            color: #fff;
-            font: 1em "Trebuchet MS", Arial, sans-serif;
-            line-height: 1em;
-            padding-top: 5%;
-            padding-left: 10%;
-        }
-    }
-    .card {
-        background-color: #7cbee8;
-        border-radius: 15px !important;
-        #titrecard {
-            color: white;
-        }
-        .card-body {
-            background-color: white;
-        }
-    }
-}
-
-.ListStats {
-    width: 50%;
-    height: 50%;
-    .stats {
-        height: 10%;
-    }
-    .graph {
-        margin: auto;
-        width: 70% !important;
-        height: 100%;
-    }
-    #cercle {
-        border: solid black;
-        width: 40%;
-        height: 50%;
-        border-radius: 50%;
-        margin-top: 2%;
-    }
-}
-
-// adminConcours.scss //
+// adminConcours
 .formulaire {
     height: 50%;
     width: 100%;
@@ -104,19 +37,90 @@
     }
 }
 
+// admin.scss //
+.page {
+    border: solid #f1f2f5;
+    border-width: 3px 3px 3px 3px;
+    height: 100vh;
+    .navGauche {
+        color: black;
+        background-color: #7cbee8;
+        height: 100%;
+        display: inline-block;
+        padding: 3vh;
+        .vertical-menu {
+            width: 10vw;
+            text-align: center;
+        }
+        .vertical-menu button {
+            background-color: #222222;
+            align-items: center;
+            color: white;
+            display: block;
+            padding: 12%;
+            text-decoration: none;
+        }
+        .vertical-menu button:hover {
+            background-color: grey;
+        }
+        .menu1 {
+            background-color: #7cbee8;
+            color: #fff;
+            font: 1em "Trebuchet MS", Arial, sans-serif;
+            line-height: 1em;
+            padding-top: 5%;
+            padding-left: 10%;
+        }
+    }
+}
+
+// adminConcours.scss //
+.card {
+    background-color: #7cbee8;
+    border-radius: 15px !important;
+    #titrecard {
+        color: white;
+    }
+    .card-body {
+        background-color: white;
+    }
+}
+
+.ListStats {
+    width: 50%;
+    height: 50%;
+    .stats {
+        height: 10%;
+    }
+    .graph {
+        margin: auto;
+        width: 70% !important;
+        height: 100%;
+    }
+    #cercle {
+        border: solid black;
+        width: 40%;
+        height: 50%;
+        border-radius: 50%;
+        margin-top: 2%;
+    }
+}
+
 // adminLogs.scss //
 // adminTable.scss //
 #customers {
+    font-size: 1rem;
     margin-top: 1%;
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     border-collapse: collapse;
-    width: 80%;
+    width: 100%;
 }
 
-#customers td,
+td,
 #customers th {
     border: 1px solid grey;
-    padding: 1%;
+    padding-top: 1%;
+    text-align: center;
 }
 
 #customers tr:nth-child(even) {
@@ -124,16 +128,71 @@
 }
 
 #customers tr:hover {
-    background-color: #ddd;
+    background-color: #de2b76;
+    color: white;
 }
 
 #customers th {
     text-align: center;
     padding-top: 12px;
     padding-bottom: 12px;
-    text-align: left;
     background-color: #7cbee8;
     color: white;
+}
+
+.pagination {
+    display: flex;
+    justify-content: flex-end;
+    .aRead {
+        display: inline-block;
+        text-decoration: none;
+        background-color: #7cbee8;
+        font-weight: bold;
+        color: #FFFFFF;
+        padding: 5px 10px;
+        margin: 15px 0 15px 5px;
+        &:hover {
+            background-color: #7cbee8;
+        }
+    }
+}
+
+.candid1 {
+    background-color: #f1f2f5;
+}
+
+.candid {
+    background-color: #7cbee8;
+}
+
+.candid:hover {
+    background-color: #de2b76;
+    color: #f1f2f5;
+    transition: transform .2s;
+    -ms-transform: scale(1.10);
+    /* IE 9 */
+    -webkit-transform: scale(1.10);
+    /* Safari 3-8 */
+    transform: scale(1.10);
+}
+
+.ent1 {
+    background-color: #f1f2f5;
+}
+
+.ent {
+    background-color: #7cbee8;
+}
+
+.ent:hover {
+    background-color: #de2b76;
+    color: #f1f2f5;
+    transition: transform .2s;
+    -ms-transform: scale(1.10);
+    /* IE 9 */
+    -webkit-transform: scale(1.10);
+    /* Safari 3-8 */
+    transform: scale(1.10);
 }
 
 // Concours.scss //
