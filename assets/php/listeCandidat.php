@@ -16,10 +16,14 @@ include 'meta.php';
 $annee = (int)date('Y');
 
 ?>
+<<<<<<< Updated upstream:assets/php/listeCandidat.php
 <?php if($_SESSION["rôles"] == 'admin'){
   ?>
 <?=template_meta('ListeCandidat')?>
 
+=======
+<?=template_meta('adminConcours')?>
+>>>>>>> Stashed changes:assets/php/test.php
 <?php
 
 // Connect to MySQL database
@@ -70,9 +74,16 @@ if (isset($_GET['search'])) {
 
 
 <body class="body2">
+<<<<<<< Updated upstream:assets/php/listeCandidat.php
 
 <?=template_headerAdmin()?>
 <div class="  row page ">
+=======
+<?=template_header()?>
+
+<div class="  row page ">
+
+>>>>>>> Stashed changes:assets/php/test.php
 <?=template_admin()?>
 
 <div class="col">
@@ -116,8 +127,13 @@ if (isset($_GET['search'])) {
                 <td><?=$contact['rôles']?></td>
             </tr>
             <?php endforeach; ?>
+<<<<<<< Updated upstream:assets/php/listeCandidat.php
 		</tbody>
 </table>
+=======
+        </tbody>
+    </table>
+>>>>>>> Stashed changes:assets/php/test.php
 	<div class="pagination">
 		<?php if ($page > 1): ?>
 		<a class="aRead" href="listeCandidat.php?page=<?=$page-1?><?=isset($_GET['search']) ? '&search=' . htmlentities($_GET['search'], ENT_QUOTES) : ''?>">
@@ -135,7 +151,11 @@ if (isset($_GET['search'])) {
     
 </div>
 
+<<<<<<< Updated upstream:assets/php/listeCandidat.php
 </body>
+=======
+</div>
+>>>>>>> Stashed changes:assets/php/test.php
 
 
 
