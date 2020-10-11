@@ -100,18 +100,16 @@ $msg = '';
 
         }
 
-        
         }
-    
-    } 
-    
-    if(isset ($_POST['connexion'])){ 
+
+    }
+    if(isset ($_POST['connexion'])){
         $email=$_POST["email"];
         $mdp=$_POST["mdp"];
      if($email!= '' AND $mdp != ''){
          $test = $pdo->prepare("select * from entreprise where email_societe = ?");
          $test->execute([$email]);
-         $entreprise= $test->fetchAll(\PDO::FETCH_ASSOC);      
+         $entreprise= $test->fetchAll(\PDO::FETCH_ASSOC);
          foreach($entreprise as $entreprises){
                  //déclaration data
              if($entreprises['mdp_societe']==$mdp){

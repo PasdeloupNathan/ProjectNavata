@@ -1,71 +1,5 @@
-// admin.scss //
-.page {
-    border: solid #f1f2f5;
-    border-width: 3px 3px 3px 3px;
-    height: 100vh;
-    .navGauche {
-        color: black;
-        background-color: #7cbee8;
-        height: 100%;
-        display: inline-block;
-        padding: 3vh;
-        .vertical-menu {
-            width: 10vw;
-            text-align: center;
-        }
-        .vertical-menu button {
-            background-color: #222222;
-            align-items: center;
-            color: white;
-            display: block;
-            padding: 12%;
-            text-decoration: none;
-        }
-        .vertical-menu button:hover {
-            background-color: grey;
-        }
-        .menu1 {
-            background-color: #7cbee8;
-            color: #fff;
-            font: 1em "Trebuchet MS", Arial, sans-serif;
-            line-height: 1em;
-            padding-top: 5%;
-            padding-left: 10%;
-        }
-    }
-    .card {
-        background-color: #7cbee8;
-        border-radius: 15px !important;
-        #titrecard {
-            color: white;
-        }
-        .card-body {
-            background-color: white;
-        }
-    }
-}
-
-.ListStats {
-    width: 50%;
-    height: 50%;
-    .stats {
-        height: 10%;
-    }
-    .graph {
-        margin: auto;
-        width: 70% !important;
-        height: 100%;
-    }
-    #cercle {
-        border: solid black;
-        width: 40%;
-        height: 50%;
-        border-radius: 50%;
-        margin-top: 2%;
-    }
-}
-
-// adminConcours.scss //
+<<<<<<< Updated upstream
+// adminConcours
 .formulaire {
     height: 50%;
     width: 100%;
@@ -104,20 +38,90 @@
     }
 }
 
+// admin.scss //
+.page {
+    border: solid #f1f2f5;
+    border-width: 3px 3px 3px 3px;
+    height: 100vh;
+    .navGauche {
+        color: black;
+        background-color: #7cbee8;
+        height: 100%;
+        display: inline-block;
+        padding: 3vh;
+        .vertical-menu {
+            width: 10vw;
+            text-align: center;
+        }
+        .vertical-menu button {
+            background-color: #222222;
+            align-items: center;
+            color: white;
+            display: block;
+            padding: 12%;
+            text-decoration: none;
+        }
+        .vertical-menu button:hover {
+            background-color: grey;
+        }
+        .menu1 {
+            background-color: #7cbee8;
+            color: #fff;
+            font: 1em "Trebuchet MS", Arial, sans-serif;
+            line-height: 1em;
+            padding-top: 5%;
+            padding-left: 10%;
+        }
+    }
+}
+
+// adminConcours.scss //
+.card {
+    background-color: #7cbee8;
+    border-radius: 15px !important;
+    #titrecard {
+        color: white;
+    }
+    .card-body {
+        background-color: white;
+    }
+}
+
+.ListStats {
+    width: 50%;
+    height: 50%;
+    .stats {
+        height: 10%;
+    }
+    .graph {
+        margin: auto;
+        width: 70% !important;
+        height: 100%;
+    }
+    #cercle {
+        border: solid black;
+        width: 40%;
+        height: 50%;
+        border-radius: 50%;
+        margin-top: 2%;
+    }
+}
+
 // adminLogs.scss //
 // adminTable.scss //
 #customers {
+    font-size: 1rem;
     margin-top: 1%;
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     border-collapse: collapse;
     width: 100%;
-    height: 50%;
 }
 
-#customers td,
+td,
 #customers th {
     border: 1px solid grey;
-    padding: 1%;
+    padding-top: 1%;
+    text-align: center;
 }
 
 #customers tr:nth-child(even) {
@@ -125,16 +129,71 @@
 }
 
 #customers tr:hover {
-    background-color: #ddd;
+    background-color: #de2b76;
+    color: white;
 }
 
 #customers th {
     text-align: center;
     padding-top: 12px;
     padding-bottom: 12px;
-    text-align: left;
     background-color: #7cbee8;
     color: white;
+}
+
+.pagination {
+    display: flex;
+    justify-content: flex-end;
+    .aRead {
+        display: inline-block;
+        text-decoration: none;
+        background-color: #7cbee8;
+        font-weight: bold;
+        color: #FFFFFF;
+        padding: 5px 10px;
+        margin: 15px 0 15px 5px;
+        &:hover {
+            background-color: #7cbee8;
+        }
+    }
+}
+
+.candid1 {
+    background-color: #f1f2f5;
+}
+
+.candid {
+    background-color: #7cbee8;
+}
+
+.candid:hover {
+    background-color: #de2b76;
+    color: #f1f2f5;
+    transition: transform .2s;
+    -ms-transform: scale(1.10);
+    /* IE 9 */
+    -webkit-transform: scale(1.10);
+    /* Safari 3-8 */
+    transform: scale(1.10);
+}
+
+.ent1 {
+    background-color: #f1f2f5;
+}
+
+.ent {
+    background-color: #7cbee8;
+}
+
+.ent:hover {
+    background-color: #de2b76;
+    color: #f1f2f5;
+    transition: transform .2s;
+    -ms-transform: scale(1.10);
+    /* IE 9 */
+    -webkit-transform: scale(1.10);
+    /* Safari 3-8 */
+    transform: scale(1.10);
 }
 
 // Concours.scss //
@@ -822,3 +881,825 @@
         }
     }
 }
+=======
+ // admin.scss //
+ .page {
+     border: solid black;
+     border-width: 3px 3px 3px 3px;
+     height: 100vh;
+     .navGauche {
+         color: black;
+         background-color: #7cbee8;
+         height: 100%;
+         border: solid black;
+         border-width: 0 3 0 0;
+         display: inline-block;
+         padding: 3vh;
+         .vertical-menu {
+             width: 10vw;
+             text-align: center;
+         }
+         .vertical-menu button {
+             background-color: #222222;
+             align-items: center;
+             color: white;
+             display: block;
+             padding: 12%;
+             text-decoration: none;
+         }
+         .vertical-menu button:hover {
+             background-color: grey;
+         }
+         .menu1 {
+             background-color: #7cbee8;
+             color: #fff;
+             font: 1em "Trebuchet MS", Arial, sans-serif;
+             line-height: 1em;
+             padding-top: 5%;
+             padding-left: 10%;
+         }
+     }
+ }
+ 
+ .ListStats {
+     width: 50%;
+     height: 50%;
+     .stats {
+         border: solid black;
+         border-width: 3 3 3 3;
+         margin-top: 5%;
+         margin-left: 6%;
+         height: 10%;
+     }
+     .graph {
+         margin: auto;
+         width: 70%!important;
+         height: 100%
+     }
+     #cercle {
+         border: solid black;
+         width: 40%;
+         height: 50%;
+         border-radius: 50%;
+         margin-top: 2%;
+     }
+ }
+ 
+ // adminConcours.scss //
+ .formulaire {
+     height: 50%;
+     width: 100%;
+     align-items: center;
+     text-align: center;
+     // border: solid black;
+     // border-width: 3px 3px 3px 3px;
+     .menu {
+         border: solid black;
+         border-width: 0px 1px 1px 1px;
+         background-color: #f1f2f5;
+         height: 100%;
+         width: 100%;
+         padding-top: 6%;
+     }
+     .listeData {
+         margin-top: 1%;
+         margin-right: 1%;
+         margin-left: 1%;
+         border: solid grey;
+         border-width: 1px 0px 0.5px 0px;
+         background-color: #ADA9A8;
+         .update {
+             background-color: blue;
+             color: white;
+         }
+         .delete {
+             background-color: #DB431A;
+             color: white;
+         }
+     }
+     .validate {
+         margin-top: 1%;
+         background-color: green;
+         color: white;
+     }
+ }
+ 
+ // adminLogs.scss //
+ // adminTable.scss //
+ #customers {
+     margin-top: 1%;
+     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+     border-collapse: collapse;
+     width: 100%;
+     height: 50%;
+ }
+ 
+ #customers td,
+ #customers th {
+     border: 1px solid grey;
+     padding: 1%;
+ }
+ 
+ #customers tr:nth-child(even) {
+     background-color: #f2f2f2;
+ }
+ 
+ #customers tr:hover {
+     background-color: #ddd;
+ }
+ 
+ #customers th {
+     text-align: center;
+     padding-top: 12px;
+     padding-bottom: 12px;
+     text-align: left;
+     background-color: #7cbee8;
+     color: white;
+ }
+ 
+ // Concours.scss //
+ .title {
+     text-align: center;
+ }
+ 
+ .body {
+     background-color: #f1f2f5;
+ }
+ 
+ .nav {
+     padding-top: 1%;
+     color: #707070;
+     font-size: 1.5rem;
+     font-family: 'Times New Roman', Times, serif;
+     font-weight: bold;
+ }
+ 
+ // .menu2 {
+ //     background-color: black;
+ //     margin: 1%;
+ //     width: 20%;
+ // }
+ // .menu1 {
+ //     background-color: white;
+ //     width: 20%;
+ // }
+ .acceuil {
+     #logoImg2 {
+         width: 80%;
+         margin-top: 7.5%;
+         margin-left: 8.333%;
+         border-radius: 10%;
+     }
+     .desc {
+         text-align: center;
+     }
+     .arrow2 {
+         padding-left: 65%;
+     }
+ }
+ 
+ .logo2 {
+     width: 70vw;
+     height: 80%;
+     text-align: center;
+ }
+ 
+ .main3 {
+     height: 100vh;
+     width: 100%;
+ }
+ 
+ .firstBox {
+     background-color: #ececec;
+     border: solid 20px #de2b76;
+     height: 85%;
+     height: 85%;
+     margin: 1%;
+ }
+ 
+ .List {
+     .subList {
+         padding-top: 5%;
+     }
+     .fond {
+         background-color: #7cbee8;
+         color: white;
+     }
+     padding-left: 10%;
+     .list1 {
+         margin-top: 5%;
+         padding-bottom: 10%;
+     }
+     .list2 {
+         padding-top: 10%;
+     }
+     .arrow1 {
+         margin-top: 8%;
+     }
+ }
+ 
+ .ListConcours {
+     margin-top: 2%;
+     padding-left: 5%;
+ }
+ 
+ .search {
+     padding-left: 14%;
+     left: 12Vw;
+     top: 1vh;
+ }
+ 
+ // Connects.scss //
+ .conect {
+     text-align: center;
+     overflow-x: hidden;
+ }
+ 
+ .test {
+     height: 100vh;
+     text-align: center;
+     overflow-x: hidden;
+ }
+ 
+ .connexion {
+     text-align: center;
+     color: red;
+ }
+ 
+ @media screen and (min-width: 375px) and (max-width: 411px) {
+     .tests {
+         position: absolute;
+         transform: rotate(315deg);
+         margin-left: 149.3px;
+         margin-top: -46.7px;
+         color: #de2b76;
+         font-size: 1.5rem;
+     }
+     .please {
+         height: 75%;
+         padding-left: 35%;
+     }
+ }
+ 
+ // Inscription logo
+ @media screen and (min-width: 412px) and (max-width: 767px) {
+     .please {
+         height: 75%;
+         padding-left: 35%;
+     }
+ }
+ 
+ @media screen and (min-width: 375px) and (max-width: 411px) {
+     .tests {
+         position: absolute;
+         transform: rotate(315deg);
+         margin-left: 149.3px;
+         margin-top: -46.7px;
+         color: #de2b76;
+         font-size: 1.5rem;
+     }
+     .fa-caret-right {
+         height: 75%;
+         padding-left: 35%;
+     }
+ }
+ 
+ @media screen and (min-width:575px) and (max-width:767px) {
+     .tests {
+         position: absolute;
+         transform: rotate(315deg);
+         margin-left: 61px;
+         margin-top: -11.4px;
+         color: #de2b76;
+         font-size: 1.5rem;
+     }
+ }
+ 
+ @media screen and (min-width: 767px) and (max-width: 991px) {
+     .tests {
+         position: absolute;
+         transform: rotate(315deg);
+         margin-left: 40px;
+         margin-top: -20.7px;
+         color: #de2b76;
+         font-size: 1.5rem;
+     }
+ }
+ 
+ @media (min-width: 992px) and (max-width: 1280px) {
+     .tests {
+         position: absolute;
+         transform: rotate(315deg);
+         margin-left: 42.3px;
+         margin-top: -15.7px;
+         color: #de2b76;
+         font-size: 1.5rem;
+     }
+ }
+ 
+ @media (min-width: 1280px) and (max-width: 2560px) {
+     .tests {
+         position: absolute;
+         transform: rotate(315deg);
+         margin-left: 176.3px;
+         margin-top: -46.7px;
+         color: #de2b76;
+         font-size: 1.5rem;
+     }
+ }
+ 
+ // Entreprise.scss //
+ .main7 {
+     height: 100vh;
+     width: 100%;
+     .profilentreprise {
+         text-align: center;
+         margin-left: 6%;
+         width: 90%;
+         height: 85%;
+         border: transparent 1.5px solid;
+         background-color: #fff;
+         padding-top: 3%;
+         .imgprofentreprise {
+             height: 50%;
+         }
+         .h2profentreprise {
+             text-align: center;
+             color: #707070;
+             font-family: 'Times New Roman', Times, serif;
+         }
+         .linkprofentreprise {
+             text-align: center;
+             color: #707070;
+             font-family: 'Times New Roman', Times, serif;
+         }
+         .rose4 {
+             position: absolute;
+             transform: rotate(315deg);
+             margin-left: 76.3%;
+             margin-top: -8.9%;
+             color: #de2b76;
+             font-size: 15rem;
+         }
+         .infoprofentreprise {
+             padding-top: 2%;
+             .gaucheentreprise {
+                 padding-top: 3%;
+                 text-align: left;
+             }
+             .droiteentreprise {
+                 padding-top: 3%;
+                 text-align: left;
+             }
+         }
+         .infoprof2entreprise {
+             padding-top: 2%;
+             text-align: left;
+         }
+     }
+ }
+ 
+ .main8 {
+     height: 100vh;
+     width: 100%;
+     .entrepriseconcour {
+         text-align: center;
+         margin-left: 6%;
+         width: 90%;
+         height: 85%;
+         border: transparent 1.5px solid;
+         background-color: #fff;
+         padding-top: 3%;
+         .titreconcourentreprise {
+             text-align: center;
+             color: #707070;
+             font-family: 'Times New Roman', Times, serif;
+         }
+         .rose5 {
+             position: absolute;
+             transform: rotate(315deg);
+             margin-left: 35.5%;
+             margin-top: -11.9%;
+             color: #de2b76;
+             font-size: 15rem;
+         }
+         .concourinfoentreprise {
+             padding-top: 3%;
+             .imgconcourentreprise {
+                 border: transparent 1px;
+                 border-radius: 15%;
+             }
+         }
+     }
+ }
+ 
+ .main9 {
+     height: 100vh;
+     width: 100%;
+     .inscvalid {
+         text-align: center;
+         margin-left: 6%;
+         width: 90%;
+         height: 85%;
+         border: transparent 1.5px solid;
+         background-color: #fff;
+         padding-top: 3%;
+         .titrevalid {
+             text-align: left;
+             color: #707070;
+             font-family: 'Times New Roman', Times, serif;
+             padding-left: 10%;
+         }
+         .rose6 {
+             position: absolute;
+             transform: rotate(315deg);
+             margin-left: 35.5%;
+             margin-top: -11.9%;
+             color: #de2b76;
+             font-size: 15rem;
+         }
+         .userinscrvalid {
+             margin-top: 5%;
+             .col1 {
+                 .valid1 {
+                     height: 50%;
+                     background-color: #00FF3C;
+                 }
+                 .delete1 {
+                     height: 50%;
+                     background-color: #FF0000;
+                 }
+             }
+             .col2 {
+                 .valid2 {
+                     height: 50%;
+                     background-color: #00FF3C;
+                 }
+                 .delete2 {
+                     height: 50%;
+                     background-color: #FF0000;
+                 }
+             }
+             .col3 {
+                 .valid3 {
+                     height: 50%;
+                     background-color: #00FF3C;
+                 }
+                 .delete3 {
+                     height: 50%;
+                     background-color: #FF0000;
+                 }
+             }
+         }
+     }
+ }
+ 
+ // Footer.scss //
+ .foot {
+     width: 100vw;
+     height: 20vh;
+     background-color: #222222;
+     margin-left: -6vw;
+     color: #707070;
+     font-size: 1.5rem;
+     font-family: 'Times New Roman', Times, serif;
+     text-align: center;
+ }
+ 
+ // index.scss //
+ .body {
+     width: 88vw;
+     height: 247.5vh;
+     margin-right: 6vw;
+     margin-left: 6vw;
+     overflow-x: hidden;
+     background-color: #f1f2f5;
+     .main1 {
+         height: 100vh;
+         width: 100%;
+         .doubleC {
+             .newC {
+                 margin-left: 15%;
+                 width: 70%;
+                 height: 70%;
+                 border: transparent 1.5px solid;
+                 background-color: #fff;
+                 .rose1 {
+                     position: absolute;
+                     transform: rotate(315deg);
+                     margin-left: 56.7%;
+                     margin-top: -26.6%;
+                     color: #de2b76;
+                     font-size: 15rem;
+                 }
+                 .h2new {
+                     text-align: center;
+                     padding-top: 10%;
+                     color: #707070;
+                     font-family: 'Times New Roman', Times, serif;
+                 }
+                 .info {
+                     margin-top: 20%;
+                     .imginf {
+                         border: transparent 1px;
+                         border-radius: 15%;
+                     }
+                 }
+             }
+             .endC {
+                 margin-left: 15%;
+                 width: 70%;
+                 height: 70%;
+                 border: transparent 1.5px solid;
+                 background-color: #fff;
+                 .rose1 {
+                     position: absolute;
+                     transform: rotate(315deg);
+                     margin-left: 56.7%;
+                     margin-top: -26.6%;
+                     color: #de2b76;
+                     font-size: 15rem;
+                 }
+                 .h2new {
+                     text-align: center;
+                     padding-top: 10%;
+                     color: #707070;
+                     font-family: 'Times New Roman', Times, serif;
+                 }
+                 .info {
+                     margin-top: 20%;
+                     .imginf {
+                         border: transparent 1px;
+                         border-radius: 15%;
+                     }
+                 }
+             }
+         }
+     }
+     .main2 {
+         height: 100vh;
+         width: 100%;
+         .bestc {
+             text-align: center;
+             margin-left: 6%;
+             width: 90%;
+             height: 85%;
+             border: transparent 1.5px solid;
+             background-color: #fff;
+             .rose2 {
+                 position: absolute;
+                 transform: rotate(315deg);
+                 margin-left: 35.4%;
+                 margin-top: -12.7%;
+                 color: #de2b76;
+                 font-size: 15rem;
+             }
+             .titrec {
+                 padding-top: 5%;
+                 .h2cat {
+                     text-align: center;
+                     color: #707070;
+                     font-family: 'Times New Roman', Times, serif;
+                     display: inline;
+                 }
+                 .fleche1 {
+                     color: #7cbee8;
+                     padding-top: 0.4%;
+                     padding-left: 0.9%;
+                     position: absolute;
+                     font-size: 2rem;
+                 }
+                 .fleche2 {
+                     transform: rotate(180deg);
+                     color: #7cbee8;
+                     margin-left: -1.5%;
+                     margin-top: 0.4%;
+                     position: absolute;
+                     font-size: 2rem;
+                 }
+             }
+             .info2 {
+                 margin-top: 7.5%;
+                 font-size: 2rem;
+                 .imginf {
+                     border: transparent 1px;
+                     border-radius: 15%;
+                 }
+             }
+         }
+     }
+ }
+ 
+ .body2 {
+     width: 88vw;
+     height: 147.5vh;
+     margin-right: 6vw;
+     margin-left: 6vw;
+     overflow-x: hidden;
+     background-color: #f1f2f5;
+ }
+ 
+ .body3 {
+     width: 88vw;
+     height: 347.5vh;
+     margin-right: 6vw;
+     margin-left: 6vw;
+     overflow-x: hidden;
+     background-color: #f1f2f5;
+ }
+ 
+ // input.scss //
+ .maininput {
+     height: 100vh;
+     text-align: center;
+     h2 {
+         padding-top: 5%;
+     }
+     .inputg {
+         padding-top: 5%;
+         .input {
+             text-align: right;
+             label {
+                 padding-top: 3%;
+             }
+         }
+     }
+     .buttong {
+         padding-left: 38%;
+         padding-top: 5%;
+     }
+ }
+ 
+ // Nav.scss //
+ .logo {
+     width: 100vw;
+     height: 80%;
+     text-align: center;
+     .logoimg {
+         width: 5%;
+     }
+ }
+ 
+ .menu {
+     background-color: #ffffff;
+     height: 20vh;
+     .haut {
+         background-color: #ffffff;
+         width: 100vw;
+         height: 50%;
+         margin-left: -6vw;
+         text-align: center;
+     }
+     .bas {
+         background-color: #ffffff;
+         width: 100vw;
+         height: 50%;
+         margin-left: -6vw;
+         text-align: center;
+     }
+ }
+ 
+ .h2nav {
+     color: #707070;
+     font-size: 1.5rem;
+     font-family: 'Times New Roman', Times, serif;
+     font-weight: bold;
+ }
+ 
+ .bleu {
+     height: 7.5vh;
+     background-color: #7cbee8;
+     width: 100vw;
+     margin-left: -6vw;
+     .pnav {
+         text-align: center;
+         width: 100%;
+         margin-bottom: 0;
+         font-family: 'Times New Roman', Times, serif;
+         padding-top: 1%;
+     }
+ }
+ 
+ // profil.scss //
+ .main5 {
+     height: 100vh;
+     width: 100%;
+     .profilc {
+         text-align: center;
+         margin-left: 6%;
+         width: 90%;
+         height: 85%;
+         border: transparent 1.5px solid;
+         background-color: #fff;
+         padding-top: 3%;
+         .imgprof {
+             height: 100%;
+         }
+         .h2prof {
+             text-align: right;
+             color: #707070;
+             font-family: 'Times New Roman', Times, serif;
+         }
+         .rose3 {
+             position: absolute;
+             transform: rotate(315deg);
+             margin-left: 76.3%;
+             margin-top: -8.9%;
+             color: #de2b76;
+             font-size: 15rem;
+         }
+         .infoprof {
+             padding-top: 5%;
+             .gauche {
+                 text-align: left;
+             }
+             .droite {
+                 text-align: left;
+             }
+         }
+     }
+ }
+ 
+ // PAGE REDIRECTION
+ .redirect1 {
+     background-color: #ececec;
+     border: solid 20px #de2b76;
+     height: 35%;
+     margin: 1%;
+     text-align: center;
+     .logoimg3 {
+         width: 60%;
+     }
+     .textredirect {
+         padding-bottom: 1%;
+     }
+ }
+ 
+ .main6 {
+     height: 100vh;
+     width: 100%;
+     .doubleCInsc {
+         .concourInsC {
+             margin-left: 15%;
+             width: 70%;
+             height: 70%;
+             border: transparent 1.5px solid;
+             background-color: #fff;
+             .rose1 {
+                 position: absolute;
+                 transform: rotate(315deg);
+                 margin-left: 56.7%;
+                 margin-top: -25.3%;
+                 color: #de2b76;
+                 font-size: 15rem;
+             }
+             .h2cins {
+                 text-align: center;
+                 padding-top: 10%;
+                 color: #707070;
+                 font-size: 1.5rem;
+                 font-family: 'Times New Roman', Times, serif;
+             }
+             .infoInsc {
+                 margin-top: 20%;
+                 .imginsc {
+                     border: transparent 1px;
+                     border-radius: 15%;
+                 }
+                 .statu {
+                     text-align: center;
+                 }
+             }
+         }
+         .concourInsC2 {
+             margin-left: 15%;
+             width: 70%;
+             height: 70%;
+             border: transparent 1.5px solid;
+             background-color: #fff;
+             .rose1 {
+                 position: absolute;
+                 transform: rotate(315deg);
+                 margin-left: 56.7%;
+                 margin-top: -25.3%;
+                 color: #de2b76;
+                 font-size: 15rem;
+             }
+             .h2cins2 {
+                 text-align: center;
+                 padding-top: 10%;
+                 color: #707070;
+                 font-size: 1.5rem;
+                 font-family: 'Times New Roman', Times, serif;
+             }
+             .infoInsc2 {
+                 margin-top: 20%;
+                 .imginsc2 {
+                     border: transparent 1px;
+                     border-radius: 15%;
+                 }
+             }
+         }
+     }
+ }
+>>>>>>> Stashed changes
