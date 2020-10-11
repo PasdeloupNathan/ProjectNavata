@@ -105,7 +105,7 @@ foreach($societed as $societess){
                 <div class="col-5 offset-md-1" style="text-align: left;">  
                     <p> Nom de votre Concours : <?= $societess['noms_concours'];?>  <br>Nom de votre l'entreprise : <?= $societess['nom_entreprise'];?> <br> Description: <?= $societess['descriptionConcours'];?> <br> 
                     Localisation: <?= $societess['locaConcours'];?> <br> Date du concour : <?= $societess['date_concours'];?> <br> Place du concours: <?= $societess['placeConcoursMax'];?> <br>  
-                    Link : <?= $societess['link_entreprise'];?>
+                    Link : <?= $societess['link_entreprise'];?> <br> Quel type de concours : <?= $societess['menu_deroulant']; ?>
                     </p>
                 </div>
             </div>
