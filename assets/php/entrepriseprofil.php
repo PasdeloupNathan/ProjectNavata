@@ -98,7 +98,7 @@ $societed= $testsp->fetchAll(\PDO::FETCH_ASSOC);
         <div class="row align-items-center">
             <div class="row concourinfoentreprise">
                 <div class="col-5 offset-md-1">
-                    <img src="../img/exam.jpg" alt="concours" style="width: 50%;" class="imgconcourentreprise">
+                    <img src="<?= $societess['img_societe']?>" alt="concours" style="width: 50%;" class="imgconcourentreprise">
                 </div>                
 
                 <div class="col-5 offset-md-1" style="text-align: left;">  
