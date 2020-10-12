@@ -236,4 +236,3 @@ foreach($societed as $societess){
     header("Location: redirection.php");
 }
 ?>
-?>
