@@ -24,10 +24,7 @@ include 'meta.php';
 
 
 <body class="body2">
-    
 
-
-    
 
 <?=template_header()?>
 <section class="row page">
@@ -41,7 +38,7 @@ include 'meta.php';
     <th>Nom</th>
     <th>Mail</th>
     <th>Role</th>
-    <th>Publicité</th>
+    
   </tr>
   <tr>
     <td>__________</td>

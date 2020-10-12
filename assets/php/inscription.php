@@ -91,7 +91,7 @@ $msg = '';
                     <div style="padding-top: 1%;">
                         <input type="checkbox" required  name="memo" id="mdp"> <label for="memo"> J’ai lu et j’accepte les conditions générales d’utilisation et la 
                         politique de confidentialité.</label>
-                        
+
                     </div>
 
                     <!-- Button -->
@@ -110,12 +110,12 @@ $msg = '';
                         <a href="entreprise.php">Vous Souhaitez vous inscrire en tant qu'Entreprise ?</a>
                     </div>
                 </div>
-            </fieldset>-                  
+            </fieldset>-
     </div>
 
 
     <?php
-        if(isset($_POST['inscrire'])){ 
+        if(isset($_POST['inscrire'])){
             $rôles=$_POST["rôles"];
              $name=$_POST["name"];
              $prénoms=$_POST["prénoms"];
@@ -125,27 +125,26 @@ $msg = '';
             $mdp=$_POST["mdp"];
             $mdpconf=$_POST["mdpconf"];
             $adresse=$_POST["adresse"];
-            $img =$_POST["img"]; 
+            $img =$_POST["img"];
             $tel =$_POST["tel"];
             $nation=$_POST["nation"];
             $naissance=$_POST["naissance"];
-            $idcard=$_POST["idcard"]; 
+            $idcard=$_POST["idcard"];
         if($mdp != $mdpconf){
             echo '<p class="connexion animate__animated animate__flash"> les deux mots de passe doivent être identique<p>';
         }else{
              $stmt = $pdo->prepare("SELECT * FROM users WHERE email=?");
-    $stmt->execute([$email]); 
+    $stmt->execute([$email]);
     $users = $stmt->fetch();
     if($users){
         echo '<p class="connexion animate__animated animate__flash">cette addresse mail est deja utilisé<p>';
     }else{
-        echo '<script LANGUAGE="javascript">document.location.href="connection.php"</script>';    
+        echo '<script LANGUAGE="javascript">document.location.href="connection.php"</script>';
  die(inscription($rôles,$name,$prénoms,$email,$ville,$adresse,$codepostal,$mdp));
     }
 
         }
-   
-       
+
         }
     ?>
 

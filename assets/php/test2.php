@@ -16,9 +16,8 @@ include 'meta.php';
 $annee = (int)date('Y');
 
 ?>
-<?php if($_SESSION["rôles"] == 'admin'){
-  ?>
-<?=template_meta('accueuilAdmin')?>
+
+<?=template_meta('adminConcours')?>
 
 
 
@@ -69,7 +68,7 @@ require_once dirname(__DIR__) . DIRECTORY_SEPARATOR . 'function' . DIRECTORY_SEP
 <?=template_admin()?>
 <!-- 1er section -->
         <div class="col ListStats accordion" id="accordion1">
-            <div class="card" style="border: solid 4px #de2b76;">
+            <div class="card">
                <div class="card-header" id="heading1">
                   <h5 class="mb-0">
                      <button class="btn btn-link collapsed" type="button"
@@ -90,7 +89,7 @@ require_once dirname(__DIR__) . DIRECTORY_SEPARATOR . 'function' . DIRECTORY_SEP
 
  <!-- 2e section -->
     <div class="col ListStats accordion" id="accordion2">
-       <div class="card" style="border: solid 4px #de2b76;">
+        <div class="card">
             <div class="card-header" id="heading2">
                     <h5 class="mb-0">
                         <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
@@ -107,7 +106,7 @@ require_once dirname(__DIR__) . DIRECTORY_SEPARATOR . 'function' . DIRECTORY_SEP
             </div>
         </div>
          <div class="col ListStats accordion" id="accordion3">
-       <div class="card" style="border: solid 4px #de2b76;">
+        <div class="card">
             <div class="card-header" id="heading3">
                     <h5 class="mb-0">
                         <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
@@ -140,8 +139,3 @@ require_once dirname(__DIR__) . DIRECTORY_SEPARATOR . 'function' . DIRECTORY_SEP
 </body>
 
 </html>
-<?php
-} else{
-    header("Location: redirection.php");
-}
-?>

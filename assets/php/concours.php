@@ -93,8 +93,8 @@ if($_SESSION == FALSE){
                         <h2 class=" col- h2nav list2">Concour3</h2>
                         <h2 class=" col- h2nav list2">Concours4</h2>
                     
-                    <div class="col- arrow1">
-                        <p class=""><i class="fas fa-caret-left"></i>  Page suivante  </p>  
+                    <div class="col arrow1">
+                        <p class="col"><i class="fas fa-caret-left"></i>  Page précédente  </p>  
                         </div>
                         </div>
                     </div>
@@ -108,7 +108,7 @@ if($_SESSION == FALSE){
                         </div>
                         
                             <div class="arrow2">
-                            <p class="">  Page suivante <i class="fas fa-caret-right "></i> </p>  
+                            <p class="col">  Page suivante <i class="fas fa-caret-right "></i> </p>  
                             </div>
                         
                     </div>

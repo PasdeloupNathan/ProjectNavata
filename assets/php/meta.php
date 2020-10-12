@@ -17,6 +17,7 @@ echo<<<EOT
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
         <link rel="stylesheet" href="../css/basic.min.css">
+        <link rel="stylesheet" href="../css/test.min.css">
 
     </head>
  
@@ -153,7 +154,7 @@ echo<<<EOT
                 <a  class=" col active">MENU</a>
         <div class="menu1"><button onclick="location.href='./admin.php'" type="button" class="but col" >Acceuil</button></div>
         <div class="menu1"><button onclick="location.href='./adminConcours.php'" type="button" class="but col" >Concours</button></div>
-        <div class="menu1"><button onclick="location.href='./adminTable.php'" type="button" class="but col" >Utilisateurs</button></div>
+        <div class="menu1"><button onclick="location.href='./ListeCandidat.php'" type="button" class="but col" >Utilisateurs</button></div>
         <div class="menu1"><button onclick="location.href='./adminLogs.php'" type="button" class="but col" >Logs</button></div>
 
         <div class="menu1"><button onclick="location.href='./adminCreation.php'" type="button" class="but col" >Creation admin</button></div>
