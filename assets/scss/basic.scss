@@ -39,7 +39,7 @@
 
 // admin.scss //
 .page {
-    border: solid #f1f2f5;
+    border: solid white;
     border-width: 3px 3px 3px 3px;
     height: 100vh;
     .navGauche {
@@ -158,7 +158,7 @@ td,
 }
 
 .candid1 {
-    background-color: #f1f2f5;
+    background-color: white;
 }
 
 .candid {
@@ -177,7 +177,7 @@ td,
 }
 
 .ent1 {
-    background-color: #f1f2f5;
+    background-color: white;
 }
 
 .ent {
@@ -260,8 +260,11 @@ td,
         padding-top: 5%;
     }
     .fond {
-        background-color: #7cbee8;
+        background-color: #de2b76;
         color: white;
+    }
+    .fond:hover {
+        color: grey;
     }
     padding-left: 10%;
     .list1 {
@@ -560,7 +563,7 @@ td,
                 margin-left: 15%;
                 width: 70%;
                 height: 70%;
-                border: transparent 1.5px solid;
+                border: solid 20px #de2b76;
                 background-color: #fff;
                 .rose1 {
                     position: absolute;
@@ -622,7 +625,7 @@ td,
             margin-left: 6%;
             width: 90%;
             height: 85%;
-            border: transparent 1.5px solid;
+            border: solid 20px #de2b76;
             background-color: #fff;
             .rose2 {
                 position: absolute;
@@ -670,11 +673,11 @@ td,
 
 .body2 {
     width: 88vw;
-    height: 147vh;
+    height: auto;
     margin-right: 6vw;
     margin-left: 6vw;
     overflow-x: hidden;
-    background-color: #f1f2f5;
+    background-color: white;
 }
 
 .body3 {
@@ -763,11 +766,15 @@ td,
     height: 100vh;
     width: 100%;
     .profilc {
+        .toprof {
+            padding: 1%;
+            border-bottom: solid #de2b76;
+        }
         text-align: center;
         margin-left: 6%;
         width: 90%;
         height: 85%;
-        border: transparent 1.5px solid;
+        border: solid 20px #de2b76;
         background-color: #fff;
         padding-top: 3%;
         .imgprof {
@@ -789,10 +796,58 @@ td,
         .infoprof {
             padding-top: 5%;
             .gauche {
+                border-right: solid #de2b76;
                 text-align: left;
             }
             .droite {
                 text-align: left;
+            }
+            .deco:hover {
+                background-color: red;
+                color: black;
+                transition: transform .2s;
+                -ms-transform: scale(1.10);
+                /* IE 9 */
+                -webkit-transform: scale(1.10);
+                /* Safari 3-8 */
+                transform: scale(1.10);
+            }
+            .gauche p {
+                width: 25%;
+                font: bold 13px Arial;
+                background: #f5f5f5;
+                color: #555;
+                border-radius: 2px;
+                width: 100px;
+                border: 1px solid #ccc;
+                box-shadow: 1px 1px 3px #999;
+            }
+            .droite p {
+                width: 25%;
+                font: bold 13px Arial;
+                background: #f5f5f5;
+                color: #555;
+                border-radius: 2px;
+                border: 1px solid #ccc;
+                box-shadow: 1px 1px 3px #999;
+            }
+            #modif:hover {
+                background-color: blue;
+                color: black;
+                transition: transform .2s;
+                -ms-transform: scale(1.10);
+                /* IE 9 */
+                -webkit-transform: scale(1.10);
+                /* Safari 3-8 */
+                transform: scale(1.10);
+            }
+            p:hover {
+                transition: transform .2s;
+                -ms-transform: scale(1.10);
+                /* IE 9 */
+                -webkit-transform: scale(1.10);
+                /* Safari 3-8 */
+                transform: scale(1.10);
             }
         }
     }
@@ -821,7 +876,7 @@ td,
             margin-left: 15%;
             width: 70%;
             height: 70%;
-            border: transparent 1.5px solid;
+            border: solid 20px #de2b76;
             background-color: #fff;
             .rose1 {
                 position: absolute;
@@ -853,7 +908,7 @@ td,
             margin-left: 15%;
             width: 70%;
             height: 70%;
-            border: transparent 1.5px solid;
+            border: solid 20px #de2b76;
             background-color: #fff;
             .rose1 {
                 position: absolute;

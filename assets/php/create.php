@@ -7,7 +7,8 @@ require 'model.php';
 $pdo = pdo_connect_mysql();
 $msg = '';
 ?>
-
+<?php if($_SESSION["rôles"] == 'entreprise'){
+  ?>
 <?php include('meta.php')?>
 
 <?=template_meta('create')?> 
@@ -21,7 +22,8 @@ $msg = '';
 
 
 <body class="body2">
-<?=template_header()?>
+
+<?=template_headerEntreprise()?>
 
     <div class="row test">
         <div class="col-md-4 row align-items-center" style="height: 20vh;">
@@ -165,3 +167,8 @@ $msg = '';
 
 </body>
 </html>
+<?php
+} else{
+    header("Location: redirection.php");
+}
+?>

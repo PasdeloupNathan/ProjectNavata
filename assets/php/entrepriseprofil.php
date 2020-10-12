@@ -220,4 +220,3 @@ $societed= $testsp->fetchAll(\PDO::FETCH_ASSOC);
     header("Location: redirection.php");
 }
 ?>
-?>
