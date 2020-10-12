@@ -85,8 +85,6 @@ foreach($societe as $societes){
 $testsp = $pdo->prepare("SELECT * from concours WHERE ref=".$_SESSION['id_entreprise']);
 $testsp->execute();
 $societed= $testsp->fetchAll(\PDO::FETCH_ASSOC);
-foreach($societed as $societess){
-    
     
 
 ?>
@@ -96,42 +94,28 @@ foreach($societed as $societess){
 <div class="main8 row align-items-center">
     <div class="entrepriseconcour">
         <h2 class="titreconcourentreprise">Concours de votre entreprise</h2>
-        <i class="fas fa-caret-right rose5"></i>
+        <i class="fas fa-caret-right rose5"></i><?php foreach($societed as $societess){?>
         <div class="row align-items-center">
             <div class="row concourinfoentreprise">
                 <div class="col-5 offset-md-1">
-                    <img src="../img/exam.jpg" alt="concours" style="width: 50%;" class="imgconcourentreprise">
-                </div>
+                    <img src="<?= $societess['img_societe']?>" alt="concours" style="width: 50%;" class="imgconcourentreprise">
+                </div>                
+
                 <div class="col-5 offset-md-1" style="text-align: left;">  
+
                     <p> Nom de votre Concours : <?= $societess['noms_concours'];?>  <br>Nom de votre l'entreprise : <?= $societess['nom_entreprise'];?> <br> Description: <?= $societess['descriptionConcours'];?> <br> 
                     Localisation: <?= $societess['locaConcours'];?> <br> Date du concour : <?= $societess['date_concours'];?> <br> Place du concours: <?= $societess['placeConcoursMax'];?> <br>  
                     Link : <?= $societess['link_entreprise'];?> <br> Quel type de concours : <?= $societess['menu_deroulant']; ?>
                     </p>
                 </div>
             </div>
-            <div class="row concourinfoentreprise">
-                <div class="col-5 offset-md-1">
-                    <img src="../img/exam.jpg" alt="concours" style="width: 50%;" class="imgconcourentreprise">
-                </div>
-                <div class="col-5 offset-md-1" style="text-align: left;">
-                    <p>Nom <br> Info <br> Desc</p>
-                </div>
-            </div>
-            <div class="row concourinfoentreprise">
-                <div class="col-5 offset-md-1">
-                    <img src="../img/exam.jpg" alt="concours" style="width: 50%;" class="imgconcourentreprise">
-                </div>
-                <div class="col-5 offset-md-1" style="text-align: left;">
-                    <p>Nom <br> Info <br> Desc</p>
-                </div>
-            </div>
+            
         </div>
+        <?php } ?>
     </div>
 </div>
 
-<?php
-}
-    ?>
+
 
     <!-- Candidat inscrit a vos concours  -->
 
