@@ -68,7 +68,6 @@ if (isset($_GET['search'])) {
 ?>
 
 
-
 <body class="body2">
 
 <?=template_headerAdmin()?>
