@@ -93,10 +93,11 @@ $societed= $testsp->fetchAll(\PDO::FETCH_ASSOC);
 <div class="main8 row align-items-center">
     <div class="entrepriseconcour">
         <h2 class="titreconcourentreprise">Concours de votre entreprise</h2>
+
         <i class="fas fa-caret-right rose5"></i>
         <div class="col row align-items-center">
-        <?php foreach($societed as $societess):?>
-        
+        <i class="fas fa-caret-right rose5 " ></i><?php foreach($societed as $societess){?>
+        <div class="row align-items-center">
             <div class="row concourinfoentreprise">
                 <div class="col-5 offset-md-1">
                     <img src="<?= $societess['img_societe']?>" alt="concours" style="width: 100%;" class="imgconcourentreprise">
