@@ -2,7 +2,7 @@
 function pdo_connect_mysql() {
     $DATABASE_HOST = 'localhost';
     $DATABASE_USER = 'root';
-    $DATABASE_PASS = 'root';
+    $DATABASE_PASS = '';
     $DATABASE_NAME = 'projet_navata';
     try {
         return new PDO('mysql:host=' . $DATABASE_HOST . ';dbname=' . $DATABASE_NAME . ';charset=utf8', $DATABASE_USER, $DATABASE_PASS);
@@ -69,14 +69,7 @@ function create_form_concours($noms_concours, $nom_entreprise, $descriptionConco
 }
 			// Connexion //
 
-function connexion($email, $mdp) {
-	$passwd_hash = hash('sha256', $mdp);
-	$req = $bdd->prepare('SELECT * FROM users AND entreprise WHERE email = ? AND email_societe = ?');
-	$req->execute([$email]);
-	$users = $req->fetch();
 
-	// var_dump($users);
-}
 
 ?>  
 

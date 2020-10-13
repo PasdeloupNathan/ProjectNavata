@@ -51,25 +51,24 @@ foreach($societe as $societes){
             <div class="row infoprofentreprise">
                 <div class="col offset-md-1 gaucheentreprise">
                     <p>Nom de l'entreprise : <?= $societes['nom_societe'];?></p>
-                    <br>                        
+
                     <p>Adresse : <?= $societes['adresse_societe'];?> </p>
-                    <br>
+
                     <p>Code Postal : <?= $societes['codepostal_societe'];?> </p>
-                    <br>
+
                     <p>Ville : <?= $societes['ville_societe'];?> </p>
                 </div>
                 <div class="col droiteentreprise">
                     <p>Email :<?= $societes['email_societe'];?> </p>
-                    <br>
+
                     <p>Telephone : <?= $societes['tel_societe'];?> </p>
-                    <br>
+
                     <p>Numéro de siret : <?= $societes['siret_societe'];?> </p>
-                    <br>
                     <p id="modifprofil">Modifiez votre information d'entreprise.  <i class="fas fa-edit" id="modifprofil"></i></p> 
 
                 </div>
             </div>
-            
+
         </div>
     </div>
     <?php
@@ -85,7 +84,7 @@ foreach($societe as $societes){
 $testsp = $pdo->prepare("SELECT * from concours WHERE ref=".$_SESSION['id_entreprise']);
 $testsp->execute();
 $societed= $testsp->fetchAll(\PDO::FETCH_ASSOC);
-    
+
 
 ?>
 
@@ -94,12 +93,15 @@ $societed= $testsp->fetchAll(\PDO::FETCH_ASSOC);
 <div class="main8 row align-items-center">
     <div class="entrepriseconcour">
         <h2 class="titreconcourentreprise">Concours de votre entreprise</h2>
+
+        <i class="fas fa-caret-right rose5"></i>
+        <div class="col row align-items-center">
         <i class="fas fa-caret-right rose5 " ></i><?php foreach($societed as $societess){?>
         <div class="row align-items-center">
             <div class="row concourinfoentreprise">
                 <div class="col-5 offset-md-1">
-                    <img src="<?= $societess['img_societe']?>" alt="concours" style="width: 50%;" class="imgconcourentreprise">
-                </div>                
+                    <img src="<?= $societess['img_societe']?>" alt="concours" style="width: 100%;" class="imgconcourentreprise">
+                </div>
 
                 <div class="col-5 offset-md-1" style="text-align: left;">  
 
@@ -109,9 +111,10 @@ $societed= $testsp->fetchAll(\PDO::FETCH_ASSOC);
                     </p>
                 </div>
             </div>
-            
+            <br>
+<?php endforeach; ?>
         </div>
-        <?php } ?>
+        
     </div>
 </div>
 
@@ -219,5 +222,5 @@ $societed= $testsp->fetchAll(\PDO::FETCH_ASSOC);
 } else{
     header("Location: redirection.php");
 }
-?>
+
 ?>

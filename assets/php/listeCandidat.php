@@ -16,14 +16,10 @@ include 'meta.php';
 $annee = (int)date('Y');
 
 ?>
-<<<<<<< Updated upstream:assets/php/listeCandidat.php
 <?php if($_SESSION["rôles"] == 'admin'){
   ?>
 <?=template_meta('ListeCandidat')?>
 
-=======
-<?=template_meta('adminConcours')?>
->>>>>>> Stashed changes:assets/php/test.php
 <?php
 
 // Connect to MySQL database
@@ -33,7 +29,7 @@ $page = isset($_GET['page']) && is_numeric($_GET['page']) ? (int)$_GET['page'] :
 // Number of records to show on each page
 $records_per_page = 5;
 
-//  code pour la barre de recherche 
+//  code pour la barre de recherche
 if (isset($_GET['search'])) {
 	// Custom search, if the user entered text in the search box and pressed enter...
 	// The below query will search in every column until it's fount a match, feel free to remove a field if you don't want to search it.
@@ -72,18 +68,10 @@ if (isset($_GET['search'])) {
 ?>
 
 
-
 <body class="body2">
-<<<<<<< Updated upstream:assets/php/listeCandidat.php
 
 <?=template_headerAdmin()?>
 <div class="  row page ">
-=======
-<?=template_header()?>
-
-<div class="  row page ">
-
->>>>>>> Stashed changes:assets/php/test.php
 <?=template_admin()?>
 
 <div class="col">
@@ -127,13 +115,8 @@ if (isset($_GET['search'])) {
                 <td><?=$contact['rôles']?></td>
             </tr>
             <?php endforeach; ?>
-<<<<<<< Updated upstream:assets/php/listeCandidat.php
 		</tbody>
 </table>
-=======
-        </tbody>
-    </table>
->>>>>>> Stashed changes:assets/php/test.php
 	<div class="pagination">
 		<?php if ($page > 1): ?>
 		<a class="aRead" href="listeCandidat.php?page=<?=$page-1?><?=isset($_GET['search']) ? '&search=' . htmlentities($_GET['search'], ENT_QUOTES) : ''?>">
@@ -151,11 +134,7 @@ if (isset($_GET['search'])) {
     
 </div>
 
-<<<<<<< Updated upstream:assets/php/listeCandidat.php
 </body>
-=======
-</div>
->>>>>>> Stashed changes:assets/php/test.php
 
 
 
