@@ -7,8 +7,7 @@ require 'model.php';
 $pdo = pdo_connect_mysql();
 $msg = '';
 ?>
-<?php if($_SESSION["rôles"] == 'entreprise'){
-  ?>
+
 <?php include('meta.php')?>
 
 <?=template_meta('create')?> 
@@ -22,8 +21,7 @@ $msg = '';
 
 
 <body class="body2">
-
-<?=template_headerEntreprise()?>
+<?=template_header()?>
 
     <div class="row test">
         <div class="col-md-4 row align-items-center" style="height: 20vh;">
@@ -152,7 +150,6 @@ $msg = '';
     $stmt->execute([$noms_concours]); 
     $Concours = $stmt->fetch();
     if($Concours){
-        echo '<p class="connexion animate__animated animate__flash">cette addresse mail est deja utilisé<p>';
     }else{
         echo '<script LANGUAGE="javascript">document.location.href="index.php"</script>';    
  die(create_form_concours($noms_concours,$nom_entreprise,$descriptionConcours,$locaConcours,$date_concours,$placeConcoursMax,$link_entreprise, $_SESSION['id_entreprise'], $menu_deroulant, $img_societe));
@@ -167,8 +164,3 @@ $msg = '';
 
 </body>
 </html>
-<?php
-} else{
-    header("Location: redirection.php");
-}
-?>
