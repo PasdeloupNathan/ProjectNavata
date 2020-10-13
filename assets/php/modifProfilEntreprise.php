@@ -72,7 +72,7 @@ foreach($societe as $societes)
 <?php 
 $DATABASE_HOST = 'localhost';
 $DATABASE_USER = 'root';
-$DATABASE_PASS = '';
+$DATABASE_PASS = 'root';
 $DATABASE_NAME = 'projet_navata';
 
 
