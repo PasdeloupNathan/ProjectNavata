@@ -63,6 +63,9 @@ if (isset($_GET['search'])) {
 } else {
 	$num_concours = $pdo->query('SELECT COUNT(*) FROM concours')->fetchColumn();
 }
+
+//  code permettant de compté le nombre de place restante
+ 
 ?>
 
 
@@ -114,7 +117,7 @@ if (isset($_GET['search'])) {
                 <td><?=$contact['date_concours']?></td>
                 <td><?=$contact['placeConcoursMax']?></td>
                 <td><?=$contact['placeConcoursPrise']?></td>
-                <td><?=$contact['placeConcoursRestante']?></td>
+                <td><?=$contact['placeConcoursPrise'] = $contact['placeConcoursMax'] - $contact['placeConcoursPrise']; ?></td>
                 
 
             </tr>
