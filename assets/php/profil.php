@@ -139,7 +139,7 @@ foreach($bro as $bros)
             </div>
             <div class="row infoInsc2">
                 <div class="col-5 offset-md-1">
-                    <img src="../img/exam.jpg" alt="concours" style="width: 100%;" class="imginsc2">
+                    <img src="../img/exam.jpg" name="img" alt="concours" style="width: 100%;" class="imginsc2">
                 </div>
                 <div class="col-4 offset-md-1">
                     <p>Nom <br> Info <br> Desc</p>
