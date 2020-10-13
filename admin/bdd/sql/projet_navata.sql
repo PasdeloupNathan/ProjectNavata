@@ -65,7 +65,10 @@ CREATE TABLE `Concours` (
   `categorieConcours` varchar(255) DEFAULT NULL,
   `placeConcoursPrise` int(11) DEFAULT NULL,
   `placeConcoursRestante` int(11) DEFAULT NULL,
+  `menu_deroulant` varchar(255) NOT NULL,
   `ref` int(11) NOT NULL,
+  `img_societe` varchar(255) NOT NULL,
+  
 	PRIMARY KEY (`id_concours`)
 );
 

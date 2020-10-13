@@ -14,7 +14,7 @@ $msg = '';
 </style>
 <body>
 <div class="row conect" style="width: 100vw;">
-            
+
         <div class="col-md-4 row align-items-center" style="height: 20vh;">
             <img src="../img/LOGO.png"alt="logo" style="height: 75%;padding-left: 35%;" class="animate__animated animate__rotateIn">
         </div>
@@ -26,13 +26,13 @@ $msg = '';
 
                 <!-- Text input-->
 
-                <div class="form-group "> 
-                    <div class="col" style="padding-top: 15%;"> 
+                <div class="form-group ">
+                    <div class="col" style="padding-top: 15%;">
                         <input id="name" name="email" type="email" placeholder="Email" class="form-control input-md"  required="" style="border:solid 1px #707070;border-radius: 0;">
                         <i class="fas fa-caret-right tests"></i>
                     </div>
                 </div>
-           
+
                 <!-- Password input-->
                 <div class="form-group">
                     <div class="col" style="padding-top: 5%;">
@@ -64,17 +64,17 @@ $msg = '';
                 </div>
             </fieldset>
         </form>
-        
+
     </div>
 
     <?php
-        if(isset ($_POST['connexion'])){ 
+        if(isset ($_POST['connexion'])){
            $email=$_POST["email"];
            $mdp=$_POST["mdp"];
         if($email!= '' AND $mdp != ''){
             $test = $pdo->prepare("select * from users where email = ?");
             $test->execute([$email]);
-            $user= $test->fetchAll(\PDO::FETCH_ASSOC);      
+            $user= $test->fetchAll(\PDO::FETCH_ASSOC);
             foreach($user as $users){
                     //déclaration data
                 if($users['mdp']==$mdp){
@@ -100,18 +100,16 @@ $msg = '';
 
         }
 
-        
         }
-    
-    } 
-    
-    if(isset ($_POST['connexion'])){ 
+
+    }
+    if(isset ($_POST['connexion'])){
         $email=$_POST["email"];
         $mdp=$_POST["mdp"];
      if($email!= '' AND $mdp != ''){
          $test = $pdo->prepare("select * from entreprise where email_societe = ?");
          $test->execute([$email]);
-         $entreprise= $test->fetchAll(\PDO::FETCH_ASSOC);      
+         $entreprise= $test->fetchAll(\PDO::FETCH_ASSOC);
          foreach($entreprise as $entreprises){
                  //déclaration data
              if($entreprises['mdp_societe']==$mdp){

@@ -67,6 +67,7 @@ foreach($societe as $societes)
     </form>
     
 </div>
+<p> batchahca</p>
 
 <?php 
 $DATABASE_HOST = 'localhost';

@@ -7,7 +7,8 @@ require 'model.php';
 $pdo = pdo_connect_mysql();
 $msg = '';
 ?>
-
+<?php if($_SESSION["rôles"] == 'entreprise'){
+  ?>
 <?php include('meta.php')?>
 
 <?=template_meta('create')?> 
@@ -21,7 +22,8 @@ $msg = '';
 
 
 <body class="body2">
-<?=template_header()?>
+
+<?=template_headerEntreprise()?>
 
     <div class="row test">
         <div class="col-md-4 row align-items-center" style="height: 20vh;">
@@ -80,6 +82,25 @@ $msg = '';
                             <i class="fas fa-caret-right" style="position: absolute; transform: rotate(315deg);margin-left: 40%; margin-top: -11.7%; color: #de2b76 ;font-size: 1.5rem;"></i>                        </div>
                     </div>
 
+                    <div class="form-group">
+                        <div class="col" style="padding-top: 1%;">
+                            <input id="" name="img_societe" type="text" placeholder="Mettez votre URL du logo" class="form-control input-md" required="" style="border:solid 1px #707070; margin-left: 5%; width:90%;border-radius: 0;">
+                            <i class="fas fa-caret-right" style="position: absolute; transform: rotate(315deg);margin-left: 40%; margin-top: -11.7%; color: #de2b76 ;font-size: 1.5rem;"></i>                        </div>
+                    </div>
+
+                    <div class="form-group">
+                            <select name="menu_deroulant" style="padding-top: 1%; #707070; margin-left: 4%; width:90%;">
+                                <option class="form-control input-md" required="" style="border:solid 1px #707070; margin-left: 5%; width:90%;border-radius: 0;">Sport</option>
+                                <option class="form-control input-md" required="" style="border:solid 1px #707070; margin-left: 5%; width:90%;border-radius: 0;">éducation</option>
+                                <option class="form-control input-md" required="" style="border:solid 1px #707070; margin-left: 5%; width:90%;border-radius: 0;">Académique</option>
+                                <option class="form-control input-md" required="" style="border:solid 1px #707070; margin-left: 5%; width:90%;border-radius: 0;">Fonctionnaire</option>
+                                <option class="form-control input-md" required="" style="border:solid 1px #707070; margin-left: 5%; width:90%;border-radius: 0;">E-sport</option>
+                                
+                            </select>
+                    </div>
+
+                    
+
 
 
 
@@ -122,6 +143,8 @@ $msg = '';
             $date_concours=$_POST["date_concours"];
             $placeConcoursMax=$_POST["placeConcoursMax"];
             $link_entreprise=$_POST["link_entreprise"];
+            $img_societe=$_POST["img_societe"];
+            $menu_deroulant=$_POST["menu_deroulant"];
         if($mdp != $mdpconf){
             echo '<p class="connexion animate__animated animate__flash"> les deux mots de passe doivent être identique<p>';
         }else{
@@ -132,7 +155,7 @@ $msg = '';
         echo '<p class="connexion animate__animated animate__flash">cette addresse mail est deja utilisé<p>';
     }else{
         echo '<script LANGUAGE="javascript">document.location.href="index.php"</script>';    
- die(create_form_concours($noms_concours,$nom_entreprise,$descriptionConcours,$locaConcours,$date_concours,$placeConcoursMax,$link_entreprise, $_SESSION['id_entreprise']));
+ die(create_form_concours($noms_concours,$nom_entreprise,$descriptionConcours,$locaConcours,$date_concours,$placeConcoursMax,$link_entreprise, $_SESSION['id_entreprise'], $menu_deroulant, $img_societe));
     }
 
 
@@ -144,3 +167,8 @@ $msg = '';
 
 </body>
 </html>
+<?php
+} else{
+    header("Location: redirection.php");
+}
+?>
