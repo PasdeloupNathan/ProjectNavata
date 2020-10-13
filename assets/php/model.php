@@ -69,14 +69,7 @@ function create_form_concours($noms_concours, $nom_entreprise, $descriptionConco
 }
 			// Connexion //
 
-function connexion($email, $mdp) {
-	$passwd_hash = hash('sha256', $mdp);
-	$req = $bdd->prepare('SELECT * FROM users AND entreprise WHERE email = ? AND email_societe = ?');
-	$req->execute([$email]);
-	$users = $req->fetch();
 
-	// var_dump($users);
-}
 
 ?>  
 

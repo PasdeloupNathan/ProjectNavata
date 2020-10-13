@@ -60,7 +60,7 @@ foreach($societe as $societes){
                 </div>
                 <div class="col droiteentreprise">
                     <p>Email :<?= $societes['email_societe'];?> </p>
-                    
+
                     <p>Telephone : <?= $societes['tel_societe'];?> </p>
 
                     <p>Numéro de siret : <?= $societes['siret_societe'];?> </p>
@@ -99,7 +99,7 @@ $societed= $testsp->fetchAll(\PDO::FETCH_ASSOC);
         
             <div class="row concourinfoentreprise">
                 <div class="col-5 offset-md-1">
-                    <img src="<?= $societess['img_societe']?>" alt="concours" style="width: 50%;" class="imgconcourentreprise">
+                    <img src="<?= $societess['img_societe']?>" alt="concours" style="width: 100%;" class="imgconcourentreprise">
                 </div>
 
                 <div class="col-5 offset-md-1" style="text-align: left;">  
