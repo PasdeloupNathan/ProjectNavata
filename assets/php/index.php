@@ -11,7 +11,6 @@ $msg = '';
 
 
 <!-- // Vérifiez si l'utilisateur est connecté, sinon redirigez-le vers la page de connexion// -->
-
 <!-- Appeller de la page meta.php ou se situe toute les fonction template  -->
 <?php include 'meta.php';?>
 <!-- fonction permettant d'accédé a la page correspondant aux rôles -->
@@ -41,6 +40,7 @@ if($_SESSION == FALSE){
 
 
 
+
 <?=template_meta('Acceuil')?>
 
 
@@ -51,6 +51,7 @@ if($_SESSION == FALSE){
 
 
 ?>
+
 <?php 
   $tests = $pdo->prepare("SELECT * from concours ORDER BY id_concours ASC LIMIT 2");
   $tests->execute();

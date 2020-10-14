@@ -105,7 +105,7 @@ $msg = '';
                         politique de confidentialité.</label>
                     </div>
 
-            <!-- A   -->
+            <!-- A MODIFIER -->
 
 
                     <!-- Button -->
