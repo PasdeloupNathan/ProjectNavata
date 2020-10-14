@@ -34,42 +34,42 @@ $msg = '';
                         <div class="col" style="padding-top: 4%;">
                         <input type="hidden" name="rôles" value="candidat" class="form-control input-md" required  style="border:solid 1px #707070; margin-left: 5%; width:90%; border-radius: 0;">
                             <input id="name" name="name" type="text" placeholder="Nom" class="form-control input-md" required  style="border:solid 1px #707070; margin-left: 5%; width:90%; border-radius: 0;">
-                            <i class="fas fa-caret-right" style="position: absolute; transform: rotate(315deg);margin-left: 40.6%; margin-top: -10.23%; color: #de2b76 ;font-size: 1.5rem;"></i>
+                             
                         </div>
                     </div>
 
                     <div class="form-group">
                         <div class="col" style="padding-top: 1%;">
                             <input id="prénoms" name="prénoms" type="name" placeholder="Prénom" class="form-control input-md" required  style="border:solid 1px #707070; margin-left: 5%; width:90%;border-radius: 0;">
-                            <i class="fas fa-caret-right" style="position: absolute; transform: rotate(315deg);margin-left: 40.6%; margin-top: -10.23%; color: #de2b76 ;font-size: 1.5rem;"></i>
+                             
                         </div>
                     </div>
 
                     <div class="form-group">
                         <div class="col" style="padding-top: 1%;">
                             <input id="email" name="email" type="email" placeholder="Adresse E-mail" class="form-control input-md" required  style="border:solid 1px #707070; margin-left: 5%; width:90%;border-radius: 0;">
-                            <i class="fas fa-caret-right" style="position: absolute; transform: rotate(315deg);margin-left: 40.6%; margin-top: -10.23%; color: #de2b76 ;font-size: 1.5rem;"></i>
+                             
                         </div>
                     </div>
 
                     <div class="form-group">
                         <div class="col" style="padding-top: 1%;">
                             <input id="ville" name="ville" type="name" placeholder="Ville" class="form-control input-md" required  style="border:solid 1px #707070; margin-left: 5%; width:90%;border-radius: 0;">
-                            <i class="fas fa-caret-right" style="position: absolute; transform: rotate(315deg);margin-left: 40.6%; margin-top: -10.23%; color: #de2b76 ;font-size: 1.5rem;"></i>
+                             
                         </div>
                     </div>
 
                     <div class="form-group">
                         <div class="col" style="padding-top: 1%;">
                             <input id="adresse" name="adresse" type="name" placeholder="Adresse" class="form-control input-md" required  style="border:solid 1px #707070; margin-left: 5%; width:90%;border-radius: 0;">
-                            <i class="fas fa-caret-right" style="position: absolute; transform: rotate(315deg);margin-left: 40.6%; margin-top: -10.23%; color: #de2b76 ;font-size: 1.5rem;"></i>
+                             
                         </div>
                     </div> 
 
                     <div class="form-group">
                         <div class="col" style="padding-top: 1%;">  
                             <input id="codepostal" name="codepostal" minlength="5" type="number" placeholder="Code Postal"  class="form-control input-md" required  style="border:solid 1px #707070; margin-left: 5%; width:90%;border-radius: 0;">
-                            <i class="fas fa-caret-right" style="position: absolute; transform: rotate(315deg);margin-left: 40.6%; margin-top: -10.23%; color: #de2b76 ;font-size: 1.5rem;"></i> 
+                              
                         </div>
                     </div>
 
@@ -77,14 +77,14 @@ $msg = '';
                     <div class="form-group">
                         <div class="col" style="padding-top: 1%;">
                             <input id="mdp" name="mdp" type="password" minlength="5" placeholder="Mot de passe" class="form-control input-md" required  style="border:solid 1px #707070; margin-left: 5%; width:90%; border-radius: 0;">
-                            <i class="fas fa-caret-right" style="position: absolute; transform: rotate(315deg);margin-left: 40.6%; margin-top: -10.23%; color: #de2b76 ;font-size: 1.5rem;"></i>
+                             
                         </div>
                     </div>
 
                     <div class="form-group">
                         <div class="col" style="padding-top: 1%;">
                             <input id="mdp" name="mdpconf" type="password" minlength="5" placeholder="Confirme Mot passe" class="form-control input-md" required  style="border:solid 1px #707070; margin-left: 5%; width:90%; border-radius: 0;">
-                            <i class="fas fa-caret-right" style="position: absolute; transform: rotate(315deg);margin-left: 40.6%; margin-top: -10.23%; color: #de2b76 ;font-size: 1.5rem;"></i>
+                             
                         </div>
                     </div>
 
@@ -99,7 +99,7 @@ $msg = '';
                         <a >
                         <button id="test" name="inscrire" value="upload ImageS" type="submit"class="btn btn-primary" style="width: 100%;background-color: #ffffff;color: #707070;border:solid 1px #707070;border-radius: 0;">Inscrivez-vous</button>
                         </a>
-                        <i class="fas fa-caret-right" style="position: absolute; transform: rotate(315deg);margin-left: 45%; margin-top: -10.26%; color: #de2b76 ;font-size: 1.5rem;"></i>
+                        
                         </div>
                     </div>
                     <div style="padding-top: 1%;">

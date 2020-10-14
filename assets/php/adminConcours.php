@@ -27,7 +27,7 @@ $annee = (int)date('Y');
 // Get the page via GET request (URL param: page), if non exists default the page to 1
 $page = isset($_GET['page']) && is_numeric($_GET['page']) ? (int)$_GET['page'] :1;
 // Number of records to show on each page
-$records_per_page = 1;
+$records_per_page = 2;
 
 //  code pour la barre de recherche 
 if (isset($_GET['search'])) {
@@ -92,7 +92,8 @@ if (isset($_GET['search'])) {
 		</form>
         <thead style="padding: 1%;">
             <tr>
-                <th>ID</th >
+				<th>ID</th >
+				<th>auteur</th >
                 <th>categorieConcours</th>
                 <th>noms_concours</th>
                 <th>descriptionConcours</th>
@@ -109,8 +110,9 @@ if (isset($_GET['search'])) {
 			<!-- boucle for each permettant d'affiché les donnés de la table concours -->
             <?php foreach ($concours as $contact): ?>
             <tr>
-                <td class="cel"><?=$contact['id_concours']?></td>
-                <td><?=$contact['categorieConcours']?></td>
+				<td class="cel"><?=$contact['id_concours']?></td>
+				<?=$contact['nom_entreprise']?></td>
+                <td><?=$contact['menu_deroulant']?></td>
                 <td><?=$contact['noms_concours']?></td>
                 <td><?=$contact['descriptionConcours']?></td>
                 <td><?=$contact['locaConcours']?></td>

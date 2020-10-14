@@ -50,7 +50,8 @@ foreach($bro as $bros)
             <label for="naissance">Date de naissance : <input type="date" name="naissance" value="<?= $bros['naissance'];?>"></label>
             <br>
             <label for="img" style="padding-right: 44%;">Image de profile : </label>
-            <br><input type="file" value="<?= $bros['img_users'];?>"> 
+
+            <br><input type="image" src="<?= $societeu['img_users'];?>"> 
         </div>
         <div class="input col-4">
 
