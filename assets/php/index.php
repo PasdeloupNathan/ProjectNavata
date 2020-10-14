@@ -1,7 +1,14 @@
-<? include 'model.php'; ?>
+
 <?php 
 session_start(); 
 ?>
+
+<?php 
+require 'model.php'; 
+$pdo = pdo_connect_mysql();
+$msg = '';
+?>
+
 
 <!-- // Vérifiez si l'utilisateur est connecté, sinon redirigez-le vers la page de connexion// -->
 
@@ -11,9 +18,13 @@ session_start();
 <?php
 if($_SESSION == FALSE){
     template_header();
+ 
 }elseif($_SESSION["rôles"] == 'candidat'){
+
     template_headerUsers();
 }elseif($_SESSION["rôles"] == 'entreprise'){
+  
+
     template_headerEntreprise();
 }elseif($_SESSION["rôles"] == 'admin'){
     template_headerAdmin();
@@ -25,39 +36,55 @@ if($_SESSION == FALSE){
 
 
 
+
 <!-- sans avoir de compte utilisateur -->
 
+<?php 
+  $tests = $pdo->prepare("SELECT * from concours WHERE ref=".$_SESSION['id_entreprise']);
+  $tests->execute();
+  $societe= $tests->fetchAll(\PDO::FETCH_ASSOC);
+
+
+?>
+
 <?=template_meta('Acceuil')?>
+
+<?php 
+  $tests = $pdo->prepare("SELECT * from concours");
+  $tests->execute();
+  $societe= $tests->fetchAll(\PDO::FETCH_ASSOC);
+
+
+?>
    
 <body class="body">
 
-
 <!-- Section pour les nouveaux concours et les concours arrivant a leur terme  -->
+
 
 <div class="main1 row" style="margin-left:0;margin-right:0;">
 <div class="col doubleC row align-items-center">
     <div class="newC">
 
         <h2 class="h2new">Nouveaux Concours</h2>
+            <?php
+            foreach ($societe as $societeu ):
+            ?>
+            <div class="row info">
+                <div class="col-5 offset-md-1">
+                    <img src="<?= $societeu['img_societe'] ?>" alt="concours" style="width: 100%;" class="imginf">
+                </div>
+                <div class="col-5 offset-md-1">
+                <p> <?= $societeu['noms_concours'];?>  <br> <?= $societeu['nom_entreprise'];?> <br><?= $societeu['descriptionConcours'];?> <br> 
+                    <?= $societeu['locaConcours'];?> <br>  <?= $societeu['date_concours'];?> <br>  <?= $societeu['placeConcoursMax'];?> <br>  
+                    <?= $societeu['link_entreprise'];?> <br> <?= $societeu['menu_deroulant']; ?>
+                    </p>
 
-            <div class="row info">
-                <div class="col-5 offset-md-1">
-                    <img src="../img/exam.jpg" alt="concours" style="width: 100%;" class="imginf">
-                </div>
-                <div class="col-5 offset-md-1">
-                    <p>Nom <br> Info <br> Desc</p>
                 </div>
             </div>
-            <div class="row info">
-                <div class="col-5 offset-md-1">
-                    <img src="../img/exam.jpg" alt="concours" style="width: 100%;" class="imginf">
-                </div>
-                <div class="col-5 offset-md-1">
-                    <p>Nom <br> Info <br> Desc</p>
-                </div>
-                <div class="col-5 offset-md-1">
-                </div>
-            </div>
+          
+            <?php endforeach ?>
+            
     </div>
 </div>
 <div class="col doubleC row align-items-center">
@@ -98,7 +125,7 @@ if($_SESSION == FALSE){
                 <img src="../img/exam.jpg" alt="concours" style="width: 100%;" class="imginf">
             </div>
             <div class="col-5 offset-md-1" style="text-align: left;">
-                <p>Nom <br> Info <br> Desc</p>
+                <p> Nom du concour :<?= $societeu['noms_concours'];?>  <br> Nom de l'entreprise : <?= $societeu['nom_entreprise'];?>  <br> Description : <?= $societeu['descriptionConcours'];?></p>
             </div>
         </div>
     </div>
@@ -110,8 +137,6 @@ if($_SESSION == FALSE){
 </body>
 
 </html>
-
-
 
 
 
