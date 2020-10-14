@@ -91,14 +91,13 @@ $msg = '';
                     <div style="padding-top: 1%;">
                         <input type="checkbox" required  name="memo" id="mdp"> <label for="memo"> J’ai lu et j’accepte les conditions générales d’utilisation et la 
                         politique de confidentialité.</label>
-
                     </div>
 
                     <!-- Button -->
                     <div class="form-group">
                         <div class="col" style="padding-top: 2.5%;">
                         <a >
-                        <button id="test" name="inscrire" type="submit"class="btn btn-primary" style="width: 100%;background-color: #ffffff;color: #707070;border:solid 1px #707070;border-radius: 0;">Inscrivez-vous</button>
+                        <button id="test" name="inscrire" value="upload ImageS" type="submit"class="btn btn-primary" style="width: 100%;background-color: #ffffff;color: #707070;border:solid 1px #707070;border-radius: 0;">Inscrivez-vous</button>
                         </a>
                         <i class="fas fa-caret-right" style="position: absolute; transform: rotate(315deg);margin-left: 45%; margin-top: -10.26%; color: #de2b76 ;font-size: 1.5rem;"></i>
                         </div>
@@ -150,3 +149,4 @@ $msg = '';
 
 </body>
 </html>
+<?php

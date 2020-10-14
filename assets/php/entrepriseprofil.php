@@ -219,5 +219,7 @@ $societed= $testsp->fetchAll(\PDO::FETCH_ASSOC);
 
 </html>
 <?php
-} 
+} else{
+    header("Location: redirection.php");
+}
 ?>
