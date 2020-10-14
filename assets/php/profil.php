@@ -36,7 +36,7 @@ foreach($bro as $bros)
 <div class="main5 row align-items-center">
     <div class="profilc">
         <div class="row toprof">
-            <img class="imgprof col-2 offset-md-1" src="../img/default_profil.png" alt="Image Profil">
+            <img class="imgprof col-2 offset-md-1" src="<?= $bros['img_users'];?>" alt="Image Profil">
             <div class="titrep col-3 offset-md-1">
                 <h2 class="h2prof"> profil de <?= $bros['prénoms'];?></h2>
             </div>
