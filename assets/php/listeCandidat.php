@@ -117,6 +117,7 @@ if (isset($_GET['search'])) {
             <?php endforeach; ?>
 		</tbody>
 </table>
+<!-- fléche pour permettre de naviqué dans le tableau -->
 	<div class="pagination">
 		<?php if ($page > 1): ?>
 		<a class="aRead" href="listeCandidat.php?page=<?=$page-1?><?=isset($_GET['search']) ? '&search=' . htmlentities($_GET['search'], ENT_QUOTES) : ''?>">
@@ -130,7 +131,7 @@ if (isset($_GET['search'])) {
 		<?php endif; ?>
 	</div>
 </div>
-<!-- fléche pour permettre de naviqué dans le tableau -->
+
     
 </div>
 

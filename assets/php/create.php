@@ -7,7 +7,8 @@ require 'model.php';
 $pdo = pdo_connect_mysql();
 $msg = '';
 ?>
-
+<?php if($_SESSION["rôles"] == 'entreprise'){
+  ?>
 <?php include('meta.php')?>
 
 <?=template_meta('create')?> 
@@ -21,7 +22,7 @@ $msg = '';
 
 
 <body class="body2">
-<?=template_header()?>
+<?=template_headerEntreprise()?>
 
     <div class="row test">
         <div class="col-md-4 row align-items-center" style="height: 20vh;">
@@ -38,61 +39,56 @@ $msg = '';
                     <div class="form-group">
                         <div class="col" style="padding-top: 4%;">
                             <input id="textinput" name="noms_concours" type="text" placeholder="Nom du concours" class="form-control input-md" required="" style="border:solid 1px #707070; margin-left: 5%; width:90%; border-radius: 0;">
-                            <i class="fas fa-caret-right" style="position: absolute; transform: rotate(315deg);margin-left: 40%; margin-top: -11.7%; color: #de2b76 ;font-size: 1.5rem;"></i>
+                            
                         </div>
                     </div>
 
-                    <div class="form-group">
-                        <div class="col" style="padding-top: 1%;">
-                            <input id="" name="nom_entreprise" type="name" placeholder="Nom de votre entreprises" class="form-control input-md" required="" style="border:solid 1px #707070; margin-left: 5%; width:90%;border-radius: 0;"> 
-                            <i class="fas fa-caret-right" style="position: absolute; transform: rotate(315deg);margin-left: 40%; margin-top: -11.7%; color: #de2b76 ;font-size: 1.5rem;"></i>
-                        </div>
-                    </div>
+                    
 
                     <div class="form-group">
                         <div class="col" style="padding-top: 1%;">
                             <textarea id="" name="descriptionConcours" type="name" placeholder="Déscription" class="form-control input-md" required="" style="border:solid 1px #707070; margin-left: 5%; width:90%;border-radius: 0;" ></textarea>
-                            <i class="fas fa-caret-right" style="position: absolute; transform: rotate(315deg);margin-left: 40%; margin-top: -11.7%; color: #de2b76 ;font-size: 1.5rem;"></i></div>
+                            </div>
                     </div>
 
 
                     <div class="form-group">
                         <div class="col" style="padding-top: 1%;">
                             <input id="" name="locaConcours" type="name" placeholder="Localisation" class="form-control input-md" required="" style="border:solid 1px #707070; margin-left: 5%; width:90%;border-radius: 0;">
-                            <i class="fas fa-caret-right" style="position: absolute; transform: rotate(315deg);margin-left: 40%; margin-top: -11.7%; color: #de2b76 ;font-size: 1.5rem;"></i>                        </div>
+                                                    </div>
                     </div>
 
                     <div class="form-group">
                         <div class="col" style="padding-top: 1%;">
                             <input id="" name="date_concours" type="date" placeholder="Date" class="form-control input-md" required="" style="border:solid 1px #707070; margin-left: 5%; width:90%;border-radius: 0;">
-                            <i class="fas fa-caret-right" style="position: absolute; transform: rotate(315deg);margin-left: 40%; margin-top: -11.7%; color: #de2b76 ;font-size: 1.5rem;"></i>                        </div>
+                                                    </div>
                     </div>
 
                     <div class="form-group">
                         <div class="col" style="padding-top: 1%;">
                             <input id="" name="placeConcoursMax" type="number" placeholder="Participant Max" class="form-control input-md" required="" style="border:solid 1px #707070; margin-left: 5%; width:90%;border-radius: 0;">
-                            <i class="fas fa-caret-right" style="position: absolute; transform: rotate(315deg);margin-left: 40%; margin-top: -11.7%; color: #de2b76 ;font-size: 1.5rem;"></i>                        </div>
+                                                    </div>
                     </div>
 
                     <div class="form-group">
                         <div class="col" style="padding-top: 1%;">
                             <input id="" name="link_entreprise" type="name" placeholder="Votre site" class="form-control input-md" required="" style="border:solid 1px #707070; margin-left: 5%; width:90%;border-radius: 0;">
-                            <i class="fas fa-caret-right" style="position: absolute; transform: rotate(315deg);margin-left: 40%; margin-top: -11.7%; color: #de2b76 ;font-size: 1.5rem;"></i>                        </div>
+                                                    </div>
                     </div>
 
                     <div class="form-group">
                         <div class="col" style="padding-top: 1%;">
                             <input id="" name="img_societe" type="text" placeholder="Mettez votre URL du logo" class="form-control input-md" required="" style="border:solid 1px #707070; margin-left: 5%; width:90%;border-radius: 0;">
-                            <i class="fas fa-caret-right" style="position: absolute; transform: rotate(315deg);margin-left: 40%; margin-top: -11.7%; color: #de2b76 ;font-size: 1.5rem;"></i>                        </div>
+                                                    </div>
                     </div>
 
                     <div class="form-group">
-                            <select name="menu_deroulant" style="padding-top: 1%; #707070; margin-left: 4%; width:90%;">
-                                <option class="form-control input-md" required="" style="border:solid 1px #707070; margin-left: 5%; width:90%;border-radius: 0;">Sport</option>
-                                <option class="form-control input-md" required="" style="border:solid 1px #707070; margin-left: 5%; width:90%;border-radius: 0;">éducation</option>
-                                <option class="form-control input-md" required="" style="border:solid 1px #707070; margin-left: 5%; width:90%;border-radius: 0;">Académique</option>
-                                <option class="form-control input-md" required="" style="border:solid 1px #707070; margin-left: 5%; width:90%;border-radius: 0;">Fonctionnaire</option>
-                                <option class="form-control input-md" required="" style="border:solid 1px #707070; margin-left: 5%; width:90%;border-radius: 0;">E-sport</option>
+                            <select name="menu_deroulant" style="padding-top: 1%; #707070;  width: 85%;">
+                                <option class="form-control input-md" required="" style="border:solid 1px #707070; width: 85%;border-radius: 0;">Sport</option>
+                                <option class="form-control input-md" required="" style="border:solid 1px #707070; width: 85%;border-radius: 0;">éducation</option>
+                                <option class="form-control input-md" required="" style="border:solid 1px #707070; width: 85%;border-radius: 0;">divertissement</option>
+                                <option class="form-control input-md" required="" style="border:solid 1px #707070; width: 85%;border-radius: 0;">Fonctionnaire</option>
+                                <option class="form-control input-md" required="" style="border:solid 1px #707070; width: 85%;border-radius: 0;">E-sport</option>
                                 
                             </select>
                     </div>
@@ -109,7 +105,7 @@ $msg = '';
                         politique de confidentialité.</label>
                     </div>
 
-            <!-- A   -->
+            <!-- A MODIFIER -->
 
 
                     <!-- Button -->
@@ -164,3 +160,8 @@ $msg = '';
 
 </body>
 </html>
+<?php
+} else{
+    header("Location: redirection.php");
+}
+?>

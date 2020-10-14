@@ -7,7 +7,8 @@ $msg = '';
 session_start();
 ?>
 
-
+<?php if($_SESSION["rôles"] == 'candidat'){
+  ?>
 
 
 <?php include 'meta.php';?>
@@ -49,7 +50,8 @@ foreach($bro as $bros)
             <label for="naissance">Date de naissance : <input type="date" name="naissance" value="<?= $bros['naissance'];?>"></label>
             <br>
             <label for="img" style="padding-right: 44%;">Image de profile : </label>
-            <br><input type="file"> 
+
+            <br><input type="image" src="<?= $societeu['img_users'];?>"> 
         </div>
         <div class="input col-4">
 
@@ -87,7 +89,7 @@ $conn = new PDO('mysql:host=' . $DATABASE_HOST . ';dbname=' . $DATABASE_NAME . '
 
 if (isset($_POST['modif'])){
 
-    $sql = "UPDATE Users SET noms='".$_POST['noms']. "',prénoms='".$_POST['prénoms']."',adresse='".$_POST['adresse']."',ville='".$_POST['ville']."',codepostal='".$_POST['codepostal']."',nation='".$_POST['nation']."',email='".$_POST['email']."',tel='".$_POST['tel']."',naissance='".$_POST['naissance']."',idcard='".$_POST['idcard']."'WHERE id_users=".$_SESSION['id_users'];
+    $sql = "UPDATE Users SET img_users='".$_POST['img_users']. "', noms='".$_POST['noms']. "',prénoms='".$_POST['prénoms']."',adresse='".$_POST['adresse']."',ville='".$_POST['ville']."',codepostal='".$_POST['codepostal']."',nation='".$_POST['nation']."',email='".$_POST['email']."',tel='".$_POST['tel']."',naissance='".$_POST['naissance']."',idcard='".$_POST['idcard']."'WHERE id_users=".$_SESSION['id_users'];
 
     $stmt = $conn->prepare($sql);
 
@@ -111,4 +113,8 @@ if (isset($_POST['modif'])){
 
 </html>
 
-
+<?php
+} else{
+    header("Location: redirection.php");
+}
+?>

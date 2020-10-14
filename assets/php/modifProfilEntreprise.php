@@ -8,7 +8,8 @@ session_start();
 ?>
 
 
-
+<?php if($_SESSION["rôles"] == 'entreprise'){
+  ?>
 
 <?php include 'meta.php';?>
 
@@ -105,4 +106,8 @@ if (isset($_POST['modif'])){
 
 </html>
 
-
+<?php
+} else{
+    header("Location: redirection.php");
+}
+?>
