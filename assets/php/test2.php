@@ -1,138 +1,76 @@
-<?php 
-session_start();
-?>
 
-<?php
-require 'model.php';
+
+<?php 
+require 'model.php'; 
 $pdo = pdo_connect_mysql();
 $msg = '';
 ?>
+<?php 
+  $tests = $pdo->prepare("SELECT * from concours ORDER BY id_concours DESC LIMIT 2");
+  $tests->execute();
+  $societe= $tests->fetchAll(\PDO::FETCH_ASSOC);
 
-<!--  Permission pour le rôles admin -->
-
-<?php
-include 'meta.php';
-// $total= nombre_vues()
-$annee = (int)date('Y');
 
 ?>
+<?php include 'meta.php';
 
-<?=template_meta('adminConcours')?>
-
-
-
- 
-<?php
-// =========================================================================
-//   function page admins
-
-// function calculant le nombre d'entreprise créé
-$sth = $pdo->prepare("SELECT * from entreprise");
-
-/* Compte le nombre de colonnes dans le jeu de résultat (non-existant) */
-$countEntreprise = $sth->rowCount();
-$sth->execute();
-/* Compte le nombre de colonnes dans le jeu de résultats */
-$countEntreprise = $sth->rowCount();
-// ===============================================
-// function calculant le nombre de concours créé
-$sth = $pdo->prepare("SELECT * from users WHERE rôles ='candidat'");
-$countCandidat = $sth->rowCount();
-$sth->execute();
-$countCandidat = $sth->rowCount();
-// ===============================================
-// function calculant le nombre de concours créé
-$sth = $pdo->prepare("SELECT * from concours");
-$countConcours = $sth->rowCount();
-$sth->execute();
-$countConcours = $sth->rowCount();
-// ===============================================
-// code permettant de compté le nombre total d'utilisateurs sur le site (admin exclu)
-$countTotal = $countCandidat + $countEntreprise;
+template_header();?>
 
 
-//  permet d'affiché le nombre de visite du site
-require_once dirname(__DIR__) . DIRECTORY_SEPARATOR . 'function' . DIRECTORY_SEPARATOR . 'compteur.php';
-    ajouter_vue();
-    $vues = nombre_vues()
-?>
+<?=template_meta('Acceuil')?>
+   
+<div class="col doubleC row align-items-center">
+    <div class="newC">
+        <h2 class="h2new">Fin Concours</h2>
+            <div class="row info">
+            <?php
+            foreach ($societe2 as $societeu ):
+            ?>
+            
+                <div class="col-5 offset-md-1">
+                    <img src="<?= $societeu['img_societe'] ?>" alt="concours" style="width: 100%;" class="imginf">
+                </div>
+                <div  class="listeInfo col-5 offset-md-1">
+                <ul>
+                <li><?= $societeu['noms_concours'];?></li>
+                <li><?= $societeu['descriptionConcours'];?></li>
+                <li><?= $societeu['date_concours'];?></li>
+                <li><?= $societeu['placeConcoursMax'];?></li>
+                <li><?= $societeu['link_entreprise'];?> </li>
+                <li><?= $societeu['menu_deroulant']; ?></li>
+                    </ul> 
 
-
-
-
-<body class="body2">
-<?=template_headerAdmin()?>
-
-<div class="  row page ">
-
-<?=template_admin()?>
-<!-- 1er section -->
-        <div class="col ListStats accordion" id="accordion1">
-            <div class="card">
-               <div class="card-header" id="heading1">
-                  <h5 class="mb-0">
-                     <button class="btn btn-link collapsed" type="button"
-                        data-toggle="collapse" data-target="#collapse1"
-                        aria-expanded="false" aria-controls="collapse1">
-                        <p id="titrecard" >nombre de concours en ligne :</p>
-                     </button>
-                  </h5>
-               </div>
-               <div id="collapse1" class="collapse" aria-labelledby="heading1"
-                  data-parent="#accordion1">
-                    <div class="col stats card-body ">
-                       <p>nombre de concours : <?= $countConcours?></p>
-                    </div>
-               </div>
+                </div>
+            
+          
+            <?php endforeach ?>
             </div>
-        </div>
-
- <!-- 2e section -->
-    <div class="col ListStats accordion" id="accordion2">
-        <div class="card">
-            <div class="card-header" id="heading2">
-                    <h5 class="mb-0">
-                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
-                            <p id="titrecard">  nombre de visite</p>
-                        </button>
-                  </h5>
-            </div>
-               <div id="collapse2" class="collapse" aria-labelledby="heading2"
-                  data-parent="#accordion2">
-                    <div class="col stats card-body ">
-                      <p>nombre de visite du site   : <?= $vues ?> visites</p>
-                    </div>
-               </div>
-            </div>
-        </div>
-         <div class="col ListStats accordion" id="accordion3">
-        <div class="card">
-            <div class="card-header" id="heading3">
-                    <h5 class="mb-0">
-                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
-                            <p id="titrecard" >nombre d'utilisateur inscrit</p>
-                        </button>
-                  </h5>
-            </div>
-               <div id="collapse3" class="collapse" aria-labelledby="heading3"
-                  data-parent="#accordion3">
-                    <div class="col stats card-body ">
-                       <p>nombre total d'utilisateur : il y a <?=$countTotal ?>  utilisateurs inscrite</p>
-                       <p>nombre d'entreprise : il y a <?=$countEntreprise ?>  utilisateurs inscrite</p>
-                       <p>nombre de candidat : il y a <?=$countCandidat ?>  utilisateurs inscrite</p>
-                    </div>
-               </div>
-            </div>
-        </div>
     </div>
-
-    </div>
- <!-- 3e section -->
-
+</div>
 
 </div>
-      
- <?=template_footer()?>
+
+<!-- Section pour les concours les tendance du momment  -->
+
+<div class="main2 row align-items-center">
+    <div class="bestc">
+        <div class="titrec">
+            <i class="fas fa-caret-right fleche2"></i> <h2 class="h2cat">  $Categorie  </h2><i class="fas fa-caret-right fleche1"></i>
+        </div>
+        <div class="row info2">
+            <div class="col-5 offset-md-1">
+                <img src="../img/exam.jpg" alt="concours" style="width: 100%;" class="imginf">
+            </div>
+            <div class="col-5 offset-md-1" style="text-align: left;">
+                <p> Nom du concour :<?= $societeu['noms_concours'];?>  <br> Nom de l'entreprise : <?= $societeu['nom_entreprise'];?>  <br> Description : <?= $societeu['descriptionConcours'];?></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<?=template_footer()?>
+
 
 </body>
 

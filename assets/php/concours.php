@@ -1,7 +1,13 @@
-<? include 'model.php'; ?>
-<?php session_start(); 
+<?php 
+session_start(); 
+?>
 
-  ?>
+<?php 
+require 'model.php'; 
+$pdo = pdo_connect_mysql();
+$msg = '';
+?>
+
 <!-- // Vérifiez si l'utilisateur est connecté, sinon redirigez-le vers la page de connexion// -->
 
 <!-- Appeller de la page meta.php ou se situe toute les fonction template  -->
@@ -19,7 +25,13 @@ if($_SESSION == FALSE){
 }
 
 ?>
+<?php 
+  $tests = $pdo->prepare("SELECT * from concours ORDER BY placeConcoursMax DESC LIMIT 1");
+  $tests->execute();
+  $societe= $tests->fetchAll(\PDO::FETCH_ASSOC);
 
+
+?>
 <?=template_meta('Concours')?>
     
 
@@ -40,16 +52,29 @@ if($_SESSION == FALSE){
                     <H2>Concours avec le plus d'angouement</H2>
                 </div>
                 <div class="row bas align-items-center">
+                <?php
+            foreach ($societe as $societeu ):
+            ?>
+            
                     <div class="col-sm-6 acceuil">
-                        <img id="logoImg2" src="../img/test1.jpg" alt="logo">
+                        <img id="logoImg2" src="<?= $societeu['img_societe'];?>" alt="logo">
                     </div>
-                    <div class="col-sm-6">
-                        <div class="List">
-                        <h2 class=" col- subList">Concours</h2>
-                        <h2 class=" col- subList">Concours2</h2>
-                        <h2 class=" col- subList">Concours3</h2>
                     
-                    </div>
+                
+                <div  class="listeInfo col-5 offset-md-1">
+                <ul>
+                <ol><h1 class="titreConcours" ><?= $societeu['noms_concours'];?></h1></ol>
+                <li><?= $societeu['descriptionConcours'];?></li>
+                <li><p>nombre de place maximum:</p><?=$societeu['placeConcoursMax']?></li>
+                
+                <li> <p>nombre de place restante:</p> <?=$societeu['placeConcoursPrise'] = $societeu['placeConcoursMax'] - $societeu['placeConcoursPrise']; ?></li>
+                
+                    </ul> 
+
+                </div>
+            
+          
+            <?php endforeach ?>
                 </div>
             </div>
         </div>

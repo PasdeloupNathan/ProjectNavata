@@ -29,7 +29,7 @@ $msg = '';
                 <div class="form-group ">
                     <div class="col" style="padding-top: 15%;">
                         <input id="name" name="email" type="email" placeholder="Email" class="form-control input-md"  required="" style="border:solid 1px #707070;border-radius: 0;">
-                        <i class="fas fa-caret-right tests"></i>
+                       
                     </div>
                 </div>
 
@@ -37,8 +37,7 @@ $msg = '';
                 <div class="form-group">
                     <div class="col" style="padding-top: 5%;">
                         <input id="mdp" name="mdp" type="password" placeholder="Mot de passe" class="form-control input-md" required="" style="border:solid 1px #707070;border-radius: 0;">
-                        <i class="fas fa-caret-right tests" ></i>
-
+                        
                     </div>
                 </div>
 
@@ -54,7 +53,7 @@ $msg = '';
                 <div class="form-group">
                     <div class="col" style="padding-top: 7.5%;">
                     <button id="connexion" type="submit" name="connexion" class="btn btn-primary" style="width: 100%;background-color: #ffffff;color: #707070;border:solid 1px #707070;border-radius: 0;">Connectez-Vous</button>
-                        <i class="fas fa-caret-right tests"></i>
+                       
                     </div>
                 </div>
 

@@ -15,8 +15,6 @@ $msg = '';
 <?php
 include 'meta.php';
 ?>
-
-
 <?php
 
 $tests = $pdo->prepare("SELECT * from entreprise WHERE id_entreprise=".$_SESSION['id_entreprise']);
@@ -41,22 +39,24 @@ foreach($societe as $societes){
             <div class="row toprofentreprise">
                 <img class="imgprofentreprise col-2 offset-md-1" src="../img/LOGO.png" alt="image profile">
                 <div class="titrepentreprise col-3 offset-md-1">
-                    <h2 class="h2profentreprise"> Profil de votre <br> Entreprise </h2>
+                    <h2 class="h2profentreprise"> ENTREPRISE <br> <?= $societes['nom_societe'];?> </h2>
                 </div>
                 <div class="titrepentreprise col-3 offset-md-1">
                     <a href="create.php"><h2 class="linkprofentreprise">Crée un concours</h2></a> 
                 </div>
-                <i class="fas fa-caret-right rose4"></i>
+                
             </div>
             <div class="row infoprofentreprise">
                 <div class="col offset-md-1 gaucheentreprise">
-                    <p>Nom de l'entreprise : <?= $societes['nom_societe'];?></p>
-                    <br>                        
+                                            
                     <p>Adresse : <?= $societes['adresse_societe'];?> </p>
                     <br>
                     <p>Code Postal : <?= $societes['codepostal_societe'];?> </p>
                     <br>
                     <p>Ville : <?= $societes['ville_societe'];?> </p>
+                    <br>
+                    <br>
+                    <p href="deconnection.php" type="button" class="deco" onclick="location.href='./deconnection.php'">déconnection</p>
                 </div>
                 <div class="col droiteentreprise">
                     <p>Email :<?= $societes['email_societe'];?> </p>
@@ -65,7 +65,7 @@ foreach($societe as $societes){
                     <br>
                     <p>Numéro de siret : <?= $societes['siret_societe'];?> </p>
                     <br>
-                    <p id="modifprofil">Modifiez votre information d'entreprise.  <i class="fas fa-edit" id="modifprofil"></i></p> 
+                    <p id="modifentreprise"type="button" onclick="location.href='./modifProfilEntreprise.php'" >Modifiez votre information d'entreprise.  <i class="fas fa-edit" id="modifprofil"></i></p> 
 
                 </div>
             </div>
@@ -76,7 +76,6 @@ foreach($societe as $societes){
 }
     ?>
 
-    <a href="deconnection.php" class="btn">deconnection</a>
 
     <?php
 
@@ -85,33 +84,56 @@ foreach($societe as $societes){
 $testsp = $pdo->prepare("SELECT * from concours WHERE ref=".$_SESSION['id_entreprise']);
 $testsp->execute();
 $societed= $testsp->fetchAll(\PDO::FETCH_ASSOC);
-    
 
 ?>
 
     <!-- Concours de l'entreprise -->
 
-<div class="main8 row align-items-center">
+<div class="main8  align-items-center">
     <div class="entrepriseconcour">
         <h2 class="titreconcourentreprise">Concours de votre entreprise</h2>
-        <i class="fas fa-caret-right rose5" ></i><?php foreach($societed as $societess){?>
+
+
         <div class="row align-items-center">
-            <div class="row concourinfoentreprise">
-                <div class="col-5 offset-md-1 align-items-center">
-                    <img src="<?= $societess['img_societe']?>" alt="concours" style="width: 50%;" class="imgconcourentreprise">
-                </div>                
 
-                <div class="col-5 offset-md-1" style="text-align: left;">  
-
-                    <p> Nom de votre Concours : <?= $societess['noms_concours'];?>  <br>Nom de votre l'entreprise : <?= $societess['nom_entreprise'];?> <br> Description: <?= $societess['descriptionConcours'];?> <br> 
-                    Localisation: <?= $societess['locaConcours'];?> <br> Date du concour : <?= $societess['date_concours'];?> <br> Place du concours: <?= $societess['placeConcoursMax'];?> <br>  
-                    Link : <?= $societess['link_entreprise'];?> <br> Quel type de concours : <?= $societess['menu_deroulant']; ?>
-                    </p>
-                </div>
-            </div>
+        <table class="" id="customers2">
+    	<form action="listeCandidat.php" method="get">
             
+        </form>
+        <thead >
+            <tr>
+                <th></th>
+                <th>Nom Concours</th>
+                <th>Description</th>
+                <th>localisation</th>
+                <th>date début</th>
+                <th>place max</th>
+                <th>place prise</th>
+                <th>place restante</th>
+                <th>catégorie</th>
+            </tr>
+        </thead>
+        <tbody>
+			<!-- boucle for each permettant d'affiché les donnés de la table USERS -->
+            <?php foreach ($societed as $societess): ?>
+            <tr>
+            <td style="width: 10%;"> <img style="width: 100%;" src="<?= $societess['img_societe'];?>" alt=""> </td>
+                <td><?= $societess['noms_concours'];?></td>
+                <td><?= $societess['descriptionConcours'];?></td>
+                <td><?= $societess['locaConcours'];?></td>
+                <td><?= $societess['date_concours'];?></td>
+                <td><?= $societess['placeConcoursMax'];?></td>
+                <td><?= $societess['placeConcoursPrise'];?></td>
+                <td><?= $societess['placeConcoursMax']=$societess['placeConcoursMax'] - $societess['placeConcoursPrise'];?></td>
+                <td><?= $societess['menu_deroulant'];?></td>
+            </tr>
+            <?php endforeach; ?>
+		</tbody>
+</table>
+            </div>
+
         </div>
-        <?php } ?>
+
     </div>
 </div>
 
@@ -216,5 +238,7 @@ $societed= $testsp->fetchAll(\PDO::FETCH_ASSOC);
 
 </html>
 <?php
-} 
+} else{
+    header("Location: redirection.php");
+}
 ?>
