@@ -49,9 +49,7 @@ foreach($bro as $bros)
             <br>
             <label for="naissance">Date de naissance : <input type="date" name="naissance" value="<?= $bros['naissance'];?>"></label>
             <br>
-            <label for="img" style="padding-right: 44%;">Image de profile : </label>
-
-            <br><input type="image" src="<?= $societeu['img_users'];?>"> 
+            
         </div>
         <div class="input col-4">
 
@@ -80,7 +78,7 @@ foreach($bro as $bros)
 <?php 
 $DATABASE_HOST = 'localhost';
 $DATABASE_USER = 'root';
-$DATABASE_PASS = 'root';
+$DATABASE_PASS = '';
 $DATABASE_NAME = 'projet_navata';
 
 

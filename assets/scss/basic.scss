@@ -454,13 +454,20 @@ td,
                 text-align: left;
             }
             .droiteentreprise p {
-                width: 30%;
                 font: bold 13px Arial;
                 background: #f5f5f5;
                 color: #555;
                 border-radius: 2px;
                 border: 1px solid #ccc;
                 box-shadow: 1px 1px 3px #999;
+            }
+            p:hover {
+                transition: transform .2s;
+                -ms-transform: scale(1.10);
+                /* IE 9 */
+                -webkit-transform: scale(1.10);
+                /* Safari 3-8 */
+                transform: scale(1.10);
             }
             .deco:hover {
                 background-color: red;
@@ -916,6 +923,33 @@ td,
             }
         }
     }
+}
+
+// page Delete.php
+.deleteButton:hover {
+    background-color: red;
+    color: black;
+    transition: transform .2s;
+    -ms-transform: scale(1.10);
+    /* IE 9 */
+    -webkit-transform: scale(1.10);
+    /* Safari 3-8 */
+    transform: scale(1.10);
+}
+
+.NodeleteButton:hover {
+    background-color: green;
+    color: black;
+    transition: transform .2s;
+    -ms-transform: scale(1.10);
+    /* IE 9 */
+    -webkit-transform: scale(1.10);
+    /* Safari 3-8 */
+    transform: scale(1.10);
+}
+
+.pDelete {
+    font-size: 27px;
 }
 
 // PAGE REDIRECTION

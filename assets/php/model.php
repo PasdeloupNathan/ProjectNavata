@@ -67,8 +67,7 @@ function create_form_concours($noms_concours, $nom_entreprise, $descriptionConco
 		echo $sql . "<br>" . $e->getMessage();
 	}
 }
-			// Connexion //
-
+	
 
 
 ?>  

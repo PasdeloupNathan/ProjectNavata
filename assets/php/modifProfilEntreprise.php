@@ -46,7 +46,7 @@ foreach($societe as $societes)
             <label for="adresse_societe">Adresse : <input type="text" name="adresse_societe" value="<?= $societes['adresse_societe'];?>"></label>
             <br>
             <label for="img" style="padding-right: 44%;">Image de profile : </label>
-            <br><input type="file"> 
+            <br><input type="file">
         </div>
         <div class="input col-4">
 
@@ -61,23 +61,24 @@ foreach($societe as $societes)
 
         <div class="buttong row col-12">
 
-            <button type="submit" name="modif" action="">Enregistrer les modifications</button>
+            <button type="submit"  name="modif" action=""onclick="location.href='./entrepriseProfil.php'">Enregistrer les modifications</button>
 
-            <button>Annulez les modifications</button>
+            <button type="submit" action=""onclick="location.href='./entrepriseProfil.php'">Annulez les modifications</button>
         </div>
     </form>
-    
 </div>
-<p> batchahca</p>
 
-<?php 
+
+<?php
 $DATABASE_HOST = 'localhost';
 $DATABASE_USER = 'root';
-$DATABASE_PASS = 'root';
+$DATABASE_PASS = '';
 $DATABASE_NAME = 'projet_navata';
 
 
 $conn = new PDO('mysql:host=' . $DATABASE_HOST . ';dbname=' . $DATABASE_NAME . ';charset=utf8', $DATABASE_USER, $DATABASE_PASS);
+
+
 
 
 if (isset($_POST['modif'])){
@@ -86,7 +87,7 @@ if (isset($_POST['modif'])){
 
     $stmt = $conn->prepare($sql);
 
-    
+
     $stmt->execute();
 
 

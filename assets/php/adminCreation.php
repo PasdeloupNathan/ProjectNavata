@@ -8,7 +8,7 @@ $pdo = pdo_connect_mysql();
 $msg = '';
 ?>
 
-<?php if($_SESSION["rôles"] == 'admin'){
+<?php if($_SESSION["id_users"] == 1){
   ?>
 
 
@@ -19,15 +19,12 @@ include 'meta.php';
 
 
 <?=template_meta('admin')?>
-    
+
 
 
 
 <body class="body2" style="text-align: center;">
-    
 
-
-    
 
 <?=template_header()?>
 <section class="row page">
