@@ -94,7 +94,7 @@ if (isset($_GET['search'])) {
 		</form>
         <thead style="padding: 1%;">
             <tr>
-				<th>ID</th >
+			
 				<th>auteur</th >
                 <th>categorieConcours</th>
                 <th>noms_concours</th>
@@ -104,7 +104,7 @@ if (isset($_GET['search'])) {
                 <th>placeConcoursMax</th>
                 <th>placeConcoursPrise</th>
                 <th>placeConcoursRestante</th>
-               
+				<th>modification</th>
                
             </tr>
         </thead>
@@ -112,7 +112,7 @@ if (isset($_GET['search'])) {
 			<!-- boucle for each permettant d'affiché les donnés de la table concours -->
             <?php foreach ($concours as $contact): ?>
             <tr>
-				<td class="cel"><?=$contact['id_concours']?></td>
+				<td class="cel">
 				<?=$contact['nom_entreprise']?></td>
                 <td><?=$contact['menu_deroulant']?></td>
                 <td><?=$contact['noms_concours']?></td>
@@ -120,15 +120,19 @@ if (isset($_GET['search'])) {
                 <td><?=$contact['locaConcours']?></td>
                 <td><?=$contact['date_concours']?></td>
                 <td><?=$contact['placeConcoursMax']?></td>
-                <td><?=$contact['placeConcoursPrise']?></td>
-                <td><?=$contact['placeConcoursPrise'] = $contact['placeConcoursMax'] - $contact['placeConcoursPrise']; ?></td>
-                
+				<td><?=$contact['placeConcoursPrise']?></td>
+				<td><?=$contact['placeConcoursPrise'] = $contact['placeConcoursMax'] - $contact['placeConcoursPrise']; ?></td>
+                <td class="actions">
+                    <a href="delete.php?id_concours=<?=$contact['id_concours']?>" class="trash"><i class="fas fa-trash fa-xs"></i></a>
+                </td>
 
             </tr>
             <?php endforeach; ?>
 		</tbody>
 </table>
-	<div class="pagination">
+	
+<!-- fléche pour permettre de naviqué dans le tableau -->
+<div class="pagination">
 		<?php if ($page > 1): ?>
 		<a class="aRead" href="adminConcours.php?page=<?=$page-1?><?=isset($_GET['search']) ? '&search=' . htmlentities($_GET['search'], ENT_QUOTES) : ''?>">
 			<i class="fas fa-angle-double-left fa-sm"></i>
@@ -141,7 +145,6 @@ if (isset($_GET['search'])) {
 		<?php endif; ?>
 	</div>
 </div>
-<!-- fléche pour permettre de naviqué dans le tableau -->
     
 </div>
 

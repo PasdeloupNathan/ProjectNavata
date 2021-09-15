@@ -60,6 +60,9 @@ $msg = '';
                 <div style="padding-top: 5%;">
                     <a href="./inscription.php">Pas encore inscrit ? Inscrivez-vous.</a>
                 </div>
+                <div style="padding-top: 1%;">
+                        <a href="entreprise.php">Vous Souhaitez vous inscrire en tant qu'Entreprise ?</a>
+                    </div>
                 </div>
             </fieldset>
         </form>

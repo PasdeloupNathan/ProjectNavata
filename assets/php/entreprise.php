@@ -126,7 +126,7 @@ $msg = '';
             $codepostal_societe=$_POST["codepostal_societe"];
             $siret_societe=$_POST["siret_societe"];
             $mdp_societe=$_POST["mdp_societe"];
-            $img_societe =$_POST["img_societe"]; 
+             
         $mdpconf=$_POST["mdpconf"]; $email_societe = "$email_societe";
         if($mdp_societe != $mdpconf){
             echo '<p class="connexion animate__animated animate__flash"> les deux mots de passe doivent être identique<p>';
